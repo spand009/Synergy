@@ -1,0 +1,880 @@
+;
+; Register Allocation:
+; A-Bank, relative GPRs (346)
+;   00 l0000!g_sbpd_wq_hi
+;   01 l0000!g_dma_word0_mask
+;   02 l0000!g_seq_mask
+;   03 l0000!g_pkt_free_hi
+;   04 l0000!g_send_cntrs_addr_hi
+;   05 l0000!g_blm_addr_hi
+;   06 l0000!g_add_imm_iref
+;   07 l0000!g_in_wq_lo
+;   08 l0000!g_pcie_addr_lo
+;   09 l0007!mu_lo_start!!2
+;      l0007!mu_lo_start!!3
+;      l0007!mu_lo_start!!5
+;      l0007!mu_lo_start!!6
+;      l0007!mu_lo_start
+;      l0029!tmp!!2
+;      l0029!tmp!!4
+;      l0029!tmp!!5
+;      l0029!tmp!!6
+;      l0029!tmp!!7
+;      l0029!tmp!!9
+;      l0029!tmp!!10
+;      l0029!tmp!!11
+;      l0029!tmp!!12
+;      l0029!tmp!!13
+;      l0029!tmp!!15
+;      l0029!tmp!!16
+;      l0029!tmp!!17
+;      l0104!pcie_lo_start!!2
+;      l0104!pcie_lo_start!!3
+;      l0104!pcie_lo_start!!4
+;      l0104!pcie_lo_start
+;      l0126!pcie_lo_start!!2
+;      l0126!pcie_lo_start!!3
+;      l0126!pcie_lo_start!!4
+;      l0126!pcie_lo_start
+;      l0151!ring_num
+;      l0154!ring_num
+;      l0179!mu_lo_start!!2
+;      l0179!mu_lo_start!!3
+;      l0179!mu_lo_start!!5
+;      l0179!mu_lo_start!!6
+;      l0179!mu_lo_start
+;      l0201!tmp!!2
+;      l0201!tmp!!4
+;      l0201!tmp!!5
+;      l0201!tmp!!6
+;      l0201!tmp!!7
+;      l0201!tmp!!9
+;      l0201!tmp!!10
+;      l0201!tmp!!11
+;      l0201!tmp!!12
+;      l0201!tmp!!13
+;      l0201!tmp!!15
+;      l0201!tmp!!16
+;      l0201!tmp!!17
+;      l0228!tmp_cycle_count!!2
+;      l0228!tmp_cycle_count
+;   0A l0007!word!!2
+;      l0007!word!!4
+;      l0007!word!!5
+;      l0007!word!!6
+;      l0007!word!!7
+;      l0007!word!!8
+;      l0029!mu_lo_start!!2
+;      l0029!mu_lo_start!!3
+;      l0029!mu_lo_start!!5
+;      l0029!mu_lo_start!!6
+;      l0029!mu_lo_start
+;      l0081!tmp_cycle_count!!2
+;      l0081!tmp_cycle_count
+;      l0082!tmp!!2
+;      l0082!tmp!!4
+;      l0082!tmp!!5
+;      l0082!tmp!!6
+;      l0082!tmp!!7
+;      l0082!tmp!!9
+;      l0082!tmp!!10
+;      l0082!tmp!!11
+;      l0082!tmp!!12
+;      l0082!tmp!!13
+;      l0082!tmp!!15
+;      l0082!tmp!!16
+;      l0082!tmp!!17
+;      l0126!len!!3
+;      l0126!len!!4
+;      l0126!len!!5
+;      l0126!len!!6
+;      l0154!addr_hi
+;      l0157!pcie_lo_start!!2
+;      l0157!pcie_lo_start!!3
+;      l0157!pcie_lo_start!!4
+;      l0157!pcie_lo_start
+;      l0179!word!!2
+;      l0179!word!!4
+;      l0179!word!!5
+;      l0179!word!!6
+;      l0179!word!!7
+;      l0179!word!!8
+;      l0201!mu_lo_start!!2
+;      l0201!mu_lo_start!!3
+;      l0201!mu_lo_start!!5
+;      l0201!mu_lo_start!!6
+;      l0201!mu_lo_start
+;      l0226!addr_hi
+;      l0231!tmp_cycle_count!!2
+;      l0231!tmp_cycle_count
+;   0B l0007!len!!3
+;      l0007!len!!4
+;      l0007!len!!5
+;      l0007!len!!6
+;      l0029!word!!2
+;      l0029!word!!4
+;      l0029!word!!5
+;      l0029!word!!6
+;      l0029!word!!7
+;      l0029!word!!8
+;      l0051!mu_lo_start!!2
+;      l0051!mu_lo_start!!3
+;      l0051!mu_lo_start!!5
+;      l0051!mu_lo_start!!6
+;      l0051!mu_lo_start
+;      l0073!qnum
+;      l0076!qnum
+;      l0079!qnum
+;      l0104!tmp!!2
+;      l0104!tmp!!4
+;      l0104!tmp!!5
+;      l0104!tmp!!6
+;      l0104!tmp!!7
+;      l0104!tmp!!9
+;      l0104!tmp!!10
+;      l0104!tmp!!11
+;      l0104!tmp!!12
+;      l0104!tmp!!13
+;      l0104!tmp!!15
+;      l0104!tmp!!16
+;      l0104!tmp!!17
+;      l0151!qnum
+;      l0153!tmp_cycle_count!!2
+;      l0153!tmp_cycle_count
+;      l0157!len!!3
+;      l0157!len!!4
+;      l0157!len!!5
+;      l0157!len!!6
+;      l0201!pcie_lo_start!!2
+;      l0201!pcie_lo_start!!3
+;      l0201!pcie_lo_start!!4
+;      l0201!pcie_lo_start
+;      l0223!qnum
+;      l0223!ring_num
+;      l0225!tmp_cycle_count!!2
+;      l0225!tmp_cycle_count
+;      l0229!qnum
+;   0C l0007!pcie_lo_start!!2
+;      l0007!pcie_lo_start!!3
+;      l0007!pcie_lo_start!!4
+;      l0007!pcie_lo_start
+;      l0051!pcie_lo_start!!2
+;      l0051!pcie_lo_start!!3
+;      l0051!pcie_lo_start!!4
+;      l0051!pcie_lo_start
+;      l0075!tmp_cycle_count!!2
+;      l0075!tmp_cycle_count
+;      l0079!addr_hi
+;      l0079!ring_num
+;      l0082!word!!2
+;      l0082!word!!4
+;      l0082!word!!5
+;      l0082!word!!6
+;      l0082!word!!7
+;      l0082!word!!8
+;      l0082!mu_lo_start!!2
+;      l0082!mu_lo_start!!3
+;      l0082!mu_lo_start!!5
+;      l0082!mu_lo_start!!6
+;      l0082!mu_lo_start
+;      l0126!tmp!!2
+;      l0126!tmp!!4
+;      l0126!tmp!!5
+;      l0126!tmp!!6
+;      l0126!tmp!!7
+;      l0126!tmp!!9
+;      l0126!tmp!!10
+;      l0126!tmp!!11
+;      l0126!tmp!!12
+;      l0126!tmp!!13
+;      l0126!tmp!!15
+;      l0126!tmp!!16
+;      l0126!tmp!!17
+;      l0179!len!!3
+;      l0179!len!!4
+;      l0179!len!!5
+;      l0179!len!!6
+;      l0201!word!!2
+;      l0201!word!!4
+;      l0201!word!!5
+;      l0201!word!!6
+;      l0201!word!!7
+;      l0201!word!!8
+;      l0223!addr_hi
+;      l0229!addr_hi
+;   0D l0000!tmp!!2
+;      l0000!tmp!!3
+;      l0000!tmp!!4
+;      l0000!tmp!!5
+;      l0029!len!!3
+;      l0029!len!!4
+;      l0029!len!!5
+;      l0029!len!!6
+;      l0051!word!!2
+;      l0051!word!!4
+;      l0051!word!!5
+;      l0051!word!!6
+;      l0051!word!!7
+;      l0051!word!!8
+;      l0051!tmp!!2
+;      l0051!tmp!!4
+;      l0051!tmp!!5
+;      l0051!tmp!!6
+;      l0051!tmp!!7
+;      l0051!tmp!!9
+;      l0051!tmp!!10
+;      l0051!tmp!!11
+;      l0051!tmp!!12
+;      l0051!tmp!!13
+;      l0051!tmp!!15
+;      l0051!tmp!!16
+;      l0051!tmp!!17
+;      l0073!addr_hi
+;      l0076!addr_hi
+;      l0082!pcie_lo_start!!2
+;      l0082!pcie_lo_start!!3
+;      l0082!pcie_lo_start!!4
+;      l0082!pcie_lo_start
+;      l0104!mu_lo_start!!2
+;      l0104!mu_lo_start!!3
+;      l0104!mu_lo_start!!5
+;      l0104!mu_lo_start!!6
+;      l0104!mu_lo_start
+;      l0148!qnum
+;      l0151!addr_hi
+;      l0179!pcie_lo_start!!2
+;      l0179!pcie_lo_start!!3
+;      l0179!pcie_lo_start!!4
+;      l0179!pcie_lo_start
+;      l0226!qnum
+;      l0226!ring_num
+;      l0229!ring_num
+;   0E l0029!pcie_lo_start!!2
+;      l0029!pcie_lo_start!!3
+;      l0029!pcie_lo_start!!4
+;      l0029!pcie_lo_start
+;      l0073!ring_num
+;      l0076!ring_num
+;      l0078!tmp_cycle_count!!2
+;      l0078!tmp_cycle_count
+;      l0082!len!!3
+;      l0082!len!!4
+;      l0082!len!!5
+;      l0082!len!!6
+;      l0104!word!!2
+;      l0104!word!!4
+;      l0104!word!!5
+;      l0104!word!!6
+;      l0104!word!!7
+;      l0104!word!!8
+;      l0126!word!!2
+;      l0126!word!!4
+;      l0126!word!!5
+;      l0126!word!!6
+;      l0126!word!!7
+;      l0126!word!!8
+;      l0126!mu_lo_start!!2
+;      l0126!mu_lo_start!!3
+;      l0126!mu_lo_start!!5
+;      l0126!mu_lo_start!!6
+;      l0126!mu_lo_start
+;      l0148!addr_hi
+;      l0154!qnum
+;      l0157!tmp!!2
+;      l0157!tmp!!4
+;      l0157!tmp!!5
+;      l0157!tmp!!6
+;      l0157!tmp!!7
+;      l0157!tmp!!9
+;      l0157!tmp!!10
+;      l0157!tmp!!11
+;      l0157!tmp!!12
+;      l0157!tmp!!13
+;      l0157!tmp!!15
+;      l0157!tmp!!16
+;      l0157!tmp!!17
+;      l0201!len!!3
+;      l0201!len!!4
+;      l0201!len!!5
+;      l0201!len!!6
+;   0F l0007!tmp!!2
+;      l0007!tmp!!4
+;      l0007!tmp!!5
+;      l0007!tmp!!6
+;      l0007!tmp!!7
+;      l0007!tmp!!9
+;      l0007!tmp!!10
+;      l0007!tmp!!11
+;      l0007!tmp!!12
+;      l0007!tmp!!13
+;      l0007!tmp!!15
+;      l0007!tmp!!16
+;      l0007!tmp!!17
+;      l0051!len!!3
+;      l0051!len!!4
+;      l0051!len!!5
+;      l0051!len!!6
+;      l0104!len!!3
+;      l0104!len!!4
+;      l0104!len!!5
+;      l0104!len!!6
+;      l0148!ring_num
+;      l0150!tmp_cycle_count!!2
+;      l0150!tmp_cycle_count
+;      l0156!tmp_cycle_count!!2
+;      l0156!tmp_cycle_count
+;      l0157!word!!2
+;      l0157!word!!4
+;      l0157!word!!5
+;      l0157!word!!6
+;      l0157!word!!7
+;      l0157!word!!8
+;      l0157!mu_lo_start!!2
+;      l0157!mu_lo_start!!3
+;      l0157!mu_lo_start!!5
+;      l0157!mu_lo_start!!6
+;      l0157!mu_lo_start
+;      l0179!tmp!!2
+;      l0179!tmp!!4
+;      l0179!tmp!!5
+;      l0179!tmp!!6
+;      l0179!tmp!!7
+;      l0179!tmp!!9
+;      l0179!tmp!!10
+;      l0179!tmp!!11
+;      l0179!tmp!!12
+;      l0179!tmp!!13
+;      l0179!tmp!!15
+;      l0179!tmp!!16
+;      l0179!tmp!!17
+; A-Bank, absolute GPRs (00)
+; B-Bank, relative GPRs (371)
+;   00 l0000!g_sbpd_wq_lo
+;   01 l0000!g_dma_word1_vals
+;   02 l0000!g_dma_word3_vals
+;   03 l0000!g_bitmap_base
+;   04 l0000!g_pkt_num_mask
+;   05 l0000!g_blm_iref
+;   06 l0000!g_in_wq_hi
+;   07 l0000!g_pcie_addr_hi
+;   08 l0000!g_dma_max
+;   09 l0000!g_num_ticket_errors
+;   0B l0007!tmp!!3
+;      l0007!tmp!!8
+;      l0007!tmp!!14
+;      l0007!tmp!!18
+;      l0007!tmp!!19
+;      l0007!tmp!!20
+;      l0007!tmp!!21
+;      l0007!tmp
+;      l0007!isl
+;      l0007!split_len
+;      l0023!__immed_big_const
+;      l0029!tmp2
+;      l0033!_wsm_mask
+;      l0039!word
+;      l0047!word
+;      l0051!addr_lo
+;      l0051!pcie_hi_word!!2
+;      l0051!pcie_hi_word!!3
+;      l0051!pcie_hi_word!!4
+;      l0051!pcie_hi_word!!5
+;      l0051!pcie_hi_word
+;      l0073!addr_lo!!2
+;      l0073!addr_lo
+;      l0073!seq
+;      l0076!cntr_addr_lo
+;      l0079!bitmap_lo
+;      l0082!tmp!!3
+;      l0082!tmp!!8
+;      l0082!tmp!!14
+;      l0082!tmp!!18
+;      l0082!tmp!!19
+;      l0082!tmp!!20
+;      l0082!tmp!!21
+;      l0082!tmp
+;      l0082!split_len
+;      l0100!word
+;      l0104!tmp2
+;      l0108!_wsm_mask
+;      l0114!word
+;      l0126!addr_lo
+;      l0126!pcie_hi_word!!2
+;      l0126!pcie_hi_word!!3
+;      l0126!pcie_hi_word!!4
+;      l0126!pcie_hi_word!!5
+;      l0126!pcie_hi_word
+;      l0148!addr_lo!!2
+;      l0148!addr_lo
+;      l0148!seq
+;      l0151!cntr_addr_lo
+;      l0154!bitmap_lo
+;      l0157!tmp!!3
+;      l0157!tmp!!8
+;      l0157!tmp!!14
+;      l0157!tmp!!18
+;      l0157!tmp!!19
+;      l0157!tmp!!20
+;      l0157!tmp!!21
+;      l0157!tmp
+;      l0157!split_len
+;      l0171!word
+;      l0179!tmp2
+;      l0183!_wsm_mask
+;      l0187!__immed_big_const
+;      l0195!__immed_big_const
+;      l0201!len!!2
+;      l0201!len
+;      l0201!pcie_hi_word!!2
+;      l0201!pcie_hi_word!!3
+;      l0201!pcie_hi_word!!4
+;      l0201!pcie_hi_word!!5
+;      l0201!pcie_hi_word
+;      l0223!addr_lo!!2
+;      l0223!addr_lo
+;      l0223!seq
+;      l0226!cntr_addr_lo
+;      l0229!bitmap_lo
+;   0C l0000!tmp
+;      l0007!tmp2
+;      l0007!len!!2
+;      l0007!len
+;      l0011!_wsm_mask
+;      l0015!__immed_big_const
+;      l0025!word
+;      l0029!addr_lo
+;      l0029!pcie_hi_word!!2
+;      l0029!pcie_hi_word!!3
+;      l0029!pcie_hi_word!!4
+;      l0029!pcie_hi_word!!5
+;      l0029!pcie_hi_word
+;      l0051!tmp!!3
+;      l0051!tmp!!8
+;      l0051!tmp!!14
+;      l0051!tmp!!18
+;      l0051!tmp!!19
+;      l0051!tmp!!20
+;      l0051!tmp!!21
+;      l0051!tmp
+;      l0051!mu_lo_start!!4
+;      l0057!word
+;      l0073!isl
+;      l0074!_wsm_mask
+;      l0076!seq
+;      l0079!cntr_addr_lo
+;      l0082!tmp2
+;      l0082!isl
+;      l0086!_wsm_mask
+;      l0092!word
+;      l0104!word!!3
+;      l0104!word
+;      l0104!pcie_hi_word!!2
+;      l0104!pcie_hi_word!!3
+;      l0104!pcie_hi_word!!4
+;      l0104!pcie_hi_word!!5
+;      l0104!pcie_hi_word
+;      l0126!tmp!!3
+;      l0126!tmp!!8
+;      l0126!tmp!!14
+;      l0126!tmp!!18
+;      l0126!tmp!!19
+;      l0126!tmp!!20
+;      l0126!tmp!!21
+;      l0126!tmp
+;      l0126!mu_lo_start!!4
+;      l0132!word
+;      l0140!word
+;      l0149!_wsm_mask
+;      l0151!isl
+;      l0151!seq
+;      l0154!cntr_addr_lo
+;      l0157!tmp2
+;      l0157!isl
+;      l0161!_wsm_mask
+;      l0173!__immed_big_const
+;      l0179!len!!2
+;      l0179!len
+;      l0179!pcie_hi_word!!2
+;      l0179!pcie_hi_word!!3
+;      l0179!pcie_hi_word!!4
+;      l0179!pcie_hi_word!!5
+;      l0179!pcie_hi_word
+;      l0201!tmp!!3
+;      l0201!tmp!!8
+;      l0201!tmp!!14
+;      l0201!tmp!!18
+;      l0201!tmp!!19
+;      l0201!tmp!!20
+;      l0201!tmp!!21
+;      l0201!tmp
+;      l0201!mu_lo_start!!4
+;      l0207!word
+;      l0219!word
+;      l0224!_wsm_mask
+;      l0226!seq
+;      l0229!cntr_addr_lo
+;   0D l0007!word!!3
+;      l0007!word
+;      l0007!pcie_hi_word!!2
+;      l0007!pcie_hi_word!!3
+;      l0007!pcie_hi_word!!4
+;      l0007!pcie_hi_word!!5
+;      l0007!pcie_hi_word
+;      l0029!tmp!!3
+;      l0029!tmp!!8
+;      l0029!tmp!!14
+;      l0029!tmp!!18
+;      l0029!tmp!!19
+;      l0029!tmp!!20
+;      l0029!tmp!!21
+;      l0029!tmp
+;      l0029!mu_lo_start!!4
+;      l0035!word
+;      l0051!isl
+;      l0051!ctm_bytes
+;      l0064!_wsm_mask
+;      l0065!word
+;      l0075!_ixp_future_count_signal_num
+;      l0076!isl
+;      l0077!_wsm_mask
+;      l0079!seq
+;      l0082!word!!3
+;      l0082!word
+;      l0082!pcie_hi_word!!2
+;      l0082!pcie_hi_word!!3
+;      l0082!pcie_hi_word!!4
+;      l0082!pcie_hi_word!!5
+;      l0082!pcie_hi_word
+;      l0104!tmp!!3
+;      l0104!tmp!!8
+;      l0104!tmp!!14
+;      l0104!tmp!!18
+;      l0104!tmp!!19
+;      l0104!tmp!!20
+;      l0104!tmp!!21
+;      l0104!tmp
+;      l0104!mu_lo_start!!4
+;      l0110!word
+;      l0118!word
+;      l0126!isl
+;      l0126!ctm_bytes
+;      l0139!_wsm_mask
+;      l0142!__immed_big_const
+;      l0150!_ixp_future_count_signal_num
+;      l0152!_wsm_mask
+;      l0154!isl
+;      l0154!seq
+;      l0157!len!!2
+;      l0157!len
+;      l0157!pcie_hi_word!!2
+;      l0157!pcie_hi_word!!3
+;      l0157!pcie_hi_word!!4
+;      l0157!pcie_hi_word!!5
+;      l0157!pcie_hi_word
+;      l0179!tmp!!3
+;      l0179!tmp!!8
+;      l0179!tmp!!14
+;      l0179!tmp!!18
+;      l0179!tmp!!19
+;      l0179!tmp!!20
+;      l0179!tmp!!21
+;      l0179!tmp
+;      l0179!mu_lo_start!!4
+;      l0185!word
+;      l0197!word
+;      l0201!ctm_bytes
+;      l0211!word
+;      l0214!_wsm_mask
+;      l0223!isl
+;      l0225!_ixp_future_count_signal_num
+;      l0227!_wsm_mask
+;      l0229!seq
+;   0E l0007!addr_lo
+;      l0007!mu_lo_start!!4
+;      l0013!word
+;      l0017!word
+;      l0029!word!!3
+;      l0029!word
+;      l0029!isl
+;      l0029!ctm_bytes
+;      l0042!_wsm_mask
+;      l0043!word
+;      l0050!addr
+;      l0051!len!!2
+;      l0051!len
+;      l0051!split_len
+;      l0059!__immed_big_const
+;      l0067!__immed_big_const
+;      l0073!bitmap_lo
+;      l0076!addr_lo!!2
+;      l0076!addr_lo
+;      l0078!_ixp_future_count_signal_num
+;      l0080!_wsm_mask
+;      l0082!len!!2
+;      l0082!len
+;      l0082!mu_lo_start!!4
+;      l0088!word
+;      l0090!__immed_big_const
+;      l0096!word
+;      l0104!isl
+;      l0104!len!!2
+;      l0104!len
+;      l0104!ctm_bytes
+;      l0117!_wsm_mask
+;      l0120!__immed_big_const
+;      l0126!word!!3
+;      l0126!word
+;      l0126!split_len
+;      l0134!__immed_big_const
+;      l0144!word
+;      l0147!addr
+;      l0148!bitmap_lo
+;      l0151!addr_lo!!2
+;      l0151!addr_lo
+;      l0153!_ixp_future_count_signal_num
+;      l0155!_wsm_mask
+;      l0157!addr_lo
+;      l0157!mu_lo_start!!4
+;      l0163!word
+;      l0165!__immed_big_const
+;      l0175!word
+;      l0178!addr
+;      l0179!addr_lo
+;      l0179!ctm_bytes
+;      l0189!word
+;      l0192!_wsm_mask
+;      l0200!addr
+;      l0201!isl
+;      l0201!addr_lo
+;      l0201!split_len
+;      l0215!word
+;      l0222!addr
+;      l0223!bitmap_lo
+;      l0226!isl
+;      l0226!addr_lo!!2
+;      l0226!addr_lo
+;      l0228!_ixp_future_count_signal_num
+;      l0230!_wsm_mask
+;   0F l0007!ctm_bytes
+;      l0020!_wsm_mask
+;      l0021!word
+;      l0028!addr
+;      l0029!len!!2
+;      l0029!len
+;      l0029!split_len
+;      l0037!__immed_big_const
+;      l0045!__immed_big_const
+;      l0051!word!!3
+;      l0051!word
+;      l0051!tmp2
+;      l0055!_wsm_mask
+;      l0061!word
+;      l0069!word
+;      l0072!addr
+;      l0073!cntr_addr_lo
+;      l0076!bitmap_lo
+;      l0079!isl
+;      l0079!addr_lo!!2
+;      l0079!addr_lo
+;      l0081!_ixp_future_count_signal_num
+;      l0082!addr_lo
+;      l0082!ctm_bytes
+;      l0095!_wsm_mask
+;      l0098!__immed_big_const
+;      l0103!addr
+;      l0104!addr_lo
+;      l0104!split_len
+;      l0112!__immed_big_const
+;      l0122!word
+;      l0125!addr
+;      l0126!tmp2
+;      l0126!len!!2
+;      l0126!len
+;      l0130!_wsm_mask
+;      l0136!word
+;      l0148!isl
+;      l0148!cntr_addr_lo
+;      l0151!bitmap_lo
+;      l0154!addr_lo!!2
+;      l0154!addr_lo
+;      l0156!_ixp_future_count_signal_num
+;      l0157!word!!3
+;      l0157!word
+;      l0157!ctm_bytes
+;      l0167!word
+;      l0170!_wsm_mask
+;      l0179!word!!3
+;      l0179!word
+;      l0179!isl
+;      l0179!split_len
+;      l0193!word
+;      l0201!word!!3
+;      l0201!word
+;      l0201!tmp2
+;      l0205!_wsm_mask
+;      l0209!__immed_big_const
+;      l0217!__immed_big_const
+;      l0223!cntr_addr_lo
+;      l0226!bitmap_lo
+;      l0229!isl
+;      l0229!addr_lo!!2
+;      l0229!addr_lo
+;      l0231!_ixp_future_count_signal_num
+; B-Bank, absolute GPRs (01)
+;   0A @l0000!ndequeued
+; Unknown-Bank, relative GPRs (09)
+;   -- l0007!ovfl
+;      l0029!ovfl
+;      l0051!ovfl
+;      l0082!ovfl
+;      l0104!ovfl
+;      l0126!ovfl
+;      l0157!ovfl
+;      l0179!ovfl
+;      l0201!ovfl
+; Relative XFERs (48)
+;   00 $l0073!ticket
+;      $l0076!ticket
+;      $l0079!ticket
+;      $l0148!ticket
+;      $l0151!ticket
+;      $l0154!ticket
+;      $l0223!ticket
+;      $l0226!ticket
+;      $l0229!ticket
+;   01 $l0000!work_in0[0]
+;      $l0000!dma_out0[0]
+;   02 $l0000!work_in0[1]
+;      $l0000!dma_out0[1]
+;   03 $l0000!work_in0[2]
+;      $l0000!dma_out0[2]
+;   04 $l0000!work_in0[3]
+;      $l0000!dma_out0[3]
+;   05 $l0000!work_in0[4]
+;      $l0000!dma_out0x[0]
+;   06 $l0000!dma_out0x[1]
+;      $l0000!work_in1[0]
+;   07 $l0000!dma_out0x[2]
+;      $l0000!work_in1[1]
+;   08 $l0000!dma_out0x[3]
+;      $l0000!work_in1[2]
+;   09 $l0000!work_in1[3]
+;      $l0000!dma_out1[0]
+;   0A $l0000!work_in1[4]
+;      $l0000!dma_out1[1]
+;   0B $l0000!dma_out1[2]
+;      $l0000!work_in2[0]
+;   0C $l0000!dma_out1[3]
+;      $l0000!work_in2[1]
+;   0D $l0000!dma_out1x[0]
+;      $l0000!work_in2[2]
+;   0E $l0000!dma_out1x[1]
+;      $l0000!work_in2[3]
+;   0F $l0000!dma_out1x[2]
+;      $l0000!work_in2[4]
+;   10 $l0000!dma_out1x[3]
+;   11 $l0000!dma_out2[0]
+;   12 $l0000!dma_out2[1]
+;   13 $l0000!dma_out2[2]
+;   14 $l0000!dma_out2[3]
+;   15 $l0000!dma_out2x[0]
+;   16 $l0000!dma_out2x[1]
+;   17 $l0000!dma_out2x[2]
+;   18 $l0000!dma_out2x[3]
+; Signals (33)
+;   01 l0000!work_sig0
+;   02 l0000!dma_sig0
+;   03 l0000!work_sig1
+;   04 l0000!dma_sig1
+;   05 l0000!work_sig2
+;   06 l0000!dma_sig2
+;   07 l0075!_ixp_future_count_signal_name
+;      l0078!_ixp_future_count_signal_name
+;      l0081!_ixp_future_count_signal_name
+;      l0150!_ixp_future_count_signal_name
+;      l0153!_ixp_future_count_signal_name
+;      l0156!_ixp_future_count_signal_name
+;      l0225!_ixp_future_count_signal_name
+;      l0228!_ixp_future_count_signal_name
+;      l0231!_ixp_future_count_signal_name
+;   08 l0073!ticket_sig!!2
+;      l0073!ticket_sig
+;      l0076!ticket_sig!!2
+;      l0076!ticket_sig
+;      l0079!ticket_sig!!2
+;      l0079!ticket_sig
+;      l0148!ticket_sig!!2
+;      l0148!ticket_sig
+;      l0151!ticket_sig!!2
+;      l0151!ticket_sig
+;      l0154!ticket_sig!!2
+;      l0154!ticket_sig
+;      l0223!ticket_sig!!2
+;      l0223!ticket_sig
+;      l0226!ticket_sig!!2
+;      l0226!ticket_sig
+;      l0229!ticket_sig!!2
+;      l0229!ticket_sig
+; Number of exposed branch latency bubbles:  598 (68.03%)
+;
+;
+; Number of optimized cycles: 236
+;
+
+; ********************************************************************
+; The following lists a path (in terms of uword addresses) along which the
+; specified register/signal maybe or was used before being set.
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out0[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49-61
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out1[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222-225, 390-398, 226-238
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out2[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856, 1245-1249, 1253-1260, 1264-1265, 
+;     1315-1316, 1481-1489, 1317, 1468-1473, 1490-1493, 1658-1666, 1494, 
+;     1645-1650, 1667-1670, 1835-1843, 1671, 1822-1827, 1844-1848, 1852-1859, 
+;     1863-1864, 399-402, 567-575, 403-415
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out1[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683-695
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out2[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856-859, 1024-1032, 860-872
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out0[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856, 1245-1249, 1253-1260, 1264-1265, 
+;     1315-1316, 1481-1489, 1317, 1468-1473, 1490-1493, 1658-1666, 1494, 
+;     1645-1650, 1667-1670, 1835-1843, 1671, 1822-1827, 1844-1848, 1852-1859, 
+;     1863-1864, 399-402, 567-575, 403, 554-559, 576-580, 584-591, 595-596, 
+;     1033-1036, 1201-1209, 1037-1049
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out2[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856, 1245-1249, 1253-1260, 1264-1265, 
+;     1315-1316, 1481-1489, 1317-1329
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out0[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856, 1245-1249, 1253-1260, 1264-1265, 
+;     1315-1316, 1481-1489, 1317, 1468-1473, 1490-1493, 1658-1666, 1494-1506
+
+; For Warning:
+;  /root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_out_pd.uc(381) : WARNING: (4701) Write transfer register $dma_out1[3] may be used before being set.
+;  Path: 0, 5-48, 213-221, 49, 200-205, 222, 611-615, 619-626, 630-631, 
+;     681-682, 847-855, 683, 834-839, 856, 1245-1249, 1253-1260, 1264-1265, 
+;     1315-1316, 1481-1489, 1317, 1468-1473, 1490-1493, 1658-1666, 1494, 
+;     1645-1650, 1667-1670, 1835-1843, 1671-1683

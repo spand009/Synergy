@@ -1,0 +1,113 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function __mem_cam_lookup_add_inc ___mem_cam_lookup_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 16 52
+.%arg data 1 data_136_V$22b
+.%arg addr 3 addr_136_V$22c
+.%arg camsize 4 camsize_136_V$22d
+.%arg cambits 4 cambits_136_V$22e
+.%arg sync 5 sync_136_V$22f
+.%arg sigpair 6 sigpair_136_V$230
+.%var ind 8 ind_136 LIX
+.%var addr_hi 0 addr_hi_136 LIX
+.%var addr_lo 0 addr_lo_136 LIX
+.%scope end
+.%scope function mem_cam_lookup_add_inc _mem_cam_lookup_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 55 61
+.%arg data 1 data_149_V$24f
+.%arg addr 3 addr_149_V$250
+.%arg camsize 4 camsize_149_V$251
+.%arg cambits 4 cambits_149_V$252
+.%var sigpair 7 sigpair_149 LIX
+.%scope end
+.%scope function __mem_cam128_lookup24_add_inc ___mem_cam128_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 65 70
+.%arg data 11 data_150_V$256
+.%arg addr 16 addr_150_V$257
+.%arg sync 5 sync_150_V$258
+.%arg sigpair 6 sigpair_150_V$259
+.%scope end
+.%scope function mem_cam128_lookup24_add_inc _mem_cam128_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 73 77
+.%arg data 11 data_151_V$25a
+.%arg addr 16 addr_151_V$25b
+.%scope end
+.%scope function __mem_cam256_lookup24_add_inc ___mem_cam256_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 80 85
+.%arg data 11 data_152_V$25c
+.%arg addr 16 addr_152_V$25d
+.%arg sync 5 sync_152_V$25e
+.%arg sigpair 6 sigpair_152_V$25f
+.%scope end
+.%scope function mem_cam256_lookup24_add_inc _mem_cam256_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 88 92
+.%arg data 11 data_153_V$260
+.%arg addr 16 addr_153_V$261
+.%scope end
+.%scope function __mem_cam384_lookup24_add_inc ___mem_cam384_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 96 101
+.%arg data 11 data_154_V$262
+.%arg addr 16 addr_154_V$263
+.%arg sync 5 sync_154_V$264
+.%arg sigpair 6 sigpair_154_V$265
+.%scope end
+.%scope function mem_cam384_lookup24_add_inc _mem_cam384_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 104 108
+.%arg data 11 data_155_V$266
+.%arg addr 16 addr_155_V$267
+.%scope end
+.%scope function __mem_cam512lookup24_add_inc ___mem_cam512lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 111 116
+.%arg data 11 data_156_V$268
+.%arg addr 16 addr_156_V$269
+.%arg sync 5 sync_156_V$26a
+.%arg sigpair 6 sigpair_156_V$26b
+.%scope end
+.%scope function mem_cam512_lookup24_add_inc _mem_cam512_lookup24_add_inc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/mem_cam_add_inc.c" 119 123
+.%arg data 11 data_157_V$26c
+.%arg addr 16 addr_157_V$26d
+.%scope end
+.%type U4
+.%type P2 2
+.%type U4
+.%type P3 2
+.%type I4
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 7
+.%type S8 SIGNAL_PAIR{
+even 0 4;
+odd 4 4;
+}
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 9;
+}
+.%type S4 {
+__unnamed 0 10;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}
+.%type P2 12
+.%type S4 mem_cam_add_inc_24bit{
+__unnamed 0 13;
+}
+.%type S4 {
+search 0 14;
+result 0 15;
+}
+.%type S4 {
+value 0 0;
+}
+.%type S4 {
+mask 0:16:16 0;
+data 0:8:8 0;
+added 0:7:1 0;
+match 0:0:7 0;
+}
+.%type P3 2

@@ -1,0 +1,78 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function fc_to_lock_release _fc_to_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 35 70
+.%arg in_lock 1 in_lock_115_V$9b
+.%arg bucket_base_ptr0 3 bucket_base_ptr0_115_V$a2
+.%arg bucket_base_ptr1 3 bucket_base_ptr1_115_V$a3
+.%var bucket_mu 0 bucket_mu_115 LIX
+.%var cam_entry_addr 0 cam_entry_addr_115 LIX
+.%var bucket_addr_ptr 3 bucket_addr_ptr_115 LIX
+.%var lock_xfer 0 lock_xfer_115 LIW
+.%var sig 4 sig_115 LIX
+.%scope end
+.%scope function fc_to_lock_release_with_bucket_addr _fc_to_lock_release_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 73 183
+.%arg in_lock 1 in_lock_117_V$a9
+.%arg bucket_addr_ptr 3 bucket_addr_ptr_117_V$b0
+.%var cam_entry_addr 0 cam_entry_addr_117 LIX
+.%var lock_xfer 0 lock_xfer_117 LIW
+.%var sig 4 sig_117 LIX
+.%scope end
+.%scope function fc_to_lock_exclusive _fc_to_lock_exclusive "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 185 211
+.%arg in_lock 1 in_lock_120_V$b4
+.%arg retry_count 0 retry_count_120_V$bb
+.%arg bucket_base_ptr0 3 bucket_base_ptr0_120_V$bc
+.%arg bucket_base_ptr1 3 bucket_base_ptr1_120_V$bd
+.%var bucket_addr_ptr 3 bucket_addr_ptr_120 LIX
+.%scope end
+.%scope function fc_to_lock_exclusive_with_bucket_addr _fc_to_lock_exclusive_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 215 368
+.%arg in_lock 1 in_lock_122_V$cd
+.%arg retry_count 0 retry_count_122_V$d4
+.%arg bucket_addr_ptr 3 bucket_addr_ptr_122_V$d5
+.%scope block 229 365
+.%var cam_entry_addr 0 cam_entry_addr_124 LIX
+.%var i 0 i_124 LIX
+.%var lock_xfer 0 lock_xfer_124 LIX
+.%var lock_xfer_read 0 lock_xfer_read_124 LIR
+.%var continue_flag 0 continue_flag_124 LIX
+.%var sig_pair 5 sig_pair_124 LIX
+.%var sig 4 sig_124 LIX
+.%scope end
+.%scope end
+.%scope function fc_to_lock_shared _fc_to_lock_shared "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 370 396
+.%arg in_lock 1 in_lock_133_V$e6
+.%arg retry_count 0 retry_count_133_V$ed
+.%arg bucket_base_ptr0 3 bucket_base_ptr0_133_V$ee
+.%arg bucket_base_ptr1 3 bucket_base_ptr1_133_V$ef
+.%var bucket_addr_ptr 3 bucket_addr_ptr_133 LIX
+.%scope end
+.%scope function fc_to_lock_shared_with_bucket_addr _fc_to_lock_shared_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timeout_lock.c" 399 466
+.%arg in_lock 1 in_lock_135_V$f2
+.%arg retry_count 0 retry_count_135_V$f9
+.%arg bucket_addr_ptr 3 bucket_addr_ptr_135_V$fa
+.%scope block 413 464
+.%var cam_entry_addr 0 cam_entry_addr_137 LIX
+.%var i 0 i_137 LIX
+.%var shared_lock 4 shared_lock_137 LIX
+.%var lock_xfer 0 lock_xfer_137 LIX
+.%var sig 4 sig_137 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type S4 fc_lock_t{
+__unnamed 0 2;
+value 0 0;
+}
+.%type S4 {
+bucket_address 0:6:26 0;
+exclusive_lock 0:5:1 0;
+cam_entry 0:2:3 0;
+bucket_mu 0:0:2 0;
+}
+.%type P3 0
+.%type I4
+.%type S8 SIGNAL_PAIR{
+even 0 4;
+odd 4 4;
+}

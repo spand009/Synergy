@@ -1,0 +1,52 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function __signal_me ___signal_me "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/cluster_target.c" 16 23
+.%arg dst_island 0 dst_island_132_V$21b
+.%arg dst_me 0 dst_me_132_V$21c
+.%arg dst_ctx 0 dst_ctx_132_V$21d
+.%arg sig_no 0 sig_no_132_V$21e
+.%var addr 0 addr_132 LIX
+.%scope end
+.%scope function ct_nn_write _ct_nn_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/cluster_target.c" 25 98
+.%arg dst_island 0 dst_island_133_V$220
+.%arg dst_me 0 dst_me_133_V$221
+.%arg sig_no 0 sig_no_133_V$222
+.%arg nn_register 0 nn_register_133_V$223
+.%arg data 1 data_133_V$224
+.%arg size 0 size_133_V$225
+.%arg sync 3 sync_133_V$226
+.%arg sig_ptr 4 sig_ptr_133_V$227
+.%var addr 0 addr_133 LIX
+.%var count 0 count_133 LIX
+.%var ind 6 ind_133 LIX
+.%scope end
+.%type U4
+.%type P2 2
+.%type U4
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 5
+.%type I4
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 7;
+}
+.%type S4 {
+__unnamed 0 8;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}

@@ -1,0 +1,664 @@
+{
+    "generic": {
+        "tables_info": {
+            "fwd": {
+                "max_entries": 65536, 
+                "allowed_actions": [
+                    "forward", 
+                    "_drop"
+                ], 
+                "name": "fwd"
+            }, 
+            "gtpu_encap_table": {
+                "max_entries": 65536, 
+                "allowed_actions": [
+                    "gtpu_encap_v4", 
+                    "_drop", 
+                    "_nop"
+                ], 
+                "name": "gtpu_encap_table"
+            }, 
+            "gtpu_decap_table": {
+                "max_entries": 65536, 
+                "allowed_actions": [
+                    "gtpu_decap_v4", 
+                    "_drop", 
+                    "_nop"
+                ], 
+                "name": "gtpu_decap_table"
+            }
+        }, 
+        "action_info": {
+            "forward": {
+                "name": "forward", 
+                "action_data": {
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "_drop": {
+                "name": "_drop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "_nop": {
+                "name": "_nop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "gtpu_encap_v4": {
+                "name": "gtpu_encap_v4", 
+                "action_data": {
+                    "srcAddr": {
+                        "size": 32
+                    }, 
+                    "dstAddr": {
+                        "size": 32
+                    }, 
+                    "srcPort": {
+                        "size": 16
+                    }, 
+                    "dstPort": {
+                        "size": 16
+                    }, 
+                    "type_": {
+                        "size": 8
+                    }, 
+                    "teid": {
+                        "size": 32
+                    }, 
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "gtpu_decap_v4": {
+                "name": "gtpu_decap_v4", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }
+        }
+    }, 
+    "vendor": {
+        "register_info": {}, 
+        "backend_source_info": {
+            "date": "2022/01/22 00:02:52", 
+            "source_files": "compiled_file.yml"
+        }, 
+        "counters_info": {}, 
+        "meter_info": {}, 
+        "frontend_source_info": {
+            "date": "2022/01/22 00:02:51", 
+            "source_files": [
+                "main.p4"
+            ]
+        }, 
+        "tables_info": {
+            "fwd": {
+                "name": "fwd", 
+                "matches": [
+                    {
+                        "field": "standard_metadata.ingress_port", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "lm_layout": [
+                            {
+                                "width": 10, 
+                                "fldbitoff": 0, 
+                                "name": "ingress_port", 
+                                "lmbitoff": 822
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "forward", 
+                    "_drop"
+                ], 
+                "id": 0, 
+                "max_entries": 65536, 
+                "data_shift": 4, 
+                "data_size": 16
+            }, 
+            "gtpu_encap_table": {
+                "name": "gtpu_encap_table", 
+                "matches": [
+                    {
+                        "field": "ipv4.srcAddr", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 27
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "srcAddr", 
+                                "lmbitoff": 256
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "ipv4.dstAddr", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 27
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "dstAddr", 
+                                "lmbitoff": 288
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "gtpu_encap_v4", 
+                    "_drop", 
+                    "_nop"
+                ], 
+                "id": 2, 
+                "max_entries": 65536, 
+                "data_shift": 5, 
+                "data_size": 32
+            }, 
+            "gtpu_decap_table": {
+                "name": "gtpu_decap_table", 
+                "matches": [
+                    {
+                        "field": "gtpu_ipv4.dstAddr", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "gtpu_ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "gtpu_ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 13
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "dstAddr", 
+                                "lmbitoff": 672
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "gtpu_ipv4.srcAddr", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "gtpu_ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "gtpu_ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 13
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "srcAddr", 
+                                "lmbitoff": 640
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "gtpu_ipv4.diffserv", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "gtpu_ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "gtpu_ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 13
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 8, 
+                                "fldbitoff": 0, 
+                                "name": "diffserv", 
+                                "lmbitoff": 560
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "gtpu.teid", 
+                        "type": "exact", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "gtpu", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "gtpu_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 16
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 32, 
+                                "fldbitoff": 0, 
+                                "name": "teid", 
+                                "lmbitoff": 512
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "gtpu_decap_v4", 
+                    "_drop", 
+                    "_nop"
+                ], 
+                "id": 1, 
+                "max_entries": 65536, 
+                "data_shift": 4, 
+                "data_size": 16
+            }
+        }, 
+        "action_info": {
+            "forward": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "port", 
+                        "name": "port", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }, 
+                    {
+                        "pad_cnt": 2, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "name": "forward", 
+                "action_data": {
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 0, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "_drop": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "name": "_drop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 1, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "_nop": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "name": "_nop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": true, 
+                "id": 4, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "gtpu_encap_v4": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "srcAddr", 
+                        "name": "srcAddr", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "dstAddr", 
+                        "name": "dstAddr", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "teid", 
+                        "name": "teid", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "srcPort", 
+                        "name": "srcPort", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }, 
+                    {
+                        "actiondata": "dstPort", 
+                        "name": "dstPort", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }, 
+                    {
+                        "actiondata": "port", 
+                        "name": "port", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }, 
+                    {
+                        "actiondata": "type_", 
+                        "name": "type_", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 1, 
+                        "pad_type": "uint8_t", 
+                        "split": false, 
+                        "size": 8
+                    }, 
+                    {
+                        "pad_cnt": 1, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "name": "gtpu_encap_v4", 
+                "action_data": {
+                    "srcAddr": {
+                        "size": 32
+                    }, 
+                    "dstAddr": {
+                        "size": 32
+                    }, 
+                    "srcPort": {
+                        "size": 16
+                    }, 
+                    "dstPort": {
+                        "size": 16
+                    }, 
+                    "type_": {
+                        "size": 8
+                    }, 
+                    "teid": {
+                        "size": 32
+                    }, 
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 3, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "gtpu_decap_v4": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "name": "gtpu_decap_v4", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 2, 
+                "tableno_field": "__pif_table_no"
+            }
+        }, 
+        "multicast": {
+            "table_rtsym": "_pif_mcast_table", 
+            "group_count": 16, 
+            "group_size": 16
+        }, 
+        "build_uuid": [
+            2518290504, 
+            3015189614, 
+            2065043948, 
+            2759604587
+        ], 
+        "parser_value_set_info": {}, 
+        "digests_info": {}
+    }
+}

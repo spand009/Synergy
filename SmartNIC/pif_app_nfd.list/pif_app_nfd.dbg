@@ -1,0 +1,275 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_207_V$8d6
+.%arg y 0 y_207_V$8d7
+.%var result 0 result_207 LIX
+.%scope end
+.%var pif_counter_RX 1 _pif_counter_RX SEX
+.%var pif_counter_RX_NFD 1 _pif_counter_RX_NFD SEX
+.%var pif_counter_TX 1 _pif_counter_TX SEX
+.%var pif_counter_TX_NFD 1 _pif_counter_TX_NFD SEX
+.%var pif_counter_DROP 1 _pif_counter_DROP SEX
+.%var pif_counter_DROP_META 1 _pif_counter_DROP_META SEX
+.%var pif_counter_DROP_NFD_NO_CREDITS 1 _pif_counter_DROP_NFD_NO_CREDITS SEX
+.%var pif_counter_DROP_PORT_PAUSED 1 _pif_counter_DROP_PORT_PAUSED SEX
+.%var pif_counter_FLOWCACHE_HIT 1 _pif_counter_FLOWCACHE_HIT SEX
+.%var pif_counter_FLOWCACHE_MISS 1 _pif_counter_FLOWCACHE_MISS SEX
+.%var pif_counter_FLOWCACHE_BYPASS 1 _pif_counter_FLOWCACHE_BYPASS SEX
+.%var pif_counter_MULTICAST 1 _pif_counter_MULTICAST SEX
+.%var pif_counter_ERROR_PKTMETA 1 _pif_counter_ERROR_PKTMETA SEX
+.%var pif_counter_ERROR_PARREP 2 _pif_counter_ERROR_PARREP SEX
+.%var pif_counter_ERROR_PARREP_CUSTOM 1 _pif_counter_ERROR_PARREP_CUSTOM SEX
+.%var pif_counter_ERROR_FLOWCACHE 1 _pif_counter_ERROR_FLOWCACHE SEX
+.%var pif_counter_ERROR_DEPARSE 1 _pif_counter_ERROR_DEPARSE SEX
+.%var pif_counter_ERROR_NFDMETA 1 _pif_counter_ERROR_NFDMETA SEX
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 3 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 5 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 6 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 7 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 8 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 9 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 10 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 11 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 12 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 13 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%var pkt_clone_destination 14 _pkt_clone_destination SEX
+.%var pif_version 15 _pif_version SEX
+.%var pif_pkt_info_copy 16 _pif_pkt_info_copy SEX
+.%var pif_pkt_info_global 16 _pif_pkt_info_global SEX
+.%var parrep 24 _parrep SEX
+.%var parrep_copy 25 _parrep_copy SEX
+.%var flowkey 26 _flowkey SEX
+.%var pkt_dup_state 27 _pkt_dup_state SEX
+.%var pif_flowcache_bypass 0 _pif_flowcache_bypass SEX
+.%var flowkey_copy 30 _flowkey_copy SEX
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_523 LIX
+.%scope end
+.%scope function __hashmap_lock_release ___hashmap_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/include/hashmap.h" 103 122
+.%arg lock 31 lock_537_V$8db
+.%var ind 35 ind_537 LIX
+.%var addr_hi 0 addr_hi_537 LIX
+.%var addr_lo 0 addr_lo_537 LIX
+.%scope end
+.%scope function forward _forward "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pif_app_nfd.c" 121 160
+.%arg parrep 38 parrep_561_V$8f4
+.%var port_spec 0 port_spec_561 LIX
+.%scope end
+.%scope function load_fc_control _load_fc_control "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pif_app_nfd.c" 168 178
+.%arg buf 39 buf_565_V$8f9
+.%arg ig_len 40 ig_len_565_V$8fa
+.%arg eg_len 40 eg_len_565_V$8fb
+.%var control_buf 41 control_buf_565 LIX
+.%var control 41 control_565 LIW
+.%scope end
+.%scope function handle_error_packet _handle_error_packet "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pif_app_nfd.c" 187 204
+.%arg reason 40 reason_566_V$908
+.%scope end
+.%scope function main _main "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pif_app_nfd.c" 212 900
+.%var action_buffer 46 action_buffer_567 LIX
+.%var ready_ctxs 0 ready_ctxs_567 LIX
+.%var act_buf 47 act_buf_567 LIX
+.%scope block 247 268
+.%var mb0 0 mb0_569 LIX
+.%scope end
+.%scope block 277 899
+.%var flowkey_len 0 flowkey_len_571 LIX
+.%var exit_node 40 exit_node_571 LIX
+.%var result 48 result_571 LIX
+.%var ingress_cached 40 ingress_cached_571 LIX
+.%var egress_cached 40 egress_cached_571 LIX
+.%var rep_info 52 rep_info_571 LIX
+.%scope block 341 346
+.%var flcalc_verify_result 40 flcalc_verify_result_580 LIX
+.%scope end
+.%scope block 376 392
+.%var control 41 control_586 LIR
+.%scope end
+.%scope block 436 471
+.%var ret 40 ret_592 LIX
+.%scope end
+.%scope block 471 497
+.%var ret 40 ret_596 LIX
+.%scope end
+.%scope block 505 635
+.%var port_spec 0 port_spec_599 LIX
+.%scope block 509 557
+.%var port 40 port_600 LIX
+.%scope end
+.%scope end
+.%scope block 636 685
+.%var type 0 type_605 LIX
+.%scope block 643 667
+.%var port 40 port_606 LIX
+.%scope end
+.%scope end
+.%scope block 711 753
+.%var ret 40 ret_608 LIX
+.%scope end
+.%scope block 753 775
+.%var ret 40 ret_611 LIX
+.%scope end
+.%scope block 809 877
+.%var pkt_byteoffset 40 pkt_byteoffset_615 LIX
+.%scope end
+.%scope end
+.%scope end
+.%type U4
+.%type U8
+.%type A56 1
+.%type A16 4
+.%type U1
+.%type A32768 4
+.%type A16 4
+.%type A2048 4
+.%type A16 4
+.%type A2048 4
+.%type A16 4
+.%type A2048 4
+.%type A41943040 4
+.%type A10485760 4
+.%type S16 pkt_clone_destination{
+ctm_pkt_num 0 0;
+mu_ptr 8 1;
+}
+.%type A64 4
+.%type S40 pif_pkt_info{
+__unnamed 0 17;
+}
+.%type S40 {
+__unnamed 0 18;
+__raw 0 23;
+}
+.%type S40 {
+isl 0:26:6 0;
+pkt_num 0:16:10 0;
+bls 0:14:2 0;
+pkt_len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+resv2 8:31:1 0;
+ctm_size 8:29:2 0;
+ctm_isl 8:22:7 0;
+seqr 8:17:5 0;
+unseq 8:16:1 0;
+seq 8:0:16 0;
+ig_port 12 19;
+eg_port 16 20;
+pkt_buf 24 21;
+trunc_len 32:18:14 0;
+pkt_pl_off 32:8:10 0;
+resv1 32:3:5 0;
+ipv4_sum_ok 32:2:1 0;
+udp_sum_ok 32:1:1 0;
+tcp_sum_ok 32:0:1 0;
+calc_fld_bmsk 36 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type P2 22
+.%type U4
+.%type A36 0
+.%type A108 0
+.%type A104 0
+.%type A32 0
+.%type S4 pif_pkt_duplication_type{
+__unnamed 0 28;
+}
+.%type S4 {
+__unnamed 0 29;
+__raw 0 0;
+}
+.%type S4 {
+action 0:31:1 0;
+reserved 0:16:15 0;
+type 0:0:16 0;
+}
+.%type A1024 0
+.%type P2 32
+.%type S10 {
+addr 0 33;
+state 8 34;
+}
+.%type P3 22
+.%type U2
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 36;
+}
+.%type S4 {
+__unnamed 0 37;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}
+.%type P6 0
+.%type P3 0
+.%type I4
+.%type S4 fc_control{
+__unnamed 0 42;
+}
+.%type S4 {
+__unnamed 0 43;
+_raw 0 45;
+}
+.%type S4 {
+ingress_len 0 44;
+egress_len 2 44;
+}
+.%type I2
+.%type A4 0
+.%type A1024 0
+.%type P3 0
+.%type S16 fc_lookup_result_t{
+payload_address 0 1;
+lock 8 49;
+result_code 12 51;
+}
+.%type S4 fc_lock_t{
+__unnamed 0 50;
+value 0 0;
+}
+.%type S4 {
+bucket_address 0:6:26 0;
+exclusive_lock 0:5:1 0;
+cam_entry 0:2:3 0;
+bucket_mu 0:0:2 0;
+}
+.%type E4 FC_LOOKUP_RESULT_CODE{
+FC_LOOKUP_ERROR 0;
+FC_LOOKUP_EXACT_MATCH 1;
+FC_LOOKUP_ENTRY_ADDED 2;
+FC_LOOKUP_ALLOCATE_ERROR 6;
+FC_LOOKUP_CAM_OVERFLOW 255;
+}
+.%type S4 replication_information{
+__unnamed 0 53;
+}
+.%type S4 {
+__unnamed 0 54;
+__raw 0 0;
+}
+.%type S4 {
+group 0 44;
+rid 2 44;
+}

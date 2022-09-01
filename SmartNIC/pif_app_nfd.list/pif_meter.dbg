@@ -1,0 +1,89 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_260_V$439
+.%arg y 0 y_260_V$43a
+.%var result 0 result_260 LIX
+.%scope end
+.%scope function mem_meter _mem_meter "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_meter.c" 19 36
+.%arg mval 1 mval_262_V$43d
+.%arg addr 2 addr_262_V$43e
+.%arg colour 4 colour_262_V$43f
+.%arg rfc 4 rfc_262_V$440
+.%var meter_sig 5 meter_sig_262 LIX
+.%var high_addr 0 high_addr_262 LIX
+.%var low_addr 0 low_addr_262 LIX
+.%scope end
+.%scope function mult32_oflow0 _mult32_oflow0 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_meter.c" 42 61
+.%arg v0 0 v0_263_V$446
+.%arg v1 0 v1_263_V$447
+.%var result 0 result_263 LIX
+.%var result_hi 0 result_hi_263 LIX
+.%scope end
+.%scope function update_meter_timers _update_meter_timers "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_meter.c" 64 167
+.%arg meter 6 meter_264_V$44b
+.%var ctime 10 ctime_264 LIX
+.%var ctime_upper 0 ctime_upper_264 LIX
+.%var ptime_upper 0 ptime_upper_264 LIX
+.%var ctime_lower 0 ctime_lower_264 LIX
+.%var ptime_lower 0 ptime_lower_264 LIX
+.%var tdelta 0 tdelta_264 LIX
+.%var shift 11 shift_264 LIX
+.%var mdata_rd 7 mdata_rd_264 LIR
+.%var mdata_wr 12 mdata_wr_264 LIW
+.%scope block 117 150
+.%var Pdelta 0 Pdelta_268 LIX
+.%var Cdelta 0 Cdelta_268 LIX
+.%var newP 0 newP_268 LIX
+.%var newC 0 newC_268 LIX
+.%scope end
+.%scope block 154 166
+.%var val 0 val_273 LIW
+.%var tmr_addr 13 tmr_addr_273 LIX
+.%scope end
+.%scope end
+.%scope function pif_meter_execute _pif_meter_execute "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_meter.c" 173 206
+.%arg meter 6 meter_274_V$47b
+.%arg colour_in 4 colour_in_274_V$47c
+.%arg tick 4 tick_274_V$47d
+.%var xval32 0 xval32_274 LIX
+.%var offset 13 offset_274 LIX
+.%scope end
+.%type U4
+.%type P2 0
+.%type P3 3
+.%type U4
+.%type I4
+.%type S8 SIGNAL_PAIR{
+even 0 4;
+odd 4 4;
+}
+.%type P3 7
+.%type S32 pif_meter_data{
+bucket_P 0 0;
+bucket_C 4 0;
+__unnamed 8 8;
+last_update_low 12 0;
+PBS 16 0;
+PIR 20 0;
+config 24 0;
+reserved_word 28 0;
+}
+.%type S4 {
+__unnamed 0 9;
+last_update_high_shft 0 0;
+}
+.%type S4 last_update_high_enc{
+locked 0:31:1 0;
+reserved 0:29:2 0;
+cfg_shift 0:24:5 0;
+last_update_upper 0:0:24 0;
+}
+.%type U8
+.%type U1
+.%type S16 pif_meter_data_wr{
+bucket_P 0 0;
+bucket_C 4 0;
+last_update_high_shft 8 0;
+last_update_low 12 0;
+}
+.%type P3 11

@@ -1,0 +1,15 @@
+EAL: Detected 24 lcore(s)
+EAL: Detected 2 NUMA nodes
+EAL: Multi-process socket /var/run/dpdk/rte/mp_socket_18936_7045428e780fa9
+EAL: Selected IOVA mode 'VA'
+[Press Ctrl-C to quit ...]
+EAL: Probing VFIO support...
+EAL: No legacy callbacks, legacy socket not created
+cur_index:1, action:2, destination:1
+
+APP: Waiting for manager to assign an ID...
+There are no cores available for this NF
+EAL: Error - exiting with code: 1
+  Cause: Failed ONVM init
+exit status 1
+FAIL	test	1.108s

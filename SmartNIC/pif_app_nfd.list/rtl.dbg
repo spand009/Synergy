@@ -1,0 +1,1020 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function sram_write_ind _sram_write_ind "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4383 4406
+.%arg data 0 data_395_V$60
+.%arg address 2 address_395_V$61
+.%arg max_nn 3 max_nn_395_V$62
+.%arg ind 4 ind_395_V$63
+.%arg sync 9 sync_395_V$7c
+.%arg sig_ptr 10 sig_ptr_395_V$7d
+.%scope end
+.%var host_comm 12 _host_comm SEX
+.%var comm_ready 3 _comm_ready SEX
+.%scope function local_csr_read _local_csr_read "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4414 4427
+.%arg lcsr 14 lcsr_399_V$88
+.%var result 3 result_399 LIX
+.%scope end
+.%scope function local_csr_write _local_csr_write "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4430 4437
+.%arg lcsr 14 lcsr_401_V$8c
+.%arg data 3 data_401_V$8d
+.%scope end
+.%scope function dbl_shr _dbl_shr "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4440 4463
+.%arg srcA 3 srcA_403_V$8e
+.%arg srcB 3 srcB_403_V$8f
+.%arg shift_cnt 3 shift_cnt_403_V$90
+.%var result 3 result_403 LIX
+.%scope end
+.%scope function dbl_shl _dbl_shl "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4466 4477
+.%arg srcA 3 srcA_407_V$95
+.%arg srcB 3 srcB_407_V$96
+.%arg shift_cnt 3 shift_cnt_407_V$97
+.%var result 3 result_407 LIX
+.%scope end
+.%scope function _mul_64 __mul_64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 37 42
+.%arg x 15 x_113_V$9a
+.%arg y 15 y_113_V$9d
+.%scope end
+.%scope function _div_mod_32 __div_mod_32 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 50 94
+.%arg x 3 x_114_V$a1
+.%arg y 3 y_114_V$a2
+.%arg mod 3 mod_114_V$a3
+.%var lo 11 lo_114 LIX
+.%var hi 3 hi_114 LIX
+.%var i 3 i_114 LIX
+.%scope end
+.%scope function _mod_s32 __mod_s32 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 98 125
+.%arg x 11 x_121_V$a8
+.%arg y 11 y_121_V$a9
+.%var neg 11 neg_121 LIX
+.%var result 11 result_121 LIX
+.%scope end
+.%scope function _div_s32 __div_s32 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 129 158
+.%arg x 11 x_126_V$ad
+.%arg y 11 y_126_V$ae
+.%var neg 11 neg_126 LIX
+.%var result 11 result_126 LIX
+.%scope end
+.%scope function _mod_u32 __mod_u32 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 162 165
+.%arg x 11 x_131_V$b2
+.%arg y 11 y_131_V$b3
+.%scope end
+.%scope function _div_u32 __div_u32 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 170 173
+.%arg x 11 x_132_V$b5
+.%arg y 11 y_132_V$b6
+.%scope end
+.%scope function _div_mod_64 __div_mod_64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 178 221
+.%arg x 16 x_133_V$b8
+.%arg y 16 y_133_V$b9
+.%arg mod 3 mod_133_V$ba
+.%var lo 17 lo_133 LIX
+.%var hi 16 hi_133 LIX
+.%var i 3 i_133 LIX
+.%scope end
+.%scope function _mod_s64 __mod_s64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 225 252
+.%arg x 17 x_140_V$bf
+.%arg y 17 y_140_V$c0
+.%var neg 11 neg_140 LIX
+.%var result 17 result_140 LIX
+.%scope end
+.%scope function _div_s64 __div_s64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 256 285
+.%arg x 17 x_145_V$c4
+.%arg y 17 y_145_V$c5
+.%var neg 11 neg_145 LIX
+.%var result 17 result_145 LIX
+.%scope end
+.%scope function _mod_u64 __mod_u64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 289 292
+.%arg x 17 x_150_V$c9
+.%arg y 17 y_150_V$ca
+.%scope end
+.%scope function _div_u64 __div_u64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 297 300
+.%arg x 17 x_151_V$cc
+.%arg y 17 y_151_V$cd
+.%scope end
+.%scope function _shl_64 __shl_64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 307 336
+.%arg x 17 x_152_V$cf
+.%arg y 3 y_152_V$d0
+.%var result 17 result_152 LIX
+.%var thirtytwo 11 thirtytwo_152 LIX
+.%var y1 11 y1_152 LIX
+.%scope end
+.%scope function _shr_64 __shr_64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 338 359
+.%arg x 17 x_154_V$d5
+.%arg y 3 y_154_V$d6
+.%var result 17 result_154 LIX
+.%scope end
+.%scope function _ashr_64 __ashr_64 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 361 394
+.%arg x 17 x_155_V$d9
+.%arg y 3 y_155_V$da
+.%var ext 11 ext_155 LIX
+.%var result 18 result_155 LIX
+.%scope end
+.%scope function ua_set_8_lmem _ua_set_8_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 503 519
+.%arg q 20 q_160_V$f6
+.%arg offset 3 offset_160_V$f7
+.%arg val 3 val_160_V$f8
+.%var v 3 v_160 LIX
+.%var shift 3 shift_160 LIX
+.%var p 21 p_160 LIX
+.%scope end
+.%scope function ua_set_16_lmem _ua_set_16_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 527 556
+.%arg q 20 q_161_V$fc
+.%arg offset 3 offset_161_V$fd
+.%arg val 3 val_161_V$fe
+.%var ap 22 ap_161 LIX
+.%var shift 3 shift_161 LIX
+.%var mask1 3 mask1_161 LIX
+.%var mask2 3 mask2_161 LIX
+.%var v1 3 v1_161 LIX
+.%var v2 3 v2_161 LIX
+.%var p 3 p_161 LIX
+.%var l 16 l_161 LIX
+.%scope end
+.%scope function ua_set_32_lmem _ua_set_32_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 563 592
+.%arg q 20 q_162_V$107
+.%arg offset 3 offset_162_V$108
+.%arg val 3 val_162_V$109
+.%var ap 22 ap_162 LIX
+.%var shift 3 shift_162 LIX
+.%var mask1 3 mask1_162 LIX
+.%var mask2 3 mask2_162 LIX
+.%var v1 3 v1_162 LIX
+.%var v2 3 v2_162 LIX
+.%var p 3 p_162 LIX
+.%var l 16 l_162 LIX
+.%scope end
+.%scope function ua_set_8_cls _ua_set_8_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 599 615
+.%arg q 23 q_163_V$112
+.%arg offset 3 offset_163_V$113
+.%arg val 3 val_163_V$114
+.%var v 3 v_163 LIX
+.%var shift 3 shift_163 LIX
+.%var p 24 p_163 LIX
+.%scope end
+.%scope function ua_set_16_cls _ua_set_16_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 622 640
+.%arg q 23 q_164_V$118
+.%arg offset 3 offset_164_V$119
+.%arg val 3 val_164_V$11a
+.%var v 16 v_164 LIX
+.%var shift 3 shift_164 LIX
+.%var p 24 p_164 LIX
+.%scope end
+.%scope function ua_set_32_cls _ua_set_32_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 647 665
+.%arg q 23 q_165_V$11e
+.%arg offset 3 offset_165_V$11f
+.%arg val 3 val_165_V$120
+.%var v 16 v_165 LIX
+.%var shift 3 shift_165 LIX
+.%var p 24 p_165 LIX
+.%scope end
+.%scope function ua_set_64_cls _ua_set_64_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 684 738
+.%arg q 23 q_168_V$124
+.%arg offset 3 offset_168_V$125
+.%arg val 16 val_168_V$126
+.%var v 25 v_168 LIX
+.%var shift 3 shift_168 LIX
+.%var a 3 a_168 LIX
+.%var b 3 b_168 LIX
+.%var c 3 c_168 LIX
+.%var p 24 p_168 LIX
+.%scope end
+.%scope function ua_set_64_sram _ua_set_64_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 745 799
+.%arg q 27 q_171_V$13c
+.%arg offset 3 offset_171_V$13d
+.%arg val 16 val_171_V$13e
+.%var v 25 v_171 LIX
+.%var shift 3 shift_171 LIX
+.%var a 3 a_171 LIX
+.%var b 3 b_171 LIX
+.%var c 3 c_171 LIX
+.%var p 28 p_171 LIX
+.%scope end
+.%scope function ua_set_64_lmem _ua_set_64_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 806 860
+.%arg q 20 q_174_V$154
+.%arg offset 3 offset_174_V$155
+.%arg val 16 val_174_V$156
+.%var v 25 v_174 LIX
+.%var shift 3 shift_174 LIX
+.%var a 3 a_174 LIX
+.%var b 3 b_174 LIX
+.%var c 3 c_174 LIX
+.%var p 21 p_174 LIX
+.%scope end
+.%scope function ua_get_u8_lmem _ua_get_u8_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 867 882
+.%arg q 20 q_177_V$16c
+.%arg offset 3 offset_177_V$16d
+.%var v 3 v_177 LIX
+.%var shift 3 shift_177 LIX
+.%var p 21 p_177 LIX
+.%scope end
+.%scope function ua_get_u8_sram _ua_get_u8_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 889 904
+.%arg q 27 q_178_V$172
+.%arg offset 3 offset_178_V$173
+.%var v 3 v_178 LIX
+.%var shift 3 shift_178 LIX
+.%var p 28 p_178 LIX
+.%scope end
+.%scope function ua_get_u8_cls _ua_get_u8_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 911 926
+.%arg q 23 q_179_V$178
+.%arg offset 3 offset_179_V$179
+.%var v 3 v_179 LIX
+.%var shift 3 shift_179 LIX
+.%var p 24 p_179 LIX
+.%scope end
+.%scope function ua_get_u16_lmem _ua_get_u16_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 935 950
+.%arg q 20 q_180_V$17e
+.%arg offset 3 offset_180_V$17f
+.%var v 16 v_180 LIX
+.%var shift 3 shift_180 LIX
+.%var p 29 p_180 LIX
+.%scope end
+.%scope function ua_get_u16_sram _ua_get_u16_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 958 973
+.%arg q 27 q_181_V$184
+.%arg offset 3 offset_181_V$185
+.%var v 16 v_181 LIX
+.%var shift 3 shift_181 LIX
+.%var p 30 p_181 LIX
+.%scope end
+.%scope function ua_get_u16_cls _ua_get_u16_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 980 995
+.%arg q 23 q_182_V$18a
+.%arg offset 3 offset_182_V$18b
+.%var v 16 v_182 LIX
+.%var shift 3 shift_182 LIX
+.%var p 31 p_182 LIX
+.%scope end
+.%scope function ua_get_u32_lmem _ua_get_u32_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1003 1018
+.%arg q 20 q_183_V$190
+.%arg offset 3 offset_183_V$191
+.%var v 16 v_183 LIX
+.%var shift 3 shift_183 LIX
+.%var p 29 p_183 LIX
+.%scope end
+.%scope function ua_get_u32_sram _ua_get_u32_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1025 1040
+.%arg q 27 q_184_V$196
+.%arg offset 3 offset_184_V$197
+.%var v 16 v_184 LIX
+.%var shift 3 shift_184 LIX
+.%var p 30 p_184 LIX
+.%scope end
+.%scope function ua_get_u32_cls _ua_get_u32_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1047 1062
+.%arg q 23 q_185_V$19c
+.%arg offset 3 offset_185_V$19d
+.%var v 16 v_185 LIX
+.%var shift 3 shift_185 LIX
+.%var p 31 p_185 LIX
+.%scope end
+.%scope function ua_get_s8_lmem _ua_get_s8_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1068 1083
+.%arg q 20 q_186_V$1a2
+.%arg offset 3 offset_186_V$1a3
+.%var v 3 v_186 LIX
+.%var shift 3 shift_186 LIX
+.%var p 21 p_186 LIX
+.%scope end
+.%scope function ua_get_s8_sram _ua_get_s8_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1090 1105
+.%arg q 27 q_187_V$1a8
+.%arg offset 3 offset_187_V$1a9
+.%var v 3 v_187 LIX
+.%var shift 3 shift_187 LIX
+.%var p 28 p_187 LIX
+.%scope end
+.%scope function ua_get_s8_cls _ua_get_s8_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1111 1126
+.%arg q 23 q_188_V$1ae
+.%arg offset 3 offset_188_V$1af
+.%var v 3 v_188 LIX
+.%var shift 3 shift_188 LIX
+.%var p 24 p_188 LIX
+.%scope end
+.%scope function ua_get_s16_lmem _ua_get_s16_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1133 1148
+.%arg q 20 q_189_V$1b4
+.%arg offset 3 offset_189_V$1b5
+.%var v 16 v_189 LIX
+.%var shift 3 shift_189 LIX
+.%var p 29 p_189 LIX
+.%scope end
+.%scope function ua_get_s16_sram _ua_get_s16_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1156 1171
+.%arg q 27 q_190_V$1ba
+.%arg offset 3 offset_190_V$1bb
+.%var v 16 v_190 LIX
+.%var shift 3 shift_190 LIX
+.%var p 30 p_190 LIX
+.%scope end
+.%scope function ua_get_s16_cls _ua_get_s16_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1177 1192
+.%arg q 23 q_191_V$1c0
+.%arg offset 3 offset_191_V$1c1
+.%var v 16 v_191 LIX
+.%var shift 3 shift_191 LIX
+.%var p 31 p_191 LIX
+.%scope end
+.%scope function ua_get_s32_lmem _ua_get_s32_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1199 1214
+.%arg q 20 q_192_V$1c6
+.%arg offset 3 offset_192_V$1c7
+.%var v 16 v_192 LIX
+.%var shift 3 shift_192 LIX
+.%var p 29 p_192 LIX
+.%scope end
+.%scope function ua_get_s32_sram _ua_get_s32_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1221 1236
+.%arg q 27 q_193_V$1cc
+.%arg offset 3 offset_193_V$1cd
+.%var v 16 v_193 LIX
+.%var shift 3 shift_193 LIX
+.%var p 30 p_193 LIX
+.%scope end
+.%scope function ua_get_s32_cls _ua_get_s32_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1242 1257
+.%arg q 23 q_194_V$1d2
+.%arg offset 3 offset_194_V$1d3
+.%var v 16 v_194 LIX
+.%var shift 3 shift_194 LIX
+.%var p 31 p_194 LIX
+.%scope end
+.%scope function ua_get_64_sram _ua_get_64_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1264 1293
+.%arg q 27 q_195_V$1d8
+.%arg offset 3 offset_195_V$1d9
+.%var v 25 v_195 LIX
+.%var shift 3 shift_195 LIX
+.%var a 3 a_195 LIX
+.%var b 3 b_195 LIX
+.%var p 28 p_195 LIX
+.%scope end
+.%scope function ua_get_64_cls _ua_get_64_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1300 1329
+.%arg q 23 q_197_V$1ea
+.%arg offset 3 offset_197_V$1eb
+.%var v 25 v_197 LIX
+.%var shift 3 shift_197 LIX
+.%var a 3 a_197 LIX
+.%var b 3 b_197 LIX
+.%var p 24 p_197 LIX
+.%scope end
+.%scope function ua_get_64_lmem _ua_get_64_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1335 1364
+.%arg q 20 q_199_V$1fc
+.%arg offset 3 offset_199_V$1fd
+.%var v 25 v_199 LIX
+.%var shift 3 shift_199 LIX
+.%var a 3 a_199 LIX
+.%var b 3 b_199 LIX
+.%var p 21 p_199 LIX
+.%scope end
+.%scope function ua_get_u64_sram _ua_get_u64_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1372 1375
+.%arg p 27 p_201_V$20e
+.%arg offset 3 offset_201_V$20f
+.%scope end
+.%scope function ua_get_u64_cls _ua_get_u64_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1381 1384
+.%arg p 23 p_202_V$211
+.%arg offset 3 offset_202_V$212
+.%scope end
+.%scope function ua_get_u64_lmem _ua_get_u64_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1390 1393
+.%arg p 20 p_203_V$214
+.%arg offset 3 offset_203_V$215
+.%scope end
+.%scope function ua_get_s64_sram _ua_get_s64_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1401 1404
+.%arg p 27 p_204_V$217
+.%arg offset 3 offset_204_V$218
+.%scope end
+.%scope function ua_get_s64_cls _ua_get_s64_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1410 1413
+.%arg p 23 p_205_V$21a
+.%arg offset 3 offset_205_V$21b
+.%scope end
+.%scope function ua_get_s64_lmem _ua_get_s64_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1419 1422
+.%arg p 20 p_206_V$21d
+.%arg offset 3 offset_206_V$21e
+.%scope end
+.%scope function ua_memcpy_sram_sram _ua_memcpy_sram_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1429 1459
+.%arg dst 27 dst_207_V$220
+.%arg dst_off 3 dst_off_207_V$221
+.%arg src 27 src_207_V$222
+.%arg src_off 3 src_off_207_V$223
+.%arg length 3 length_207_V$224
+.%scope end
+.%scope function ua_memcpy_lmem_lmem _ua_memcpy_lmem_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1466 1481
+.%arg dst 20 dst_212_V$225
+.%arg dst_off 3 dst_off_212_V$226
+.%arg src 20 src_212_V$227
+.%arg src_off 3 src_off_212_V$228
+.%arg length 3 length_212_V$229
+.%var p 32 p_212 LIX
+.%var q 32 q_212 LIX
+.%var i 3 i_212 LIX
+.%scope end
+.%scope function ua_memcpy_lmem_sram _ua_memcpy_lmem_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1487 1502
+.%arg dst 20 dst_214_V$22d
+.%arg dst_off 3 dst_off_214_V$22e
+.%arg src 27 src_214_V$22f
+.%arg src_off 3 src_off_214_V$230
+.%arg length 3 length_214_V$231
+.%var p 32 p_214 LIX
+.%var q 34 q_214 LIX
+.%var i 3 i_214 LIX
+.%scope end
+.%scope function ua_memcpy_lmem_cls _ua_memcpy_lmem_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1508 1523
+.%arg dst 20 dst_216_V$235
+.%arg dst_off 3 dst_off_216_V$236
+.%arg src 23 src_216_V$237
+.%arg src_off 3 src_off_216_V$238
+.%arg length 3 length_216_V$239
+.%var p 32 p_216 LIX
+.%var q 35 q_216 LIX
+.%var i 3 i_216 LIX
+.%scope end
+.%scope function ua_memcpy_sram_lmem _ua_memcpy_sram_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1530 1545
+.%arg dst 27 dst_218_V$23d
+.%arg dst_off 3 dst_off_218_V$23e
+.%arg src 20 src_218_V$23f
+.%arg src_off 3 src_off_218_V$240
+.%arg length 3 length_218_V$241
+.%var p 34 p_218 LIX
+.%var q 32 q_218 LIX
+.%var i 3 i_218 LIX
+.%scope end
+.%scope function ua_memcpy_cls_lmem _ua_memcpy_cls_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1552 1567
+.%arg dst 23 dst_220_V$245
+.%arg dst_off 3 dst_off_220_V$246
+.%arg src 20 src_220_V$247
+.%arg src_off 3 src_off_220_V$248
+.%arg length 3 length_220_V$249
+.%var q 32 q_220 LIX
+.%var p 35 p_220 LIX
+.%var i 3 i_220 LIX
+.%scope end
+.%scope function ua_memcpy_lmem0_7_xfer_w_clr _ua_memcpy_lmem0_7_xfer_w_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 1578 2774
+.%arg dst 20 dst_222_V$24d
+.%arg dst_off 3 dst_off_222_V$24e
+.%arg ctx 3 ctx_222_V$24f
+.%arg xfer_reg_number 3 xfer_reg_number_222_V$250
+.%arg src_off 3 src_off_222_V$251
+.%arg length 3 length_222_V$252
+.%var ii 3 ii_222 LIX
+.%var Z 3 Z_222 LIX
+.%var M 3 M_222 LIX
+.%var lm_off 3 lm_off_222 LIX
+.%var d 3 d_222 LIX
+.%var s 3 s_222 LIX
+.%var tibi 3 tibi_222 LIX
+.%scope end
+.%scope function exit _exit "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 2819 2833
+.%arg status 11 status_292_V$25a
+.%scope end
+.%scope function exit_thread _exit_thread "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 2835 2849
+.%arg status 11 status_293_V$25b
+.%scope end
+.%scope function ua_set_8_sram _ua_set_8_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 2855 2877
+.%arg q 27 q_294_V$25c
+.%arg offset 3 offset_294_V$25d
+.%arg val 3 val_294_V$25e
+.%var ap 36 ap_294 LIX
+.%var shift 3 shift_294 LIX
+.%var byte_shift 3 byte_shift_294 LIX
+.%var p 3 p_294 LIX
+.%var sig 11 sig_294 LIX
+.%var sw 11 sw_294 LIW
+.%var sind 4 sind_294 LIX
+.%scope end
+.%scope function ua_set_16_sram _ua_set_16_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 2884 2953
+.%arg q 27 q_298_V$27e
+.%arg offset 3 offset_298_V$27f
+.%arg val 3 val_298_V$280
+.%var ap 36 ap_298 LIX
+.%var shift 3 shift_298 LIX
+.%var byte_shift 3 byte_shift_298 LIX
+.%var v2 3 v2_298 LIX
+.%var p 3 p_298 LIX
+.%var p2 3 p2_298 LIX
+.%var sig1 11 sig1_298 LIX
+.%var sig2 11 sig2_298 LIX
+.%var sw1 11 sw1_298 LIW
+.%var sw2 11 sw2_298 LIW
+.%var sind 4 sind_298 LIX
+.%var l 16 l_298 LIX
+.%scope end
+.%scope function ua_set_32_sram _ua_set_32_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 2957 3027
+.%arg q 27 q_305_V$2a5
+.%arg offset 3 offset_305_V$2a6
+.%arg val 3 val_305_V$2a7
+.%var ap 36 ap_305 LIX
+.%var shift 3 shift_305 LIX
+.%var byte_shift 3 byte_shift_305 LIX
+.%var v2 3 v2_305 LIX
+.%var p 3 p_305 LIX
+.%var p2 3 p2_305 LIX
+.%var sig1 11 sig1_305 LIX
+.%var sig2 11 sig2_305 LIX
+.%var sw1 11 sw1_305 LIW
+.%var sw2 11 sw2_305 LIW
+.%var sind 4 sind_305 LIX
+.%var l 16 l_305 LIX
+.%scope end
+.%scope function ua_set_8_mem _ua_set_8_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3037 3074
+.%arg q 37 q_312_V$2cc
+.%arg offset 3 offset_312_V$2cd
+.%arg val 3 val_312_V$2ce
+.%var p 38 p_312 LIX
+.%var data 39 data_312 LIW
+.%var pp 40 pp_312 LIX
+.%var bulk_sig 11 bulk_sig_312 LIX
+.%var shift 3 shift_312 LIX
+.%var byte_shift 3 byte_shift_312 LIX
+.%var dind 4 dind_312 LIX
+.%scope end
+.%scope function ua_set_16_mem _ua_set_16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3080 3189
+.%arg q 37 q_313_V$2ef
+.%arg offset 3 offset_313_V$2f0
+.%arg val 3 val_313_V$2f1
+.%var p 38 p_313 LIX
+.%var data 42 data_313 LIW
+.%var bulk_sig 11 bulk_sig_313 LIX
+.%var shift 3 shift_313 LIX
+.%var byte_shift 3 byte_shift_313 LIX
+.%var pp 43 pp_313 LIX
+.%var high_byte_shift 3 high_byte_shift_313 LIX
+.%var low_byte_shift 3 low_byte_shift_313 LIX
+.%var low 41 low_313 LIX
+.%var high 41 high_313 LIX
+.%var data0 3 data0_313 LIX
+.%var data1 3 data1_313 LIX
+.%var dind 4 dind_313 LIX
+.%scope end
+.%scope function ua_set_32_mem _ua_set_32_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3208 3259
+.%arg q 37 q_316_V$318
+.%arg offset 3 offset_316_V$319
+.%arg val 3 val_316_V$31a
+.%var v 45 v_316 LIX
+.%var mask 47 mask_316 LIX
+.%var data 47 data_316 LIX
+.%var shift 3 shift_316 LIX
+.%var p 49 p_316 LIX
+.%var pp 50 pp_316 LIX
+.%scope end
+.%scope function ua_set_64_mem _ua_set_64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3266 3360
+.%arg q 37 q_319_V$335
+.%arg offset 3 offset_319_V$336
+.%arg val 16 val_319_V$337
+.%var v 45 v_319 LIX
+.%var shift 3 shift_319 LIX
+.%var a 3 a_319 LIX
+.%var b 3 b_319 LIX
+.%var c 3 c_319 LIX
+.%var p 49 p_319 LIX
+.%scope end
+.%scope function ua_get_u8_mem _ua_get_u8_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3371 3393
+.%arg q 37 q_320_V$34a
+.%arg offset 3 offset_320_V$34b
+.%var v 16 v_320 LIX
+.%var shift 3 shift_320 LIX
+.%var pp 40 pp_320 LIX
+.%var p 49 p_320 LIX
+.%scope end
+.%scope function ua_get_u16_mem _ua_get_u16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3402 3475
+.%arg q 37 q_321_V$351
+.%arg offset 3 offset_321_V$352
+.%var v 16 v_321 LIX
+.%var v1 16 v1_321 LIX
+.%var shift 3 shift_321 LIX
+.%var and_result 3 and_result_321 LIX
+.%var p 49 p_321 LIX
+.%scope end
+.%scope function ua_get_u32_mem _ua_get_u32_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3482 3561
+.%arg q 37 q_323_V$359
+.%arg offset 3 offset_323_V$35a
+.%var v 16 v_323 LIX
+.%var v1 16 v1_323 LIX
+.%var shift 3 shift_323 LIX
+.%var p 49 p_323 LIX
+.%var pp 50 pp_323 LIX
+.%scope end
+.%scope function ua_get_s8_mem _ua_get_s8_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3569 3591
+.%arg q 37 q_324_V$361
+.%arg offset 3 offset_324_V$362
+.%var v 16 v_324 LIX
+.%var shift 3 shift_324 LIX
+.%var pp 51 pp_324 LIX
+.%var p 49 p_324 LIX
+.%scope end
+.%scope function ua_get_s16_mem _ua_get_s16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3600 3673
+.%arg q 37 q_325_V$368
+.%arg offset 3 offset_325_V$369
+.%var v 16 v_325 LIX
+.%var v1 16 v1_325 LIX
+.%var shift 3 shift_325 LIX
+.%var and_result 3 and_result_325 LIX
+.%var p 49 p_325 LIX
+.%scope end
+.%scope function ua_get_s32_mem _ua_get_s32_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3684 3763
+.%arg q 37 q_327_V$370
+.%arg offset 3 offset_327_V$371
+.%var v 16 v_327 LIX
+.%var v1 16 v1_327 LIX
+.%var shift 3 shift_327 LIX
+.%var p 49 p_327 LIX
+.%var pp 52 pp_327 LIX
+.%scope end
+.%scope function ua_get_64_mem _ua_get_64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3771 3826
+.%arg q 37 q_328_V$378
+.%arg offset 3 offset_328_V$379
+.%var v 45 v_328 LIX
+.%var shift 3 shift_328 LIX
+.%var p 49 p_328 LIX
+.%scope end
+.%scope function ua_get_u64_mem _ua_get_u64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3834 3837
+.%arg p 37 p_329_V$38a
+.%arg offset 3 offset_329_V$38b
+.%scope end
+.%scope function ua_get_s64_mem _ua_get_s64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3845 3848
+.%arg p 37 p_330_V$38d
+.%arg offset 3 offset_330_V$38e
+.%scope end
+.%scope function ua_set_ptr40_8_mem _ua_set_ptr40_8_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3851 3866
+.%arg hi_q 37 hi_q_331_V$390
+.%arg q 37 q_331_V$391
+.%arg offset 3 offset_331_V$392
+.%arg val 3 val_331_V$393
+.%var pp 53 pp_331 LIX
+.%var hi_addr 3 hi_addr_331 LIX
+.%var low_addr 3 low_addr_331 LIX
+.%scope end
+.%scope function ua_set_ptr40_16_mem _ua_set_ptr40_16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3868 3883
+.%arg hi_q 37 hi_q_333_V$397
+.%arg q 37 q_333_V$398
+.%arg offset 3 offset_333_V$399
+.%arg val 3 val_333_V$39a
+.%var pp 54 pp_333 LIX
+.%var hi_addr 3 hi_addr_333 LIX
+.%var low_addr 3 low_addr_333 LIX
+.%scope end
+.%scope function ua_set_ptr40_32_mem _ua_set_ptr40_32_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3885 3900
+.%arg hi_q 37 hi_q_335_V$39e
+.%arg q 37 q_335_V$39f
+.%arg offset 3 offset_335_V$3a0
+.%arg val 3 val_335_V$3a1
+.%var pp 55 pp_335 LIX
+.%var hi_addr 3 hi_addr_335 LIX
+.%var low_addr 3 low_addr_335 LIX
+.%scope end
+.%scope function ua_set_ptr40_64_mem _ua_set_ptr40_64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3902 3917
+.%arg hi_q 37 hi_q_337_V$3a5
+.%arg q 37 q_337_V$3a6
+.%arg offset 3 offset_337_V$3a7
+.%arg val 16 val_337_V$3a8
+.%var pp 56 pp_337 LIX
+.%var hi_addr 3 hi_addr_337 LIX
+.%var low_addr 3 low_addr_337 LIX
+.%scope end
+.%scope function ua_get_ptr40_64_mem _ua_get_ptr40_64_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3919 3933
+.%arg hi_q 37 hi_q_339_V$3ac
+.%arg q 37 q_339_V$3ad
+.%arg offset 3 offset_339_V$3ae
+.%var p 56 p_339 LIX
+.%var hi_addr 3 hi_addr_339 LIX
+.%var low_addr 3 low_addr_339 LIX
+.%scope end
+.%scope function ua_get_ptr40_32_mem _ua_get_ptr40_32_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3935 3949
+.%arg hi_q 37 hi_q_341_V$3b3
+.%arg q 37 q_341_V$3b4
+.%arg offset 3 offset_341_V$3b5
+.%var p 55 p_341 LIX
+.%var hi_addr 3 hi_addr_341 LIX
+.%var low_addr 3 low_addr_341 LIX
+.%scope end
+.%scope function ua_get_ptr40_16_mem _ua_get_ptr40_16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3951 3965
+.%arg hi_q 37 hi_q_343_V$3ba
+.%arg q 37 q_343_V$3bb
+.%arg offset 3 offset_343_V$3bc
+.%var p 54 p_343 LIX
+.%var hi_addr 3 hi_addr_343 LIX
+.%var low_addr 3 low_addr_343 LIX
+.%scope end
+.%scope function ua_get_ptr40_8_mem _ua_get_ptr40_8_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3967 3981
+.%arg hi_q 37 hi_q_345_V$3c1
+.%arg q 37 q_345_V$3c2
+.%arg offset 3 offset_345_V$3c3
+.%var p 53 p_345 LIX
+.%var hi_addr 3 hi_addr_345 LIX
+.%var low_addr 3 low_addr_345 LIX
+.%scope end
+.%scope function ua_set_8_mem40 _ua_set_8_mem40 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3983 3986
+.%arg ptr 37 ptr_347_V$3c8
+.%arg off 3 off_347_V$3c9
+.%arg val 3 val_347_V$3ca
+.%scope end
+.%scope function ua_set_16_mem40 _ua_set_16_mem40 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3988 3991
+.%arg ptr 37 ptr_348_V$3cb
+.%arg off 3 off_348_V$3cc
+.%arg val 3 val_348_V$3cd
+.%scope end
+.%scope function ua_set_32_mem40 _ua_set_32_mem40 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3993 3996
+.%arg ptr 37 ptr_349_V$3ce
+.%arg off 3 off_349_V$3cf
+.%arg val 3 val_349_V$3d0
+.%scope end
+.%scope function ua_set_64_mem40 _ua_set_64_mem40 "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 3998 4001
+.%arg ptr 37 ptr_350_V$3d1
+.%arg off 3 off_350_V$3d2
+.%arg val 16 val_350_V$3d3
+.%scope end
+.%scope function ua_memcpy_mem_mem _ua_memcpy_mem_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4010 4061
+.%arg dst 37 dst_351_V$3d4
+.%arg dst_off 3 dst_off_351_V$3d5
+.%arg src 37 src_351_V$3d6
+.%arg src_off 3 src_off_351_V$3d7
+.%arg length 3 length_351_V$3d8
+.%scope block 4013 4024
+.%var ddst 49 ddst_352 LIX
+.%var ssrc 49 ssrc_352 LIX
+.%scope end
+.%scope block 4026 4037
+.%var ddst 50 ddst_353 LIX
+.%var ssrc 50 ssrc_353 LIX
+.%scope end
+.%scope block 4039 4050
+.%var ddst 43 ddst_354 LIX
+.%var ssrc 43 ssrc_354 LIX
+.%scope end
+.%scope block 4052 4060
+.%var ddst 40 ddst_355 LIX
+.%var ssrc 40 ssrc_355 LIX
+.%scope end
+.%scope end
+.%scope function ua_memcpy_mem_sram _ua_memcpy_mem_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4067 4094
+.%arg dst 37 dst_356_V$3e1
+.%arg dst_off 3 dst_off_356_V$3e2
+.%arg src 27 src_356_V$3e3
+.%arg src_off 3 src_off_356_V$3e4
+.%arg length 3 length_356_V$3e5
+.%scope end
+.%scope function ua_memcpy_mem_cls _ua_memcpy_mem_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4100 4127
+.%arg dst 37 dst_361_V$3e6
+.%arg dst_off 3 dst_off_361_V$3e7
+.%arg src 23 src_361_V$3e8
+.%arg src_off 3 src_off_361_V$3e9
+.%arg length 3 length_361_V$3ea
+.%scope end
+.%scope function ua_memcpy_sram_mem _ua_memcpy_sram_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4134 4181
+.%arg dst 27 dst_366_V$3eb
+.%arg dst_off 3 dst_off_366_V$3ec
+.%arg src 37 src_366_V$3ed
+.%arg src_off 3 src_off_366_V$3ee
+.%arg length 3 length_366_V$3ef
+.%scope block 4137 4147
+.%var ssrc 49 ssrc_367 LIX
+.%scope end
+.%scope block 4149 4159
+.%var ssrc 50 ssrc_368 LIX
+.%scope end
+.%scope block 4161 4171
+.%var ssrc 43 ssrc_369 LIX
+.%scope end
+.%scope block 4173 4180
+.%var ssrc 40 ssrc_370 LIX
+.%scope end
+.%scope end
+.%scope function ua_memcpy_cls_mem _ua_memcpy_cls_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4188 4235
+.%arg dst 23 dst_371_V$3f4
+.%arg dst_off 3 dst_off_371_V$3f5
+.%arg src 37 src_371_V$3f6
+.%arg src_off 3 src_off_371_V$3f7
+.%arg length 3 length_371_V$3f8
+.%scope block 4191 4201
+.%var ssrc 49 ssrc_372 LIX
+.%scope end
+.%scope block 4203 4213
+.%var ssrc 50 ssrc_373 LIX
+.%scope end
+.%scope block 4215 4225
+.%var ssrc 43 ssrc_374 LIX
+.%scope end
+.%scope block 4227 4234
+.%var ssrc 40 ssrc_375 LIX
+.%scope end
+.%scope end
+.%scope function ua_memcpy_sram_cls _ua_memcpy_sram_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4242 4269
+.%arg dst 27 dst_376_V$3fd
+.%arg dst_off 3 dst_off_376_V$3fe
+.%arg src 23 src_376_V$3ff
+.%arg src_off 3 src_off_376_V$400
+.%arg length 3 length_376_V$401
+.%scope end
+.%scope function ua_memcpy_cls_sram _ua_memcpy_cls_sram "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4275 4302
+.%arg dst 23 dst_381_V$402
+.%arg dst_off 3 dst_off_381_V$403
+.%arg src 27 src_381_V$404
+.%arg src_off 3 src_off_381_V$405
+.%arg length 3 length_381_V$406
+.%scope end
+.%scope function ua_memcpy_cls_cls _ua_memcpy_cls_cls "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4308 4338
+.%arg dst 23 dst_386_V$407
+.%arg dst_off 3 dst_off_386_V$408
+.%arg src 23 src_386_V$409
+.%arg src_off 3 src_off_386_V$40a
+.%arg length 3 length_386_V$40b
+.%scope end
+.%scope function ua_memcpy_lmem_mem _ua_memcpy_lmem_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4344 4356
+.%arg dst 20 dst_391_V$40c
+.%arg dst_off 3 dst_off_391_V$40d
+.%arg src 37 src_391_V$40e
+.%arg src_off 3 src_off_391_V$40f
+.%arg length 3 length_391_V$410
+.%var p 32 p_391 LIX
+.%var q 51 q_391 LIX
+.%var i 3 i_391 LIX
+.%scope end
+.%scope function ua_memcpy_mem_lmem _ua_memcpy_mem_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/components/standardlibrary/microc/src/rtl.c" 4363 4375
+.%arg dst 37 dst_393_V$414
+.%arg dst_off 3 dst_off_393_V$415
+.%arg src 20 src_393_V$416
+.%arg src_off 3 src_off_393_V$417
+.%arg length 3 length_393_V$418
+.%var p 51 p_393 LIX
+.%var q 32 q_393 LIX
+.%var i 3 i_393 LIX
+.%scope end
+.%type P2 1
+.%type U4
+.%type P2 1
+.%type U4
+.%type S8 generic_ind_t{
+alu_ind 0 5;
+csr_ind 4 7;
+}
+.%type S4 override_alu_ind_t{
+__unnamed 0 6;
+value 0 3;
+}
+.%type S4 {
+data16 0:16:16 3;
+reserved 0:15:1 3;
+override_signal_ctx 0:14:1 3;
+override_signal_num 0:13:1 3;
+ref_count 0:8:5 3;
+override_length 0:7:1 3;
+override_bytemask_csr 0:6:1 3;
+override_data 0:3:3 3;
+override_master 0:1:2 3;
+override_signal_master 0:0:1 3;
+}
+.%type S4 override_csr_ind_t{
+__unnamed 0 8;
+value 0 3;
+}
+.%type S4 {
+reserved_1 0:30:2 3;
+island 0:24:6 3;
+master 0:20:4 3;
+signal_master 0:16:4 3;
+signal_ctx 0:13:3 3;
+signal_num 0:9:4 3;
+reserved_2 0:8:1 3;
+byte_mask 0:0:8 3;
+}
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 11
+.%type I4
+.%type P3 13
+.%type S16 host_comm_struct{
+data 0 3;
+thread 4 3;
+command 8 3;
+reserved 12 3;
+}
+.%type E4 {
+local_csr_ustore_address 0;
+local_csr_ustore_data_lower 1;
+local_csr_ustore_data_upper 2;
+local_csr_ustore_error_status 3;
+local_csr_alu_out 4;
+local_csr_ctx_arb_cntl 5;
+local_csr_ctx_enables 6;
+local_csr_cc_enable 7;
+local_csr_csr_ctx_pointer 8;
+local_csr_pc_breakpoint_0 9;
+local_csr_pc_breakpoint_1 10;
+local_csr_pc_breakpoint_status 11;
+local_csr_lm_register_error_status 12;
+local_csr_lm_error_status 13;
+local_csr_lm_error_mask 14;
+local_csr_indirect_ctx_sts 16;
+local_csr_active_ctx_sts 17;
+local_csr_indirect_ctx_sig_events 18;
+local_csr_active_ctx_sig_events 19;
+local_csr_indirect_ctx_wakeup_events 20;
+local_csr_active_ctx_wakeup_events 21;
+local_csr_indirect_ctx_future_count 22;
+local_csr_active_ctx_future_count 23;
+local_csr_byte_index 28;
+local_csr_t_index 29;
+local_csr_indirect_future_count_signal 30;
+local_csr_active_future_count_signal 31;
+local_csr_nn_put 32;
+local_csr_nn_get 33;
+local_csr_indirect_lm_addr_0 24;
+local_csr_active_lm_addr_0 25;
+local_csr_indirect_lm_addr_1 26;
+local_csr_active_lm_addr_1 27;
+local_csr_indirect_lm_addr_2 36;
+local_csr_active_lm_addr_2 37;
+local_csr_indirect_lm_addr_3 38;
+local_csr_active_lm_addr_3 39;
+local_csr_indirect_lm_addr_0_byte_index 56;
+local_csr_active_lm_addr_0_byte_index 57;
+local_csr_indirect_lm_addr_1_byte_index 58;
+local_csr_active_lm_addr_1_byte_index 59;
+local_csr_indirect_lm_addr_2_byte_index 40;
+local_csr_active_lm_addr_2_byte_index 41;
+local_csr_indirect_lm_addr_3_byte_index 42;
+local_csr_active_lm_addr_3_byte_index 43;
+local_csr_indirect_predicate_cc 44;
+local_csr_t_index_byte_index 61;
+local_csr_timestamp_low 48;
+local_csr_timestamp_high 49;
+local_csr_next_neighbor_signal 64;
+local_csr_prev_neighbor_signal 65;
+local_csr_same_me_signal 66;
+local_csr_crc_remainder 80;
+local_csr_profile_count 81;
+local_csr_pseudo_random_number 82;
+local_csr_misc_control 88;
+pc_breakpoint_0_mask 89;
+pc_breakpoint_1_mask 90;
+local_csr_mailbox0 92;
+local_csr_mailbox1 93;
+local_csr_mailbox2 94;
+local_csr_mailbox3 95;
+local_csr_mailbox_0 92;
+local_csr_mailbox_1 93;
+local_csr_mailbox_2 94;
+local_csr_mailbox_3 95;
+local_csr_cmd_indirect_ref0 100;
+local_csr_cmd_indirect_ref1 101;
+local_csr_cmd_indirect_ref_0 100;
+local_csr_cmd_indirect_ref_1 101;
+local_csr_reserved 255;
+}
+.%type S8 lohi{
+hi 0 3;
+lo 4 3;
+}
+.%type U8
+.%type I8
+.%type S8 two_ints{
+i 0 19;
+ll 0 17;
+}
+.%type S8 {
+hi 0 11;
+lo 4 11;
+}
+.%type P6 1
+.%type P6 3
+.%type P6 3
+.%type P12 1
+.%type P12 3
+.%type S16 threelong{
+__unnamed 0 26;
+ll 0 17;
+}
+.%type S12 {
+a 0 3;
+b 4 3;
+c 8 3;
+}
+.%type P2 1
+.%type P2 3
+.%type P6 16
+.%type P2 16
+.%type P12 16
+.%type P6 33
+.%type I1
+.%type P2 33
+.%type P12 33
+.%type P2 3
+.%type P3 1
+.%type P3 1
+.%type A8 3
+.%type P3 41
+.%type U1
+.%type A8 3
+.%type P3 44
+.%type U2
+.%type S16 fourlong{
+__unnamed 0 46;
+ll 0 17;
+}
+.%type S16 {
+a 0 11;
+b 4 11;
+c 8 11;
+d 12 11;
+}
+.%type S8 {
+__unnamed 0 48;
+ll 0 17;
+}
+.%type S8 {
+a 0 11;
+b 4 11;
+}
+.%type P3 16
+.%type P3 3
+.%type P3 33
+.%type P3 11
+.%type P3 41
+.%type P3 44
+.%type P3 3
+.%type P3 16

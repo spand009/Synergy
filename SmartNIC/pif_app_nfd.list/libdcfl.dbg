@@ -1,0 +1,375 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var dcfl_lkp_overflow_counter 1 _dcfl_lkp_overflow_counter SEX
+.%var dcfl_cross_overflow_counter 1 _dcfl_cross_overflow_counter SEX
+.%var dcfl_me_cfg 2 _dcfl_me_cfg SEX
+.%scope function dcfl_get_hdr_valid_val _dcfl_get_hdr_valid_val "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 282 292
+.%arg hdr_valid 22 hdr_valid_171_V$53f
+.%arg localkey 23 localkey_171_V$540
+.%arg f_cfg 24 f_cfg_171_V$541
+.%var word 0 word_171 LIX
+.%scope end
+.%scope function dcfl_get_hdr_valid_val_from_mem _dcfl_get_hdr_valid_val_from_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 295 310
+.%arg hdr_valid 22 hdr_valid_172_V$582
+.%arg key 25 key_172_V$583
+.%arg f_cfg 24 f_cfg_172_V$584
+.%var read_buf 27 read_buf_172 LIR
+.%var word 0 word_172 LIX
+.%scope end
+.%scope function dcfl_get_field_value _dcfl_get_field_value "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 314 366
+.%arg valid_val 28 valid_val_173_V$5c7
+.%arg value 29 value_173_V$5c8
+.%arg localkey 23 localkey_173_V$5c9
+.%arg f_cfg 24 f_cfg_173_V$5ca
+.%var field_mask 0 field_mask_173 LIX
+.%var word 0 word_173 LIX
+.%var bitlen 0 bitlen_173 LIX
+.%var reg_offset 0 reg_offset_173 LIX
+.%var i 0 i_173 LIX
+.%scope end
+.%scope function dcfl_get_field_value_from_mem _dcfl_get_field_value_from_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 369 427
+.%arg valid_val 28 valid_val_180_V$624
+.%arg value 29 value_180_V$625
+.%arg key 25 key_180_V$626
+.%arg f_cfg 24 f_cfg_180_V$627
+.%var read_buf 30 read_buf_180 LIR
+.%var field_mask 0 field_mask_180 LIX
+.%var word 0 word_180 LIX
+.%var bitlen 0 bitlen_180 LIX
+.%var reg_offset 0 reg_offset_180 LIX
+.%var i 0 i_180 LIX
+.%scope end
+.%scope function cmd_mem_lookup _cmd_mem_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/an.c" 155 196
+.%arg xfer 31 xfer_341_V$66e
+.%arg address 33 address_341_V$66f
+.%arg count 0 count_341_V$670
+.%arg sync 34 sync_341_V$671
+.%arg sig_pair_ptr 35 sig_pair_ptr_341_V$672
+.%scope block 164 194
+.%var hi_addr 0 hi_addr_342 LIX
+.%var low_addr 0 low_addr_342 LIX
+.%scope end
+.%scope end
+.%scope function dcfl_dlut_field_lookup _dcfl_dlut_field_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 147 178
+.%arg value 29 value_157_V$67e
+.%arg field_lkp_base 0 field_lkp_base_157_V$67f
+.%arg field_lkp_base_hi 0 field_lkp_base_hi_157_V$680
+.%arg startbit 37 startbit_157_V$681
+.%var large_table_desc 38 large_table_desc_157 LIX
+.%var lookup_index 43 lookup_index_157 LIW
+.%var sig_pair 36 sig_pair_157 LIX
+.%var addr_hi 0 addr_hi_157 LIX
+.%var result 0 result_157 LIX
+.%scope end
+.%scope function dcfl_field_lookup _dcfl_field_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/field_lkp.c" 182 278
+.%arg labels 44 labels_158_V$696
+.%arg valid_val 53 valid_val_158_V$697
+.%arg value 29 value_158_V$698
+.%arg field_cfg 24 field_cfg_158_V$699
+.%arg hdr_valid 0 hdr_valid_158_V$69a
+.%var nlabels 37 nlabels_158 LIX
+.%var wildcard 0 wildcard_158 LIX
+.%var label 0 label_158 LIX
+.%var multilabel_idx 0 multilabel_idx_158 LIX
+.%var multilabel_addr 54 multilabel_addr_158 LIX
+.%var multilabel 55 multilabel_158 LIR
+.%scope block 220 233
+.%var vld 37 vld_162 LIX
+.%var lbl 37 lbl_162 LIX
+.%scope end
+.%scope end
+.%scope function dcfl_an_final _dcfl_an_final "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/an.c" 16 152
+.%arg labels_in1 44 labels_in1_326_V$799
+.%arg nlabel1 0 nlabel1_326_V$79a
+.%arg labels_in2 44 labels_in2_326_V$79b
+.%arg nlabel2 0 nlabel2_326_V$79c
+.%arg labels_out 44 labels_out_326_V$79d
+.%arg stage_base 0 stage_base_326_V$79e
+.%arg stage_base_hi 0 stage_base_hi_326_V$79f
+.%var labels_in1_id 0 labels_in1_id_326 LIX
+.%var labels_in2_id 0 labels_in2_id_326 LIX
+.%var labels_out_cnt 0 labels_out_cnt_326 LIX
+.%var labels_in2_label 49 labels_in2_label_326 LIX
+.%var i 0 i_326 LIX
+.%var num_an_entries 0 num_an_entries_326 LIX
+.%var an_base 54 an_base_326 LIX
+.%var addr_an_block 54 addr_an_block_326 LIX
+.%var an_entries 56 an_entries_326 LIR
+.%var an_entry 57 an_entry_326 LIX
+.%var prio_entry 57 prio_entry_326 LIR
+.%var priority_idx 0 priority_idx_326 LIX
+.%var priority 0 priority_326 LIX
+.%var lowest_prio 0 lowest_prio_326 LIX
+.%var prev_prio 0 prev_prio_326 LIX
+.%var priority_rule_idx 0 priority_rule_idx_326 LIX
+.%var prio_found 0 prio_found_326 LIX
+.%scope end
+.%scope function dcfl_an_lkp _dcfl_an_lkp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/_c/an.c" 199 259
+.%arg labels_in1 44 labels_in1_349_V$80d
+.%arg nlabel1 0 nlabel1_349_V$80e
+.%arg labels_in2 44 labels_in2_349_V$80f
+.%arg nlabel2 0 nlabel2_349_V$810
+.%arg labels_out 44 labels_out_349_V$811
+.%arg stage_base 0 stage_base_349_V$812
+.%arg stage_base_hi 0 stage_base_hi_349_V$813
+.%arg an_alut_loc_reg 0 an_alut_loc_reg_349_V$814
+.%var labels_in1_id 0 labels_in1_id_349 LIX
+.%var labels_in2_id 0 labels_in2_id_349 LIX
+.%var nlabels_out 49 nlabels_out_349 LIX
+.%var addr_an_block 1 addr_an_block_349 LIX
+.%var alut_table_desc 62 alut_table_desc_349 LIX
+.%var lookup_index 65 lookup_index_349 LIW
+.%var sig_pair 36 sig_pair_349 LIX
+.%var lkp_value 66 lkp_value_349 LIX
+.%var read_result 67 read_result_349 LIX
+.%var pmm 69 pmm_349 LIX
+.%var addr_stage_hi 1 addr_stage_hi_349 LIX
+.%var addr_stage 1 addr_stage_349 LIX
+.%scope end
+.%scope function dcfl_get_conf _dcfl_get_conf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/libdcfl.c" 53 84
+.%arg table 0 table_354_V$848
+.%arg custom_cfg 70 custom_cfg_354_V$849
+.%var active_buffer 0 active_buffer_354 LIR
+.%var cfg_ptr 71 cfg_ptr_354 LIX
+.%scope end
+.%scope function dcfl_sort_results _dcfl_sort_results "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/libdcfl.c" 94 121
+.%arg results 44 results_356_V$84d
+.%arg nresults 0 nresults_356_V$84e
+.%var sorted 0 sorted_356 LIX
+.%var i 0 i_356 LIX
+.%var temp 0 temp_356 LIX
+.%scope end
+.%scope function dcfl_classify _dcfl_classify "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/dcfl/me/lib/dcfl/libdcfl.c" 491 663
+.%arg key 72 key_361_V$895
+.%arg table 0 table_361_V$896
+.%arg label_set 44 label_set_361_V$897
+.%arg labels_id 73 labels_id_361_V$898
+.%arg cfg 71 cfg_361_V$899
+.%var tblcfg 74 tblcfg_361 LIR
+.%var current_f_cfg 24 current_f_cfg_361 LIX
+.%var cfg_ptr 71 cfg_ptr_361 LIX
+.%var field_id 0 field_id_361 LIX
+.%var buffer 0 buffer_361 LIX
+.%var nlabels 79 nlabels_361 LIX
+.%var localkey 23 localkey_361 LIX
+.%var id_out 26 id_out_361 LIX
+.%var hdr_valid 0 hdr_valid_361 LIX
+.%var hdr_valid_val 0 hdr_valid_val_361 LIX
+.%scope block 536 643
+.%var lkup_set 0 lkup_set_362 LIX
+.%var valid_val 0 valid_val_362 LIX
+.%var field_value 80 field_value_362 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type U8
+.%type S524288 dcfl_me_config{
+__unnamed 0 3;
+}
+.%type S524288 {
+__unnamed 0 4;
+raw 0 21;
+}
+.%type S524288 {
+tables 0 5;
+}
+.%type A524288 6
+.%type S2048 dcfl_me_table_config_buffers{
+__unnamed 0 7;
+}
+.%type S2048 {
+__unnamed 0 8;
+raw 0 20;
+}
+.%type S1964 {
+active_buffer 0 0;
+buf 4 9;
+}
+.%type A1960 10
+.%type S980 dcfl_me_table_config{
+__unnamed 0 11;
+}
+.%type S980 {
+__unnamed 0 12;
+raw 0 19;
+}
+.%type S980 {
+custom_data 0 13;
+num_fields 16 0;
+f_cfg 20 14;
+}
+.%type A16 0
+.%type A960 15
+.%type S24 dcfl_me_field_config{
+__unnamed 0 16;
+}
+.%type S24 {
+__unnamed 0 17;
+raw 0 18;
+}
+.%type S24 {
+reserved0 0:26:6 0;
+an_alut_loc_reg 0:23:3 0;
+hdr_shift 0:18:5 0;
+hdr_bitlen 0:11:7 0;
+hdr_offset 0:3:8 0;
+type 0:0:3 0;
+valid_labelmap 4:28:4 0;
+valid_value 4:16:12 0;
+wildcard_label 4:0:16 0;
+field_base 8 0;
+reserved1 12:23:9 0;
+hdr_valid_bitlen 12:17:6 0;
+hdr_valid_shift 12:12:5 0;
+hdr_valid_offset 12:8:4 0;
+field_base_hi 12:0:8 0;
+an_stage_base 16 0;
+reserved2 20:8:24 0;
+an_stage_base_hi 20:0:8 0;
+}
+.%type A24 0
+.%type A980 0
+.%type A2048 0
+.%type A524288 0
+.%type P2 0
+.%type P6 0
+.%type P2 15
+.%type P2 26
+.%type U1
+.%type A16 0
+.%type P2 0
+.%type P2 0
+.%type A16 0
+.%type P2 32
+.%type U4
+.%type P3 32
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 36
+.%type S8 SIGNAL_PAIR{
+even 0 37;
+odd 4 37;
+}
+.%type I4
+.%type S4 mem_lookup_dlut_large_t{
+__unnamed 0 39;
+}
+.%type S4 {
+__unnamed 0 40;
+raw 0 0;
+}
+.%type S4 {
+internal_memory 0:31:1 0;
+direct_lookup 0:30:1 0;
+base_address 0:15:15 0;
+reserved_2 0:13:2 0;
+result 0:12:1 41;
+reserved_1 0:11:1 0;
+table_size 0:8:3 42;
+table_type 0:7:1 0;
+start_bit_position 0:0:7 0;
+}
+.%type E4 MEM_LOOKUP_RESULT{
+LOOKUP_24BIT_RESULT 0;
+LOOKUP_32BIT_RESULT 1;
+}
+.%type E4 MEM_LOOKUP_DLUT_LARGE_SIZE{
+LOOKUP_DLUT_LARGE_SIZE_64K 0;
+LOOKUP_DLUT_LARGE_SIZE_128K 1;
+LOOKUP_DLUT_LARGE_SIZE_256K 2;
+LOOKUP_DLUT_LARGE_SIZE_512K 3;
+LOOKUP_DLUT_LARGE_SIZE_1M 4;
+LOOKUP_DLUT_LARGE_SIZE_2M 5;
+LOOKUP_DLUT_LARGE_SIZE_4M 6;
+LOOKUP_DLUT_LARGE_SIZE_8M 7;
+}
+.%type A8 0
+.%type P6 45
+.%type S64 dcfl_label_set{
+__unnamed 0 46;
+}
+.%type S64 {
+__unnamed 0 47;
+results 0 50;
+values 0 52;
+}
+.%type S64 {
+labels 0 48;
+}
+.%type A64 49
+.%type U2
+.%type A64 51
+.%type S4 {
+priority 0:16:16 0;
+rule_id 0:0:16 0;
+}
+.%type A64 0
+.%type U4
+.%type P2 53
+.%type A64 0
+.%type A64 57
+.%type S4 dcfl_an_entry{
+__unnamed 0 58;
+}
+.%type S4 {
+__unnamed 0 59;
+__unnamed 0 60;
+values 0 61;
+}
+.%type S4 {
+label 0:16:16 0;
+mlabel 0:0:16 0;
+}
+.%type S4 {
+prio_even 0:16:16 0;
+prio_odd 0:0:16 0;
+}
+.%type A4 0
+.%type S4 mem_lookup_alut_t{
+__unnamed 0 63;
+value 0 0;
+}
+.%type S4 {
+internal_memory 0:31:1 0;
+direct_lookup 0:30:1 0;
+lookup_type 0:29:1 0;
+table_size 0:27:2 64;
+table_number 0:24:3 0;
+address_bits 0:0:24 0;
+}
+.%type E4 MEM_LOOKUP_ALUT_SIZE{
+LOOKUP_ALUT_SIZE_1 0;
+LOOKUP_ALUT_SIZE_2 1;
+LOOKUP_ALUT_SIZE_3 2;
+LOOKUP_ALUT_SIZE_4 3;
+}
+.%type A8 0
+.%type A16 0
+.%type P2 68
+.%type S4 mem_lookup_result_t{
+result 0 0;
+}
+.%type P3 32
+.%type P2 32
+.%type P3 26
+.%type P2 32
+.%type P2 0
+.%type S28 dcfl_me_table_config_small{
+__unnamed 0 75;
+}
+.%type S28 {
+__unnamed 0 76;
+raw 0 78;
+}
+.%type S28 {
+num_fields 0 0;
+f_cfg 4 77;
+}
+.%type A24 15
+.%type A28 0
+.%type A12 0
+.%type A16 0

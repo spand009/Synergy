@@ -1,0 +1,461 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_129 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%scope function cntr64_get_addr _cntr64_get_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 26 32
+.%arg base 3 base_150_V$350
+.%var addr_256b_aligned 0 addr_256b_aligned_150 LIX
+.%scope end
+.%scope function cntr64_clr _cntr64_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 35 48
+.%arg base 0 base_151_V$353
+.%arg offset 0 offset_151_V$354
+.%var ind 5 ind_151 LIX
+.%var byte_offset 0 byte_offset_151 LIX
+.%scope end
+.%scope function cntr64_incr _cntr64_incr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 51 57
+.%arg base 0 base_152_V$364
+.%arg offset 0 offset_152_V$365
+.%var byte_offset 0 byte_offset_152 LIX
+.%scope end
+.%scope function cntr64_add _cntr64_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 60 85
+.%arg base 0 base_153_V$367
+.%arg offset 0 offset_153_V$368
+.%arg count 0 count_153_V$369
+.%var byte_offset 0 byte_offset_153 LIX
+.%scope block 69 78
+.%var ind 5 ind_156 LIX
+.%scope end
+.%scope block 78 84
+.%var value 8 value_157 LIW
+.%var add_sig 9 add_sig_157 LIX
+.%scope end
+.%scope end
+.%scope function cntr64_cls_get_addr _cntr64_cls_get_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 89 95
+.%arg base 10 base_158_V$37e
+.%var addr_256b_aligned 0 addr_256b_aligned_158 LIX
+.%scope end
+.%scope function cntr64_cls_clr _cntr64_cls_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 98 107
+.%arg base 0 base_159_V$381
+.%arg offset 0 offset_159_V$382
+.%var zero 11 zero_159 LIW
+.%var cls_sig 9 cls_sig_159 LIX
+.%var byte_offset 0 byte_offset_159 LIX
+.%scope end
+.%scope function cntr64_cls_incr _cntr64_cls_incr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 110 116
+.%arg base 0 base_160_V$386
+.%arg offset 0 offset_160_V$387
+.%var byte_offset 0 byte_offset_160 LIX
+.%scope end
+.%scope function cntr64_cls_add _cntr64_cls_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 119 145
+.%arg base 0 base_161_V$389
+.%arg offset 0 offset_161_V$38a
+.%arg count 0 count_161_V$38b
+.%var byte_offset 0 byte_offset_161 LIX
+.%scope block 130 138
+.%var ind 5 ind_165 LIX
+.%scope end
+.%scope block 138 144
+.%var value 12 value_166 LIW
+.%var add_sig 9 add_sig_166 LIX
+.%scope end
+.%scope end
+.%scope function pkt_cntr_get_addr _pkt_cntr_get_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 149 157
+.%arg base 13 base_167_V$39e
+.%var cntr_addr 14 cntr_addr_167 LIX
+.%scope end
+.%scope function pkt_cntr_clr _pkt_cntr_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 160 178
+.%arg base 14 base_168_V$3a5
+.%arg offset 0 offset_168_V$3a8
+.%arg base_select 0 base_select_168_V$3a9
+.%arg sync 15 sync_168_V$3aa
+.%arg sig 16 sig_168_V$3ab
+.%var read_val 11 read_val_168 LIR
+.%var push_cmd 17 push_cmd_168 LIX
+.%scope end
+.%scope function pkt_cntr_add _pkt_cntr_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 181 207
+.%arg base 14 base_172_V$3b4
+.%arg offset 0 offset_172_V$3b7
+.%arg base_select 0 base_select_172_V$3b8
+.%arg byte_count 19 byte_count_172_V$3b9
+.%arg sync 15 sync_172_V$3ba
+.%arg sig 16 sig_172_V$3bb
+.%var xfer 0 xfer_172 LIW
+.%var log_cmd 20 log_cmd_172 LIX
+.%var stts_addr 23 stts_addr_172 LIX
+.%scope end
+.%scope function pkt_cntr_read _pkt_cntr_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 210 229
+.%arg base 14 base_176_V$3c7
+.%arg offset 0 offset_176_V$3ca
+.%arg base_select 0 base_select_176_V$3cb
+.%arg pkt_count 25 pkt_count_176_V$3cc
+.%arg byte_count 26 byte_count_176_V$3cd
+.%var read_val 11 read_val_176 LIR
+.%var push_cmd 17 push_cmd_176 LIX
+.%var read_sig 9 read_sig_176 LIX
+.%scope end
+.%scope function pkt_cntr_read_and_clr _pkt_cntr_read_and_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/cntrs.c" 232 251
+.%arg base 14 base_178_V$3d5
+.%arg offset 0 offset_178_V$3d8
+.%arg base_select 0 base_select_178_V$3d9
+.%arg pkt_count 25 pkt_count_178_V$3da
+.%arg byte_count 26 byte_count_178_V$3db
+.%var read_val 11 read_val_178 LIR
+.%var push_cmd 17 push_cmd_178 LIX
+.%var read_sig 9 read_sig_178 LIX
+.%scope end
+.%scope function event_cls_filter_handle _event_cls_filter_handle "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 35 39
+.%arg fnum 9 fnum_303_V$3e3
+.%scope end
+.%scope function event_cls_filter_setup _event_cls_filter_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 42 69
+.%arg filter 27 filter_304_V$3e5
+.%arg type 9 type_304_V$3e6
+.%arg match 0 match_304_V$3e7
+.%arg mask 0 mask_304_V$3e8
+.%arg status 29 status_304_V$3e9
+.%var evmask 0 evmask_304 LIW
+.%var evmatch 0 evmatch_304 LIW
+.%var evstatus 0 evstatus_304 LIW
+.%var evack 0 evack_304 LIR
+.%var faddr 36 faddr_304 LIX
+.%var s1 9 s1_304 LIX
+.%var s2 9 s2_304 LIX
+.%var s3 9 s3_304 LIX
+.%var s4 9 s4_304 LIX
+.%scope end
+.%scope function event_cls_filter_disable _event_cls_filter_disable "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 72 85
+.%arg filter 27 filter_305_V$40b
+.%var zero 0 zero_305 LIW
+.%var faddr 36 faddr_305 LIX
+.%var s1 9 s1_305 LIX
+.%var s2 9 s2_305 LIX
+.%var s3 9 s3_305 LIX
+.%scope end
+.%scope function event_cls_filter_ack _event_cls_filter_ack "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 88 98
+.%arg filter 27 filter_306_V$411
+.%var evack 0 evack_306 LIR
+.%var faddr 36 faddr_306 LIX
+.%scope end
+.%scope function event_cls_user_event _event_cls_user_event "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 101 106
+.%arg evdata 0 evdata_307_V$415
+.%var out 0 out_307 LIW
+.%scope end
+.%scope function event_cls_autopush_signal_setup _event_cls_autopush_signal_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 109 125
+.%arg apnum 0 apnum_308_V$417
+.%arg master 0 master_308_V$418
+.%arg thd 0 thd_308_V$419
+.%arg signum 0 signum_308_V$41a
+.%arg xfernum 0 xfernum_308_V$41b
+.%var apaddr 10 apaddr_308 LIX
+.%var apcfg 0 apcfg_308 LIW
+.%scope end
+.%scope function __event_cls_autopush_filter_reset ___event_cls_autopush_filter_reset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 128 142
+.%arg fnum 0 fnum_309_V$41e
+.%arg type 0 type_309_V$41f
+.%arg autopush 0 autopush_309_V$420
+.%arg sync 15 sync_309_V$421
+.%arg sig 16 sig_309_V$422
+.%var apfaddr 10 apfaddr_309 LIX
+.%var apfval 0 apfval_309 LIW
+.%scope end
+.%scope function event_cls_autopush_filter_reset _event_cls_autopush_filter_reset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 145 151
+.%arg fnum 0 fnum_312_V$429
+.%arg type 0 type_312_V$42a
+.%arg autopush 0 autopush_312_V$42b
+.%var sig 9 sig_312 LIX
+.%scope end
+.%scope function event_cls_autopush_filter_disable _event_cls_autopush_filter_disable "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/event.c" 154 160
+.%arg fnum 0 fnum_313_V$42d
+.%var apfaddr 10 apfaddr_313 LIX
+.%var zero 0 zero_313 LIW
+.%scope end
+.%scope function hash_me_crc32 _hash_me_crc32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 120 155
+.%arg s 38 s_323_V$430
+.%arg n 0 n_323_V$431
+.%arg init 0 init_323_V$432
+.%var result 0 result_323 LIX
+.%scope end
+.%scope function hash_me_crc32c _hash_me_crc32c "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 161 196
+.%arg s 38 s_334_V$43c
+.%arg n 0 n_334_V$43d
+.%arg init 0 init_334_V$43e
+.%var result 0 result_334 LIX
+.%scope end
+.%scope function hash_toeplitz_block _hash_toeplitz_block "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 260 319
+.%arg input 0 input_350_V$441
+.%arg prev_result 0 prev_result_350_V$442
+.%arg sk0 39 sk0_350_V$443
+.%arg sk1 39 sk1_350_V$444
+.%var bit_val 0 bit_val_350 LIX
+.%var iter 0 iter_350 LIX
+.%var result 0 result_350 LIX
+.%var inputa 0 inputa_350 LIX
+.%scope end
+.%scope function __hash_toeplitz_copy ___hash_toeplitz_copy "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 322 381
+.%arg s 38 s_351_V$44a
+.%arg n 9 n_351_V$44b
+.%var src 40 src_351 LIX
+.%var dst 40 dst_351 LIX
+.%scope end
+.%scope function hash_toeplitz _hash_toeplitz "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 391 454
+.%arg s 38 s_353_V$44e
+.%arg n 0 n_353_V$44f
+.%arg k 38 k_353_V$450
+.%arg nk 0 nk_353_V$451
+.%var t 40 t_353 LIX
+.%var sk 41 sk_353 LIX
+.%var result 9 result_353 LIX
+.%var tmp 0 tmp_353 LIX
+.%var i 9 i_353 LIX
+.%var j 9 j_353 LIX
+.%var sk_idx 9 sk_idx_353 LIX
+.%var num_words 9 num_words_353 LIX
+.%var current_ctx 0 current_ctx_353 LIX
+.%scope end
+.%scope function reg_set _reg_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/reg_utils.c" 235 261
+.%arg d 38 d_360_V$465
+.%arg s_val 0 s_val_360_V$466
+.%arg n 0 n_360_V$467
+.%scope end
+.%scope function reg_zero _reg_zero "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/reg_utils.c" 264 267
+.%arg s 38 s_371_V$469
+.%arg n 0 n_371_V$46a
+.%scope end
+.%scope function reg_cp _reg_cp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/reg_utils.c" 270 315
+.%arg d 38 d_372_V$46b
+.%arg s 38 s_372_V$46c
+.%arg n 0 n_372_V$46d
+.%scope end
+.%scope function reg_eq _reg_eq "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/reg_utils.c" 318 367
+.%arg s1 38 s1_390_V$46e
+.%arg s2 38 s2_390_V$46f
+.%arg n 0 n_390_V$470
+.%var ret 9 ret_390 LIX
+.%scope end
+.%scope function synch_cnt_dram_reset _synch_cnt_dram_reset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 33 38
+.%arg s 42 s_448_V$476
+.%arg cnt 0 cnt_448_V$477
+.%var wrval 0 wrval_448 LIW
+.%scope end
+.%scope function synch_cnt_dram_ack _synch_cnt_dram_ack "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 41 44
+.%arg s 42 s_449_V$479
+.%scope end
+.%scope function synch_cnt_dram_poll _synch_cnt_dram_poll "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 47 53
+.%arg s 42 s_450_V$47a
+.%var rdval 0 rdval_450 LIR
+.%scope end
+.%scope function synch_cnt_dram_wait _synch_cnt_dram_wait "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 56 59
+.%arg s 42 s_451_V$47d
+.%scope end
+.%scope function sem_cls_wait _sem_cls_wait "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 62 84
+.%arg s 44 s_453_V$47e
+.%arg max_credits 0 max_credits_453_V$47f
+.%arg poll_interval 0 poll_interval_453_V$480
+.%var xrw 45 xrw_453 LIX
+.%var my_credit 9 my_credit_453 LIX
+.%scope end
+.%scope function sem_cls_post _sem_cls_post "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/synch.c" 87 90
+.%arg s 44 s_457_V$487
+.%scope end
+.%scope function cls_write_alert_setup _cls_write_alert_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 32 53
+.%arg addr_mask 0 addr_mask_464_V$48a
+.%arg addr_match 0 addr_match_464_V$48b
+.%arg region 0 region_464_V$48c
+.%arg events 0 events_464_V$48d
+.%arg data63 0 data63_464_V$48e
+.%var waaddr 10 waaddr_464 LIX
+.%var wacfg_temp 0 wacfg_temp_464 LIX
+.%var wacfg 0 wacfg_464 LIW
+.%scope end
+.%scope function cls_write_alert_disable _cls_write_alert_disable "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 56 62
+.%var waaddr 10 waaddr_465 LIX
+.%var wacfg 0 wacfg_465 LIW
+.%scope end
+.%scope function __cls_read_write_alert_pending ___cls_read_write_alert_pending "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 65 74
+.%arg wa_pending 46 wa_pending_466_V$494
+.%arg size 0 size_466_V$495
+.%arg sync 15 sync_466_V$496
+.%arg sig 16 sig_466_V$497
+.%scope end
+.%scope function cls_read_write_alert_pending _cls_read_write_alert_pending "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 77 82
+.%arg wa_pending 46 wa_pending_469_V$49b
+.%arg size 0 size_469_V$49c
+.%var sig 9 sig_469 LIX
+.%scope end
+.%scope function cls_write_alert_event_setup _cls_write_alert_event_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 85 108
+.%arg fnum 0 fnum_470_V$49e
+.%arg apnum 0 apnum_470_V$49f
+.%arg emeid 0 emeid_470_V$4a0
+.%arg ectx 0 ectx_470_V$4a1
+.%arg esig 0 esig_470_V$4a2
+.%arg exfer 0 exfer_470_V$4a3
+.%var status 29 status_470 LIX
+.%var filter 27 filter_470 LIX
+.%var event_mask 0 event_mask_470 LIX
+.%var event_match 0 event_match_470 LIX
+.%scope end
+.%scope function cls_write_alert_event_disable _cls_write_alert_event_disable "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 111 116
+.%arg filter 27 filter_471_V$4c1
+.%arg fnum 0 fnum_471_V$4c2
+.%scope end
+.%scope function cls_write_alert_event_reset _cls_write_alert_event_reset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/write_alert.c" 119 123
+.%arg fnum 0 fnum_472_V$4c3
+.%arg apnum 0 apnum_472_V$4c4
+.%scope end
+.%scope function cls_hash_init _cls_hash_init "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 203 237
+.%arg mask 10 mask_345_V$4c5
+.%arg size 0 size_345_V$4c6
+.%var mult_val 0 mult_val_345 LIW
+.%var hashmask 47 hashmask_345 LIW
+.%scope end
+.%scope function cls_hash _cls_hash "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/std/_c/hash.c" 240 253
+.%arg key 48 key_349_V$4cc
+.%arg mask 10 mask_349_V$4cd
+.%arg size 0 size_349_V$4ce
+.%arg idx 0 idx_349_V$4cf
+.%var hash_idx_csr 10 hash_idx_csr_349 LIX
+.%var data 11 data_349 LIR
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type P3 4
+.%type U4
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 6;
+}
+.%type S4 {
+__unnamed 0 7;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}
+.%type A8 0
+.%type I4
+.%type P12 4
+.%type U8
+.%type A8 0
+.%type P3 4
+.%type S8 pkt_cntr_addr{
+hi 0 0;
+lo 4 0;
+}
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 9
+.%type S4 stats_push_cmd{
+__unnamed 0 18;
+__raw 0 0;
+}
+.%type S4 {
+base 0:30:2 0;
+addrs 0:3:19 0;
+}
+.%type U2
+.%type S4 stats_log_cmd{
+__unnamed 0 21;
+__raw 0 0;
+}
+.%type S4 {
+pack 0:16:2 22;
+bytes 0:0:16 0;
+}
+.%type E4 stats_addr_pack{
+STATS_ALL_16_BIT_PACKED 1;
+STATS_ALL_32_BIT_UNPACKED 2;
+STATS_FIRST_32_BIT_UNPACKED_ONLY 3;
+}
+.%type S4 stats_addr{
+__unnamed 0 24;
+__raw 0 0;
+}
+.%type S4 {
+base 0:30:2 0;
+addrs 0:0:19 0;
+}
+.%type P2 0
+.%type P2 11
+.%type P12 28
+.%type S4 event_cls_filter{
+}
+.%type S4 nfp_em_filter_status{
+__unnamed 0 30;
+}
+.%type S4 {
+count32 0 31;
+count16 0 32;
+bitmask32 0 33;
+bitmask16 0 34;
+event 0 35;
+__raw 0 0;
+}
+.%type S4 {
+cnt32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+override 0:16:6 0;
+cnt16 0:0:16 0;
+}
+.%type S4 {
+mask32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+override 0:20:3 0;
+cnt4 0:16:4 0;
+mask16 0:0:16 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+cnt2 0:20:2 0;
+event 0:0:20 0;
+}
+.%type P12 37
+.%type U1
+.%type P2 4
+.%type P2 0
+.%type P2 0
+.%type A40 0
+.%type P3 43
+.%type S4 synch_cnt{
+value 0 0;
+}
+.%type P12 45
+.%type S8 sem{
+next_credit 0 9;
+last_complete 4 9;
+}
+.%type P2 4
+.%type A64 11
+.%type P2 4

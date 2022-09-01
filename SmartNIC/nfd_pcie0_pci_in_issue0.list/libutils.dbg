@@ -1,0 +1,630 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var nfp_pcie_pcie_msi_sw_gen 3 _nfp_pcie_pcie_msi_sw_gen SEX
+.%var nfp_pcie_pcie_msix_sw_gen 4 _nfp_pcie_pcie_msix_sw_gen SEX
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 5 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 7 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 8 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 9 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 10 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 11 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 12 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 13 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 14 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 15 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%scope function cls_ring_setup _cls_ring_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/cls_ring.c" 37 62
+.%arg rnum 0 rnum_197_V$506
+.%arg base 16 base_197_V$507
+.%arg size 0 size_197_V$508
+.%var entries 0 entries_197 LIX
+.%var cls_ring_base 0 cls_ring_base_197 LIW
+.%var cls_ring_ptrs 0 cls_ring_ptrs_197 LIW
+.%var ring_addr 18 ring_addr_197 LIX
+.%var s1 19 s1_197 LIX
+.%var s2 19 s2_197 LIX
+.%scope end
+.%scope function cls_state_test _cls_state_test "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/cls_ring.c" 66 79
+.%arg rstate 19 rstate_202_V$517
+.%var full 19 full_202 LIX
+.%scope end
+.%scope function cls_state_test2 _cls_state_test2 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/cls_ring.c" 83 98
+.%arg rstate1 19 rstate1_204_V$51c
+.%arg rstate2 19 rstate2_204_V$51d
+.%var full 19 full_204 LIX
+.%scope end
+.%scope function cls_ring_put _cls_ring_put "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/cls_ring.c" 102 126
+.%arg rnum 0 rnum_207_V$523
+.%arg data 20 data_207_V$524
+.%arg size 0 size_207_V$525
+.%arg put_sig 21 put_sig_207_V$526
+.%var ind 0 ind_207 LIX
+.%var count 0 count_207 LIX
+.%var ring_addr 0 ring_addr_207 LIX
+.%scope end
+.%scope function cls_ring_get _cls_ring_get "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/cls_ring.c" 130 154
+.%arg rnum 0 rnum_215_V$530
+.%arg data 22 data_215_V$531
+.%arg size 0 size_215_V$532
+.%arg get_sig 21 get_sig_215_V$533
+.%var ind 0 ind_215 LIX
+.%var count 0 count_215 LIX
+.%var ring_addr 0 ring_addr_215 LIX
+.%scope end
+.%scope function ctm_ring_setup _ctm_ring_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ctm_ring.c" 31 71
+.%arg rnum 0 rnum_244_V$538
+.%arg base 23 base_244_V$539
+.%arg size 0 size_244_V$53a
+.%var entries 0 entries_244 LIX
+.%var ctm_ring_base_tmp 24 ctm_ring_base_tmp_244 LIX
+.%var ctm_ring_base 24 ctm_ring_base_244 LIW
+.%var ctm_ring_ptrs 0 ctm_ring_ptrs_244 LIW
+.%var check 0 check_244 LIR
+.%var xpb_addr 0 xpb_addr_244 LIX
+.%var s1 19 s1_244 LIX
+.%var s2 19 s2_244 LIX
+.%var s3 19 s3_244 LIX
+.%var s4 19 s4_244 LIX
+.%scope end
+.%scope function ctm_ring_put _ctm_ring_put "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ctm_ring.c" 75 99
+.%arg isl 0 isl_249_V$559
+.%arg rnum 0 rnum_249_V$55a
+.%arg data 20 data_249_V$55b
+.%arg size 0 size_249_V$55c
+.%arg put_sig 21 put_sig_249_V$55d
+.%var ind 0 ind_249 LIX
+.%var count 0 count_249 LIX
+.%var ring_addr 0 ring_addr_249 LIX
+.%scope end
+.%scope function ctm_ring_get _ctm_ring_get "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ctm_ring.c" 103 127
+.%arg isl 0 isl_257_V$561
+.%arg rnum 0 rnum_257_V$562
+.%arg data 22 data_257_V$563
+.%arg size 0 size_257_V$564
+.%arg get_sig 21 get_sig_257_V$565
+.%var ind 0 ind_257 LIX
+.%var count 0 count_257 LIX
+.%var ring_addr 0 ring_addr_257 LIX
+.%scope end
+.%scope function dma_seqn_ap_setup _dma_seqn_ap_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 40 90
+.%arg filter_num 0 filter_num_352_V$569
+.%arg ap_num 0 ap_num_352_V$56a
+.%arg type 0 type_352_V$56b
+.%arg ext_type 0 ext_type_352_V$56c
+.%arg xfer 27 xfer_352_V$56d
+.%arg sig 21 sig_352_V$56e
+.%var ctx 0 ctx_352 LIX
+.%var meid 0 meid_352 LIX
+.%var filter_status 28 filter_status_352 LIX
+.%var event_filter_handle 35 event_filter_handle_352 LIX
+.%var event_mask 0 event_mask_352 LIX
+.%var pcie_provider 0 pcie_provider_352 LIX
+.%var event_match 0 event_match_352 LIX
+.%scope end
+.%scope function dma_seqn_advance _dma_seqn_advance "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 94 101
+.%arg xfer 27 xfer_357_V$596
+.%arg compl 37 compl_357_V$597
+.%var seqn_inc 0 seqn_inc_357 LIX
+.%scope end
+.%scope function dma_seqn_advance_save _dma_seqn_advance_save "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 106 113
+.%arg xfer 27 xfer_358_V$599
+.%arg compl 37 compl_358_V$59a
+.%arg seqn_inc 37 seqn_inc_358_V$59b
+.%scope end
+.%scope function dma_seqn_set_event _dma_seqn_set_event "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 118 131
+.%arg cmd 38 cmd_359_V$59c
+.%arg type 0 type_359_V$59d
+.%arg ext_type 0 ext_type_359_V$59e
+.%arg source 0 source_359_V$59f
+.%var dma_mode 0 dma_mode_359 LIX
+.%var cmd_ptr 39 cmd_ptr_359 LIX
+.%scope end
+.%scope function dma_seqn_init_event _dma_seqn_init_event "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 135 147
+.%arg type 0 type_360_V$5c0
+.%arg ext_type 0 ext_type_360_V$5c1
+.%var event 0 event_360 LIX
+.%scope end
+.%scope function dma_seqn_set_seqn _dma_seqn_set_seqn "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/dma_seqn.c" 151 159
+.%arg cpp_hi_part 0 cpp_hi_part_363_V$5c4
+.%arg source 0 source_363_V$5c5
+.%var event 0 event_363 LIX
+.%scope end
+.%scope function nn_ring_empty _nn_ring_empty "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/nn_ring.h" 58 61
+.%scope end
+.%scope function nn_ring_full _nn_ring_full "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/nn_ring.h" 72 75
+.%scope end
+.%scope function nn_ring_put _nn_ring_put "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/nn_ring.c" 28 31
+.%arg val 0 val_388_V$5ca
+.%scope end
+.%scope function nn_ring_get _nn_ring_get "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/nn_ring.c" 35 42
+.%var result 0 result_389 LIX
+.%scope end
+.%scope function nn_ring_read _nn_ring_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/nn_ring.c" 45 52
+.%var result 0 result_390 LIX
+.%scope end
+.%scope function reorder_start _reorder_start "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 30 44
+.%arg start_ctx 0 start_ctx_398_V$5cf
+.%arg sig 21 sig_398_V$5d0
+.%var val 0 val_398 LIX
+.%scope end
+.%scope function reorder_done _reorder_done "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 48 73
+.%arg start_ctx 0 start_ctx_400_V$5d3
+.%arg end_ctx 0 end_ctx_400_V$5d4
+.%arg sig 21 sig_400_V$5d5
+.%var val 0 val_400 LIX
+.%scope end
+.%scope function reorder_get_next_ctx _reorder_get_next_ctx "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 77 88
+.%arg start_ctx 0 start_ctx_405_V$5d8
+.%arg end_ctx 0 end_ctx_405_V$5d9
+.%var val 0 val_405 LIX
+.%scope end
+.%scope function reorder_done_opt _reorder_done_opt "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 92 103
+.%arg next_ctx 44 next_ctx_408_V$5dc
+.%arg sig 21 sig_408_V$5dd
+.%var val 0 val_408 LIX
+.%scope end
+.%scope function reorder_self _reorder_self "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 107 117
+.%arg sig 21 sig_409_V$5df
+.%var val 0 val_409 LIX
+.%var ctx 0 ctx_409 LIX
+.%scope end
+.%scope function reorder_future_sig _reorder_future_sig "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 121 131
+.%arg sig 21 sig_410_V$5e2
+.%arg cycles 0 cycles_410_V$5e3
+.%var sig_num 0 sig_num_410 LIX
+.%var tslo 0 tslo_410 LIX
+.%scope end
+.%scope function reorder_test_swap _reorder_test_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/ordering.c" 135 142
+.%arg sig 21 sig_411_V$5e6
+.%scope end
+.%scope function bf_compress_quad _bf_compress_quad "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 47 57
+.%arg x 0 x_451_V$5e7
+.%arg off 19 off_451_V$5e8
+.%scope end
+.%scope function select_queue _select_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 64 110
+.%arg queue 37 queue_453_V$5ec
+.%arg bmsk 45 bmsk_453_V$5ed
+.%var bmsk_cp 0 bmsk_cp_453 LIX
+.%var queue_cp 0 queue_cp_453 LIX
+.%scope end
+.%scope function clear_queue _clear_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 113 120
+.%arg queue 37 queue_463_V$63d
+.%arg bmsk 45 bmsk_463_V$63e
+.%scope end
+.%scope function set_queue _set_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 123 130
+.%arg queue 37 queue_466_V$647
+.%arg bmsk 45 bmsk_466_V$648
+.%scope end
+.%scope function init_qc_queues _init_qc_queues "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 133 150
+.%arg pcie_isl 6 pcie_isl_469_V$651
+.%arg cfg 47 cfg_469_V$652
+.%arg start_queue 6 start_queue_469_V$653
+.%arg stride 6 stride_469_V$654
+.%arg num_queues 6 num_queues_469_V$655
+.%var queue 0 queue_469 LIX
+.%var end_queue 6 end_queue_469 LIX
+.%scope end
+.%scope function init_bitmask_filters _init_bitmask_filters "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 175 209
+.%arg xfers 52 xfers_474_V$65c
+.%arg s0 54 s0_474_V$65d
+.%arg s1 54 s1_474_V$65e
+.%arg s2 54 s2_474_V$65f
+.%arg s3 54 s3_474_V$660
+.%arg s4 54 s4_474_V$661
+.%arg s5 54 s5_474_V$662
+.%arg s6 54 s6_474_V$663
+.%arg s7 54 s7_474_V$664
+.%arg event_data 0 event_data_474_V$665
+.%arg start_handle 0 start_handle_474_V$666
+.%var event_filter 35 event_filter_474 LIX
+.%var status 28 status_474 LIX
+.%var event_mask 0 event_mask_474 LIX
+.%var event_match 0 event_match_474 LIX
+.%var meid 0 meid_474 LIX
+.%var ctx 0 ctx_474 LIX
+.%var pcie_provider 0 pcie_provider_474 LIX
+.%scope end
+.%scope function init_bitmasks _init_bitmasks "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 212 218
+.%arg bmsk 55 bmsk_485_V$709
+.%scope end
+.%scope function check_bitmask_filters _check_bitmask_filters "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 253 271
+.%arg updates 56 updates_486_V$71a
+.%arg xfers 52 xfers_486_V$71b
+.%arg s0 54 s0_486_V$71c
+.%arg s1 54 s1_486_V$71d
+.%arg s2 54 s2_486_V$71e
+.%arg s3 54 s3_486_V$71f
+.%arg s4 54 s4_486_V$720
+.%arg s5 54 s5_486_V$721
+.%arg s6 54 s6_486_V$722
+.%arg s7 54 s7_486_V$723
+.%arg start_handle 0 start_handle_486_V$724
+.%scope block 263 263
+.%var new_queues 0 new_queues_488 LIX
+.%scope end
+.%scope block 264 264
+.%var new_queues 0 new_queues_490 LIX
+.%scope end
+.%scope block 265 265
+.%var new_queues 0 new_queues_492 LIX
+.%scope end
+.%scope block 266 266
+.%var new_queues 0 new_queues_494 LIX
+.%scope end
+.%scope block 267 267
+.%var new_queues 0 new_queues_496 LIX
+.%scope end
+.%scope block 268 268
+.%var new_queues 0 new_queues_498 LIX
+.%scope end
+.%scope block 269 269
+.%var new_queues 0 new_queues_500 LIX
+.%scope end
+.%scope block 270 270
+.%var new_queues 0 new_queues_502 LIX
+.%scope end
+.%scope end
+.%scope function check_queues _check_queues "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 275 385
+.%arg queue_info_struct 38 queue_info_struct_503_V$85d
+.%arg active_bmsk 45 active_bmsk_503_V$85e
+.%arg pending_bmsk 45 pending_bmsk_503_V$85f
+.%arg c 58 c_503_V$860
+.%var queues 60 queues_503 LIX
+.%var queue 0 queue_503 LIX
+.%var ret 19 ret_503 LIX
+.%var retry 19 retry_503 LIX
+.%var qc_queue 0 qc_queue_503 LIX
+.%var queue_base_addr 0 queue_base_addr_503 LIX
+.%var wptr_raw 0 wptr_raw_503 LIR
+.%var wptr 63 wptr_503 LIX
+.%var qc_sig 19 qc_sig_503 LIX
+.%var ptr_inc 0 ptr_inc_503 LIX
+.%scope end
+.%scope function set_Qctl8bitQnum _set_Qctl8bitQnum "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qc.c" 388 401
+.%var addr 0 addr_516 LIX
+.%var ECCSramCntl10 0 ECCSramCntl10_516 LIX
+.%var sig 19 sig_516 LIX
+.%scope end
+.%scope function __qc_read ___qc_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 29 55
+.%arg pcie_isl 6 pcie_isl_517_V$8ea
+.%arg queue 0 queue_517_V$8eb
+.%arg ptr 66 ptr_517_V$8ec
+.%arg value 67 value_517_V$8ed
+.%arg sync 68 sync_517_V$8ee
+.%arg sig 21 sig_517_V$8ef
+.%var addr_hi 0 addr_hi_517 LIX
+.%var queue_base_addr 0 queue_base_addr_517 LIX
+.%var offset 0 offset_517 LIX
+.%scope end
+.%scope function qc_read _qc_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 58 65
+.%arg pcie_isl 6 pcie_isl_525_V$8f8
+.%arg queue 0 queue_525_V$8f9
+.%arg ptr 66 ptr_525_V$8fa
+.%var xfer 0 xfer_525 LIR
+.%var sig 19 sig_525 LIX
+.%scope end
+.%scope function __qc_write ___qc_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 70 89
+.%arg pcie_isl 6 pcie_isl_526_V$8fe
+.%arg queue 0 queue_526_V$8ff
+.%arg value 69 value_526_V$900
+.%arg offset 0 offset_526_V$901
+.%arg sync 68 sync_526_V$902
+.%arg sig 21 sig_526_V$903
+.%var addr_hi 0 addr_hi_526 LIX
+.%var queue_base_addr 0 queue_base_addr_526 LIX
+.%scope end
+.%scope function qc_init_queue _qc_init_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 93 127
+.%arg pcie_isl 6 pcie_isl_531_V$906
+.%arg queue 0 queue_531_V$907
+.%arg cfg 47 cfg_531_V$908
+.%var queue_base_addr 0 queue_base_addr_531 LIX
+.%var config_hi_tmp 63 config_hi_tmp_531 LIX
+.%var config_hi 63 config_hi_531 LIW
+.%var config_lo_tmp 70 config_lo_tmp_531 LIX
+.%var config_lo 70 config_lo_531 LIW
+.%var s1 19 s1_531 LIX
+.%var s2 19 s2_531 LIX
+.%scope end
+.%scope function __qc_ping_queue ___qc_ping_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 131 148
+.%arg pcie_isl 6 pcie_isl_532_V$960
+.%arg queue 0 queue_532_V$961
+.%arg event_data 0 event_data_532_V$962
+.%arg event_type 51 event_type_532_V$963
+.%arg xfer 69 xfer_532_V$964
+.%arg sync 68 sync_532_V$965
+.%arg sig 21 sig_532_V$966
+.%var config_lo_tmp 70 config_lo_tmp_532 LIX
+.%scope end
+.%scope function qc_ping_queue _qc_ping_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 151 159
+.%arg pcie_isl 6 pcie_isl_535_V$974
+.%arg queue 0 queue_535_V$975
+.%arg event_data 0 event_data_535_V$976
+.%arg event_type 51 event_type_535_V$977
+.%var xfer 0 xfer_535 LIW
+.%var sig 19 sig_535 LIX
+.%scope end
+.%scope function __qc_add_to_ptr ___qc_add_to_ptr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 163 195
+.%arg pcie_isl 6 pcie_isl_536_V$97a
+.%arg queue 0 queue_536_V$97b
+.%arg ptr 66 ptr_536_V$97c
+.%arg value 0 value_536_V$97d
+.%arg xfer 67 xfer_536_V$97e
+.%arg sync 68 sync_536_V$97f
+.%arg sig 21 sig_536_V$980
+.%var addr_hi 0 addr_hi_536 LIX
+.%var val_str 73 val_str_536 LIX
+.%var ptr_offset 0 ptr_offset_536 LIX
+.%scope end
+.%scope function qc_add_to_ptr _qc_add_to_ptr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/utils/_c/qcntl.c" 198 206
+.%arg pcie_isl 6 pcie_isl_543_V$98b
+.%arg queue 0 queue_543_V$98c
+.%arg ptr 66 ptr_543_V$98d
+.%arg value 0 value_543_V$98e
+.%var xfer 0 xfer_543 LIR
+.%var sig 19 sig_543 LIX
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type S4 {
+__reserved_5 0:5:27 0;
+msi_vec_num 0:0:5 0;
+}
+.%type S4 {
+__reserved_8 0:8:24 0;
+msix_vec_num 0:0:8 0;
+}
+.%type A16 6
+.%type U1
+.%type A32768 6
+.%type A16 6
+.%type A2048 6
+.%type A16 6
+.%type A2048 6
+.%type A16 6
+.%type A2048 6
+.%type A41943040 6
+.%type A10485760 6
+.%type P12 17
+.%type U4
+.%type P12 6
+.%type I4
+.%type P2 17
+.%type P2 19
+.%type P2 17
+.%type P3 17
+.%type S4 nfp_ctm_ring_base{
+__unnamed 0 25;
+}
+.%type S4 {
+__unnamed 0 26;
+__raw 0 0;
+}
+.%type S4 {
+size 0:29:3 0;
+status_type 0:28:1 0;
+__reserved_18 0:18:10 0;
+base 0:9:9 0;
+__reserved_0 0:0:9 0;
+}
+.%type P2 0
+.%type S4 nfp_em_filter_status{
+__unnamed 0 29;
+}
+.%type S4 {
+count32 0 30;
+count16 0 31;
+bitmask32 0 32;
+bitmask16 0 33;
+event 0 34;
+__raw 0 0;
+}
+.%type S4 {
+cnt32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+override 0:16:6 0;
+cnt16 0:0:16 0;
+}
+.%type S4 {
+mask32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+override 0:20:3 0;
+cnt4 0:16:4 0;
+mask16 0:0:16 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+cnt2 0:20:2 0;
+event 0:0:20 0;
+}
+.%type P12 36
+.%type S4 event_cls_filter{
+}
+.%type P2 0
+.%type P2 17
+.%type P2 40
+.%type S16 nfp_pcie_dma_cmd{
+__unnamed 0 41;
+}
+.%type S16 {
+__unnamed 0 42;
+__raw 0 43;
+}
+.%type S16 {
+cpp_addr_lo 0:0:32 0;
+mode_sel 4:30:2 0;
+dma_mode 4:14:16 0;
+cpp_token 4:12:2 0;
+dma_cfg_index 4:8:4 0;
+cpp_addr_hi 4:0:8 0;
+pcie_addr_lo 8:0:32 0;
+length 12:20:12 0;
+rid 12:12:8 0;
+rid_override 12:11:1 0;
+trans_class 12:8:3 0;
+pcie_addr_hi 12:0:8 0;
+}
+.%type A16 0
+.%type P2 0
+.%type P2 46
+.%type S16 qc_bitmask{
+bmsk_lo 0 0;
+bmsk_hi 4 0;
+proc 8 0;
+curr 12 0;
+}
+.%type P2 48
+.%type S20 qc_queue_config{
+watermark 0 49;
+size 4 50;
+event_data 8 0;
+event_type 12 51;
+ptr 16 0;
+}
+.%type E4 pcie_qc_watermark{
+PCIE_QC_WM_4 0;
+PCIE_QC_WM_8 1;
+PCIE_QC_WM_16 2;
+PCIE_QC_WM_32 3;
+PCIE_QC_WM_64 4;
+PCIE_QC_WM_128 5;
+PCIE_QC_WM_256 6;
+PCIE_QC_WM_512 7;
+}
+.%type E4 pcie_qc_q_size{
+PCIE_QC_SZ_256 0;
+PCIE_QC_SZ_512 1;
+PCIE_QC_SZ_1k 2;
+PCIE_QC_SZ_2k 3;
+PCIE_QC_SZ_4k 4;
+PCIE_QC_SZ_8k 5;
+PCIE_QC_SZ_16k 6;
+PCIE_QC_SZ_32k 7;
+PCIE_QC_SZ_64k 8;
+PCIE_QC_SZ_128k 9;
+PCIE_QC_SZ_256k 10;
+}
+.%type E4 pcie_qc_event{
+PCIE_QC_EVENT_NO_EVENT 0;
+PCIE_QC_EVENT_NOT_EMPTY 1;
+PCIE_QC_EVENT_GE_MARK 2;
+PCIE_QC_EVENT_LT_MARK 3;
+}
+.%type P2 53
+.%type S32 qc_xfers{
+x0 0 0;
+x1 4 0;
+x2 8 0;
+x3 12 0;
+x4 16 0;
+x5 20 0;
+x6 24 0;
+x7 28 0;
+}
+.%type P2 19
+.%type P2 46
+.%type P2 57
+.%type S8 qc_bmsk_updates{
+bmsk_lo 0 0;
+bmsk_hi 4 0;
+}
+.%type P2 59
+.%type S28 check_queues_consts{
+pcie_isl 0 0;
+max_retries 4 0;
+batch_sz 8 0;
+queue_type 12 0;
+pending_test 16 0;
+event_data 20 0;
+event_type 24 0;
+}
+.%type P6 61
+.%type S32 queue_info{
+wptr 0 0;
+sptr 4 0;
+ring_sz_msk 8 0;
+dummy 12 62;
+}
+.%type A20 0
+.%type S4 nfp_qc_sts_hi{
+__unnamed 0 64;
+}
+.%type S4 {
+__unnamed 0 65;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_31 0:31:1 0;
+overflowed 0:30:1 0;
+underflowed 0:29:1 0;
+wmreached 0:28:1 0;
+full 0:27:1 0;
+empty 0:26:1 0;
+__reserved_25 0:25:1 0;
+watermark 0:22:3 0;
+size 0:18:4 0;
+writeptr 0:0:18 0;
+}
+.%type E4 qc_ptr_type{
+QC_RPTR 0;
+QC_WPTR 1;
+}
+.%type P2 0
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 0
+.%type S4 nfp_qc_sts_lo{
+__unnamed 0 71;
+}
+.%type S4 {
+__unnamed 0 72;
+__raw 0 0;
+}
+.%type S4 {
+rptr_enable 0:31:1 0;
+overflowed 0:30:1 0;
+underflowed 0:29:1 0;
+wmreached 0:28:1 0;
+full 0:27:1 0;
+empty 0:26:1 0;
+event_data 0:20:6 0;
+event_type 0:18:2 0;
+readptr 0:0:18 0;
+}
+.%type S4 nfp_qc_add_rptr{
+__unnamed 0 74;
+}
+.%type S4 {
+__unnamed 0 75;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_18 0:18:14 0;
+val 0:0:18 0;
+}

@@ -1,0 +1,82 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_327_V$6d6
+.%arg y 0 y_327_V$6d7
+.%var result 0 result_327 LIX
+.%scope end
+.%scope function pif_lookup _pif_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_lookup.c" 94 307
+.%arg tableno 0 tableno_346_V$6da
+.%arg parrep 1 parrep_346_V$6db
+.%arg action_buffer 2 action_buffer_346_V$6dc
+.%var label_set 3 label_set_346 LIX
+.%var d 12 d_346 LIR
+.%var result 15 result_346 LIX
+.%var rule 0 rule_346 LIX
+.%var cfg_ptr 17 cfg_ptr_346 LIX
+.%scope block 166 199
+.%var label_set_id 18 label_set_id_350 LIX
+.%scope end
+.%scope block 226 305
+.%var sig 18 sig_354 LIX
+.%var ruledata 2 ruledata_354 LIX
+.%var rd_buf 19 rd_buf_354 LIR
+.%var wr_buf 20 wr_buf_354 LIW
+.%var rd_buf_ptr 21 rd_buf_ptr_354 LIX
+.%var act_op 22 act_op_354 LIX
+.%var action_id 18 action_id_354 LIX
+.%var i 18 i_354 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type P6 0
+.%type P3 0
+.%type A192 4
+.%type S64 dcfl_label_set{
+__unnamed 0 5;
+}
+.%type S64 {
+__unnamed 0 6;
+results 0 9;
+values 0 11;
+}
+.%type S64 {
+labels 0 7;
+}
+.%type A64 8
+.%type U2
+.%type A64 10
+.%type S4 {
+priority 0:16:16 0;
+rule_id 0:0:16 0;
+}
+.%type A64 0
+.%type S16 pif_actiondata_table_desc{
+table_address 0 13;
+rule_count 8 0;
+reserved 12 8;
+record_shift 14 14;
+flags 15 14;
+}
+.%type P3 0
+.%type U1
+.%type S8 pif_lookup_result{
+action_id 0 16;
+action_len 4 16;
+}
+.%type I4
+.%type P3 14
+.%type I4
+.%type A96 0
+.%type A96 0
+.%type P2 0
+.%type P2 23
+.%type S4 pif_action_opdata{
+__unnamed 0 24;
+val32 0 0;
+}
+.%type S4 {
+reserved0 0:24:8 18;
+action_id 0:16:8 18;
+dbg_flags 0:8:8 18;
+actdata_cnt 0:0:8 18;
+}

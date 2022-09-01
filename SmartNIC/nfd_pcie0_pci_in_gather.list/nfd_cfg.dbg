@@ -1,0 +1,114 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 1 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 3 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 4 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 5 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 6 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 7 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 8 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 9 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 10 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 11 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%scope function nfd_cfg_init_cfg_msg _nfd_cfg_init_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 37 42
+.%arg cfg_sig 12 cfg_sig_137_V$3f
+.%arg cfg_msg 14 cfg_msg_137_V$40
+.%scope end
+.%scope function send_interthread_sig _send_interthread_sig "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 45 56
+.%arg dst_me 0 dst_me_138_V$4b
+.%arg ctx 0 ctx_138_V$4c
+.%arg sig_no 0 sig_no_138_V$4d
+.%var addr 0 addr_138 LIX
+.%scope end
+.%scope function nfd_cfg_check_cfg_msg _nfd_cfg_check_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 59 86
+.%arg cfg_msg 14 cfg_msg_139_V$4f
+.%arg cfg_sig 12 cfg_sig_139_V$50
+.%arg rnum 0 rnum_139_V$51
+.%scope block 63 85
+.%var ret 13 ret_140 LIX
+.%var cfg_msg_rd 15 cfg_msg_rd_140 LIR
+.%var ring_addr 0 ring_addr_140 LIX
+.%scope end
+.%scope end
+.%scope function _nfd_flr_ack_pf __nfd_flr_ack_pf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 97 118
+.%arg pcie_isl 0 pcie_isl_143_V$75
+.%var flr_data 0 flr_data_143 LIW
+.%var flr_addr 0 flr_addr_143 LIX
+.%var atomic_data 0 atomic_data_143 LIX
+.%var atomic_addr 18 atomic_addr_143 LIX
+.%scope end
+.%scope function _nfd_flr_ack_vf __nfd_flr_ack_vf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 130 156
+.%arg pcie_isl 0 pcie_isl_144_V$7b
+.%arg vf 0 vf_144_V$7c
+.%var flr_data 0 flr_data_144 LIX
+.%var flr_addr 0 flr_addr_144 LIX
+.%var atomic_data 0 atomic_data_144 LIW
+.%var atomic_addr 18 atomic_addr_144 LIX
+.%scope end
+.%scope function nfd_cfg_app_complete_cfg_msg _nfd_cfg_app_complete_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 160 215
+.%arg pcie_isl 0 pcie_isl_145_V$81
+.%arg cfg_msg 14 cfg_msg_145_V$82
+.%arg isl_base 19 isl_base_145_V$83
+.%arg cfg_sig 12 cfg_sig_145_V$84
+.%var result 0 result_145 LIW
+.%var addr 21 addr_145 LIX
+.%var update_request 0 update_request_145 LIR
+.%var read_sig 13 read_sig_145 LIX
+.%var write_sig 13 write_sig_145 LIX
+.%var nfd_isl_master 0 nfd_isl_master_145 LIX
+.%scope end
+.%scope function nfd_cfg_svc_complete_cfg_msg _nfd_cfg_svc_complete_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg.c" 219 252
+.%arg cfg_msg 14 cfg_msg_152_V$bd
+.%arg cfg_sig_remote 22 cfg_sig_remote_152_V$be
+.%arg next_me 0 next_me_152_V$bf
+.%arg rnum_out 0 rnum_out_152_V$c0
+.%arg rnum_in 0 rnum_in_152_V$c1
+.%var cfg_msg_tmp 15 cfg_msg_tmp_152 LIX
+.%var cfg_msg_wr 15 cfg_msg_wr_152 LIW
+.%var cfg_msg_rd 15 cfg_msg_rd_152 LIR
+.%var ring_addr 0 ring_addr_152 LIX
+.%var journal_sig 13 journal_sig_152 LIX
+.%var get_sig 23 get_sig_152 LIX
+.%scope end
+.%type U4
+.%type A16 2
+.%type U1
+.%type A32768 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A41943040 2
+.%type A10485760 2
+.%type P2 13
+.%type I4
+.%type P2 15
+.%type S4 nfd_cfg_msg{
+__unnamed 0 16;
+}
+.%type S4 {
+__unnamed 0 17;
+__raw 0 0;
+}
+.%type S4 {
+msg_valid 0:31:1 0;
+error 0:30:1 0;
+interested 0:29:1 0;
+up_bit 0:28:1 0;
+spare 0:16:12 0;
+queue 0:8:8 0;
+vnic 0:0:8 0;
+}
+.%type P3 2
+.%type P3 20
+.%type U4
+.%type P3 2
+.%type P2 13
+.%type S8 SIGNAL_PAIR{
+even 0 13;
+odd 4 13;
+}

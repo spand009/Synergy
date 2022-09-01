@@ -1,0 +1,1682 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var nfp_pcie_pcie_msi_sw_gen 3 _nfp_pcie_pcie_msi_sw_gen SEX
+.%var nfp_pcie_pcie_msix_sw_gen 4 _nfp_pcie_pcie_msix_sw_gen SEX
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 5 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 7 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 8 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 9 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 10 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 11 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 12 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 13 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 14 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 15 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%var nfd_in_lso_cntr_names 16 _nfd_in_lso_cntr_names SIX
+.%var desc_ring_base 0 _desc_ring_base SIX
+.%var tx_desc 18 _tx_desc SER
+.%var issued_tmp 23 _issued_tmp SEX
+.%var queue_data 27 _queue_data SEX
+.%var nfd_in_lso_cntr_addr 0 _nfd_in_lso_cntr_addr SIX
+.%var lso_hdr_data 32 _lso_hdr_data SEX
+.%var lso_hdr_data_base 0 _lso_hdr_data_base SIX
+.%var gather_dma_seq_compl 0 _gather_dma_seq_compl SEX
+.%var gather_dma_seq_serv 0 _gather_dma_seq_serv SEX
+.%var data_dma_seq_issued 0 _data_dma_seq_issued SEX
+.%var jumbo_dma_seq_issued 0 _jumbo_dma_seq_issued SEX
+.%var jumbo_dma_seq_compl 0 _jumbo_dma_seq_compl SEX
+.%var desc_ring0 33 _desc_ring0 SEX
+.%var nfd_in_issued_ring0 34 _nfd_in_issued_ring0 SEX
+.%var nfd_in_gather_compl_refl_in0 0 _nfd_in_gather_compl_refl_in0 SER
+.%var nfd_in_gather_compl_refl_sig0 35 _nfd_in_gather_compl_refl_sig0 SEX
+.%var nfd_in_issued_lso_ring_addr 0 _nfd_in_issued_lso_ring_addr SIX
+.%var nfd_in_issued_lso_ring_num 0 _nfd_in_issued_lso_ring_num SIX
+.%var cpp_hi_no_sig_part 0 _cpp_hi_no_sig_part SIX
+.%var cpp_hi_event_part 0 _cpp_hi_event_part SIX
+.%var dma_out 36 _dma_out SIW
+.%var batch_out 41 _batch_out SIW
+.%var tx_desc_sig 35 _tx_desc_sig SIX
+.%var msg_sig0 35 _msg_sig0 SIX
+.%var desc_order_sig 35 _desc_order_sig SIX
+.%var dma_order_sig 35 _dma_order_sig SIX
+.%var last_of_batch_dma_sig 35 _last_of_batch_dma_sig SIX
+.%var msg_sig1 35 _msg_sig1 SIX
+.%var batch_sig 35 _batch_sig SIX
+.%var wait_msk 35 _wait_msk SIX
+.%var next_ctx 0 _next_ctx SEX
+.%var status_queue_sel 0 _status_queue_sel SIR
+.%var status_queue_info 28 _status_queue_info SIW
+.%var status_issued 42 _status_issued SIW
+.%var status_throttle 35 _status_throttle SEX
+.%var buf_store 43 _buf_store SEX
+.%var buf_store_start 0 _buf_store_start SIX
+.%var state 44 _state SIX
+.%var precache_sig0 45 _precache_sig0 SIX
+.%var precache_sig1 45 _precache_sig1 SIX
+.%var bufs_rd 46 _bufs_rd SIR
+.%var blm_queue_addr 0 _blm_queue_addr SIX
+.%var blm_queue_num 0 _blm_queue_num SIX
+.%var buf_addr_msk 0 _buf_addr_msk SIX
+.%var jumbo_store 47 _jumbo_store SEX
+.%var jumbo_cnt 0 _jumbo_cnt SEX
+.%var data_dma_seq_compl 0 _data_dma_seq_compl SEX
+.%var data_dma_seq_served 0 _data_dma_seq_served SEX
+.%var data_dma_seq_safe 0 _data_dma_seq_safe SEX
+.%var nfd_in_data_event_xfer 0 _nfd_in_data_event_xfer SIR
+.%var nfd_in_data_event_sig 35 _nfd_in_data_event_sig SIX
+.%var nfd_in_jumbo_event_xfer 0 _nfd_in_jumbo_event_xfer SIR
+.%var nfd_in_jumbo_event_sig 35 _nfd_in_jumbo_event_sig SIX
+.%var nfd_in_data_compl_refl_out 0 _nfd_in_data_compl_refl_out SIW
+.%var nfd_in_data_compl_refl_sig 35 _nfd_in_data_compl_refl_sig SEX
+.%var nfd_in_data_compl_refl_in0 0 _nfd_in_data_compl_refl_in0 SER
+.%var nfd_in_data_served_refl_in0 0 _nfd_in_data_served_refl_in0 SER
+.%var nfd_in_data_served_refl_sig0 35 _nfd_in_data_served_refl_sig0 SEX
+.%var cfg_queue_bmsk 48 _cfg_queue_bmsk SEX
+.%var flr_pend_status 0 _flr_pend_status SIX
+.%var flr_pend_vf 49 _flr_pend_vf SIX
+.%var flr_ap_sig 35 _flr_ap_sig SIX
+.%var flr_ap_xfer 0 _flr_ap_xfer SIR
+.%var cfg_ring_enables 50 _cfg_ring_enables SIX
+.%var cfg_ring_addr 51 _cfg_ring_addr SER
+.%var cfg_ring_sizes 0 _cfg_ring_sizes SER
+.%var nfd_cfg_sig_pci_in0 35 _nfd_cfg_sig_pci_in0 SEX
+.%var nfd_cfg_sig_pci_out 35 _nfd_cfg_sig_pci_out SEX
+.%var cfg_msg 52 _cfg_msg SEX
+.%scope function issue_dma_queue_state_bit_set_test _issue_dma_queue_state_bit_set_test "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 249 262
+.%arg bit_num 35 bit_num_551_V$b4c
+.%var result 35 result_551 LIX
+.%scope end
+.%scope function issue_dma_queue_state_proc_lso _issue_dma_queue_state_proc_lso "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 269 283
+.%var result 35 result_553 LIX
+.%var bit_num 0 bit_num_553 LIX
+.%scope end
+.%scope function _add_to_pcie_addr __add_to_pcie_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 293 301
+.%arg pcie_hi_word 55 pcie_hi_word_554_V$b54
+.%arg pcie_addr_lo 55 pcie_addr_lo_554_V$b55
+.%arg dma_len 0 dma_len_554_V$b56
+.%scope end
+.%scope function issue_dma_vnic_setup _issue_dma_vnic_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 378 476
+.%arg cfg_msg 56 cfg_msg_557_V$b57
+.%var queue 0 queue_557 LIX
+.%var bmsk_queue 0 bmsk_queue_557 LIX
+.%var cfg_msg_cp 52 cfg_msg_cp_557 LIX
+.%scope block 438 453
+.%var blm_raddr 0 blm_raddr_565 LIX
+.%var blm_rnum 0 blm_rnum_565 LIX
+.%scope end
+.%scope end
+.%scope function issue_dma_gather_seq_recv _issue_dma_gather_seq_recv "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 525 530
+.%scope end
+.%scope function reflect_data _reflect_data "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 126 154
+.%arg dst_me 0 dst_me_1429_V$f34
+.%arg dst_xfer 0 dst_xfer_1429_V$f35
+.%arg sig_no 0 sig_no_1429_V$f36
+.%arg src_xfer 57 src_xfer_1429_V$f37
+.%arg size 0 size_1429_V$f38
+.%var addr 0 addr_1429 LIX
+.%var count 0 count_1429 LIX
+.%var indirect 59 indirect_1429 LIX
+.%scope end
+.%scope function _precache_buf_bytes_used __precache_buf_bytes_used "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 179 186
+.%var ret 0 ret_1431 LIX
+.%scope end
+.%scope function precache_bufs _precache_bufs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 278 315
+.%scope end
+.%scope function precache_bufs_use _precache_bufs_use "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 322 328
+.%var ret 0 ret_1452 LIX
+.%scope end
+.%scope function precache_bufs_return _precache_bufs_return "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 342 348
+.%arg buf_addr 0 buf_addr_1453_V$f55
+.%scope end
+.%scope function precache_bufs_avail _precache_bufs_avail "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 356 364
+.%var ret 0 ret_1454 LIX
+.%scope end
+.%scope function precache_bufs_compute_seq_safe _precache_bufs_compute_seq_safe "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 377 401
+.%var min_bat 0 min_bat_1455 LIX
+.%var buf_bat 0 buf_bat_1455 LIX
+.%var dma_bat 0 dma_bat_1455 LIX
+.%var ring_bat 0 ring_bat_1455 LIX
+.%scope end
+.%scope function precache_bufs_jumbo _precache_bufs_jumbo "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 413 486
+.%var to_cache 0 to_cache_1458 LIX
+.%scope block 419 485
+.%var jumbo_rd 62 jumbo_rd_1459 LIR
+.%var jumbo_store_addr 0 jumbo_store_addr_1459 LIX
+.%var jumbo_queue_num 0 jumbo_queue_num_1459 LIX
+.%var jump_offset 0 jump_offset_1459 LIX
+.%var jumbo_sig 45 jumbo_sig_1459 LIX
+.%scope end
+.%scope end
+.%scope function precache_bufs_jumbo_use _precache_bufs_jumbo_use "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 498 524
+.%arg buf_addr 63 buf_addr_1463_V$f66
+.%var ret 35 ret_1463 LIX
+.%scope end
+.%scope function distr_precache_bufs _distr_precache_bufs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 572 618
+.%arg wait_msk 64 wait_msk_1467_V$f69
+.%arg data_sig 65 data_sig_1467_V$f6a
+.%arg jumbo_sig 65 jumbo_sig_1467_V$f6b
+.%scope end
+.%scope function nfd_flr_clr_bar _nfd_flr_clr_bar "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 84 112
+.%arg addr 66 addr_1515_V$f6e
+.%var zero 67 zero_1515 LIW
+.%var copied_bytes 0 copied_bytes_1515 LIX
+.%scope end
+.%scope function nfd_flr_init_cfg_queue _nfd_flr_init_cfg_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 128 146
+.%arg pcie_isl 0 pcie_isl_1520_V$f76
+.%arg vnic 0 vnic_1520_V$f77
+.%arg event_type 0 event_type_1520_V$f78
+.%var nfd_cfg_queue 68 nfd_cfg_queue_1520 LIX
+.%scope end
+.%scope function nfd_flr_check_pf _nfd_flr_check_pf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 239 272
+.%arg pcie_isl 0 pcie_isl_1523_V$f7f
+.%arg flr_pend_status 72 flr_pend_status_1523_V$f80
+.%var seen_flr 0 seen_flr_1523 LIR
+.%var atomic_addr 73 atomic_addr_1523 LIX
+.%var atomic_sig 35 atomic_sig_1523 LIX
+.%var cntrlr3 0 cntrlr3_1523 LIR
+.%var xpb_addr 0 xpb_addr_1523 LIX
+.%var xpb_sig 35 xpb_sig_1523 LIX
+.%var pf_atomic_data 0 pf_atomic_data_1523 LIX
+.%scope end
+.%scope function nfd_flr_check_vfs _nfd_flr_check_vfs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 284 330
+.%arg pcie_isl 0 pcie_isl_1526_V$f89
+.%arg flr_pend_status 72 flr_pend_status_1526_V$f8a
+.%arg flr_pend_vf 74 flr_pend_vf_1526_V$f8b
+.%var seen_flr 75 seen_flr_1526 LIR
+.%var hw_flr 76 hw_flr_1526 LIR
+.%var atomic_addr 73 atomic_addr_1526 LIX
+.%var atomic_sig 35 atomic_sig_1526 LIX
+.%var cntrlr3 0 cntrlr3_1526 LIR
+.%var xpb_addr 0 xpb_addr_1526 LIX
+.%var xpb_sig0 35 xpb_sig0_1526 LIX
+.%var xpb_sig1 35 xpb_sig1_1526 LIX
+.%var new_flr 0 new_flr_1526 LIX
+.%var new_flr_wr 77 new_flr_wr_1526 LIW
+.%scope end
+.%scope function nfd_flr_write_cfg_msg _nfd_flr_write_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 347 356
+.%arg isl_base 66 isl_base_1529_V$f99
+.%arg vnic 0 vnic_1529_V$f9a
+.%var cfg_bar_msg 78 cfg_bar_msg_1529 LIW
+.%scope end
+.%scope function nfd_flr_ack_pf _nfd_flr_ack_pf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 367 391
+.%arg pcie_isl 0 pcie_isl_1530_V$f9e
+.%var flr_data 0 flr_data_1530 LIW
+.%var flr_addr 0 flr_addr_1530 LIX
+.%var atomic_data 0 atomic_data_1530 LIX
+.%var atomic_addr 73 atomic_addr_1530 LIX
+.%scope end
+.%scope function nfd_flr_ack_vf _nfd_flr_ack_vf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 403 432
+.%arg pcie_isl 0 pcie_isl_1531_V$fa3
+.%arg vf 0 vf_1531_V$fa4
+.%var flr_data 0 flr_data_1531 LIX
+.%var flr_addr 0 flr_addr_1531 LIX
+.%var atomic_data 0 atomic_data_1531 LIW
+.%var atomic_addr 73 atomic_addr_1531 LIX
+.%scope end
+.%scope function send_interthread_sig _send_interthread_sig "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 211 222
+.%arg dst_me 0 dst_me_1532_V$fa9
+.%arg ctx 0 ctx_1532_V$faa
+.%arg sig_no 0 sig_no_1532_V$fab
+.%var addr 0 addr_1532 LIX
+.%scope end
+.%scope function _ffs __ffs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 235 247
+.%arg data 0 data_1533_V$fad
+.%var ret 35 ret_1533 LIX
+.%scope end
+.%scope function _ring_enables_test __ring_enables_test "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 254 270
+.%arg cfg_msg 56 cfg_msg_1534_V$fb0
+.%var mod_queue 0 mod_queue_1534 LIX
+.%var ret 35 ret_1534 LIX
+.%scope end
+.%scope function _get_ring_sz __get_ring_sz "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 282 289
+.%arg cfg_msg 56 cfg_msg_1537_V$fc8
+.%var ring_sz 6 ring_sz_1537 LIX
+.%var offset 0 offset_1537 LIX
+.%scope end
+.%scope function _bar_addr __bar_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 294 299
+.%arg bar 79 bar_1538_V$fd6
+.%arg data 83 data_1538_V$fd7
+.%var addr_tmp 0 addr_tmp_1538 LIX
+.%scope end
+.%scope function nfd_cfg_setup_pf _nfd_cfg_setup_pf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 309 346
+.%var addr_hi 0 addr_hi_1539 LIX
+.%var bar_base_addr 0 bar_base_addr_1539 LIX
+.%var bar_tmp 80 bar_tmp_1539 LIX
+.%var bar 80 bar_1539 LIW
+.%var sig 35 sig_1539 LIX
+.%scope end
+.%scope function nfd_cfg_setup_vf _nfd_cfg_setup_vf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 350 385
+.%var addr_hi 0 addr_hi_1540 LIX
+.%var bar_base_addr 0 bar_base_addr_1540 LIX
+.%var bar_tmp 84 bar_tmp_1540 LIX
+.%var bar 84 bar_1540 LIW
+.%var sig 35 sig_1540 LIX
+.%scope end
+.%scope function nfd_cfg_pcie_monitor_stop _nfd_cfg_pcie_monitor_stop "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 566 601
+.%var addr_hi 0 addr_hi_1550 LIX
+.%var addr_lo 0 addr_lo_1550 LIX
+.%var chk_val 0 chk_val_1550 LIR
+.%var chk_sig 35 chk_sig_1550 LIX
+.%scope end
+.%scope function nfd_cfg_start_cfg_msg _nfd_cfg_start_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 731 750
+.%arg cfg_msg 56 cfg_msg_1562_V$101f
+.%arg cfg_sig_remote 87 cfg_sig_remote_1562_V$1020
+.%arg next_me 0 next_me_1562_V$1021
+.%arg rnum 0 rnum_1562_V$1022
+.%var cfg_msg_tmp 52 cfg_msg_tmp_1562 LIX
+.%var cfg_msg_wr 52 cfg_msg_wr_1562 LIW
+.%var ring_addr 0 ring_addr_1562 LIX
+.%scope end
+.%scope function nfd_cfg_complete_cfg_msg _nfd_cfg_complete_cfg_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 764 797
+.%arg cfg_msg 56 cfg_msg_1563_V$104e
+.%arg cfg_sig_remote 87 cfg_sig_remote_1563_V$104f
+.%arg next_me 0 next_me_1563_V$1050
+.%arg rnum_out 0 rnum_out_1563_V$1051
+.%arg rnum_in 0 rnum_in_1563_V$1052
+.%var cfg_msg_tmp 52 cfg_msg_tmp_1563 LIX
+.%var cfg_msg_wr 52 cfg_msg_wr_1563 LIX
+.%var cfg_msg_rd 52 cfg_msg_rd_1563 LIR
+.%var ring_addr 0 ring_addr_1563 LIX
+.%var journal_sig 35 journal_sig_1563 LIX
+.%var get_sig 45 get_sig_1563 LIX
+.%scope end
+.%scope function nfd_cfg_next_flr _nfd_cfg_next_flr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 814 953
+.%arg cfg_msg 56 cfg_msg_1565_V$1097
+.%scope block 817 871
+.%var vnic 0 vnic_1567 LIX
+.%scope end
+.%scope block 871 905
+.%var vf 35 vf_1568 LIX
+.%scope end
+.%scope block 905 941
+.%var vf 35 vf_1573 LIX
+.%scope end
+.%scope end
+.%scope function nfd_cfg_parse_msg _nfd_cfg_parse_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 968 1043
+.%arg cfg_msg 56 cfg_msg_1580_V$10ec
+.%arg comp 88 comp_1580_V$10ed
+.%var cfg_bar_data 89 cfg_bar_data_1580 LIR
+.%scope block 1005 1038
+.%var enables_ind 0 enables_ind_1587 LIX
+.%var addr_off 0 addr_off_1587 LIX
+.%var sz_off 0 sz_off_1587 LIX
+.%scope end
+.%scope end
+.%scope function nfd_cfg_proc_msg _nfd_cfg_proc_msg "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 1060 1122
+.%arg cfg_msg 56 cfg_msg_1595_V$116e
+.%arg queue 55 queue_1595_V$116f
+.%arg ring_sz 90 ring_sz_1595_V$1170
+.%arg ring_base 91 ring_base_1595_V$1171
+.%arg comp 88 comp_1595_V$1172
+.%var next_addr_off 0 next_addr_off_1595 LIX
+.%var next_sz_off 0 next_sz_off_1595 LIX
+.%scope end
+.%scope function nfd_cfg_next_queue _nfd_cfg_next_queue "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 1126 1150
+.%arg cfg_msg 56 cfg_msg_1604_V$1215
+.%arg queue 55 queue_1604_V$1216
+.%scope end
+.%scope function nfd_cfg_check_pcie_link _nfd_cfg_check_pcie_link "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 1162 1194
+.%var pcie_sts_raw 0 pcie_sts_raw_1609 LIR
+.%var pcie_sts 0 pcie_sts_1609 LIX
+.%var pcie_sts_addr 0 pcie_sts_addr_1609 LIX
+.%var pcie_sts_sig 35 pcie_sts_sig_1609 LIX
+.%scope end
+.%scope function _issue_dma_enable_DmaByteMaskSwap __issue_dma_enable_DmaByteMaskSwap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 230 242
+.%arg pcie_isl 6 pcie_isl_550_V$1275
+.%var data 0 data_550 LIW
+.%var addr_hi 0 addr_hi_550 LIX
+.%var dma_dbg_reg_0_addr 0 dma_dbg_reg_0_addr_550 LIX
+.%var sig 35 sig_550 LIX
+.%scope end
+.%scope function issue_dma_setup_shared _issue_dma_setup_shared "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 308 367
+.%var cfg_tmp 92 cfg_tmp_555 LIX
+.%var cfg 92 cfg_555 LIW
+.%var lso_hdr_data_init_xw 0 lso_hdr_data_init_xw_555 LIW
+.%var i 0 i_555 LIX
+.%scope end
+.%scope function issue_dma_setup _issue_dma_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 483 513
+.%scope end
+.%scope function issue_dma_cleanup_lso_state _issue_dma_cleanup_lso_state "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 579 617
+.%var curr_buf 0 curr_buf_571 LIX
+.%scope end
+.%scope function issue_proc_lso0 _issue_proc_lso0 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1389 1389
+.%arg queue 0 queue_573_V$12ab
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_573_V$12ac
+.%arg type 0 type_573_V$12ad
+.%var dma_len 0 dma_len_573 LIX
+.%var lso_dma_index 0 lso_dma_index_573 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_573 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_573 LIX
+.%var cpp_hi_word 0 cpp_hi_word_573 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_573 LIX
+.%var pcie_hi_word 0 pcie_hi_word_573 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_573 LIX
+.%var buf_addr 0 buf_addr_573 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_573 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_573 LIX
+.%var lso_enq_sig 35 lso_enq_sig_573 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_573 LIX
+.%var lso_journal_sig 35 lso_journal_sig_573 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_573 LIX
+.%var mu_buf_left 0 mu_buf_left_573 LIX
+.%var dma_left 0 dma_left_573 LIX
+.%var dma_length 0 dma_length_573 LIX
+.%var mode 0 mode_573 LIX
+.%var header_to_read 0 header_to_read_573 LIX
+.%var hdr_remainder 0 hdr_remainder_573 LIX
+.%var curr_buf 0 curr_buf_573 LIX
+.%var lso_hdr_len 0 lso_hdr_len_573 LIX
+.%var lso_payload_len 0 lso_payload_len_573 LIX
+.%var data_len 0 data_len_573 LIX
+.%var offset 0 offset_573 LIX
+.%var l4_offset 0 l4_offset_573 LIX
+.%var mss 0 mss_573 LIX
+.%var lso_req_wrd 0 lso_req_wrd_573 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_573 LIX
+.%var bytes_dmaed 0 bytes_dmaed_573 LIX
+.%scope block 1389 1389
+.%var hdr_len_chk 0 hdr_len_chk_574 LIX
+.%scope end
+.%scope block 1389 1389
+.%var mss_msk 0 mss_msk_581 LIX
+.%scope end
+.%scope block 1389 1389
+.%var lso_wait_msk 35 lso_wait_msk_596 LIX
+.%scope block 1389 1389
+.%var jumbo_seq_test 35 jumbo_seq_test_608 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso1 _issue_proc_lso1 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1390 1390
+.%arg queue 0 queue_617_V$12f1
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_617_V$12f2
+.%arg type 0 type_617_V$12f3
+.%var dma_len 0 dma_len_617 LIX
+.%var lso_dma_index 0 lso_dma_index_617 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_617 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_617 LIX
+.%var cpp_hi_word 0 cpp_hi_word_617 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_617 LIX
+.%var pcie_hi_word 0 pcie_hi_word_617 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_617 LIX
+.%var buf_addr 0 buf_addr_617 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_617 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_617 LIX
+.%var lso_enq_sig 35 lso_enq_sig_617 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_617 LIX
+.%var lso_journal_sig 35 lso_journal_sig_617 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_617 LIX
+.%var mu_buf_left 0 mu_buf_left_617 LIX
+.%var dma_left 0 dma_left_617 LIX
+.%var dma_length 0 dma_length_617 LIX
+.%var mode 0 mode_617 LIX
+.%var header_to_read 0 header_to_read_617 LIX
+.%var hdr_remainder 0 hdr_remainder_617 LIX
+.%var curr_buf 0 curr_buf_617 LIX
+.%var lso_hdr_len 0 lso_hdr_len_617 LIX
+.%var lso_payload_len 0 lso_payload_len_617 LIX
+.%var data_len 0 data_len_617 LIX
+.%var offset 0 offset_617 LIX
+.%var l4_offset 0 l4_offset_617 LIX
+.%var mss 0 mss_617 LIX
+.%var lso_req_wrd 0 lso_req_wrd_617 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_617 LIX
+.%var bytes_dmaed 0 bytes_dmaed_617 LIX
+.%scope block 1390 1390
+.%var hdr_len_chk 0 hdr_len_chk_618 LIX
+.%scope end
+.%scope block 1390 1390
+.%var mss_msk 0 mss_msk_625 LIX
+.%scope end
+.%scope block 1390 1390
+.%var lso_wait_msk 35 lso_wait_msk_640 LIX
+.%scope block 1390 1390
+.%var jumbo_seq_test 35 jumbo_seq_test_652 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso2 _issue_proc_lso2 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1391 1391
+.%arg queue 0 queue_661_V$1331
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_661_V$1332
+.%arg type 0 type_661_V$1333
+.%var dma_len 0 dma_len_661 LIX
+.%var lso_dma_index 0 lso_dma_index_661 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_661 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_661 LIX
+.%var cpp_hi_word 0 cpp_hi_word_661 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_661 LIX
+.%var pcie_hi_word 0 pcie_hi_word_661 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_661 LIX
+.%var buf_addr 0 buf_addr_661 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_661 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_661 LIX
+.%var lso_enq_sig 35 lso_enq_sig_661 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_661 LIX
+.%var lso_journal_sig 35 lso_journal_sig_661 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_661 LIX
+.%var mu_buf_left 0 mu_buf_left_661 LIX
+.%var dma_left 0 dma_left_661 LIX
+.%var dma_length 0 dma_length_661 LIX
+.%var mode 0 mode_661 LIX
+.%var header_to_read 0 header_to_read_661 LIX
+.%var hdr_remainder 0 hdr_remainder_661 LIX
+.%var curr_buf 0 curr_buf_661 LIX
+.%var lso_hdr_len 0 lso_hdr_len_661 LIX
+.%var lso_payload_len 0 lso_payload_len_661 LIX
+.%var data_len 0 data_len_661 LIX
+.%var offset 0 offset_661 LIX
+.%var l4_offset 0 l4_offset_661 LIX
+.%var mss 0 mss_661 LIX
+.%var lso_req_wrd 0 lso_req_wrd_661 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_661 LIX
+.%var bytes_dmaed 0 bytes_dmaed_661 LIX
+.%scope block 1391 1391
+.%var hdr_len_chk 0 hdr_len_chk_662 LIX
+.%scope end
+.%scope block 1391 1391
+.%var mss_msk 0 mss_msk_669 LIX
+.%scope end
+.%scope block 1391 1391
+.%var lso_wait_msk 35 lso_wait_msk_684 LIX
+.%scope block 1391 1391
+.%var jumbo_seq_test 35 jumbo_seq_test_696 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso3 _issue_proc_lso3 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1392 1392
+.%arg queue 0 queue_705_V$1371
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_705_V$1372
+.%arg type 0 type_705_V$1373
+.%var dma_len 0 dma_len_705 LIX
+.%var lso_dma_index 0 lso_dma_index_705 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_705 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_705 LIX
+.%var cpp_hi_word 0 cpp_hi_word_705 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_705 LIX
+.%var pcie_hi_word 0 pcie_hi_word_705 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_705 LIX
+.%var buf_addr 0 buf_addr_705 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_705 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_705 LIX
+.%var lso_enq_sig 35 lso_enq_sig_705 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_705 LIX
+.%var lso_journal_sig 35 lso_journal_sig_705 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_705 LIX
+.%var mu_buf_left 0 mu_buf_left_705 LIX
+.%var dma_left 0 dma_left_705 LIX
+.%var dma_length 0 dma_length_705 LIX
+.%var mode 0 mode_705 LIX
+.%var header_to_read 0 header_to_read_705 LIX
+.%var hdr_remainder 0 hdr_remainder_705 LIX
+.%var curr_buf 0 curr_buf_705 LIX
+.%var lso_hdr_len 0 lso_hdr_len_705 LIX
+.%var lso_payload_len 0 lso_payload_len_705 LIX
+.%var data_len 0 data_len_705 LIX
+.%var offset 0 offset_705 LIX
+.%var l4_offset 0 l4_offset_705 LIX
+.%var mss 0 mss_705 LIX
+.%var lso_req_wrd 0 lso_req_wrd_705 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_705 LIX
+.%var bytes_dmaed 0 bytes_dmaed_705 LIX
+.%scope block 1392 1392
+.%var hdr_len_chk 0 hdr_len_chk_706 LIX
+.%scope end
+.%scope block 1392 1392
+.%var mss_msk 0 mss_msk_713 LIX
+.%scope end
+.%scope block 1392 1392
+.%var lso_wait_msk 35 lso_wait_msk_728 LIX
+.%scope block 1392 1392
+.%var jumbo_seq_test 35 jumbo_seq_test_740 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso4 _issue_proc_lso4 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1393 1393
+.%arg queue 0 queue_749_V$13b1
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_749_V$13b2
+.%arg type 0 type_749_V$13b3
+.%var dma_len 0 dma_len_749 LIX
+.%var lso_dma_index 0 lso_dma_index_749 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_749 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_749 LIX
+.%var cpp_hi_word 0 cpp_hi_word_749 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_749 LIX
+.%var pcie_hi_word 0 pcie_hi_word_749 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_749 LIX
+.%var buf_addr 0 buf_addr_749 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_749 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_749 LIX
+.%var lso_enq_sig 35 lso_enq_sig_749 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_749 LIX
+.%var lso_journal_sig 35 lso_journal_sig_749 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_749 LIX
+.%var mu_buf_left 0 mu_buf_left_749 LIX
+.%var dma_left 0 dma_left_749 LIX
+.%var dma_length 0 dma_length_749 LIX
+.%var mode 0 mode_749 LIX
+.%var header_to_read 0 header_to_read_749 LIX
+.%var hdr_remainder 0 hdr_remainder_749 LIX
+.%var curr_buf 0 curr_buf_749 LIX
+.%var lso_hdr_len 0 lso_hdr_len_749 LIX
+.%var lso_payload_len 0 lso_payload_len_749 LIX
+.%var data_len 0 data_len_749 LIX
+.%var offset 0 offset_749 LIX
+.%var l4_offset 0 l4_offset_749 LIX
+.%var mss 0 mss_749 LIX
+.%var lso_req_wrd 0 lso_req_wrd_749 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_749 LIX
+.%var bytes_dmaed 0 bytes_dmaed_749 LIX
+.%scope block 1393 1393
+.%var hdr_len_chk 0 hdr_len_chk_750 LIX
+.%scope end
+.%scope block 1393 1393
+.%var mss_msk 0 mss_msk_757 LIX
+.%scope end
+.%scope block 1393 1393
+.%var lso_wait_msk 35 lso_wait_msk_772 LIX
+.%scope block 1393 1393
+.%var jumbo_seq_test 35 jumbo_seq_test_784 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso5 _issue_proc_lso5 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1394 1394
+.%arg queue 0 queue_793_V$13f1
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_793_V$13f2
+.%arg type 0 type_793_V$13f3
+.%var dma_len 0 dma_len_793 LIX
+.%var lso_dma_index 0 lso_dma_index_793 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_793 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_793 LIX
+.%var cpp_hi_word 0 cpp_hi_word_793 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_793 LIX
+.%var pcie_hi_word 0 pcie_hi_word_793 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_793 LIX
+.%var buf_addr 0 buf_addr_793 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_793 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_793 LIX
+.%var lso_enq_sig 35 lso_enq_sig_793 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_793 LIX
+.%var lso_journal_sig 35 lso_journal_sig_793 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_793 LIX
+.%var mu_buf_left 0 mu_buf_left_793 LIX
+.%var dma_left 0 dma_left_793 LIX
+.%var dma_length 0 dma_length_793 LIX
+.%var mode 0 mode_793 LIX
+.%var header_to_read 0 header_to_read_793 LIX
+.%var hdr_remainder 0 hdr_remainder_793 LIX
+.%var curr_buf 0 curr_buf_793 LIX
+.%var lso_hdr_len 0 lso_hdr_len_793 LIX
+.%var lso_payload_len 0 lso_payload_len_793 LIX
+.%var data_len 0 data_len_793 LIX
+.%var offset 0 offset_793 LIX
+.%var l4_offset 0 l4_offset_793 LIX
+.%var mss 0 mss_793 LIX
+.%var lso_req_wrd 0 lso_req_wrd_793 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_793 LIX
+.%var bytes_dmaed 0 bytes_dmaed_793 LIX
+.%scope block 1394 1394
+.%var hdr_len_chk 0 hdr_len_chk_794 LIX
+.%scope end
+.%scope block 1394 1394
+.%var mss_msk 0 mss_msk_801 LIX
+.%scope end
+.%scope block 1394 1394
+.%var lso_wait_msk 35 lso_wait_msk_816 LIX
+.%scope block 1394 1394
+.%var jumbo_seq_test 35 jumbo_seq_test_828 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso6 _issue_proc_lso6 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1395 1395
+.%arg queue 0 queue_837_V$1431
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_837_V$1432
+.%arg type 0 type_837_V$1433
+.%var dma_len 0 dma_len_837 LIX
+.%var lso_dma_index 0 lso_dma_index_837 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_837 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_837 LIX
+.%var cpp_hi_word 0 cpp_hi_word_837 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_837 LIX
+.%var pcie_hi_word 0 pcie_hi_word_837 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_837 LIX
+.%var buf_addr 0 buf_addr_837 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_837 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_837 LIX
+.%var lso_enq_sig 35 lso_enq_sig_837 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_837 LIX
+.%var lso_journal_sig 35 lso_journal_sig_837 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_837 LIX
+.%var mu_buf_left 0 mu_buf_left_837 LIX
+.%var dma_left 0 dma_left_837 LIX
+.%var dma_length 0 dma_length_837 LIX
+.%var mode 0 mode_837 LIX
+.%var header_to_read 0 header_to_read_837 LIX
+.%var hdr_remainder 0 hdr_remainder_837 LIX
+.%var curr_buf 0 curr_buf_837 LIX
+.%var lso_hdr_len 0 lso_hdr_len_837 LIX
+.%var lso_payload_len 0 lso_payload_len_837 LIX
+.%var data_len 0 data_len_837 LIX
+.%var offset 0 offset_837 LIX
+.%var l4_offset 0 l4_offset_837 LIX
+.%var mss 0 mss_837 LIX
+.%var lso_req_wrd 0 lso_req_wrd_837 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_837 LIX
+.%var bytes_dmaed 0 bytes_dmaed_837 LIX
+.%scope block 1395 1395
+.%var hdr_len_chk 0 hdr_len_chk_838 LIX
+.%scope end
+.%scope block 1395 1395
+.%var mss_msk 0 mss_msk_845 LIX
+.%scope end
+.%scope block 1395 1395
+.%var lso_wait_msk 35 lso_wait_msk_860 LIX
+.%scope block 1395 1395
+.%var jumbo_seq_test 35 jumbo_seq_test_872 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_proc_lso7 _issue_proc_lso7 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1396 1396
+.%arg queue 0 queue_881_V$1471
+.%arg pcie_hi_word_part 0 pcie_hi_word_part_881_V$1472
+.%arg type 0 type_881_V$1473
+.%var dma_len 0 dma_len_881 LIX
+.%var lso_dma_index 0 lso_dma_index_881 LIX
+.%var lso_issued_cnt 0 lso_issued_cnt_881 LIX
+.%var jumbo_seq_test 35 jumbo_seq_test_881 LIX
+.%var cpp_hi_word 0 cpp_hi_word_881 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_881 LIX
+.%var pcie_hi_word 0 pcie_hi_word_881 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_881 LIX
+.%var buf_addr 0 buf_addr_881 LIX
+.%var lso_hdr_dma_sig 35 lso_hdr_dma_sig_881 LIX
+.%var lso_hdr_enq_sig 35 lso_hdr_enq_sig_881 LIX
+.%var lso_enq_sig 35 lso_enq_sig_881 LIX
+.%var lso_hdr_sig 35 lso_hdr_sig_881 LIX
+.%var lso_journal_sig 35 lso_journal_sig_881 LIX
+.%var hdr_pkt_ptr 95 hdr_pkt_ptr_881 LIX
+.%var mu_buf_left 0 mu_buf_left_881 LIX
+.%var dma_left 0 dma_left_881 LIX
+.%var dma_length 0 dma_length_881 LIX
+.%var mode 0 mode_881 LIX
+.%var header_to_read 0 header_to_read_881 LIX
+.%var hdr_remainder 0 hdr_remainder_881 LIX
+.%var curr_buf 0 curr_buf_881 LIX
+.%var lso_hdr_len 0 lso_hdr_len_881 LIX
+.%var lso_payload_len 0 lso_payload_len_881 LIX
+.%var data_len 0 data_len_881 LIX
+.%var offset 0 offset_881 LIX
+.%var l4_offset 0 l4_offset_881 LIX
+.%var mss 0 mss_881 LIX
+.%var lso_req_wrd 0 lso_req_wrd_881 LIX
+.%var lso_seq_cnt 0 lso_seq_cnt_881 LIX
+.%var bytes_dmaed 0 bytes_dmaed_881 LIX
+.%scope block 1396 1396
+.%var hdr_len_chk 0 hdr_len_chk_882 LIX
+.%scope end
+.%scope block 1396 1396
+.%var mss_msk 0 mss_msk_889 LIX
+.%scope end
+.%scope block 1396 1396
+.%var lso_wait_msk 35 lso_wait_msk_904 LIX
+.%scope block 1396 1396
+.%var jumbo_seq_test 35 jumbo_seq_test_916 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_dma _issue_dma "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma.c" 1931 2085
+.%var batch 96 batch_925 SIR
+.%var desc_ring_addr 99 desc_ring_addr_925 LIX
+.%var desc_ring_off 0 desc_ring_off_925 LIX
+.%var pcie_hi_word_part 0 pcie_hi_word_part_925 LIX
+.%var queue 0 queue_925 LIX
+.%var num 0 num_925 LIX
+.%scope block 2020 2020
+.%var dma_len 0 dma_len_930 LIX
+.%var buf_addr 0 buf_addr_930 LIX
+.%var curr_buf 0 curr_buf_930 LIX
+.%var temp 0 temp_930 LIX
+.%var cpp_hi_word 0 cpp_hi_word_930 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_930 LIX
+.%var pcie_hi_word 0 pcie_hi_word_930 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_930 LIX
+.%scope block 2020 2020
+.%var cpp_hi_addr 0 cpp_hi_addr_932 LIX
+.%scope block 2020 2020
+.%var pkt_len 0 pkt_len_934 LIX
+.%scope end
+.%scope block 2020 2020
+.%var jumbo_seq_test 35 jumbo_seq_test_939 LIX
+.%scope end
+.%scope end
+.%scope block 2020 2020
+.%var data_len 0 data_len_946 LIX
+.%var offset 0 offset_946 LIX
+.%var len_chk 35 len_chk_946 LIX
+.%scope block 2020 2020
+.%var pkt_len 0 pkt_len_948 LIX
+.%scope end
+.%scope block 2020 2020
+.%var jumbo_seq_test 35 jumbo_seq_test_960 LIX
+.%scope end
+.%scope block 2020 2020
+.%var info_chk 35 info_chk_966 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2021 2021
+.%var dma_len 0 dma_len_969 LIX
+.%var buf_addr 0 buf_addr_969 LIX
+.%var curr_buf 0 curr_buf_969 LIX
+.%var temp 0 temp_969 LIX
+.%var cpp_hi_word 0 cpp_hi_word_969 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_969 LIX
+.%var pcie_hi_word 0 pcie_hi_word_969 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_969 LIX
+.%scope block 2021 2021
+.%var cpp_hi_addr 0 cpp_hi_addr_971 LIX
+.%scope block 2021 2021
+.%var pkt_len 0 pkt_len_973 LIX
+.%scope end
+.%scope block 2021 2021
+.%var jumbo_seq_test 35 jumbo_seq_test_978 LIX
+.%scope end
+.%scope end
+.%scope block 2021 2021
+.%var data_len 0 data_len_985 LIX
+.%var offset 0 offset_985 LIX
+.%var len_chk 35 len_chk_985 LIX
+.%scope block 2021 2021
+.%var pkt_len 0 pkt_len_987 LIX
+.%scope end
+.%scope block 2021 2021
+.%var jumbo_seq_test 35 jumbo_seq_test_999 LIX
+.%scope end
+.%scope block 2021 2021
+.%var info_chk 35 info_chk_1005 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2022 2022
+.%var dma_len 0 dma_len_1008 LIX
+.%var buf_addr 0 buf_addr_1008 LIX
+.%var curr_buf 0 curr_buf_1008 LIX
+.%var temp 0 temp_1008 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1008 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1008 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1008 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1008 LIX
+.%scope block 2022 2022
+.%var cpp_hi_addr 0 cpp_hi_addr_1010 LIX
+.%scope block 2022 2022
+.%var pkt_len 0 pkt_len_1012 LIX
+.%scope end
+.%scope block 2022 2022
+.%var jumbo_seq_test 35 jumbo_seq_test_1017 LIX
+.%scope end
+.%scope end
+.%scope block 2022 2022
+.%var data_len 0 data_len_1024 LIX
+.%var offset 0 offset_1024 LIX
+.%var len_chk 35 len_chk_1024 LIX
+.%scope block 2022 2022
+.%var pkt_len 0 pkt_len_1026 LIX
+.%scope end
+.%scope block 2022 2022
+.%var jumbo_seq_test 35 jumbo_seq_test_1038 LIX
+.%scope end
+.%scope block 2022 2022
+.%var info_chk 35 info_chk_1044 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2023 2023
+.%var dma_len 0 dma_len_1047 LIX
+.%var buf_addr 0 buf_addr_1047 LIX
+.%var curr_buf 0 curr_buf_1047 LIX
+.%var temp 0 temp_1047 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1047 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1047 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1047 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1047 LIX
+.%scope block 2023 2023
+.%var cpp_hi_addr 0 cpp_hi_addr_1049 LIX
+.%scope block 2023 2023
+.%var pkt_len 0 pkt_len_1051 LIX
+.%scope end
+.%scope block 2023 2023
+.%var jumbo_seq_test 35 jumbo_seq_test_1056 LIX
+.%scope end
+.%scope end
+.%scope block 2023 2023
+.%var data_len 0 data_len_1063 LIX
+.%var offset 0 offset_1063 LIX
+.%var len_chk 35 len_chk_1063 LIX
+.%scope block 2023 2023
+.%var pkt_len 0 pkt_len_1065 LIX
+.%scope end
+.%scope block 2023 2023
+.%var jumbo_seq_test 35 jumbo_seq_test_1077 LIX
+.%scope end
+.%scope block 2023 2023
+.%var info_chk 35 info_chk_1083 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2024 2024
+.%var dma_len 0 dma_len_1086 LIX
+.%var buf_addr 0 buf_addr_1086 LIX
+.%var curr_buf 0 curr_buf_1086 LIX
+.%var temp 0 temp_1086 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1086 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1086 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1086 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1086 LIX
+.%scope block 2024 2024
+.%var cpp_hi_addr 0 cpp_hi_addr_1088 LIX
+.%scope block 2024 2024
+.%var pkt_len 0 pkt_len_1090 LIX
+.%scope end
+.%scope block 2024 2024
+.%var jumbo_seq_test 35 jumbo_seq_test_1095 LIX
+.%scope end
+.%scope end
+.%scope block 2024 2024
+.%var data_len 0 data_len_1102 LIX
+.%var offset 0 offset_1102 LIX
+.%var len_chk 35 len_chk_1102 LIX
+.%scope block 2024 2024
+.%var pkt_len 0 pkt_len_1104 LIX
+.%scope end
+.%scope block 2024 2024
+.%var jumbo_seq_test 35 jumbo_seq_test_1116 LIX
+.%scope end
+.%scope block 2024 2024
+.%var info_chk 35 info_chk_1122 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2025 2025
+.%var dma_len 0 dma_len_1125 LIX
+.%var buf_addr 0 buf_addr_1125 LIX
+.%var curr_buf 0 curr_buf_1125 LIX
+.%var temp 0 temp_1125 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1125 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1125 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1125 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1125 LIX
+.%scope block 2025 2025
+.%var cpp_hi_addr 0 cpp_hi_addr_1127 LIX
+.%scope block 2025 2025
+.%var pkt_len 0 pkt_len_1129 LIX
+.%scope end
+.%scope block 2025 2025
+.%var jumbo_seq_test 35 jumbo_seq_test_1134 LIX
+.%scope end
+.%scope end
+.%scope block 2025 2025
+.%var data_len 0 data_len_1141 LIX
+.%var offset 0 offset_1141 LIX
+.%var len_chk 35 len_chk_1141 LIX
+.%scope block 2025 2025
+.%var pkt_len 0 pkt_len_1143 LIX
+.%scope end
+.%scope block 2025 2025
+.%var jumbo_seq_test 35 jumbo_seq_test_1155 LIX
+.%scope end
+.%scope block 2025 2025
+.%var info_chk 35 info_chk_1161 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2026 2026
+.%var dma_len 0 dma_len_1164 LIX
+.%var buf_addr 0 buf_addr_1164 LIX
+.%var curr_buf 0 curr_buf_1164 LIX
+.%var temp 0 temp_1164 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1164 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1164 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1164 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1164 LIX
+.%scope block 2026 2026
+.%var cpp_hi_addr 0 cpp_hi_addr_1166 LIX
+.%scope block 2026 2026
+.%var pkt_len 0 pkt_len_1168 LIX
+.%scope end
+.%scope block 2026 2026
+.%var jumbo_seq_test 35 jumbo_seq_test_1173 LIX
+.%scope end
+.%scope end
+.%scope block 2026 2026
+.%var data_len 0 data_len_1180 LIX
+.%var offset 0 offset_1180 LIX
+.%var len_chk 35 len_chk_1180 LIX
+.%scope block 2026 2026
+.%var pkt_len 0 pkt_len_1182 LIX
+.%scope end
+.%scope block 2026 2026
+.%var jumbo_seq_test 35 jumbo_seq_test_1194 LIX
+.%scope end
+.%scope block 2026 2026
+.%var info_chk 35 info_chk_1200 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2027 2027
+.%var dma_len 0 dma_len_1203 LIX
+.%var buf_addr 0 buf_addr_1203 LIX
+.%var curr_buf 0 curr_buf_1203 LIX
+.%var temp 0 temp_1203 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1203 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1203 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1203 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1203 LIX
+.%scope block 2027 2027
+.%var cpp_hi_addr 0 cpp_hi_addr_1205 LIX
+.%scope block 2027 2027
+.%var pkt_len 0 pkt_len_1207 LIX
+.%scope end
+.%scope block 2027 2027
+.%var jumbo_seq_test 35 jumbo_seq_test_1212 LIX
+.%scope end
+.%scope end
+.%scope block 2027 2027
+.%var data_len 0 data_len_1219 LIX
+.%var offset 0 offset_1219 LIX
+.%var len_chk 35 len_chk_1219 LIX
+.%scope block 2027 2027
+.%var pkt_len 0 pkt_len_1221 LIX
+.%scope end
+.%scope block 2027 2027
+.%var jumbo_seq_test 35 jumbo_seq_test_1233 LIX
+.%scope end
+.%scope block 2027 2027
+.%var info_chk 35 info_chk_1239 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2028 2069
+.%var exc_cnt 0 exc_cnt_1242 SIX
+.%var event_type 0 event_type_1242 LIX
+.%scope block 2043 2043
+.%var dma_len 0 dma_len_1246 LIX
+.%var buf_addr 0 buf_addr_1246 LIX
+.%var curr_buf 0 curr_buf_1246 LIX
+.%var temp 0 temp_1246 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1246 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1246 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1246 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1246 LIX
+.%scope block 2043 2043
+.%var cpp_hi_addr 0 cpp_hi_addr_1248 LIX
+.%scope block 2043 2043
+.%var pkt_len 0 pkt_len_1250 LIX
+.%scope end
+.%scope block 2043 2043
+.%var jumbo_seq_test 35 jumbo_seq_test_1255 LIX
+.%scope end
+.%scope end
+.%scope block 2043 2043
+.%var data_len 0 data_len_1262 LIX
+.%var offset 0 offset_1262 LIX
+.%var len_chk 35 len_chk_1262 LIX
+.%scope block 2043 2043
+.%var pkt_len 0 pkt_len_1264 LIX
+.%scope end
+.%scope block 2043 2043
+.%var jumbo_seq_test 35 jumbo_seq_test_1276 LIX
+.%scope end
+.%scope block 2043 2043
+.%var info_chk 35 info_chk_1282 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2046 2046
+.%var dma_len 0 dma_len_1288 LIX
+.%var buf_addr 0 buf_addr_1288 LIX
+.%var curr_buf 0 curr_buf_1288 LIX
+.%var temp 0 temp_1288 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1288 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1288 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1288 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1288 LIX
+.%scope block 2046 2046
+.%var cpp_hi_addr 0 cpp_hi_addr_1290 LIX
+.%scope block 2046 2046
+.%var pkt_len 0 pkt_len_1292 LIX
+.%scope end
+.%scope block 2046 2046
+.%var jumbo_seq_test 35 jumbo_seq_test_1297 LIX
+.%scope end
+.%scope end
+.%scope block 2046 2046
+.%var data_len 0 data_len_1304 LIX
+.%var offset 0 offset_1304 LIX
+.%var len_chk 35 len_chk_1304 LIX
+.%scope block 2046 2046
+.%var pkt_len 0 pkt_len_1306 LIX
+.%scope end
+.%scope block 2046 2046
+.%var jumbo_seq_test 35 jumbo_seq_test_1318 LIX
+.%scope end
+.%scope block 2046 2046
+.%var info_chk 35 info_chk_1324 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2049 2049
+.%var dma_len 0 dma_len_1330 LIX
+.%var buf_addr 0 buf_addr_1330 LIX
+.%var curr_buf 0 curr_buf_1330 LIX
+.%var temp 0 temp_1330 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1330 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1330 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1330 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1330 LIX
+.%scope block 2049 2049
+.%var cpp_hi_addr 0 cpp_hi_addr_1332 LIX
+.%scope block 2049 2049
+.%var pkt_len 0 pkt_len_1334 LIX
+.%scope end
+.%scope block 2049 2049
+.%var jumbo_seq_test 35 jumbo_seq_test_1339 LIX
+.%scope end
+.%scope end
+.%scope block 2049 2049
+.%var data_len 0 data_len_1346 LIX
+.%var offset 0 offset_1346 LIX
+.%var len_chk 35 len_chk_1346 LIX
+.%scope block 2049 2049
+.%var pkt_len 0 pkt_len_1348 LIX
+.%scope end
+.%scope block 2049 2049
+.%var jumbo_seq_test 35 jumbo_seq_test_1360 LIX
+.%scope end
+.%scope block 2049 2049
+.%var info_chk 35 info_chk_1366 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope block 2054 2054
+.%var dma_len 0 dma_len_1370 LIX
+.%var buf_addr 0 buf_addr_1370 LIX
+.%var curr_buf 0 curr_buf_1370 LIX
+.%var temp 0 temp_1370 LIX
+.%var cpp_hi_word 0 cpp_hi_word_1370 LIX
+.%var cpp_addr_lo 0 cpp_addr_lo_1370 LIX
+.%var pcie_hi_word 0 pcie_hi_word_1370 LIX
+.%var pcie_addr_lo 0 pcie_addr_lo_1370 LIX
+.%scope block 2054 2054
+.%var cpp_hi_addr 0 cpp_hi_addr_1372 LIX
+.%scope block 2054 2054
+.%var pkt_len 0 pkt_len_1374 LIX
+.%scope end
+.%scope block 2054 2054
+.%var jumbo_seq_test 35 jumbo_seq_test_1379 LIX
+.%scope end
+.%scope end
+.%scope block 2054 2054
+.%var data_len 0 data_len_1386 LIX
+.%var offset 0 offset_1386 LIX
+.%var len_chk 35 len_chk_1386 LIX
+.%scope block 2054 2054
+.%var pkt_len 0 pkt_len_1388 LIX
+.%scope end
+.%scope block 2054 2054
+.%var jumbo_seq_test 35 jumbo_seq_test_1400 LIX
+.%scope end
+.%scope block 2054 2054
+.%var info_chk 35 info_chk_1406 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope end
+.%scope end
+.%scope function issue_dma_status_setup _issue_dma_status_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma_status.c" 66 76
+.%scope end
+.%scope function issue_dma_status _issue_dma_status "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/issue_dma_status.c" 80 123
+.%var bmsk_queue 0 bmsk_queue_1419 LIX
+.%scope block 85 122
+.%var resv_dma_avail 0 resv_dma_avail_1420 LIX
+.%scope end
+.%scope end
+.%scope function precache_bufs_setup _precache_bufs_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 244 269
+.%var cfg 100 cfg_1432 LIX
+.%scope end
+.%scope function distr_precache_bufs_setup_shared _distr_precache_bufs_setup_shared "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in/precache_bufs.c" 531 545
+.%scope end
+.%scope function nfd_flr_init_pf_ctrl_bar _nfd_flr_init_pf_ctrl_bar "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 156 180
+.%arg isl_base 66 isl_base_1521_V$17c7
+.%arg vnic 0 vnic_1521_V$17c8
+.%scope end
+.%scope function nfd_flr_init_vf_ctrl_bar _nfd_flr_init_vf_ctrl_bar "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_flr.c" 191 226
+.%arg isl_base 66 isl_base_1522_V$17c9
+.%arg vf_cfg_base 66 vf_cfg_base_1522_V$17ca
+.%arg vf 0 vf_1522_V$17cb
+.%var q_base 0 q_base_1522 LIX
+.%var cfg 103 cfg_1522 LIW
+.%var exn_lsc 0 exn_lsc_1522 LIW
+.%var rx_off 0 rx_off_1522 LIW
+.%var vf_cfg_rd 104 vf_cfg_rd_1522 LIR
+.%var vf_cfg_wr 105 vf_cfg_wr_1522 LIW
+.%scope end
+.%scope function _nfd_cfg_queue_setup __nfd_cfg_queue_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 389 423
+.%var nfd_cfg_queue 68 nfd_cfg_queue_1541 LIX
+.%scope end
+.%scope function _nfd_cfg_init_vf_ctrl_bar __nfd_cfg_init_vf_ctrl_bar "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 429 455
+.%arg vnic 0 vnic_1542_V$17dc
+.%var q_base 0 q_base_1542 LIX
+.%var cfg 106 cfg_1542 LIW
+.%var exn_lsc 0 exn_lsc_1542 LIW
+.%var rx_off 0 rx_off_1542 LIW
+.%scope end
+.%scope function _nfd_cfg_init_pf_ctrl_bar __nfd_cfg_init_pf_ctrl_bar "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 459 481
+.%arg vnic 0 vnic_1543_V$17e3
+.%scope end
+.%scope function nfd_cfg_setup _nfd_cfg_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 488 515
+.%var vnic 0 vnic_1544 LIX
+.%var ring 0 ring_1544 LIX
+.%scope end
+.%scope function nfd_cfg_flr_setup _nfd_cfg_flr_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 522 555
+.%var event_filter 107 event_filter_1549 LIX
+.%var status 109 status_1549 LIX
+.%var pcie_provider 0 pcie_provider_1549 LIX
+.%var event_mask 0 event_mask_1549 LIX
+.%var event_match 0 event_match_1549 LIX
+.%scope end
+.%scope function nfd_cfg_check_flr_ap _nfd_cfg_check_flr_ap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 614 670
+.%scope block 616 669
+.%var flr_sent 116 flr_sent_1553 LIR
+.%var pcie_state_change_stat 0 pcie_state_change_stat_1553 LIR
+.%var pf_csr 0 pf_csr_1553 LIR
+.%var vf_csr 117 vf_csr_1553 LIR
+.%var vendor_msg 0 vendor_msg_1553 LIX
+.%var state_change_ack 0 state_change_ack_1553 LIX
+.%var int_mgr_status 0 int_mgr_status_1553 LIX
+.%var vf 35 vf_1553 LIX
+.%scope end
+.%scope end
+.%scope function nfd_cfg_next_vnic _nfd_cfg_next_vnic "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/shared/nfd_cfg_internal.c" 678 719
+.%var queue 0 queue_1557 LIX
+.%var vnic 35 vnic_1557 LIX
+.%var ret 35 ret_1557 LIX
+.%scope block 690 716
+.%var wptr_raw 0 wptr_raw_1559 LIR
+.%var wptr 118 wptr_1559 LIX
+.%var qc_queue 0 qc_queue_1559 LIX
+.%scope end
+.%scope end
+.%scope function main _main "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/ng_nfd/me/blocks/vnic/pci_in_me1.c" 74 164
+.%scope block 103 160
+.%var distr0 35 distr0_1614 LIX
+.%var distr1 35 distr1_1614 LIX
+.%var distr_wait_msk 35 distr_wait_msk_1614 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type S4 {
+__reserved_5 0:5:27 0;
+msi_vec_num 0:0:5 0;
+}
+.%type S4 {
+__reserved_8 0:8:24 0;
+msix_vec_num 0:0:8 0;
+}
+.%type A16 6
+.%type U1
+.%type A32768 6
+.%type A16 6
+.%type A2048 6
+.%type A16 6
+.%type A2048 6
+.%type A16 6
+.%type A2048 6
+.%type A41943040 6
+.%type A10485760 6
+.%type A272 17
+.%type P2 6
+.%type S128 _tx_desc_batch{
+pkt0 0 19;
+pkt1 16 19;
+pkt2 32 19;
+pkt3 48 19;
+pkt4 64 19;
+pkt5 80 19;
+pkt6 96 19;
+pkt7 112 19;
+}
+.%type S16 nfd_in_tx_desc{
+__unnamed 0 20;
+}
+.%type S16 {
+__unnamed 0 21;
+__raw 0 22;
+}
+.%type S16 {
+eop 0:31:1 0;
+offset 0:24:7 0;
+dma_len 0:8:16 0;
+dma_addr_hi 0:0:8 0;
+dma_addr_lo 4:0:32 0;
+flags 8:24:8 0;
+l4_offset 8:16:8 0;
+sp0 8:14:2 0;
+mss 8:0:14 0;
+data_len 12:16:16 0;
+vlan 12:0:16 0;
+}
+.%type A16 0
+.%type S16 nfd_in_issued_desc{
+__unnamed 0 24;
+}
+.%type S16 {
+__unnamed 0 25;
+__raw 0 26;
+}
+.%type S16 {
+eop 0:31:1 0;
+offset 0:24:7 0;
+lso_issued_cnt 0:16:8 0;
+num_batch 0:8:8 0;
+sp1 0:6:2 0;
+q_num 0:0:6 0;
+buf_addr 4:0:32 0;
+flags 8:24:8 0;
+l4_offset 8:16:8 0;
+lso_end 8:15:1 0;
+sp2 8:14:1 0;
+mss 8:0:14 0;
+data_len 12:16:16 0;
+vlan 12:0:16 0;
+}
+.%type A16 0
+.%type A2048 28
+.%type S32 nfd_in_dma_state{
+__unnamed 0 29;
+}
+.%type S32 {
+__unnamed 0 30;
+__raw 0 31;
+}
+.%type S32 {
+up 0:31:1 0;
+cont 0:30:1 0;
+locked 0:29:1 0;
+sp0 0:24:5 0;
+lso_hdr_len 0:16:8 0;
+lso_seq_cnt 0:8:8 0;
+rid 0:0:8 0;
+invalid 4:31:1 0;
+jumbo 4:30:1 0;
+sp1 4:29:1 0;
+curr_buf 4:0:29 0;
+flags 8:24:8 0;
+l4_offset 8:16:8 0;
+res 8:14:2 0;
+mss 8:0:14 0;
+offset 12:24:8 0;
+data_len 12:0:24 0;
+bytes_dmaed 16 0;
+lso_payload_len 20 0;
+spare0 24 0;
+spare1 28 0;
+}
+.%type A32 0
+.%type A16384 6
+.%type A16384 19
+.%type A2048 23
+.%type I4
+.%type S128 _dma_desc_batch{
+pkt0 0 37;
+pkt1 16 37;
+pkt2 32 37;
+pkt3 48 37;
+pkt4 64 37;
+pkt5 80 37;
+pkt6 96 37;
+pkt7 112 37;
+}
+.%type S16 nfp_pcie_dma_cmd{
+__unnamed 0 38;
+}
+.%type S16 {
+__unnamed 0 39;
+__raw 0 40;
+}
+.%type S16 {
+cpp_addr_lo 0:0:32 0;
+mode_sel 4:30:2 0;
+dma_mode 4:14:16 0;
+cpp_token 4:12:2 0;
+dma_cfg_index 4:8:4 0;
+cpp_addr_hi 4:0:8 0;
+pcie_addr_lo 8:0:32 0;
+length 12:20:12 0;
+rid 12:12:8 0;
+rid_override 12:11:1 0;
+trans_class 12:8:3 0;
+pcie_addr_hi 12:0:8 0;
+}
+.%type A16 0
+.%type S128 _issued_pkt_batch{
+pkt0 0 23;
+pkt1 16 23;
+pkt2 32 23;
+pkt3 48 23;
+pkt4 64 23;
+pkt5 80 23;
+pkt6 96 23;
+pkt7 112 23;
+}
+.%type S48 nfd_in_issue_dma_status{
+gather_dma_seq_compl 0 0;
+gather_dma_seq_serv 4 0;
+bufs_avail 8 0;
+resv_dma_avail 12 0;
+data_dma_seq_issued 16 0;
+data_dma_seq_compl 20 0;
+data_dma_seq_served 24 0;
+data_dma_seq_safe 28 0;
+jumbo_cnt 32 0;
+spare0 36 0;
+spare1 40 0;
+spare2 44 0;
+}
+.%type A384 0
+.%type S4 precache_bufs_state{
+sigs_even_compl 0:30:2 0;
+spare 0:0:30 0;
+}
+.%type S8 SIGNAL_PAIR{
+even 0 35;
+odd 4 35;
+}
+.%type A96 0
+.%type A64 0
+.%type S16 qc_bitmask{
+bmsk_lo 0 0;
+bmsk_hi 4 0;
+proc 8 0;
+curr 12 0;
+}
+.%type A8 0
+.%type A8 0
+.%type A8 0
+.%type S4 nfd_cfg_msg{
+__unnamed 0 53;
+}
+.%type S4 {
+__unnamed 0 54;
+__raw 0 0;
+}
+.%type S4 {
+msg_valid 0:31:1 0;
+error 0:30:1 0;
+interested 0:29:1 0;
+up_bit 0:28:1 0;
+spare 0:16:12 0;
+queue 0:8:8 0;
+vnic 0:0:8 0;
+}
+.%type P2 0
+.%type P2 52
+.%type P2 58
+.%type U4
+.%type S4 nfp_mecsr_cmd_indirect_ref_0{
+__unnamed 0 60;
+}
+.%type S4 {
+__unnamed 0 61;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_30 0:30:2 0;
+island 0:24:6 0;
+master 0:20:4 0;
+signal_master 0:16:4 0;
+signal_ctx 0:13:3 0;
+signal_num 0:9:4 0;
+__reserved_8 0:8:1 0;
+byte_mask 0:0:8 0;
+}
+.%type A32 0
+.%type P2 0
+.%type P2 35
+.%type P2 35
+.%type P3 6
+.%type A64 0
+.%type S20 qc_queue_config{
+watermark 0 69;
+size 4 70;
+event_data 8 0;
+event_type 12 71;
+ptr 16 0;
+}
+.%type E4 pcie_qc_watermark{
+PCIE_QC_WM_4 0;
+PCIE_QC_WM_8 1;
+PCIE_QC_WM_16 2;
+PCIE_QC_WM_32 3;
+PCIE_QC_WM_64 4;
+PCIE_QC_WM_128 5;
+PCIE_QC_WM_256 6;
+PCIE_QC_WM_512 7;
+}
+.%type E4 pcie_qc_q_size{
+PCIE_QC_SZ_256 0;
+PCIE_QC_SZ_512 1;
+PCIE_QC_SZ_1k 2;
+PCIE_QC_SZ_2k 3;
+PCIE_QC_SZ_4k 4;
+PCIE_QC_SZ_8k 5;
+PCIE_QC_SZ_16k 6;
+PCIE_QC_SZ_32k 7;
+PCIE_QC_SZ_64k 8;
+PCIE_QC_SZ_128k 9;
+PCIE_QC_SZ_256k 10;
+}
+.%type E4 pcie_qc_event{
+PCIE_QC_EVENT_NO_EVENT 0;
+PCIE_QC_EVENT_NOT_EMPTY 1;
+PCIE_QC_EVENT_GE_MARK 2;
+PCIE_QC_EVENT_LT_MARK 3;
+}
+.%type P2 0
+.%type P3 6
+.%type P2 0
+.%type A8 0
+.%type A8 0
+.%type A8 0
+.%type A8 0
+.%type P2 80
+.%type S4 nfp_pcie_barcfg_p2c{
+__unnamed 0 81;
+}
+.%type S4 {
+__unnamed 0 82;
+__raw 0 0;
+}
+.%type S4 {
+map_type 0:29:3 0;
+len 0:27:2 0;
+target 0:23:4 0;
+token 0:21:2 0;
+actaddr 0:16:5 0;
+base 0:0:16 0;
+}
+.%type U8
+.%type S4 nfp_pcie_barcfg_vf_p2c{
+__unnamed 0 85;
+}
+.%type S4 {
+__unnamed 0 86;
+__raw 0 0;
+}
+.%type S4 {
+len 0:30:2 0;
+target 0:26:4 0;
+token 0:24:2 0;
+__reserved_19 0:19:5 0;
+base 0:0:19 0;
+}
+.%type P2 35
+.%type E4 nfd_cfg_component{
+NFD_CFG_PCI_IN0 0;
+NFD_CFG_PCI_IN1 1;
+NFD_CFG_PCI_OUT 2;
+}
+.%type A24 0
+.%type P2 6
+.%type P2 0
+.%type S4 nfp_pcie_dma_cfg{
+__unnamed 0 93;
+}
+.%type S4 {
+__unnamed 0 94;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_29 0:29:3 0;
+signal_only_odd 0:28:1 0;
+end_pad_odd 0:26:2 0;
+start_pad_odd 0:24:2 0;
+id_based_order_odd 0:23:1 0;
+relaxed_order_odd 0:22:1 0;
+no_snoop_odd 0:21:1 0;
+target_64_odd 0:20:1 0;
+cpp_target_odd 0:16:4 0;
+__reserved_13 0:13:3 0;
+signal_only_even 0:12:1 0;
+end_pad_even 0:10:2 0;
+start_pad_even 0:8:2 0;
+id_based_order_even 0:7:1 0;
+relaxed_order_even 0:6:1 0;
+no_snoop_even 0:5:1 0;
+target_64_even 0:4:1 0;
+cpp_target_even 0:0:4 0;
+}
+.%type P2 58
+.%type S4 nfd_in_batch_desc{
+__unnamed 0 97;
+}
+.%type S4 {
+__unnamed 0 98;
+__raw 0 0;
+}
+.%type S4 {
+spare1 0:24:8 0;
+spare2 0:16:8 0;
+num 0:8:8 0;
+queue 0:0:8 0;
+}
+.%type P12 58
+.%type S4 nfp_mecsr_ctx_enables{
+__unnamed 0 101;
+}
+.%type S4 {
+__unnamed 0 102;
+__raw 0 0;
+}
+.%type S4 {
+in_use 0:31:1 0;
+prn_mode 0:30:1 0;
+ustore_ecc_err 0:29:1 0;
+ustore_ecc_enable 0:28:1 0;
+breakpoint 0:27:1 0;
+__reserved_26 0:26:1 0;
+reg_par_err 0:25:1 0;
+__reserved_24 0:24:1 0;
+local_memory_ecc_enable 0:23:1 0;
+lm_addr_3_glob 0:22:1 0;
+lm_addr_2_glob 0:21:1 0;
+nn_send_configuration 0:20:1 0;
+nn_ring_empty 0:18:2 0;
+lm_addr_1_glob 0:17:1 0;
+lm_addr_0_glob 0:16:1 0;
+contexts 0:8:8 0;
+__reserved_3 0:3:5 0;
+nn_receive_configuration 0:0:3 0;
+}
+.%type A32 0
+.%type A8 0
+.%type A8 0
+.%type A32 0
+.%type P12 108
+.%type S4 event_cls_filter{
+}
+.%type S4 nfp_em_filter_status{
+__unnamed 0 110;
+}
+.%type S4 {
+count32 0 111;
+count16 0 112;
+bitmask32 0 113;
+bitmask16 0 114;
+event 0 115;
+__raw 0 0;
+}
+.%type S4 {
+cnt32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+override 0:16:6 0;
+cnt16 0:0:16 0;
+}
+.%type S4 {
+mask32 0:0:32 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+override 0:20:3 0;
+cnt4 0:16:4 0;
+mask16 0:0:16 0;
+}
+.%type S4 {
+tmout 0:29:3 0;
+upcnt 0:23:6 0;
+__reserved_22 0:22:1 0;
+cnt2 0:20:2 0;
+event 0:0:20 0;
+}
+.%type A12 0
+.%type A8 0
+.%type S4 nfp_qc_sts_hi{
+__unnamed 0 119;
+}
+.%type S4 {
+__unnamed 0 120;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_31 0:31:1 0;
+overflowed 0:30:1 0;
+underflowed 0:29:1 0;
+wmreached 0:28:1 0;
+full 0:27:1 0;
+empty 0:26:1 0;
+__reserved_25 0:25:1 0;
+watermark 0:22:3 0;
+size 0:18:4 0;
+writeptr 0:0:18 0;
+}

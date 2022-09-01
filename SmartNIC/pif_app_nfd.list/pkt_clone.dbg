@@ -1,0 +1,208 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_446_V$779
+.%arg y 0 y_446_V$77a
+.%var result 0 result_446 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 3 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 5 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 6 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 7 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 8 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 9 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 10 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 11 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 12 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 13 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%var pif_pkt_info_global 14 _pif_pkt_info_global SEX
+.%var pif_counter_ERROR_WAIT_CTM_PKT_ALLOC 22 _pif_counter_ERROR_WAIT_CTM_PKT_ALLOC SEX
+.%var pif_counter_ERROR_WAIT_BLM_BUF_ALLOC 22 _pif_counter_ERROR_WAIT_BLM_BUF_ALLOC SEX
+.%var pkt_clone_destination 23 _pkt_clone_destination SEX
+.%var ctm_credits 24 _ctm_credits SEX
+.%scope function save_pkt_info _save_pkt_info "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 253 260
+.%arg cls_ptr 25 cls_ptr_510_V$77d
+.%var wr_pkt_info 14 wr_pkt_info_510 LIW
+.%scope end
+.%scope function retrieve_pkt_info _retrieve_pkt_info "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 262 269
+.%arg cls_ptr 25 cls_ptr_511_V$7a1
+.%var rd_pkt_info 14 rd_pkt_info_511 LIR
+.%scope end
+.%scope function save_parrep _save_parrep "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 276 304
+.%arg parrep 26 parrep_512_V$7c5
+.%arg cls_ptr 27 cls_ptr_512_V$7c6
+.%arg word_length 0 word_length_512_V$7c7
+.%var wr_buffer 28 wr_buffer_512 LIW
+.%var i 0 i_512 LIX
+.%scope end
+.%scope function retrieve_parrep _retrieve_parrep "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 306 334
+.%arg parrep 26 parrep_515_V$7cb
+.%arg cls_ptr 27 cls_ptr_515_V$7cc
+.%arg word_length 0 word_length_515_V$7cd
+.%var rd_buffer 29 rd_buffer_515 LIR
+.%var i 0 i_515 LIX
+.%scope end
+.%scope function copy_ctm_packet _copy_ctm_packet "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 46 104
+.%arg source_ctm_pkt_num 0 source_ctm_pkt_num_493_V$7d1
+.%arg dest_ctm_pkt_num 0 dest_ctm_pkt_num_493_V$7d2
+.%arg ctm_src_off 0 ctm_src_off_493_V$7d3
+.%arg ctm_src_byte_len 0 ctm_src_byte_len_493_V$7d4
+.%var source_ctm_ptr 30 source_ctm_ptr_493 LIX
+.%var dest_ctm_ptr 30 dest_ctm_ptr_493 LIX
+.%var chunk 0 chunk_493 LIX
+.%var i 0 i_493 LIX
+.%var sig 31 sig_493 LIX
+.%scope block 55 76
+.%var rd_buffer 32 rd_buffer_494 LIR
+.%var wr_buffer 33 wr_buffer_494 LIW
+.%var to_copy_words 0 to_copy_words_494 LIX
+.%scope end
+.%scope block 79 101
+.%var rd_buffer 34 rd_buffer_496 LIR
+.%var wr_buffer 35 wr_buffer_496 LIW
+.%var to_copy_bytes 0 to_copy_bytes_496 LIX
+.%scope end
+.%scope end
+.%scope function copy_mu_buffer _copy_mu_buffer "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 110 167
+.%arg source_mu_ptr 30 source_mu_ptr_498_V$7e6
+.%arg dest_mu_ptr 30 dest_mu_ptr_498_V$7e7
+.%arg byte_length 0 byte_length_498_V$7e8
+.%var source_ptr 30 source_ptr_498 LIX
+.%var dest_ptr 30 dest_ptr_498 LIX
+.%var sig 31 sig_498 LIX
+.%var chunk 0 chunk_498 LIX
+.%var offset 0 offset_498 LIX
+.%scope block 119 140
+.%var rd_buffer 36 rd_buffer_499 LIR
+.%var wr_buffer 37 wr_buffer_499 LIW
+.%var to_copy_words 0 to_copy_words_499 LIX
+.%scope end
+.%scope block 143 164
+.%var rd_buffer 38 rd_buffer_501 LIR
+.%var wr_buffer 39 wr_buffer_501 LIW
+.%var to_copy_bytes 0 to_copy_bytes_501 LIX
+.%scope end
+.%scope end
+.%scope function pkt_clone _pkt_clone "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pkt_clone.c" 172 245
+.%arg source_ctm_pkt_num 0 source_ctm_pkt_num_503_V$7f8
+.%arg ctm_size 40 ctm_size_503_V$7f9
+.%arg source_mu_ptr 30 source_mu_ptr_503_V$7fa
+.%arg blq 0 blq_503_V$7fb
+.%arg pkt_off 0 pkt_off_503_V$7fc
+.%arg pkt_len 0 pkt_len_503_V$7fd
+.%arg packet_split 0 packet_split_503_V$7fe
+.%var destination 23 destination_503 LIX
+.%scope block 195 205
+.%var buf 0 buf_505 LIR
+.%scope end
+.%scope block 210 242
+.%var ctm_buffer_size 0 ctm_buffer_size_507 LIX
+.%scope block 224 241
+.%var mu_len 0 mu_len_509 LIX
+.%scope end
+.%scope end
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type A16 4
+.%type U1
+.%type A32768 4
+.%type A16 4
+.%type A2048 4
+.%type A16 4
+.%type A2048 4
+.%type A16 4
+.%type A2048 4
+.%type A41943040 4
+.%type A10485760 4
+.%type S40 pif_pkt_info{
+__unnamed 0 15;
+}
+.%type S40 {
+__unnamed 0 16;
+__raw 0 21;
+}
+.%type S40 {
+isl 0:26:6 0;
+pkt_num 0:16:10 0;
+bls 0:14:2 0;
+pkt_len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+resv2 8:31:1 0;
+ctm_size 8:29:2 0;
+ctm_isl 8:22:7 0;
+seqr 8:17:5 0;
+unseq 8:16:1 0;
+seq 8:0:16 0;
+ig_port 12 17;
+eg_port 16 18;
+pkt_buf 24 19;
+trunc_len 32:18:14 0;
+pkt_pl_off 32:8:10 0;
+resv1 32:3:5 0;
+ipv4_sum_ok 32:2:1 0;
+udp_sum_ok 32:1:1 0;
+tcp_sum_ok 32:0:1 0;
+calc_fld_bmsk 36 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type P2 20
+.%type U4
+.%type A36 0
+.%type U8
+.%type S16 pkt_clone_destination{
+ctm_pkt_num 0 0;
+mu_ptr 8 22;
+}
+.%type S8 ctm_pkt_credits{
+pkts 0 0;
+bufs 4 0;
+}
+.%type P12 20
+.%type P6 0
+.%type P12 0
+.%type A16 0
+.%type A16 0
+.%type P3 0
+.%type I4
+.%type A64 0
+.%type A64 0
+.%type A32 0
+.%type A32 0
+.%type A64 0
+.%type A64 0
+.%type A32 0
+.%type A32 0
+.%type E4 PKT_CTM_SIZE{
+PKT_CTM_SIZE_256 0;
+PKT_CTM_SIZE_512 1;
+PKT_CTM_SIZE_1024 2;
+PKT_CTM_SIZE_2048 3;
+}

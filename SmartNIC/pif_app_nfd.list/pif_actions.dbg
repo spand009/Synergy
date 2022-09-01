@@ -1,0 +1,257 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_342_V$4e5
+.%arg y 0 y_342_V$4e6
+.%var result 0 result_342 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var pkt_clone_destination 3 _pkt_clone_destination SEX
+.%var pif_act_stats 5 _pif_act_stats SEX
+.%scope function pif_action_exec_op _pif_action_exec_op "out/pif_actions.c" 320 353
+.%arg parrep 6 parrep_383_V$4e9
+.%arg _actdata 7 _actdata_383_V$4ea
+.%var opdata 8 opdata_383 LIX
+.%var ret 11 ret_383 LIX
+.%scope end
+.%scope function pif_action_exec_forward _pif_action_exec_forward "out/pif_actions.c" 18 57
+.%arg parrep 6 parrep_350_V$524
+.%arg actdatabuf 7 actdatabuf_350_V$525
+.%arg debug 0 debug_350_V$526
+.%var _actdata 12 _actdata_350 LIX
+.%var standard_metadata 17 standard_metadata_350 LIX
+.%scope block 24 46
+.%var temp0 0 temp0_351 LIX
+.%var temp1 0 temp1_351 LIX
+.%scope end
+.%scope end
+.%scope function pif_action_exec__drop _pif_action_exec__drop "out/pif_actions.c" 59 92
+.%arg parrep 6 parrep_352_V$53c
+.%arg actdatabuf 7 actdatabuf_352_V$53d
+.%arg debug 0 debug_352_V$53e
+.%var _actdata 19 _actdata_352 LIX
+.%scope block 64 86
+.%var temp0 0 temp0_353 LIX
+.%var temp1 0 temp1_353 LIX
+.%scope end
+.%scope end
+.%scope function pif_action_exec_gtpu_decap_v4 _pif_action_exec_gtpu_decap_v4 "out/pif_actions.c" 94 166
+.%arg parrep 6 parrep_354_V$54b
+.%arg actdatabuf 7 actdatabuf_354_V$54c
+.%arg debug 0 debug_354_V$54d
+.%var _actdata 21 _actdata_354 LIX
+.%var gtpu_ipv4 23 gtpu_ipv4_354 LIX
+.%var gtpu 25 gtpu_354 LIX
+.%var ipv4 27 ipv4_354 LIX
+.%var udp 29 udp_354 LIX
+.%var ctldata 31 ctldata_354 LIX
+.%scope block 104 126
+.%var temp0 0 temp0_355 LIX
+.%var temp1 0 temp1_355 LIX
+.%scope end
+.%scope block 137 141
+.%var i 11 i_356 LIX
+.%scope end
+.%scope block 143 146
+.%var ctldata 33 ctldata_357 LIX
+.%scope end
+.%scope block 148 151
+.%var ctldata 33 ctldata_359 LIX
+.%scope end
+.%scope block 153 156
+.%var ctldata 33 ctldata_361 LIX
+.%scope end
+.%scope end
+.%scope function pif_action_exec_gtpu_encap_v4 _pif_action_exec_gtpu_encap_v4 "out/pif_actions.c" 168 283
+.%arg parrep 6 parrep_367_V$563
+.%arg actdatabuf 7 actdatabuf_367_V$564
+.%arg debug 0 debug_367_V$565
+.%var _actdata 34 _actdata_367 LIX
+.%var gtpu_ipv4 23 gtpu_ipv4_367 LIX
+.%var gtpu 25 gtpu_367 LIX
+.%var ipv4 27 ipv4_367 LIX
+.%var standard_metadata 17 standard_metadata_367 LIX
+.%var udp 29 udp_367 LIX
+.%var ctldata 31 ctldata_367 LIX
+.%var pif_expression__expression_gtpu_encap_v4_0_register_0 0 pif_expression__expression_gtpu_encap_v4_0_register_0_367 LIX
+.%scope block 180 202
+.%var temp0 0 temp0_368 LIX
+.%var temp1 0 temp1_368 LIX
+.%scope end
+.%scope block 214 217
+.%var ctldata 33 ctldata_369 LIX
+.%scope end
+.%scope block 219 222
+.%var ctldata 33 ctldata_371 LIX
+.%scope end
+.%scope block 224 227
+.%var ctldata 33 ctldata_373 LIX
+.%scope end
+.%scope block 229 233
+.%var i 11 i_375 LIX
+.%scope end
+.%scope block 257 265
+.%var pif_expression__expression_gtpu_encap_v4_0_register_1 0 pif_expression__expression_gtpu_encap_v4_0_register_1_376 LIX
+.%var pif_expression__expression_gtpu_encap_v4_0_register_2 0 pif_expression__expression_gtpu_encap_v4_0_register_2_376 LIX
+.%scope end
+.%scope end
+.%scope function pif_action_exec__nop _pif_action_exec__nop "out/pif_actions.c" 285 318
+.%arg parrep 6 parrep_381_V$5d3
+.%arg actdatabuf 7 actdatabuf_381_V$5d4
+.%arg debug 0 debug_381_V$5d5
+.%var _actdata 36 _actdata_381 LIX
+.%scope block 290 312
+.%var temp0 0 temp0_382 LIX
+.%var temp1 0 temp1_382 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type S16 pkt_clone_destination{
+ctm_pkt_num 0 0;
+mu_ptr 8 4;
+}
+.%type U8
+.%type A40 4
+.%type P6 0
+.%type P2 0
+.%type P2 9
+.%type S4 pif_action_opdata{
+__unnamed 0 10;
+val32 0 0;
+}
+.%type S4 {
+reserved0 0:24:8 11;
+action_id 0:16:8 11;
+dbg_flags 0:8:8 11;
+actdata_cnt 0:0:8 11;
+}
+.%type I4
+.%type P2 13
+.%type S12 pif_action_actiondata_forward{
+__pif_rule_no 0 0;
+__pif_table_no 4 0;
+__pif_padding 8 14;
+port 10 16;
+}
+.%type A2 15
+.%type U1
+.%type U2
+.%type P6 18
+.%type S16 pif_header_standard_metadata{
+clone_spec 0:0:32 0;
+egress_spec 4:16:16 0;
+egress_port 4:0:16 0;
+packet_length 8:18:14 0;
+egress_instance 8:8:10 0;
+instance_type 8:4:4 0;
+_padding_0 8:0:4 0;
+ingress_port 12:22:10 0;
+_padding_1 12:0:22 0;
+}
+.%type P2 20
+.%type S8 pif_action_actiondata__drop{
+__pif_rule_no 0 0;
+__pif_table_no 4 0;
+}
+.%type P2 22
+.%type S8 pif_action_actiondata_gtpu_decap_v4{
+__pif_rule_no 0 0;
+__pif_table_no 4 0;
+}
+.%type P6 24
+.%type S20 pif_header_gtpu_ipv4{
+version 0:28:4 0;
+ihl 0:24:4 0;
+diffserv 0:16:8 0;
+totalLen 0:0:16 0;
+identification 4:16:16 0;
+flags 4:13:3 0;
+fragOffset 4:0:13 0;
+ttl 8:24:8 0;
+protocol 8:16:8 0;
+hdrChecksum 8:0:16 0;
+srcAddr 12:0:32 0;
+dstAddr 16:0:32 0;
+}
+.%type P6 26
+.%type S8 pif_header_gtpu{
+flags 0:24:8 0;
+type_ 0:16:8 0;
+length_ 0:0:16 0;
+teid 4:0:32 0;
+}
+.%type P6 28
+.%type S20 pif_header_ipv4{
+version 0:28:4 0;
+ihl 0:24:4 0;
+diffserv 0:16:8 0;
+totalLen 0:0:16 0;
+identification 4:16:16 0;
+flags 4:13:3 0;
+fragOffset 4:0:13 0;
+ttl 8:24:8 0;
+protocol 8:16:8 0;
+hdrChecksum 8:0:16 0;
+srcAddr 12:0:32 0;
+dstAddr 16:0:32 0;
+}
+.%type P6 30
+.%type S8 pif_header_udp{
+srcPort 0:16:16 0;
+dstPort 0:0:16 0;
+length_ 4:16:16 0;
+checksum 4:0:16 0;
+}
+.%type P6 32
+.%type S4 pif_parrep_ctldata{
+valid 0:31:1 0;
+t1_valid 0:30:1 0;
+t1_dirty 0:29:1 0;
+t1_orig_len 0:28:1 0;
+t2_valid 0:27:1 0;
+t2_dirty 0:26:1 0;
+t2_orig_len 0:25:1 0;
+t3_valid 0:24:1 0;
+t3_type 0:23:1 0;
+t3_dirty 0:22:1 0;
+t3_orig_len 0:17:5 0;
+t4_valid 0:16:1 0;
+t4_dirty 0:15:1 0;
+t4_orig_len 0:14:1 0;
+t5_valid 0:13:1 0;
+t5_dirty 0:12:1 0;
+t5_orig_len 0:11:1 0;
+}
+.%type P6 32
+.%type P2 35
+.%type S28 pif_action_actiondata_gtpu_encap_v4{
+srcAddr 0 0;
+dstAddr 4 0;
+teid 8 0;
+__pif_rule_no 12 0;
+__pif_table_no 16 0;
+dstPort 20 16;
+srcPort 22 16;
+__pif_padding 24 15;
+type_ 25 15;
+port 26 16;
+}
+.%type P2 37
+.%type S8 pif_action_actiondata__nop{
+__pif_rule_no 0 0;
+__pif_table_no 4 0;
+}

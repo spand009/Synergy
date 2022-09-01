@@ -1,0 +1,277 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var gro_ctxcfg 1 _gro_ctxcfg SEX
+.%var gro_cli_lm_ctx 3 _gro_cli_lm_ctx SEX
+.%var gro_cli_cntrs 4 _gro_cli_cntrs SEX
+.%scope function gro_cli_init _gro_cli_init "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 143 151
+.%var xctx 2 xctx_263 LIR
+.%var i 6 i_263 LIX
+.%scope end
+.%scope function gro_cli_build_drop_seq_meta _gro_cli_build_drop_seq_meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 155 161
+.%arg meta 7 meta_265_V$2f9
+.%scope end
+.%scope function gro_cli_build_drop_ctm_buf_meta _gro_cli_build_drop_ctm_buf_meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 165 173
+.%arg meta 7 meta_266_V$32e
+.%arg isl 0 isl_266_V$32f
+.%arg pkt_num 0 pkt_num_266_V$330
+.%scope end
+.%scope function gro_cli_build_drop_mu_buf_meta _gro_cli_build_drop_mu_buf_meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 177 186
+.%arg meta 7 meta_267_V$365
+.%arg ring_addr_hi 0 ring_addr_hi_267_V$366
+.%arg ring_num 0 ring_num_267_V$367
+.%arg mu_handle 0 mu_handle_267_V$368
+.%scope end
+.%scope function gro_cli_build_memq_meta _gro_cli_build_memq_meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 190 209
+.%arg meta 12 meta_268_V$39d
+.%arg type 6 type_268_V$39e
+.%arg isl 0 isl_268_V$39f
+.%arg qnum 0 qnum_268_V$3a0
+.%arg nwords 6 nwords_268_V$3a1
+.%arg qd0 6 qd0_268_V$3a2
+.%arg qd1 6 qd1_268_V$3a3
+.%arg qd2 6 qd2_268_V$3a4
+.%var w0 14 w0_268 LIX
+.%scope end
+.%scope function gro_cli_build_workq_meta1 _gro_cli_build_workq_meta1 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 213 217
+.%arg meta 12 meta_271_V$3d0
+.%arg isl 0 isl_271_V$3d1
+.%arg qnum 0 qnum_271_V$3d2
+.%arg qd0 6 qd0_271_V$3d3
+.%scope end
+.%scope function gro_cli_build_workq_meta2 _gro_cli_build_workq_meta2 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 221 225
+.%arg meta 12 meta_272_V$3d4
+.%arg isl 0 isl_272_V$3d5
+.%arg qnum 0 qnum_272_V$3d6
+.%arg qd0 6 qd0_272_V$3d7
+.%arg qd1 6 qd1_272_V$3d8
+.%scope end
+.%scope function gro_cli_build_workq_meta3 _gro_cli_build_workq_meta3 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 229 234
+.%arg meta 12 meta_273_V$3d9
+.%arg isl 0 isl_273_V$3da
+.%arg qnum 0 qnum_273_V$3db
+.%arg qd0 6 qd0_273_V$3dc
+.%arg qd1 6 qd1_273_V$3dd
+.%arg qd2 6 qd2_273_V$3de
+.%scope end
+.%scope function gro_cli_build_mem_ring_meta1 _gro_cli_build_mem_ring_meta1 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 238 242
+.%arg meta 12 meta_274_V$3df
+.%arg isl 0 isl_274_V$3e0
+.%arg qnum 0 qnum_274_V$3e1
+.%arg qd0 6 qd0_274_V$3e2
+.%scope end
+.%scope function gro_cli_build_mem_ring_meta2 _gro_cli_build_mem_ring_meta2 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 246 251
+.%arg meta 12 meta_275_V$3e3
+.%arg isl 0 isl_275_V$3e4
+.%arg qnum 0 qnum_275_V$3e5
+.%arg qd0 6 qd0_275_V$3e6
+.%arg qd1 6 qd1_275_V$3e7
+.%scope end
+.%scope function gro_cli_build_mem_ring_meta3 _gro_cli_build_mem_ring_meta3 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 255 260
+.%arg meta 12 meta_276_V$3e8
+.%arg isl 0 isl_276_V$3e9
+.%arg qnum 0 qnum_276_V$3ea
+.%arg qd0 6 qd0_276_V$3eb
+.%arg qd1 6 qd1_276_V$3ec
+.%arg qd2 6 qd2_276_V$3ed
+.%scope end
+.%scope function gro_cli_build_nbi_meta _gro_cli_build_nbi_meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 265 316
+.%arg meta 16 meta_277_V$3ee
+.%arg pkt_isl 0 pkt_isl_277_V$3ef
+.%arg pkt_num 0 pkt_num_277_V$3f0
+.%arg ctm_sz 0 ctm_sz_277_V$3f1
+.%arg ms_off 0 ms_off_277_V$3f2
+.%arg eoff 0 eoff_277_V$3f3
+.%arg nbi 0 nbi_277_V$3f4
+.%arg txq 0 txq_277_V$3f5
+.%var dm 0 dm_277 LIX
+.%scope end
+.%scope function gro_cli_nfd_desc2meta _gro_cli_nfd_desc2meta "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 328 357
+.%arg odesc 21 odesc_283_V$426
+.%arg idescp 26 idescp_283_V$427
+.%arg pcie 0 pcie_283_V$428
+.%arg qid 0 qid_283_V$429
+.%var idesc 28 idesc_283 LIX
+.%var w0 23 w0_283 LIX
+.%var off 0 off_283 LIX
+.%scope end
+.%scope function _gro_cli_cntr_enqueued_incr __gro_cli_cntr_enqueued_incr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 411 414
+.%arg ctx 0 ctx_284_V$46f
+.%scope end
+.%scope function _gro_cli_cntr_released_add __gro_cli_cntr_released_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 418 421
+.%arg ctx 0 ctx_285_V$470
+.%arg amt 0 amt_285_V$471
+.%scope end
+.%scope function _gro_cli_release __gro_cli_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 425 451
+.%arg clictx 29 clictx_286_V$472
+.%arg ctx 0 ctx_286_V$473
+.%arg nrel 0 nrel_286_V$474
+.%var addr_hi 0 addr_hi_286 LIX
+.%var addr_lo 0 addr_lo_286 LIX
+.%var rel 30 rel_286 LIX
+.%var xrel 30 xrel_286 LIX
+.%var putsig 33 putsig_286 LIX
+.%scope end
+.%scope function gro_cli_abort_ticket _gro_cli_abort_ticket "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 455 467
+.%arg ctx 0 ctx_288_V$48e
+.%arg tape 0 tape_288_V$48f
+.%arg seq 0 seq_288_V$490
+.%scope end
+.%scope function gro_cli_abort_tape _gro_cli_abort_tape "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 472 484
+.%arg ctx 0 ctx_289_V$491
+.%arg tape 0 tape_289_V$492
+.%arg nrel 0 nrel_289_V$493
+.%scope end
+.%scope function ticket_error_is_fatal _ticket_error_is_fatal "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 488 529
+.%arg addr_hi 0 addr_hi_290_V$494
+.%arg addr_lo 0 addr_lo_290_V$495
+.%arg ticket_seq 0 ticket_seq_290_V$496
+.%arg epoch 0 epoch_290_V$497
+.%var prev_epoch 0 prev_epoch_290 LIX
+.%var skid_marker 0 skid_marker_290 LIX
+.%var tape_epoch 0 tape_epoch_290 LIX
+.%var tape_seq 0 tape_seq_290 LIX
+.%var rel_seq 0 rel_seq_290 LIX
+.%var tape_read_sig 6 tape_read_sig_290 LIX
+.%var ticket_tape 34 ticket_tape_290 LIR
+.%scope end
+.%scope function cascaded_ticket_error_is_fatal _cascaded_ticket_error_is_fatal "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 533 551
+.%arg addr_hi 0 addr_hi_293_V$4a1
+.%arg addr_lo 0 addr_lo_293_V$4a2
+.%arg epoch 0 epoch_293_V$4a3
+.%var prev_epoch 0 prev_epoch_293 LIX
+.%var skid_marker 0 skid_marker_293 LIX
+.%var tape_read_sig 6 tape_read_sig_293 LIX
+.%var tape_seq 0 tape_seq_293 LIR
+.%scope end
+.%scope function gro_cli_send _gro_cli_send "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/gro/libgro.c" 555 660
+.%arg meta 35 meta_294_V$4a9
+.%arg ctx 0 ctx_294_V$4aa
+.%arg seq 0 seq_294_V$4ab
+.%var adj_seq 0 adj_seq_294 LIX
+.%var nrel 6 nrel_294 LIX
+.%var tape 0 tape_294 LIX
+.%var ticket_seq 0 ticket_seq_294 LIX
+.%var rel_ctx 0 rel_ctx_294 LIX
+.%var addr_hi 0 addr_hi_294 LIX
+.%var addr_lo 0 addr_lo_294 LIX
+.%var ntapes 0 ntapes_294 LIX
+.%var epoch 0 epoch_294 LIX
+.%var clictx 29 clictx_294 LIX
+.%var ticket 0 ticket_294 LIX
+.%var meta_sig 6 meta_sig_294 LIX
+.%var ticket_sig 33 ticket_sig_294 LIX
+.%scope end
+.%type U4
+.%type A128 2
+.%type S16 gro_client_ctx{
+ring_addr_hi 0:24:8 0;
+ring_addr_lo 0:0:24 0;
+bm_addr_hi 4:24:8 0;
+bm_addr_lo 4:0:24 0;
+q_addr_hi 8:24:8 0;
+q_size 8:0:24 0;
+q_addr_lo 12 0;
+}
+.%type A128 2
+.%type A128 5
+.%type U8
+.%type I4
+.%type P2 8
+.%type S16 gro_meta_drop{
+__unnamed 0 9;
+}
+.%type S16 {
+__unnamed 0 10;
+__raw 0 11;
+}
+.%type S16 {
+unused 0:7:25 0;
+dest 0:3:4 0;
+type 0:0:3 0;
+ctm_addr_hi 4:24:8 0;
+unused2 4:9:15 0;
+ctm_pkt_num 4:0:9 0;
+mu_ring_addr_hi 8:24:8 0;
+mu_ring_num 8:0:24 0;
+mu_handle 12 0;
+}
+.%type A16 0
+.%type P2 13
+.%type S16 gro_meta_memq{
+w0 0 14;
+qdata 4 15;
+}
+.%type S4 gro_meta_memq_w0{
+q_hi 0:24:8 0;
+unused 0:17:7 0;
+qnum 0:7:10 0;
+dest 0:3:4 0;
+type 0:0:3 0;
+}
+.%type A12 0
+.%type P2 17
+.%type S16 gro_meta_nbi{
+__unnamed 0 18;
+}
+.%type S16 {
+__unnamed 0 19;
+__raw 0 20;
+}
+.%type S16 {
+unused 0:7:25 0;
+dest 0:3:4 0;
+type 0:0:3 0;
+addr_hi 4 0;
+addr_lo 8 0;
+prev_alu 12 0;
+}
+.%type A16 0
+.%type P2 22
+.%type S16 gro_meta_nfd3{
+w0 0 23;
+w1 4 0;
+w2 8 0;
+w3 12 0;
+}
+.%type S4 gro_meta_nfd3_w0{
+__unnamed 0 24;
+}
+.%type S4 {
+__unnamed 0 25;
+__raw 0 0;
+}
+.%type S4 {
+isl 0:26:6 0;
+ctm_only 0:25:1 0;
+pktnum 0:16:9 0;
+split 0:14:2 0;
+off 0:7:7 0;
+pcie 0:3:4 0;
+type 0:0:3 0;
+}
+.%type P2 27
+.%type U4
+.%type P2 0
+.%type P6 2
+.%type S4 gro_release{
+__unnamed 0 31;
+}
+.%type S4 {
+__unnamed 0 32;
+__raw 0 0;
+}
+.%type S4 {
+valid 0:31:1 0;
+pad2 0:23:8 0;
+nrel 0:16:7 0;
+pad1 0:3:13 0;
+ctx 0:0:3 0;
+}
+.%type S8 SIGNAL_PAIR{
+even 0 6;
+odd 4 6;
+}
+.%type A12 0
+.%type P2 27

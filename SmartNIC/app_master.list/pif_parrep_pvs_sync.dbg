@@ -1,0 +1,40 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_224 LIX
+.%scope end
+.%scope function __hashmap_lock_release ___hashmap_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/include/hashmap.h" 103 122
+.%arg lock 1 lock_238_V$231
+.%var ind 6 ind_238 LIX
+.%var addr_hi 0 addr_hi_238 LIX
+.%var addr_lo 0 addr_lo_238 LIX
+.%scope end
+.%scope function pif_value_set_scan_configs _pif_value_set_scan_configs "out/pif_parrep_pvs_sync.c" 6 8
+.%scope end
+.%type U4
+.%type P2 2
+.%type S10 {
+addr 0 3;
+state 8 5;
+}
+.%type P3 4
+.%type U4
+.%type U2
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 7;
+}
+.%type S4 {
+__unnamed 0 8;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}

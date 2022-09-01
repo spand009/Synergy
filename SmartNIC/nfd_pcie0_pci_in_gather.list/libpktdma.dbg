@@ -1,0 +1,34 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __pktdma_mu_to_ctm ___pktdma_mu_to_ctm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pktdma/libpktdma.c" 34 42
+.%arg ctm_addr 0 ctm_addr_52_V$13
+.%arg mem_addr 2 mem_addr_52_V$14
+.%arg size 3 size_52_V$15
+.%arg poll_int 3 poll_int_52_V$16
+.%scope end
+.%var libpktdma_sem_sem 4 _libpktdma_sem_sem SEX
+.%var libpktdma_sem_max_credits 3 _libpktdma_sem_max_credits SIX
+.%scope function pktdma_mu_to_ctm _pktdma_mu_to_ctm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pktdma/libpktdma.c" 45 48
+.%arg ctm_addr 0 ctm_addr_53_V$17
+.%arg mem_addr 2 mem_addr_53_V$18
+.%arg size 3 size_53_V$19
+.%scope end
+.%scope function __pktdma_ctm_to_mu ___pktdma_ctm_to_mu "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pktdma/libpktdma.c" 51 59
+.%arg mem_addr 2 mem_addr_54_V$1a
+.%arg ctm_addr 0 ctm_addr_54_V$1b
+.%arg size 3 size_54_V$1c
+.%arg poll_int 3 poll_int_54_V$1d
+.%scope end
+.%scope function pktdma_ctm_to_mu _pktdma_ctm_to_mu "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pktdma/libpktdma.c" 62 65
+.%arg mem_addr 2 mem_addr_55_V$1e
+.%arg ctm_addr 0 ctm_addr_55_V$1f
+.%arg size 3 size_55_V$20
+.%scope end
+.%type P3 1
+.%type U4
+.%type P3 1
+.%type U4
+.%type S8 sem{
+next_credit 0 5;
+last_complete 4 5;
+}
+.%type I4

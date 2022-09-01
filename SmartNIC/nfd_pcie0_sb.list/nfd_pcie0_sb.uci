@@ -1,0 +1,238 @@
+;
+; Register Allocation:
+; A-Bank, relative GPRs (35)
+;   00 l0000!g_sbpd_wq_hi
+;      l0005!ring_addr_hi
+;      l0030!count
+;   01 l0005!vnic
+;      l0031!g_seq_mask
+;   02 l0006!up!!2
+;      l0006!up
+;      l0031!g_seq_incr
+;   03 l0006!maxqs
+;      l0031!g_in_wq_hi
+;   04 l0006!rid
+;      l0031!g_out_wq_hi
+;   05 l0008!qid
+;      l0031!g_out_wq_lo
+;   06 l0031!next_ctx
+;      l0042!out_word0
+;   07 l0015!addr_lo
+;      l0031!lma
+;   08 l0018!qid
+;      l0033!sigval
+;   09 l0025!addr_hi
+;      l0034!sigval
+;   0A l0006!bar_addr_hi
+;      l0035!sigval
+;   0B l0007!tmp_lo
+;      l0036!sigval
+;   0C l0028!meid
+;      l0038!out_word0
+;   0D l0028!addr!!3
+;      l0028!addr
+;      l0039!out_word0
+;   0E l0003!count
+;      l0040!out_word0
+;   0F l0029!addr_hi
+;      l0041!out_word0
+; A-Bank, absolute GPRs (00)
+; B-Bank, relative GPRs (57)
+;   01 l0000!g_sbpd_wq_lo
+;      l0001!state_version
+;   02 l0005!ring_in_addr_lo
+;      l0029!addr_lo!!2
+;      l0029!addr_lo
+;      l0031!g_sig_next_worker
+;   03 l0003!count!!2
+;      l0005!ring_out_addr_lo
+;      l0029!lma!!2
+;      l0029!lma!!3
+;      l0029!lma
+;      l0031!g_lm_qstate_mask
+;   04 l0003!amt
+;      l0006!q!!2
+;      l0006!q
+;      l0031!g_cache_addr_lo_mask
+;   05 l0004!addr_lo
+;      l0008!lma
+;      l0015!addr_hi
+;      l0031!g_in_wq_lo
+;   06 l0018!lma
+;      l0030!count!!2
+;      l0031!ctx!!2
+;      l0031!ctx
+;   07 l0018!currently_up
+;      l0030!amt
+;      l0037!sigval
+;      l0040!out_word0!!2
+;   08 l0018!base_addr
+;      l0038!lma
+;      l0041!lma
+;   09 l0025!addr_lo
+;      l0038!addr_lo
+;      l0041!addr_lo
+;   0A l0006!bar_addr_lo
+;      l0038!out_word0!!2
+;      l0041!out_word0!!2
+;   0B l0007!off
+;      l0039!lma
+;      l0042!lma
+;   0C l0028!addr!!2
+;      l0028!addr!!4
+;      l0039!addr_lo
+;      l0042!addr_lo
+;   0D l0028!tmp!!2
+;      l0028!tmp!!3
+;      l0028!tmp!!4
+;      l0028!tmp
+;      l0039!out_word0!!2
+;      l0042!out_word0!!2
+;   0E l0008!currently_up
+;      l0029!i!!2
+;      l0029!i
+;      l0040!lma
+;   0F l0001!lma
+;      l0008!base_addr
+;      l0040!addr_lo
+; B-Bank, absolute GPRs (01)
+;   00 @l0000!nconfigs
+; Unknown-Bank, relative GPRs (09)
+;   -- l0008!changed
+;      l0008!tmp
+;      l0018!changed
+;      l0018!tmp
+;      l0038!credits
+;      l0039!credits
+;      l0040!credits
+;      l0041!credits
+;      l0042!credits
+; Relative XFERs (92)
+;   00 $l0004!credits
+;      $l0006!bar[0]
+;      $l0015!bitmap[0]
+;      $l0025!bitmap[0]
+;      $l0029!out[0]
+;      $l0031!in_0[0]
+;      $l0031!out_0[0]
+;   01 $l0006!bar[1]
+;      $l0015!bitmap[1]
+;      $l0025!bitmap[1]
+;      $l0029!out[1]
+;      $l0031!in_0[1]
+;      $l0031!out_0[1]
+;   02 $l0006!bar[2]
+;      $l0015!bitmap[2]
+;      $l0025!bitmap[2]
+;      $l0029!out[2]
+;      $l0031!in_0[2]
+;      $l0031!out_0[2]
+;   03 $l0006!bar[3]
+;      $l0015!bitmap[3]
+;      $l0025!bitmap[3]
+;      $l0029!out[3]
+;      $l0031!in_0[3]
+;      $l0031!out_0[3]
+;   04 $l0006!bar[4]
+;      $l0029!out[4]
+;      $l0031!out_0[4]
+;      $l0031!in_1[0]
+;   05 $l0006!bar[5]
+;      $l0029!out[5]
+;      $l0031!out_0[5]
+;      $l0031!in_1[1]
+;   06 $l0005!cmsg[0]
+;      $l0029!out[6]
+;      $l0031!in_1[2]
+;      $l0031!out_1[0]
+;   07 $l0029!out[7]
+;      $l0031!in_1[3]
+;      $l0031!out_1[1]
+;   08 $l0029!out[8]
+;      $l0031!out_1[2]
+;      $l0031!in_2[0]
+;   09 $l0029!out[9]
+;      $l0031!out_1[3]
+;      $l0031!in_2[1]
+;   0A $l0029!out[10]
+;      $l0031!out_1[4]
+;      $l0031!in_2[2]
+;   0B $l0029!out[11]
+;      $l0031!out_1[5]
+;      $l0031!in_2[3]
+;   0C $l0029!out[12]
+;      $l0031!out_2[0]
+;      $l0031!in_3[0]
+;   0D $l0029!out[13]
+;      $l0031!out_2[1]
+;      $l0031!in_3[1]
+;   0E $l0029!out[14]
+;      $l0031!out_2[2]
+;      $l0031!in_3[2]
+;   0F $l0029!out[15]
+;      $l0031!out_2[3]
+;      $l0031!in_3[3]
+;   10 $l0031!out_2[4]
+;      $l0031!in_4[0]
+;   11 $l0031!out_2[5]
+;      $l0031!in_4[1]
+;   12 $l0031!out_3[0]
+;      $l0031!in_4[2]
+;   13 $l0031!out_3[1]
+;      $l0031!in_4[3]
+;   14 $l0031!out_3[2]
+;      $l0038!buf_desc[0]
+;      $l0039!buf_desc[0]
+;      $l0040!buf_desc[0]
+;      $l0041!buf_desc[0]
+;      $l0042!buf_desc[0]
+;   15 $l0031!out_3[3]
+;      $l0038!buf_desc[1]
+;      $l0039!buf_desc[1]
+;      $l0040!buf_desc[1]
+;      $l0041!buf_desc[1]
+;      $l0042!buf_desc[1]
+;   16 $l0031!out_3[4]
+;   17 $l0031!out_3[5]
+;   18 $l0031!out_4[0]
+;   19 $l0031!out_4[1]
+;   1A $l0031!out_4[2]
+;   1B $l0031!out_4[3]
+;   1C $l0031!out_4[4]
+;   1D $l0031!out_4[5]
+; Signals (30)
+;   00 _nfd_cfg_sig_svc_me0!
+;   01 l0001!state_alarm_sig
+;      l0005!get_sig!!2
+;      l0005!get_sig!!3
+;      l0031!insig_0
+;   02 l0004!iosig
+;      l0005!get_sig
+;      l0005!put_sig
+;      l0006!read_sig
+;      l0015!bitmap_sig
+;      l0025!bitmap_sig
+;      l0029!out_sig!!2
+;      l0029!out_sig
+;      l0031!outsig_0
+;   03 l0031!insig_1
+;   04 l0031!outsig_1
+;   05 l0031!insig_2
+;   06 l0031!outsig_2
+;   07 l0031!insig_3
+;   08 l0031!outsig_3
+;   09 l0031!insig_4
+;   0A l0031!outsig_4
+;   0B l0038!fl_read_sig
+;      l0039!fl_read_sig
+;      l0040!fl_read_sig
+;      l0041!fl_read_sig
+;      l0042!fl_read_sig
+;   0D l0001!_nfd_credit_sig_sb
+;   0E l0001!_nfd_cfg_sig_sb
+;   0F l0031!ordersig
+; Number of exposed branch latency bubbles:  119 (69.59%)
+;
+;
+; Number of optimized cycles: 44
+;

@@ -1,0 +1,36 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_228_V$439
+.%arg y 0 y_228_V$43a
+.%var result 0 result_228 LIX
+.%scope end
+.%scope function pif_flcalc_verify _pif_flcalc_verify "out/pif_flcalc.c" 6 11
+.%arg parrep 1 parrep_230_V$43d
+.%var ctldata 2 ctldata_230 LIX
+.%scope end
+.%scope function pif_flcalc_update _pif_flcalc_update "out/pif_flcalc.c" 13 17
+.%arg parrep 1 parrep_231_V$440
+.%var ctldata 2 ctldata_231 LIX
+.%scope end
+.%type U4
+.%type P6 0
+.%type P6 3
+.%type S4 pif_parrep_ctldata{
+valid 0:31:1 0;
+t1_valid 0:30:1 0;
+t1_dirty 0:29:1 0;
+t1_orig_len 0:28:1 0;
+t2_valid 0:27:1 0;
+t2_dirty 0:26:1 0;
+t2_orig_len 0:25:1 0;
+t3_valid 0:24:1 0;
+t3_type 0:23:1 0;
+t3_dirty 0:22:1 0;
+t3_orig_len 0:17:5 0;
+t4_valid 0:16:1 0;
+t4_dirty 0:15:1 0;
+t4_orig_len 0:14:1 0;
+t5_valid 0:13:1 0;
+t5_dirty 0:12:1 0;
+t5_orig_len 0:11:1 0;
+}

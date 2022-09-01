@@ -1,0 +1,31 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function xpb_read_multiple _xpb_read_multiple "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time.c" 44 49
+.%arg xfer 0 xfer_76_V$1b
+.%arg addr 1 addr_76_V$1c
+.%arg count 2 count_76_V$1d
+.%var sig 2 sig_76 LIX
+.%scope end
+.%var mac_time_mult 1 _mac_time_mult SEX
+.%var mac_time_rshift 1 _mac_time_rshift SEX
+.%var mac_time 3 _mac_time SEX
+.%scope function mac_time_update _mac_time_update "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time.c" 51 114
+.%var mactime_xfer 5 mactime_xfer_77 LIR
+.%var mactime_xfer_again 6 mactime_xfer_again_77 LIR
+.%var time_reg_xfer 3 time_reg_xfer_77 LIW
+.%var time_reg 3 time_reg_77 LIX
+.%var sub_one_sec 2 sub_one_sec_77 LIX
+.%var me_time 1 me_time_77 LIX
+.%scope end
+.%type P2 1
+.%type U4
+.%type I4
+.%type S16 mac_time_state{
+mac_time_s 0 1;
+mac_time_ns 4 1;
+me_time 8 1;
+conv_mult 12 4;
+conv_rshift 14 4;
+}
+.%type U2
+.%type A8 1
+.%type A8 1

@@ -1,0 +1,40 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_359_V$647
+.%arg y 0 y_359_V$648
+.%var result 0 result_359 LIX
+.%scope end
+.%scope function get_actdata _get_actdata "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_action_common.c" 17 46
+.%arg xfer_buf 1 xfer_buf_361_V$64b
+.%arg flow_state_ptr 2 flow_state_ptr_361_V$64c
+.%arg act_len 0 act_len_361_V$64d
+.%arg offset 0 offset_361_V$64e
+.%var sig 3 sig_361 LIX
+.%var alen 0 alen_361 LIX
+.%var act_op 4 act_op_361 LIX
+.%scope end
+.%scope function pif_action_execute _pif_action_execute "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_action_common.c" 49 75
+.%arg parrep 7 parrep_363_V$65f
+.%arg flow_state_ptr 2 flow_state_ptr_363_V$660
+.%arg act_len 3 act_len_363_V$661
+.%var xfer_buf 8 xfer_buf_363 LIR
+.%var retrieved 0 retrieved_363 LIX
+.%var offset 0 offset_363 LIX
+.%scope end
+.%type U4
+.%type P2 0
+.%type P3 0
+.%type I4
+.%type P2 5
+.%type S4 pif_action_opdata{
+__unnamed 0 6;
+val32 0 0;
+}
+.%type S4 {
+reserved0 0:24:8 3;
+action_id 0:16:8 3;
+dbg_flags 0:8:8 3;
+actdata_cnt 0:0:8 3;
+}
+.%type P6 0
+.%type A96 0

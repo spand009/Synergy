@@ -1,0 +1,6 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function fc_get_timestamp _fc_get_timestamp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_timestamp.c" 26 35
+.%var timestamp_hi 0 timestamp_hi_152 LIX
+.%var timestamp_low 0 timestamp_low_152 LIX
+.%scope end
+.%type U4

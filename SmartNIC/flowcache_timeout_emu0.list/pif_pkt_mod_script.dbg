@@ -1,0 +1,70 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function pif_pkt_msd_write _pif_pkt_msd_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/pif_pkt_mod_script.c" 1519 1550
+.%arg pbuf 0 pbuf_188_V$1bb
+.%arg off 2 off_188_V$1bc
+.%var msi 3 msi_188 LIX
+.%var wr_sig 5 wr_sig_188 LIX
+.%var rd_sig 5 rd_sig_188 LIX
+.%var rd_xfer 6 rd_xfer_188 LIR
+.%var wr_xfer 6 wr_xfer_188 LIW
+.%var script_idx 8 script_idx_188 LIX
+.%scope block 1535 1547
+.%var mem_ptr 10 mem_ptr_190 LIX
+.%scope end
+.%scope end
+.%var nfp_cls_autopush_user_event 11 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 12 _nfp_cls_autopush_user_event_status SEX
+.%var pkt_mod_script_tbl 13 _pkt_mod_script_tbl SEX
+.%type P2 1
+.%type U4
+.%type U1
+.%type S4 pkt_ms_info{
+off_enc 0 4;
+len_adj 2 4;
+}
+.%type U2
+.%type I4
+.%type S16 packet_modifier_struct_t{
+__unnamed 0 7;
+value 0 9;
+}
+.%type S16 {
+direct 0:31:1 8;
+unused 0:27:4 8;
+offset_len 0:24:3 8;
+opcode_index 0:16:8 8;
+rdata_index 0:8:8 8;
+rdata_location 0:6:2 8;
+rdata_length 0:0:6 8;
+offset_0 4:24:8 8;
+offset_1 4:16:8 8;
+offset_2 4:8:8 8;
+offset_3 4:0:8 8;
+offset_4 8:24:8 8;
+offset_5 8:16:8 8;
+offset_6 8:8:8 8;
+offset_7 8:0:8 8;
+valid 12:31:1 8;
+reserved 12:11:20 8;
+prepend_len0 12:8:3 8;
+prepend_offset 12:0:8 8;
+}
+.%type U4
+.%type A16 8
+.%type P2 2
+.%type S4 {
+__reserved_16 0:16:16 8;
+source 0:4:12 8;
+type 0:0:4 8;
+}
+.%type S4 {
+__reserved_21 0:21:11 8;
+overflow 0:20:1 8;
+hwm 0:16:4 8;
+__reserved_12 0:12:4 8;
+read 0:8:4 8;
+__reserved_4 0:4:4 8;
+write 0:0:4 8;
+}
+.%type A3344 14
+.%type A16 8

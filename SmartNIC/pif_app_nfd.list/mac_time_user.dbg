@@ -1,0 +1,40 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_32x32 _multiply_32x32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time_user.c" 29 48
+.%arg x 0 x_76_V$19
+.%arg y 0 y_76_V$1a
+.%var lo 0 lo_76 LIX
+.%var hi 0 hi_76 LIX
+.%scope end
+.%var mac_time 1 _mac_time SEX
+.%scope function mac_time_fetch _mac_time_fetch "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time_user.c" 51 54
+.%arg mac_time_xfer 3 mac_time_xfer_78_V$1e
+.%scope end
+.%scope function mac_time_calc _mac_time_calc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time_user.c" 57 81
+.%arg mac_time_buf 1 mac_time_buf_79_V$1f
+.%var ret 4 ret_79 LIX
+.%var me_time 0 me_time_79 LIX
+.%var conv_result 5 conv_result_79 LIX
+.%var delta_ns 0 delta_ns_79 LIX
+.%scope end
+.%scope function mac_time_calc_pkt _mac_time_calc_pkt "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/mac_time_user.c" 86 119
+.%arg mac_time_buf 1 mac_time_buf_82_V$2e
+.%arg pkt_time_ns 0 pkt_time_ns_82_V$34
+.%var ret 4 ret_82 LIX
+.%var time_diff 6 time_diff_82 LIX
+.%scope end
+.%type U4
+.%type S16 mac_time_state{
+mac_time_s 0 0;
+mac_time_ns 4 0;
+me_time 8 0;
+conv_mult 12 2;
+conv_rshift 14 2;
+}
+.%type U2
+.%type P2 1
+.%type S8 mac_time_data{
+sec 0 0;
+nsec 4 0;
+}
+.%type U8
+.%type I4

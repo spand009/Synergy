@@ -1,0 +1,54 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function mem2lmem_bcopy _mem2lmem_bcopy "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_memops.c" 10 33
+.%arg pktdata 0 pktdata_116_V$b1
+.%arg lm_ptr 2 lm_ptr_116_V$b2
+.%arg lm_off_b 3 lm_off_b_116_V$b3
+.%arg lm_len_b 3 lm_len_b_116_V$b4
+.%var sig 3 sig_116 LIX
+.%var xfr_data 4 xfr_data_116 LIR
+.%var i 5 i_116 LIX
+.%var xfr_b 5 xfr_b_116 LIX
+.%var pkt_off 5 pkt_off_116 LIX
+.%var rem_b 3 rem_b_116 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 6 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 7 _nfp_cls_autopush_user_event_status SEX
+.%scope function mem2cls_bcopy _mem2cls_bcopy "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_memops.c" 37 70
+.%arg pktdata 0 pktdata_118_V$bc
+.%arg cls_ptr 8 cls_ptr_118_V$bd
+.%arg cls_len_b 3 cls_len_b_118_V$be
+.%var sig 3 sig_118 LIX
+.%var xfr_rd_data 9 xfr_rd_data_118 LIR
+.%var xfr_wr_data 10 xfr_wr_data_118 LIW
+.%var i 5 i_118 LIX
+.%var xfr_b 5 xfr_b_118 LIX
+.%var off_b 5 off_b_118 LIX
+.%var pkt_off 5 pkt_off_118 LIX
+.%var rem_b 3 rem_b_118 LIX
+.%scope block 60 64
+.%var xfr_4b 5 xfr_4b_120 LIX
+.%scope end
+.%scope end
+.%type P3 1
+.%type U1
+.%type P6 1
+.%type I4
+.%type A32 1
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 5;
+source 0:4:12 5;
+type 0:0:4 5;
+}
+.%type S4 {
+__reserved_21 0:21:11 5;
+overflow 0:20:1 5;
+hwm 0:16:4 5;
+__reserved_12 0:12:4 5;
+read 0:8:4 5;
+__reserved_4 0:4:4 5;
+write 0:0:4 5;
+}
+.%type P12 1
+.%type A32 5
+.%type A32 5

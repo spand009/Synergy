@@ -1,0 +1,15 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function hash_jenkins _hash_jenkins "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/jenkins_hash.c" 143 183
+.%arg in_key_index 0 in_key_index_32_V$e
+.%arg in_key_length 1 in_key_length_32_V$f
+.%var a 1 a_32 LIX
+.%var b 1 b_32 LIX
+.%var c 1 c_32 LIX
+.%var out_hash 2 out_hash_32 LIX
+.%scope end
+.%type P6 1
+.%type U4
+.%type S8 hash_result_t{
+value_0 0 1;
+value_1 4 1;
+}

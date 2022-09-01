@@ -1,0 +1,437 @@
+;
+; Register Allocation:
+; A-Bank, relative GPRs (57)
+;   00 l0001!NbiNum!!2
+;      l0001!NbiNum
+;      l0058!_addr
+;   01 l0001!blq!!2
+;      l0001!blq
+;      l0073!_addr
+;   02 l0001!event_data
+;      l0035!temp!!4
+;      l0035!temp!!5
+;      l0039!_addr
+;   03 l0000!cache_cnt!!3
+;      l0000!cache_cnt!!4
+;      l0001!is_aps
+;      l0001!to_ticks
+;   04 l0000!cls_ap_filter_number!!2
+;      l0000!cls_ap_filter_number
+;      l0011!val!!3
+;      l0011!val!!6
+;   05 l0000!ringid!!2
+;      l0000!ringid!!3
+;      l0012!val!!3
+;      l0012!val!!6
+;   06 l0001!blq_cnt_prev
+;      l0040!_addr
+;      l0075!_addr
+;   07 l0001!alarm_cnt
+;      l0042!_addr
+;   08 l0001!deficit!!2
+;      l0001!deficit!!4
+;      l0076!_addr
+;   09 l0013!val!!3
+;      l0013!val!!6
+;      l0043!addr!!2
+;      l0065!_addr
+;   0A l0014!val!!3
+;      l0014!val!!6
+;      l0044!_addr
+;      l0066!_addr
+;   0B l0015!val!!3
+;      l0015!val!!6
+;      l0047!_addr
+;      l0070!_addr
+;   0C l0016!val!!3
+;      l0016!val!!6
+;      l0048!_addr
+;      l0072!_addr
+;   0D l0017!val!!3
+;      l0017!val!!6
+;      l0050!_addr
+;      l0067!_addr
+;   0E l0054!temp!!4
+;      l0054!temp!!5
+;      l0069!_addr
+;   0F l0000!cache_hwm!!2
+;      l0018!val!!3
+;      l0018!val!!6
+;      l0057!_addr
+; A-Bank, absolute GPRs (00)
+; B-Bank, relative GPRs (246)
+;   00 l0000!blq_stats_base
+;      l0001!count!!2
+;      l0001!count
+;      l0012!val!!2
+;      l0012!val!!4
+;      l0012!val!!5
+;      l0012!val!!7
+;      l0012!val
+;      l0022!tmp
+;      l0025!tmp
+;      l0032!_mask!!2
+;      l0032!_mask
+;      l0041!override_data!!2
+;      l0041!override_data
+;      l0043!override_data!!2
+;      l0043!override_data
+;   01 l0000!blq_stats_base!!2
+;      l0000!cache_hwm
+;      l0011!n!!2
+;      l0011!n!!3
+;      l0011!n!!4
+;      l0011!n!!5
+;      l0011!n!!6
+;      l0011!n
+;      l0013!n!!2
+;      l0013!n!!3
+;      l0013!n!!4
+;      l0013!n!!5
+;      l0013!n!!6
+;      l0013!n
+;      l0015!n!!2
+;      l0015!n!!3
+;      l0015!n!!4
+;      l0015!n!!5
+;      l0015!n!!6
+;      l0015!n
+;      l0017!n!!2
+;      l0017!n!!3
+;      l0017!n!!4
+;      l0017!n!!5
+;      l0017!n!!6
+;      l0017!n
+;   02 l0000!cache_size!!2
+;      l0000!cache_size!!3
+;      l0000!cache_size!!4
+;      l0000!cache_size!!5
+;      l0000!cache_size
+;      l0001!island
+;      l0041!ov!!2
+;      l0041!ov
+;      l0044!addrhi
+;      l0059!_filter
+;      l0067!_offset
+;      l0071!override_data!!2
+;      l0071!override_data
+;      l0074!cache_offset!!2
+;      l0074!cache_offset
+;   03 l0000!ringid
+;      l0001!blq_cnt_mask
+;   04 l0001!blq_evnt_cnt
+;   05 l0001!addr!!2
+;      l0001!addr
+;      l0012!n!!2
+;      l0012!n!!3
+;      l0012!n!!4
+;      l0012!n!!5
+;      l0012!n!!6
+;      l0012!n
+;      l0014!n!!2
+;      l0014!n!!3
+;      l0014!n!!4
+;      l0014!n!!5
+;      l0014!n!!6
+;      l0014!n
+;      l0016!n!!2
+;      l0016!n!!3
+;      l0016!n!!4
+;      l0016!n!!5
+;      l0016!n!!6
+;      l0016!n
+;      l0018!n!!2
+;      l0018!n!!3
+;      l0018!n!!4
+;      l0018!n!!5
+;      l0018!n!!6
+;      l0018!n
+;   06 l0015!addr
+;      l0016!val!!2
+;      l0016!val!!4
+;      l0016!val!!5
+;      l0016!val!!7
+;      l0016!val
+;      l0043!offset!!2
+;      l0043!offset
+;      l0045!override_data!!2
+;      l0045!override_data
+;      l0051!addr!!2
+;      l0051!addr
+;      l0064!next!!2
+;      l0064!next
+;      l0068!override_data!!2
+;      l0068!override_data
+;      l0075!addrhi
+;   07 l0012!tmp!!2
+;      l0012!tmp
+;      l0016!tmp!!2
+;      l0016!tmp
+;      l0023!tmp
+;      l0045!ov!!2
+;      l0045!ov
+;      l0048!_offset!!2
+;      l0048!_offset!!3
+;      l0048!_offset
+;      l0051!_mask!!2
+;      l0051!_mask
+;      l0071!ov!!2
+;      l0071!ov
+;   08 l0011!addr
+;      l0013!addr
+;      l0015!val!!2
+;      l0015!val!!4
+;      l0015!val!!5
+;      l0015!val!!7
+;      l0015!val
+;      l0035!me_num
+;      l0046!override_data!!2
+;      l0046!override_data
+;      l0049!override_data!!2
+;      l0049!override_data
+;      l0051!_match
+;      l0068!ov!!2
+;      l0068!ov
+;      l0076!addrhi
+;   09 l0011!val!!2
+;      l0011!val!!4
+;      l0011!val!!5
+;      l0011!val!!7
+;      l0011!val
+;      l0018!addr
+;      l0019!zero
+;      l0024!immed32_temp
+;      l0028!tmp
+;      l0039!addrhi
+;      l0046!ov!!2
+;      l0046!ov
+;      l0049!ov!!2
+;      l0049!ov
+;      l0054!ctxt_num
+;   0A l0000!cls_ap_filter_match!!2
+;      l0000!cls_ap_filter_match
+;      l0013!val!!2
+;      l0013!val!!4
+;      l0013!val!!5
+;      l0013!val!!7
+;      l0013!val
+;      l0032!_match
+;      l0037!addr!!2
+;      l0037!addr
+;      l0040!_offset
+;      l0043!addr
+;      l0047!addrhi
+;      l0062!addr!!2
+;      l0062!addr
+;      l0065!addrhi
+;   0B l0001!blq_cnt_cur!!2
+;      l0001!blq_cnt_cur!!3
+;      l0001!blq_cnt_cur
+;      l0013!tmp!!2
+;      l0013!tmp
+;      l0017!addr
+;      l0018!val!!2
+;      l0018!val!!4
+;      l0018!val!!5
+;      l0018!val!!7
+;      l0018!val
+;      l0026!tmp
+;      l0031!tmp
+;      l0032!addr!!2
+;      l0032!addr
+;      l0035!ctxt_num
+;      l0056!cache_offset!!2
+;      l0056!cache_offset
+;      l0062!_filter
+;   0C l0000!cache_cnt!!2
+;      l0001!deficit!!3
+;      l0001!deficit!!5
+;      l0001!deficit
+;      l0014!addr
+;      l0015!tmp!!2
+;      l0015!tmp
+;      l0018!tmp!!2
+;      l0018!tmp
+;      l0027!immed32_temp
+;      l0037!_filter
+;      l0057!addrhi
+;      l0059!addr!!2
+;      l0059!addr
+;      l0070!_offset!!2
+;      l0070!_offset
+;   0D l0000!cache_cnt
+;      l0011!tmp!!2
+;      l0011!tmp
+;      l0016!addr
+;      l0017!val!!2
+;      l0017!val!!4
+;      l0017!val!!5
+;      l0017!val!!7
+;      l0017!val
+;      l0020!tmp
+;      l0029!tmp
+;      l0042!addrhi
+;      l0050!addrhi
+;      l0054!addr!!2
+;      l0054!addr
+;      l0058!addrhi
+;      l0066!addrhi
+;   0E l0014!val!!2
+;      l0014!val!!4
+;      l0014!val!!5
+;      l0014!val!!7
+;      l0014!val
+;      l0035!addr!!2
+;      l0035!addr
+;      l0043!ov!!2
+;      l0043!ov
+;      l0054!temp!!2
+;      l0054!temp!!3
+;      l0054!temp!!6
+;      l0054!temp
+;      l0061!next!!2
+;      l0061!next
+;      l0072!addrhi
+;   0F l0012!addr
+;      l0014!tmp!!2
+;      l0014!tmp
+;      l0017!tmp!!2
+;      l0017!tmp
+;      l0021!immed32_temp
+;      l0030!immed32_temp
+;      l0035!temp!!2
+;      l0035!temp!!3
+;      l0035!temp!!6
+;      l0035!temp
+;      l0054!me_num
+;      l0069!addrhi
+;      l0073!addrhi
+; B-Bank, absolute GPRs (00)
+; Unknown-Bank, relative GPRs (03)
+;   -- l0001!sub_id
+;      l0056!cache_base
+;      l0074!cache_base
+; Relative XFERs (70)
+;   00 $l0001!event_data[0]
+;   01 $l0001!xfer[0]
+;   02 $l0001!nbidmabuf[0]
+;      $l0011!x[0]
+;      $l0012!x[0]
+;      $l0013!x[0]
+;      $l0014!x[0]
+;      $l0015!x[0]
+;      $l0016!x[0]
+;      $l0017!x[0]
+;      $l0018!x[0]
+;      $l0001!nbitmbuf[0]
+;      $l0032!xfer[0]
+;      $l0035!xfer
+;      $l0041!x[0]
+;      $l0043!x[0]
+;      $l0045!x[0]
+;      $l0046!x[0]
+;      $l0048!dummy[0]
+;      $l0049!x[0]
+;      $l0051!xfer[0]
+;      $l0054!xfer
+;      $l0068!x[0]
+;      $l0071!x[0]
+;   03 $l0001!nbidmabuf[1]
+;      $l0001!nbitmbuf[1]
+;      $l0032!xfer[1]
+;      $l0041!x[1]
+;      $l0043!x[1]
+;      $l0045!x[1]
+;      $l0046!x[1]
+;      $l0048!dummy[1]
+;      $l0049!x[1]
+;      $l0051!xfer[1]
+;      $l0068!x[1]
+;      $l0071!x[1]
+;   04 $l0001!nbidmabuf[2]
+;      $l0001!nbitmbuf[2]
+;      $l0032!xfer[2]
+;      $l0051!xfer[2]
+;   05 $l0001!nbidmabuf[3]
+;      $l0001!nbitmbuf[3]
+;      $l0032!xfer[3]
+;      $l0051!xfer[3]
+;   06 $l0001!nbidmabuf[4]
+;      $l0001!nbitmbuf[4]
+;   07 $l0001!nbidmabuf[5]
+;      $l0001!nbitmbuf[5]
+;   08 $l0001!nbidmabuf[6]
+;      $l0001!nbitmbuf[6]
+;   09 $l0001!nbidmabuf[7]
+;      $l0001!nbitmbuf[7]
+;   0A $l0001!nbidmabuf[8]
+;      $l0001!nbitmbuf[8]
+;   0B $l0001!nbidmabuf[9]
+;      $l0001!nbitmbuf[9]
+;   0C $l0001!nbidmabuf[10]
+;      $l0001!nbitmbuf[10]
+;   0D $l0001!nbidmabuf[11]
+;      $l0001!nbitmbuf[11]
+;   0E $l0001!nbidmabuf[12]
+;      $l0001!nbitmbuf[12]
+;   0F $l0001!nbidmabuf[13]
+;      $l0001!nbitmbuf[13]
+;   10 $l0001!nbidmabuf[14]
+;      $l0001!nbitmbuf[14]
+;   11 $l0001!nbidmabuf[15]
+;      $l0001!nbitmbuf[15]
+;   -- $l0070!dummy[0]
+;      $l0070!dummy[1]
+; Signals (47)
+;   01 l0001!auto_push_event_sig
+;   02 l0001!evtsig
+;   03 l0001!alarm_sig
+;      l0032!signal!!2
+;      l0032!signal
+;      l0035!local_signal
+;      l0041!dummy_sig
+;      l0043!bogus_sig
+;      l0045!bogus_sig
+;      l0046!bogus_sig
+;      l0048!pop_complete_sig
+;      l0049!dummy_sig
+;   04 l0001!sig_memget0!!2
+;      l0001!sig_memget0!!3
+;      l0001!sig_memget0!!4
+;      l0001!sig_memget0!!5
+;      l0001!sig_memget0!!6
+;      l0001!sig_memget0
+;      l0011!nbi_sig!!2
+;      l0011!nbi_sig
+;      l0012!nbi_sig!!2
+;      l0012!nbi_sig
+;      l0013!nbi_sig!!2
+;      l0013!nbi_sig
+;      l0014!nbi_sig!!2
+;      l0014!nbi_sig
+;      l0015!nbi_sig!!2
+;      l0015!nbi_sig
+;      l0016!nbi_sig!!2
+;      l0016!nbi_sig
+;      l0017!nbi_sig!!2
+;      l0017!nbi_sig
+;      l0018!nbi_sig!!2
+;      l0018!nbi_sig
+;      l0051!signal!!2
+;      l0051!signal
+;      l0054!local_signal
+;      l0056!sig_cache_fill
+;      l0068!dummy_sig
+;      l0071!dummy_sig
+;      l0074!sig_cache_fill
+;   -- l0001!sig_bufpush
+;      l0001!sig_memget1
+;      l0001!sig_bufpop
+;      l0001!sig_memput0
+;      l0001!sig_memput1
+;      l0070!rd_complete_sig
+; Number of exposed branch latency bubbles:  234 (80.14%)
+;
+;
+; Number of optimized cycles: 88
+;

@@ -1,0 +1,39 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_207_V$458
+.%arg y 0 y_207_V$459
+.%var result 0 result_207 LIX
+.%scope end
+.%var pif_counter_RX 1 _pif_counter_RX SEX
+.%var pif_counter_RX_NFD 1 _pif_counter_RX_NFD SEX
+.%var pif_counter_TX 1 _pif_counter_TX SEX
+.%var pif_counter_TX_NFD 1 _pif_counter_TX_NFD SEX
+.%var pif_counter_DROP 1 _pif_counter_DROP SEX
+.%var pif_counter_DROP_META 1 _pif_counter_DROP_META SEX
+.%var pif_counter_DROP_NFD_NO_CREDITS 1 _pif_counter_DROP_NFD_NO_CREDITS SEX
+.%var pif_counter_DROP_MCAST_PORT_OUT_BOUNDS 1 _pif_counter_DROP_MCAST_PORT_OUT_BOUNDS SEX
+.%var pif_counter_DROP_PORT_PAUSED 1 _pif_counter_DROP_PORT_PAUSED SEX
+.%var pif_counter_FLOWCACHE_HIT 1 _pif_counter_FLOWCACHE_HIT SEX
+.%var pif_counter_FLOWCACHE_MISS 1 _pif_counter_FLOWCACHE_MISS SEX
+.%var pif_counter_FLOWCACHE_BYPASS 1 _pif_counter_FLOWCACHE_BYPASS SEX
+.%var pif_counter_MULTICAST 1 _pif_counter_MULTICAST SEX
+.%var pif_counter_RESUBMIT 1 _pif_counter_RESUBMIT SEX
+.%var pif_counter_RECIRCULATE 1 _pif_counter_RECIRCULATE SEX
+.%var pif_counter_CLONE_I2I 1 _pif_counter_CLONE_I2I SEX
+.%var pif_counter_CLONE_I2E 1 _pif_counter_CLONE_I2E SEX
+.%var pif_counter_CLONE_E2I 1 _pif_counter_CLONE_E2I SEX
+.%var pif_counter_CLONE_E2E 1 _pif_counter_CLONE_E2E SEX
+.%var pif_counter_OFFSET_TOO_LARGE_SHIFT 1 _pif_counter_OFFSET_TOO_LARGE_SHIFT SEX
+.%var pif_counter_ERROR_PKTMETA 1 _pif_counter_ERROR_PKTMETA SEX
+.%var pif_counter_ERROR_PARREP 2 _pif_counter_ERROR_PARREP SEX
+.%var pif_counter_ERROR_PARREP_CUSTOM 1 _pif_counter_ERROR_PARREP_CUSTOM SEX
+.%var pif_counter_ERROR_FLOWCACHE 1 _pif_counter_ERROR_FLOWCACHE SEX
+.%var pif_counter_ERROR_INGRESS 1 _pif_counter_ERROR_INGRESS SEX
+.%var pif_counter_ERROR_EGRESS 1 _pif_counter_ERROR_EGRESS SEX
+.%var pif_counter_ERROR_DEPARSE 1 _pif_counter_ERROR_DEPARSE SEX
+.%var pif_counter_ERROR_WAIT_CTM_PKT_ALLOC 1 _pif_counter_ERROR_WAIT_CTM_PKT_ALLOC SEX
+.%var pif_counter_ERROR_WAIT_BLM_BUF_ALLOC 1 _pif_counter_ERROR_WAIT_BLM_BUF_ALLOC SEX
+.%var pif_counter_ERROR_NFDMETA 1 _pif_counter_ERROR_NFDMETA SEX
+.%type U4
+.%type U8
+.%type A56 1

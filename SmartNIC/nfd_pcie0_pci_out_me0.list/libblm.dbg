@@ -1,0 +1,85 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 1 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 3 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 4 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 5 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 6 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 7 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 8 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 9 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 10 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 11 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%scope function __blm_buf_alloc ___blm_buf_alloc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 27 31
+.%arg buf 12 buf_157_V$22f
+.%arg blq 0 blq_157_V$230
+.%arg sigpair 13 sigpair_157_V$231
+.%arg sync 16 sync_157_V$232
+.%scope end
+.%scope function blm_buf_alloc _blm_buf_alloc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 34 37
+.%arg buf 12 buf_158_V$234
+.%arg blq 0 blq_158_V$235
+.%scope end
+.%scope function __blm_buf_alloc_bulk ___blm_buf_alloc_bulk "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 40 67
+.%arg bufs 12 bufs_159_V$237
+.%arg count 0 count_159_V$238
+.%arg blq 0 blq_159_V$239
+.%arg sigpair 13 sigpair_159_V$23a
+.%arg sync 16 sync_159_V$23b
+.%var raddr_hi 0 raddr_hi_159 LIX
+.%var rnum 0 rnum_159 LIX
+.%scope end
+.%scope function blm_buf_alloc_bulk _blm_buf_alloc_bulk "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 70 75
+.%arg bufs 12 bufs_164_V$249
+.%arg count 0 count_164_V$24a
+.%arg blq 0 blq_164_V$24b
+.%var sigpair 14 sigpair_164 LIX
+.%scope end
+.%scope function blm_buf_free _blm_buf_free "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 78 91
+.%arg buf 0 buf_165_V$250
+.%arg blq 0 blq_165_V$251
+.%var raddr_hi 0 raddr_hi_165 LIX
+.%var rnum 0 rnum_165 LIX
+.%scope end
+.%scope function __blm_buf_free_bulk ___blm_buf_free_bulk "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 94 109
+.%arg bufs 17 bufs_167_V$254
+.%arg count 0 count_167_V$255
+.%arg blq 0 blq_167_V$256
+.%arg sig 18 sig_167_V$257
+.%arg sync 16 sync_167_V$258
+.%var raddr_hi 0 raddr_hi_167 LIX
+.%var rnum 0 rnum_167 LIX
+.%scope end
+.%scope function blm_buf_free_bulk _blm_buf_free_bulk "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/blocks/blm/libblm.c" 112 117
+.%arg bufs 17 bufs_170_V$25b
+.%arg count 0 count_170_V$25c
+.%arg blq 0 blq_170_V$25d
+.%var sig 15 sig_170 LIX
+.%scope end
+.%type U4
+.%type A16 2
+.%type U1
+.%type A32768 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A41943040 2
+.%type A10485760 2
+.%type P2 0
+.%type P2 14
+.%type S8 SIGNAL_PAIR{
+even 0 15;
+odd 4 15;
+}
+.%type I4
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 0
+.%type P2 15

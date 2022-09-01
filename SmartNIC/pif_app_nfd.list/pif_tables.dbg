@@ -1,0 +1,31 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_207_V$451
+.%arg y 0 y_207_V$452
+.%var result 0 result_207 LIX
+.%scope end
+.%var dcfl_ct_0 1 _dcfl_ct_0 SEX
+.%var dcfl_ct_1 2 _dcfl_ct_1 SEX
+.%var dcfl_ct_2 3 _dcfl_ct_2 SEX
+.%var pif_actiondata_table_0_fwd 4 _pif_actiondata_table_0_fwd SEX
+.%var pif_actiondata_table_1_gtpu_decap_table 5 _pif_actiondata_table_1_gtpu_decap_table SEX
+.%var pif_actiondata_table_2_gtpu_encap_table 6 _pif_actiondata_table_2_gtpu_encap_table SEX
+.%var pif_actiondata_table_descs 7 _pif_actiondata_table_descs SEX
+.%type U4
+.%type A20971520 0
+.%type A20971520 0
+.%type A20971520 0
+.%type A2097152 0
+.%type A2097152 0
+.%type A4194304 0
+.%type A48 8
+.%type S16 pif_actiondata_table_desc{
+table_address 0 9;
+rule_count 8 0;
+reserved 12 10;
+record_shift 14 11;
+flags 15 11;
+}
+.%type P3 0
+.%type U2
+.%type U1

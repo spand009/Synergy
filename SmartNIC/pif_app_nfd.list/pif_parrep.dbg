@@ -1,0 +1,344 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_224 LIX
+.%scope end
+.%var pif_pkt_info_global 1 _pif_pkt_info_global SEX
+.%var parrep 9 _parrep SEX
+.%scope function __hashmap_lock_release ___hashmap_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/include/hashmap.h" 103 122
+.%arg lock 10 lock_238_V$683
+.%var ind 14 ind_238 LIX
+.%var addr_hi 0 addr_hi_238 LIX
+.%var addr_lo 0 addr_lo_238 LIX
+.%scope end
+.%scope function mem2lmem_copy _mem2lmem_copy "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_memops.h" 12 36
+.%arg pktdata 17 pktdata_240_V$69c
+.%arg lm_ptr 19 lm_ptr_240_V$69d
+.%arg off_lw 20 off_lw_240_V$69e
+.%arg len_lw 20 len_lw_240_V$69f
+.%var sig 20 sig_240 LIX
+.%var read_xfer 21 read_xfer_240 LIR
+.%var i 0 i_240 LIX
+.%var tocopy 0 tocopy_240 LIX
+.%var chunk 0 chunk_240 LIX
+.%var off 0 off_240 LIX
+.%var copied 0 copied_240 LIX
+.%scope end
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_397_V$6a8
+.%arg y 0 y_397_V$6a9
+.%var result 0 result_397 LIX
+.%scope end
+.%scope function handle_node_start _handle_node_start "out/pif_parrep.c" 8 19
+.%arg lm_ptr 19 lm_ptr_399_V$6ac
+.%arg pktdata 17 pktdata_399_V$6ad
+.%arg pktdataoff 0 pktdataoff_399_V$6ae
+.%arg fk_ptr 19 fk_ptr_399_V$6af
+.%arg fk_len 22 fk_len_399_V$6b0
+.%arg pstate 23 pstate_399_V$6b1
+.%var prdata 24 prdata_399 LIX
+.%var hdrsz 20 hdrsz_399 LIX
+.%scope end
+.%scope function handle_node_parse_ethernet _handle_node_parse_ethernet "out/pif_parrep.c" 22 53
+.%arg lm_ptr 19 lm_ptr_400_V$6b7
+.%arg pktdata 17 pktdata_400_V$6b8
+.%arg pktdataoff 0 pktdataoff_400_V$6b9
+.%arg fk_ptr 19 fk_ptr_400_V$6ba
+.%arg fk_len 22 fk_len_400_V$6bb
+.%arg pstate 23 pstate_400_V$6bc
+.%var prdata 24 prdata_400 LIX
+.%var hdrsz 20 hdrsz_400 LIX
+.%var ethernet 26 ethernet_400 LIX
+.%var select_value 28 select_value_400 LIX
+.%scope end
+.%scope function handle_node_parse_ipv4 _handle_node_parse_ipv4 "out/pif_parrep.c" 56 97
+.%arg lm_ptr 19 lm_ptr_405_V$6c6
+.%arg pktdata 17 pktdata_405_V$6c7
+.%arg pktdataoff 0 pktdataoff_405_V$6c8
+.%arg fk_ptr 19 fk_ptr_405_V$6c9
+.%arg fk_len 22 fk_len_405_V$6ca
+.%arg pstate 23 pstate_405_V$6cb
+.%var prdata 24 prdata_405 LIX
+.%var hdrsz 20 hdrsz_405 LIX
+.%var ipv4 29 ipv4_405 LIX
+.%var select_value 31 select_value_405 LIX
+.%scope block 76 81
+.%var fk 32 fk_406 LIX
+.%scope end
+.%scope end
+.%scope function handle_node_parse_tcp _handle_node_parse_tcp "out/pif_parrep.c" 100 124
+.%arg lm_ptr 19 lm_ptr_412_V$6d6
+.%arg pktdata 17 pktdata_412_V$6d7
+.%arg pktdataoff 0 pktdataoff_412_V$6d8
+.%arg fk_ptr 19 fk_ptr_412_V$6d9
+.%arg fk_len 22 fk_len_412_V$6da
+.%arg pstate 23 pstate_412_V$6db
+.%var prdata 24 prdata_412 LIX
+.%var hdrsz 20 hdrsz_412 LIX
+.%var tcp 34 tcp_412 LIX
+.%scope end
+.%scope function handle_node_parse_udp _handle_node_parse_udp "out/pif_parrep.c" 127 158
+.%arg lm_ptr 19 lm_ptr_415_V$6e2
+.%arg pktdata 17 pktdata_415_V$6e3
+.%arg pktdataoff 0 pktdataoff_415_V$6e4
+.%arg fk_ptr 19 fk_ptr_415_V$6e5
+.%arg fk_len 22 fk_len_415_V$6e6
+.%arg pstate 23 pstate_415_V$6e7
+.%var prdata 24 prdata_415 LIX
+.%var hdrsz 20 hdrsz_415 LIX
+.%var udp 36 udp_415 LIX
+.%var select_value 38 select_value_415 LIX
+.%scope end
+.%scope function handle_node_parse_gtpu _handle_node_parse_gtpu "out/pif_parrep.c" 161 192
+.%arg lm_ptr 19 lm_ptr_420_V$6f0
+.%arg pktdata 17 pktdata_420_V$6f1
+.%arg pktdataoff 0 pktdataoff_420_V$6f2
+.%arg fk_ptr 19 fk_ptr_420_V$6f3
+.%arg fk_len 22 fk_len_420_V$6f4
+.%arg pstate 23 pstate_420_V$6f5
+.%var prdata 24 prdata_420 LIX
+.%var hdrsz 20 hdrsz_420 LIX
+.%var gtpu 39 gtpu_420 LIX
+.%scope block 180 184
+.%var fk 41 fk_421 LIX
+.%scope end
+.%scope end
+.%scope function handle_node_parse_gtpu_ipv4 _handle_node_parse_gtpu_ipv4 "out/pif_parrep.c" 195 229
+.%arg lm_ptr 19 lm_ptr_424_V$6fc
+.%arg pktdata 17 pktdata_424_V$6fd
+.%arg pktdataoff 0 pktdataoff_424_V$6fe
+.%arg fk_ptr 19 fk_ptr_424_V$6ff
+.%arg fk_len 22 fk_len_424_V$700
+.%arg pstate 23 pstate_424_V$701
+.%var prdata 24 prdata_424 LIX
+.%var hdrsz 20 hdrsz_424 LIX
+.%var gtpu_ipv4 43 gtpu_ipv4_424 LIX
+.%scope block 214 221
+.%var fk 45 fk_425 LIX
+.%scope end
+.%scope end
+.%scope function pif_parrep_extract _pif_parrep_extract "out/pif_parrep.c" 232 309
+.%arg lm_ptr 19 lm_ptr_428_V$709
+.%arg pktdata 17 pktdata_428_V$70a
+.%arg pktlen 0 pktlen_428_V$70b
+.%arg fk_ptr 19 fk_ptr_428_V$70c
+.%arg fk_len 22 fk_len_428_V$70d
+.%var prdata 24 prdata_428 LIX
+.%var pkt_info 47 pkt_info_428 LIX
+.%var exit_node 20 exit_node_428 LIX
+.%var pif_parrep_state 20 pif_parrep_state_428 LIX
+.%var ret 20 ret_428 LIX
+.%var off 20 off_428 LIX
+.%var i 20 i_428 LIX
+.%scope block 290 296
+.%var standard_metadata 48 standard_metadata_434 LIX
+.%var fk 50 fk_434 LIX
+.%scope end
+.%scope end
+.%scope function pif_parrep_exceptions _pif_parrep_exceptions "out/pif_parrep.c" 312 315
+.%arg parrep 19 parrep_437_V$7a2
+.%arg result 20 result_437_V$7a3
+.%scope end
+.%type U4
+.%type S40 pif_pkt_info{
+__unnamed 0 2;
+}
+.%type S40 {
+__unnamed 0 3;
+__raw 0 8;
+}
+.%type S40 {
+isl 0:26:6 0;
+pkt_num 0:16:10 0;
+bls 0:14:2 0;
+pkt_len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+resv2 8:31:1 0;
+ctm_size 8:29:2 0;
+ctm_isl 8:22:7 0;
+seqr 8:17:5 0;
+unseq 8:16:1 0;
+seq 8:0:16 0;
+ig_port 12 4;
+eg_port 16 5;
+pkt_buf 24 6;
+trunc_len 32:18:14 0;
+pkt_pl_off 32:8:10 0;
+resv1 32:3:5 0;
+ipv4_sum_ok 32:2:1 0;
+udp_sum_ok 32:1:1 0;
+tcp_sum_ok 32:0:1 0;
+calc_fld_bmsk 36 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type P2 7
+.%type U4
+.%type A36 0
+.%type A108 0
+.%type P2 11
+.%type S10 {
+addr 0 12;
+state 8 13;
+}
+.%type P3 7
+.%type U2
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 15;
+}
+.%type S4 {
+__unnamed 0 16;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}
+.%type P3 18
+.%type U1
+.%type P6 0
+.%type I4
+.%type A32 0
+.%type P2 0
+.%type P2 20
+.%type P6 25
+.%type S4 pif_parrep_ctldata{
+valid 0:31:1 0;
+t1_valid 0:30:1 0;
+t1_dirty 0:29:1 0;
+t1_orig_len 0:28:1 0;
+t2_valid 0:27:1 0;
+t2_dirty 0:26:1 0;
+t2_orig_len 0:25:1 0;
+t3_valid 0:24:1 0;
+t3_type 0:23:1 0;
+t3_dirty 0:22:1 0;
+t3_orig_len 0:17:5 0;
+t4_valid 0:16:1 0;
+t4_dirty 0:15:1 0;
+t4_orig_len 0:14:1 0;
+t5_valid 0:13:1 0;
+t5_dirty 0:12:1 0;
+t5_orig_len 0:11:1 0;
+}
+.%type P6 27
+.%type S16 pif_header_ethernet{
+__dstAddr_0 0:0:32 0;
+__dstAddr_1 4:16:16 0;
+__srcAddr_0 4:0:16 0;
+__srcAddr_1 8:0:32 0;
+etherType 12:16:16 0;
+}
+.%type A4 20
+.%type P6 30
+.%type S20 pif_header_ipv4{
+version 0:28:4 0;
+ihl 0:24:4 0;
+diffserv 0:16:8 0;
+totalLen 0:0:16 0;
+identification 4:16:16 0;
+flags 4:13:3 0;
+fragOffset 4:0:13 0;
+ttl 8:24:8 0;
+protocol 8:16:8 0;
+hdrChecksum 8:0:16 0;
+srcAddr 12:0:32 0;
+dstAddr 16:0:32 0;
+}
+.%type A4 20
+.%type P6 33
+.%type S8 pif_global_flowkey_parse_ipv4{
+ipv4__srcAddr 0:0:32 0;
+ipv4__dstAddr 4:0:32 0;
+}
+.%type P6 35
+.%type S20 pif_header_tcp{
+srcPort 0:16:16 0;
+dstPort 0:0:16 0;
+seqNo 4:0:32 0;
+ackNo 8:0:32 0;
+dataOffset 12:28:4 0;
+res 12:24:4 0;
+flags 12:16:8 0;
+window 12:0:16 0;
+checksum 16:16:16 0;
+urgentPtr 16:0:16 0;
+}
+.%type P6 37
+.%type S8 pif_header_udp{
+srcPort 0:16:16 0;
+dstPort 0:0:16 0;
+length_ 4:16:16 0;
+checksum 4:0:16 0;
+}
+.%type A4 20
+.%type P6 40
+.%type S8 pif_header_gtpu{
+flags 0:24:8 0;
+type_ 0:16:8 0;
+length_ 0:0:16 0;
+teid 4:0:32 0;
+}
+.%type P6 42
+.%type S4 pif_global_flowkey_parse_gtpu{
+gtpu__teid 0:0:32 0;
+}
+.%type P6 44
+.%type S20 pif_header_gtpu_ipv4{
+version 0:28:4 0;
+ihl 0:24:4 0;
+diffserv 0:16:8 0;
+totalLen 0:0:16 0;
+identification 4:16:16 0;
+flags 4:13:3 0;
+fragOffset 4:0:13 0;
+ttl 8:24:8 0;
+protocol 8:16:8 0;
+hdrChecksum 8:0:16 0;
+srcAddr 12:0:32 0;
+dstAddr 16:0:32 0;
+}
+.%type P6 46
+.%type S12 pif_global_flowkey_parse_gtpu_ipv4{
+gtpu_ipv4__dstAddr 0:0:32 0;
+gtpu_ipv4__srcAddr 4:0:32 0;
+gtpu_ipv4__diffserv 8:24:8 0;
+__padding 8:0:24 0;
+}
+.%type P2 1
+.%type P6 49
+.%type S16 pif_header_standard_metadata{
+clone_spec 0:0:32 0;
+egress_spec 4:16:16 0;
+egress_port 4:0:16 0;
+packet_length 8:18:14 0;
+egress_instance 8:8:10 0;
+instance_type 8:4:4 0;
+_padding_0 8:0:4 0;
+ingress_port 12:22:10 0;
+_padding_1 12:0:22 0;
+}
+.%type P6 51
+.%type S4 pif_global_flowkey_metadata{
+standard_metadata__ingress_port 0:22:10 0;
+__padding 0:0:22 0;
+}

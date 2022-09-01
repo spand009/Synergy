@@ -1,0 +1,109 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var fc_stats_lock_release 0 _fc_stats_lock_release SEX
+.%var fc_stats_lock_error 0 _fc_stats_lock_error SEX
+.%var fc_stats_wait_busy_bit 0 _fc_stats_wait_busy_bit SEX
+.%var fc_stats_wait_shared_locks 0 _fc_stats_wait_shared_locks SEX
+.%var fc_stats_wait_cache_locks 0 _fc_stats_wait_cache_locks SEX
+.%var fc_lock_cache_base 1 _fc_lock_cache_base SEX
+.%var fc_cached_lock_free_slot_list 0 _fc_cached_lock_free_slot_list SEX
+.%scope function fc_lock_release_with_bucket_addr _fc_lock_release_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 89 262
+.%arg in_lock 4 in_lock_121_V$be
+.%arg bucket_addr_ptr 6 bucket_addr_ptr_121_V$c5
+.%var cam_entry_addr 0 cam_entry_addr_121 LIX
+.%var lock_slot 7 lock_slot_121 LIX
+.%var lock_slot_idx 0 lock_slot_idx_121 LIX
+.%var lock_xfer_value 0 lock_xfer_value_121 LIX
+.%var lock_xfer 0 lock_xfer_121 LIW
+.%var sig 9 sig_121 LIX
+.%scope end
+.%scope function fc_lock_release _fc_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 52 86
+.%arg in_lock 4 in_lock_119_V$105
+.%arg bucket_base_ptr0 6 bucket_base_ptr0_119_V$10c
+.%arg bucket_base_ptr1 6 bucket_base_ptr1_119_V$10d
+.%var bucket_mu 0 bucket_mu_119 LIX
+.%var bucket_addr_ptr 6 bucket_addr_ptr_119 LIX
+.%var lock_xfer 0 lock_xfer_119 LIW
+.%var sig 9 sig_119 LIX
+.%scope end
+.%scope function fc_lock_exclusive _fc_lock_exclusive "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 266 291
+.%arg in_lock 4 in_lock_129_V$112
+.%arg bucket_base_ptr0 6 bucket_base_ptr0_129_V$119
+.%arg bucket_base_ptr1 6 bucket_base_ptr1_129_V$11a
+.%var bucket_addr_ptr 6 bucket_addr_ptr_129 LIX
+.%scope end
+.%scope function fc_lock_exclusive_with_bucket_addr _fc_lock_exclusive_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 295 446
+.%arg in_lock 4 in_lock_131_V$12a
+.%arg bucket_addr_ptr 6 bucket_addr_ptr_131_V$131
+.%scope block 308 443
+.%var lock_slot 7 lock_slot_133 LIX
+.%var lock_slot_idx 0 lock_slot_idx_133 LIX
+.%var has_global_lock 0 has_global_lock_133 LIX
+.%var cam_entry_addr 0 cam_entry_addr_133 LIX
+.%var lock_xfer 0 lock_xfer_133 LIX
+.%var sig_pair 10 sig_pair_133 LIX
+.%var sig 9 sig_133 LIX
+.%scope end
+.%scope end
+.%scope function fc_lock_shared _fc_lock_shared "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 450 475
+.%arg in_lock 4 in_lock_142_V$171
+.%arg bucket_base_ptr0 6 bucket_base_ptr0_142_V$178
+.%arg bucket_base_ptr1 6 bucket_base_ptr1_142_V$179
+.%var bucket_addr_ptr 6 bucket_addr_ptr_142 LIX
+.%scope end
+.%scope function fc_lock_shared_with_bucket_addr _fc_lock_shared_with_bucket_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/flowcache/_c/flow_cache_lock.c" 478 638
+.%arg in_lock 4 in_lock_144_V$17c
+.%arg bucket_addr_ptr 6 bucket_addr_ptr_144_V$183
+.%scope block 491 636
+.%var cam_entry_addr 0 cam_entry_addr_146 LIX
+.%var lock_xfer 0 lock_xfer_146 LIX
+.%var lock_slot 7 lock_slot_146 LIX
+.%var lock_slot_idx 0 lock_slot_idx_146 LIX
+.%var cam_entry_ptr 6 cam_entry_ptr_146 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type A64 2
+.%type S4 fc_cached_lock_entry_t{
+__unnamed 0 3;
+value 0 0;
+}
+.%type S4 {
+usage_counter 0:27:5 0;
+reserved 0:26:1 0;
+busy_bit 0:25:1 0;
+cam_entry_ovf_counter 0:20:5 0;
+cam_entry_4_counter 0:15:5 0;
+cam_entry_3_counter 0:10:5 0;
+cam_entry_2_counter 0:5:5 0;
+cam_entry_1_counter 0:0:5 0;
+}
+.%type S4 fc_lock_t{
+__unnamed 0 5;
+value 0 0;
+}
+.%type S4 {
+bucket_address 0:6:26 0;
+exclusive_lock 0:5:1 0;
+cam_entry 0:2:3 0;
+bucket_mu 0:0:2 0;
+}
+.%type P3 0
+.%type S4 cam_lookup_t{
+__unnamed 0 8;
+value 0 0;
+}
+.%type S4 {
+zeros1 0:12:20 0;
+state 0:8:4 0;
+hit 0:7:1 0;
+entry_num 0:3:4 0;
+zeros2 0:0:3 0;
+}
+.%type I4
+.%type S8 SIGNAL_PAIR{
+even 0 9;
+odd 4 9;
+}

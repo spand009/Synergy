@@ -1,0 +1,323 @@
+##########################################
+# Header layout definitions              #
+##########################################
+
+"ipv4_t" : &ipv4_t
+    - "version" : 4
+    - "ihl" : 4
+    - "diffserv" : 8
+    - "totalLen" : 16
+    - "identification" : 16
+    - "flags" : 3
+    - "fragOffset" : 13
+    - "ttl" : 8
+    - "protocol" : 8
+    - "hdrChecksum" : 16
+    - "srcAddr" : 32
+    - "dstAddr" : 32
+
+##########################################
+# Header instance definitions            #
+##########################################
+
+"udp" :
+    type : header
+    fields : 
+        - "srcPort" : 16
+        - "dstPort" : 16
+        - "length_" : 16
+        - "checksum" : 16
+
+"gtpu_ipv4" :
+    type : header
+    fields : *ipv4_t
+
+"tcp" :
+    type : header
+    fields : 
+        - "srcPort" : 16
+        - "dstPort" : 16
+        - "seqNo" : 32
+        - "ackNo" : 32
+        - "dataOffset" : 4
+        - "res" : 4
+        - "flags" : 8
+        - "window" : 16
+        - "checksum" : 16
+        - "urgentPtr" : 16
+
+"gtpu" :
+    type : header
+    fields : 
+        - "flags" : 8
+        - "type_" : 8
+        - "length_" : 16
+        - "teid" : 32
+
+"ipv4" :
+    type : header
+    fields : *ipv4_t
+
+"ethernet" :
+    type : header
+    fields : 
+        - "dstAddr" : 48
+        - "srcAddr" : 48
+        - "etherType" : 16
+
+"standard_metadata" :
+    type : metadata
+    fields : 
+        - "ingress_port" : 10
+        - "packet_length" : 14
+        - "egress_spec" : 16
+        - "egress_port" : 16
+        - "egress_instance" : 10
+        - "instance_type" : 4
+        - "clone_spec" : 32
+        - "_padding" : 2
+
+##########################################
+# Parse states                           #
+##########################################
+
+"parse_tcp" :
+    type : parse_state
+    extracts :
+        - "tcp"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/parser.p4'
+    src_lineno : 33
+
+"parse_udp" :
+    type : parse_state
+    extracts :
+        - "udp"
+    select_value :
+        - "udp.dstPort"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/parser.p4'
+    src_lineno : 38
+
+"parse_ipv4" :
+    type : parse_state
+    extracts :
+        - "ipv4"
+    select_value :
+        - "ipv4.protocol"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/parser.p4'
+    src_lineno : 47
+
+"parse_ethernet" :
+    type : parse_state
+    extracts :
+        - "ethernet"
+    select_value :
+        - "ethernet.etherType"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/parser.p4'
+    src_lineno : 57
+
+"start" :
+    type : parse_state
+    src_filename : '/root/GTP/Test3/SNIC_CODE/parser.p4'
+    src_lineno : 65
+
+"parse_gtpu" :
+    type : parse_state
+    extracts :
+        - "gtpu"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/gtp.p4'
+    src_lineno : 13
+
+"parse_gtpu_ipv4" :
+    type : parse_state
+    extracts :
+        - "gtpu_ipv4"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/gtp.p4'
+    src_lineno : 18
+
+##########################################
+# Parser                                 #
+##########################################
+
+parser :
+    type : parser
+    format : dot
+    start_state : "parse_tcp"
+    implementation : >-
+        digraph {
+            start -> parse_ethernet [value="default", mask="none", order="0"]
+            parse_ethernet -> parse_ipv4 [value="0x800", mask="none", order="0"]
+            parse_ethernet -> fwd [value="default", mask="none", order="1"]
+            parse_ipv4 -> parse_tcp [value="0x6", mask="none", order="0"]
+            parse_ipv4 -> parse_udp [value="0x11", mask="none", order="1"]
+            parse_ipv4 -> fwd [value="default", mask="none", order="2"]
+            parse_tcp -> fwd [value="default", mask="none", order="0"]
+            parse_udp -> parse_gtpu [value="0x868", mask="none", order="0"]
+            parse_udp -> fwd [value="default", mask="none", order="1"]
+            parse_gtpu -> parse_gtpu_ipv4 [value="default", mask="none", order="0"]
+            parse_gtpu_ipv4 -> fwd [value="default", mask="none", order="0"]
+        }
+
+##########################################
+# Action Expressions                     #
+##########################################
+
+"_expression_gtpu_encap_v4_0":
+    type : expression
+    doc : "expression for action gtpu_encap_v4"
+    expression : "(udp.length_) - (16)"
+    format : bracketed_expr
+
+##########################################
+# Action sets                            #
+##########################################
+
+"forward" :
+    type : action
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 16
+    parameter_list :
+        - "port" : 16
+    implementation : >-
+        modify_field(standard_metadata.egress_spec, port);
+
+"_drop" :
+    type : action
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 13
+    implementation : >-
+        drop();
+
+"_nop" :
+    type : action
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 10
+
+"gtpu_decap_v4" :
+    type : action
+    src_filename : '/root/GTP/Test3/SNIC_CODE/gtp.p4'
+    src_lineno : 49
+    implementation : >-
+        copy_header(ipv4, gtpu_ipv4);
+        remove_header(udp);
+        remove_header(gtpu);
+        remove_header(gtpu_ipv4);
+
+"gtpu_encap_v4" :
+    type : action
+    src_filename : '/root/GTP/Test3/SNIC_CODE/gtp.p4'
+    src_lineno : 24
+    parameter_list :
+        - "srcAddr" : 32
+        - "dstAddr" : 32
+        - "srcPort" : 16
+        - "dstPort" : 16
+        - "type_" : 8
+        - "teid" : 32
+        - "port" : 16
+    implementation : >-
+        add_header(udp);
+        add_header(gtpu);
+        add_header(gtpu_ipv4);
+        copy_header(gtpu_ipv4, ipv4);
+        modify_field(ipv4.protocol, 0x11);
+        modify_field(ipv4.srcAddr, srcAddr);
+        modify_field(ipv4.dstAddr, dstAddr);
+        modify_field(udp.srcPort, srcPort);
+        modify_field(udp.dstPort, dstPort);
+        modify_field(gtpu.flags, 0x30);
+        modify_field(gtpu.type_, type_);
+        modify_field(gtpu.length_, _expression_gtpu_encap_v4_0);
+        modify_field(gtpu.teid, teid);
+        modify_field(standard_metadata.egress_spec, port);
+
+##########################################
+# Ingress and Egress tables              #
+##########################################
+
+"fwd":
+    type : table
+    match_on : 
+        "standard_metadata.ingress_port" : "exact"
+    allowed_actions : 
+        - "forward"
+        - "_drop"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 22
+
+"gtpu_decap_table":
+    type : table
+    match_on : 
+        "gtpu.teid" : "exact"
+        "gtpu_ipv4.diffserv" : "exact"
+        "gtpu_ipv4.srcAddr" : "exact"
+        "gtpu_ipv4.dstAddr" : "exact"
+    allowed_actions : 
+        - "gtpu_decap_v4"
+        - "_drop"
+        - "_nop"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 32
+
+"gtpu_encap_table":
+    type : table
+    match_on : 
+        "ipv4.srcAddr" : "exact"
+        "ipv4.dstAddr" : "exact"
+    allowed_actions : 
+        - "gtpu_encap_v4"
+        - "_drop"
+        - "_nop"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 46
+
+##########################################
+# Ingress conditionals sets              #
+##########################################
+
+"_condition_0":
+    type : conditional
+    format : bracketed_expr
+    condition : "(ipv4.dstAddr) == (2130706433)"
+    src_filename : '/root/GTP/Test3/SNIC_CODE/main.p4'
+    src_lineno : 0
+
+##########################################
+# Ingress control flow                   #
+##########################################
+
+ingress_flow:
+    type : control_flow
+    doc : "control flow for ingress"
+    format : dot
+    start_state : "fwd"
+    implementation : >-
+        digraph {
+            fwd -> _condition_0 [action = always]
+            _condition_0 -> gtpu_encap_table [condition = false]
+            _condition_0 -> gtpu_decap_table [condition = true]
+            gtpu_decap_table -> exit_control_flow [action = always]
+            gtpu_encap_table -> exit_control_flow [action = always]
+        }
+
+##########################################
+# Processor layout                       #
+##########################################
+
+layout:
+    type : processor_layout
+    format : list
+    implementation :
+        - parser
+        - ingress
+
+##########################################
+# Source info                            #
+##########################################
+
+source_info :
+    type : source_info
+    date : "2022/01/22 00:02:51"
+    source_files : 
+        - 'main.p4'
+    output_file : 'compiled_file.yml'
+

@@ -1,0 +1,376 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_303_V$501
+.%arg y 0 y_303_V$502
+.%var result 0 result_303 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var pif_pkt_info_global 3 _pif_pkt_info_global SEX
+.%scope function __pif_flcalc_csum16_var ___pif_flcalc_csum16_var "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 27 61
+.%arg in_sum32 0 in_sum32_305_V$505
+.%arg cls_ptr 11 cls_ptr_305_V$506
+.%arg cls_len 0 cls_len_305_V$507
+.%arg odd_byte_offset 12 odd_byte_offset_305_V$508
+.%var out_sum32 0 out_sum32_305 LIX
+.%var cls_offset 0 cls_offset_305 LIX
+.%var i 0 i_305 LIX
+.%var val16 13 val16_305 LIX
+.%var to_rd 0 to_rd_305 LIX
+.%var rem 12 rem_305 LIX
+.%var xfr_rd 14 xfr_rd_305 LIR
+.%var sig_rd 15 sig_rd_305 LIX
+.%scope end
+.%scope function __pif_flcalc_csum16_payload ___pif_flcalc_csum16_payload "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 74 106
+.%arg in_sum32 0 in_sum32_308_V$513
+.%arg payload_base 16 payload_base_308_V$514
+.%arg payload_offset 0 payload_offset_308_V$515
+.%arg payload_len 0 payload_len_308_V$516
+.%arg odd_byte_offset 12 odd_byte_offset_308_V$517
+.%var out_sum32 0 out_sum32_308 LIX
+.%var i 0 i_308 LIX
+.%var val16 13 val16_308 LIX
+.%var to_rd 0 to_rd_308 LIX
+.%var xfr_rd 17 xfr_rd_308 LIR
+.%var sig_rd 15 sig_rd_308 LIX
+.%scope end
+.%scope function pif_flcalc_csum16 _pif_flcalc_csum16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 108 182
+.%arg init 13 init_311_V$520
+.%arg lm_ptr 18 lm_ptr_311_V$521
+.%arg lm_len 0 lm_len_311_V$522
+.%arg cls_ptr 11 cls_ptr_311_V$523
+.%arg cls_len 0 cls_len_311_V$524
+.%arg payld_offset 0 payld_offset_311_V$525
+.%arg payld_len 0 payld_len_311_V$526
+.%arg odd_byte_offset_bmask 12 odd_byte_offset_bmask_311_V$527
+.%var i 0 i_311 LIX
+.%var csum16 13 csum16_311 LIX
+.%var val16 13 val16_311 LIX
+.%var odd_byte_offset 12 odd_byte_offset_311 LIX
+.%var sum32 0 sum32_311 LIX
+.%scope block 142 172
+.%var ctm_payld_len 0 ctm_payld_len_314 LIX
+.%var mu_payld_len 0 mu_payld_len_314 LIX
+.%var payld_base 16 payld_base_314 LIX
+.%var ctm_offset 0 ctm_offset_314 LIX
+.%var mu_offset 0 mu_offset_314 LIX
+.%scope end
+.%scope end
+.%scope function pif_flcalc_csum16_lmem _pif_flcalc_csum16_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 184 215
+.%arg init 13 init_320_V$535
+.%arg lm_ptr 19 lm_ptr_320_V$536
+.%arg lm_len 0 lm_len_320_V$537
+.%var i 0 i_320 LIX
+.%var csum16 13 csum16_320 LIX
+.%var rem 0 rem_320 LIX
+.%var val 0 val_320 LIX
+.%var sum32 0 sum32_320 LIX
+.%scope end
+.%scope function pif_flcalc_csum16_mem _pif_flcalc_csum16_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 217 264
+.%arg init 13 init_325_V$53e
+.%arg payld_offset 0 payld_offset_325_V$53f
+.%arg payld_len 0 payld_len_325_V$540
+.%var i 0 i_325 LIX
+.%var csum16 13 csum16_325 LIX
+.%var rem 0 rem_325 LIX
+.%var val 0 val_325 LIX
+.%var sum32 0 sum32_325 LIX
+.%var ctm_len 0 ctm_len_325 LIX
+.%var mu_len 0 mu_len_325 LIX
+.%var mem_addr 16 mem_addr_325 LIX
+.%var ctm_offset 0 ctm_offset_325 LIX
+.%var mu_offset 0 mu_offset_325 LIX
+.%scope end
+.%scope function pif_flcalc_csum16_update _pif_flcalc_csum16_update "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 266 315
+.%arg init 13 init_329_V$54c
+.%arg lm_old 18 lm_old_329_V$54d
+.%arg lm_new 18 lm_new_329_V$54e
+.%arg lm_len 0 lm_len_329_V$54f
+.%arg odd_byte_offset 12 odd_byte_offset_329_V$550
+.%arg byte_mask_first 12 byte_mask_first_329_V$551
+.%arg byte_mask_last 12 byte_mask_last_329_V$552
+.%var i 0 i_329 LIX
+.%var val8 12 val8_329 LIX
+.%var val16 13 val16_329 LIX
+.%var csum16 13 csum16_329 LIX
+.%var sum32 0 sum32_329 LIX
+.%scope end
+.%scope function __pif_flcalc_xor16_var ___pif_flcalc_xor16_var "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 331 365
+.%arg in_xor16 13 in_xor16_336_V$559
+.%arg cls_ptr 11 cls_ptr_336_V$55a
+.%arg cls_len 0 cls_len_336_V$55b
+.%arg odd_byte_offset 12 odd_byte_offset_336_V$55c
+.%var out_xor16 13 out_xor16_336 LIX
+.%var cls_offset 0 cls_offset_336 LIX
+.%var i 0 i_336 LIX
+.%var val16 13 val16_336 LIX
+.%var to_rd 0 to_rd_336 LIX
+.%var rem 12 rem_336 LIX
+.%var xfr_rd 20 xfr_rd_336 LIR
+.%var sig_rd 15 sig_rd_336 LIX
+.%scope end
+.%scope function __pif_flcalc_xor16_payload ___pif_flcalc_xor16_payload "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 378 410
+.%arg in_xor16 13 in_xor16_339_V$567
+.%arg payload_base 16 payload_base_339_V$568
+.%arg payload_offset 0 payload_offset_339_V$569
+.%arg payload_len 0 payload_len_339_V$56a
+.%arg odd_byte_offset 12 odd_byte_offset_339_V$56b
+.%var out_xor16 13 out_xor16_339 LIX
+.%var i 0 i_339 LIX
+.%var val16 13 val16_339 LIX
+.%var to_rd 0 to_rd_339 LIX
+.%var xfr_rd 21 xfr_rd_339 LIR
+.%var sig_rd 15 sig_rd_339 LIX
+.%scope end
+.%scope function pif_flcalc_xor16 _pif_flcalc_xor16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 412 478
+.%arg init 13 init_342_V$574
+.%arg lm_ptr 18 lm_ptr_342_V$575
+.%arg lm_len 0 lm_len_342_V$576
+.%arg cls_ptr 11 cls_ptr_342_V$577
+.%arg cls_len 0 cls_len_342_V$578
+.%arg payld_offset 0 payld_offset_342_V$579
+.%arg payld_len 0 payld_len_342_V$57a
+.%arg odd_byte_offset_bmask 12 odd_byte_offset_bmask_342_V$57b
+.%var i 0 i_342 LIX
+.%var odd_byte_offset 12 odd_byte_offset_342 LIX
+.%var val16 13 val16_342 LIX
+.%var xor16 13 xor16_342 LIX
+.%scope block 445 475
+.%var ctm_payld_len 0 ctm_payld_len_345 LIX
+.%var mu_payld_len 0 mu_payld_len_345 LIX
+.%var payld_base 16 payld_base_345 LIX
+.%var ctm_offset 0 ctm_offset_345 LIX
+.%var mu_offset 0 mu_offset_345 LIX
+.%scope end
+.%scope end
+.%scope function pif_flcalc_xor16_update _pif_flcalc_xor16_update "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 480 521
+.%arg init 13 init_350_V$586
+.%arg lm_old 18 lm_old_350_V$587
+.%arg lm_new 18 lm_new_350_V$588
+.%arg lm_len 0 lm_len_350_V$589
+.%arg odd_byte_offset 12 odd_byte_offset_350_V$58a
+.%arg byte_mask_first 12 byte_mask_first_350_V$58b
+.%arg byte_mask_last 12 byte_mask_last_350_V$58c
+.%var i 0 i_350 LIX
+.%var val8 12 val8_350 LIX
+.%var val16 13 val16_350 LIX
+.%var xor16 13 xor16_350 LIX
+.%scope end
+.%scope function __pif_flcalc_crc16_byte ___pif_flcalc_crc16_byte "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 538 550
+.%arg in_crc16 13 in_crc16_356_V$592
+.%arg dbyte 12 dbyte_356_V$593
+.%var out_crc16 13 out_crc16_356 LIX
+.%var ibyte 0 ibyte_356 LIX
+.%scope end
+.%scope function __pif_flcalc_crc16_xfr_buf ___pif_flcalc_crc16_xfr_buf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 563 630
+.%arg in_crc16 13 in_crc16_357_V$597
+.%arg xfr_buf 22 xfr_buf_357_V$598
+.%arg xfr_len_b 0 xfr_len_b_357_V$599
+.%var out_crc16 13 out_crc16_357 LIX
+.%var t_val 0 t_val_357 LIX
+.%var xfr_len_lw 0 xfr_len_lw_357 LIX
+.%var rem_b 0 rem_b_357 LIX
+.%var jump_idx 0 jump_idx_357 LIX
+.%scope end
+.%scope function __pif_flcalc_crc16_var ___pif_flcalc_crc16_var "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 641 668
+.%arg in_crc16 13 in_crc16_362_V$5a0
+.%arg cls_ptr 11 cls_ptr_362_V$5a1
+.%arg cls_len 0 cls_len_362_V$5a2
+.%var out_crc16 13 out_crc16_362 LIX
+.%var cls_offset 0 cls_offset_362 LIX
+.%var i 0 i_362 LIX
+.%var to_rd 0 to_rd_362 LIX
+.%var xfr_rd 23 xfr_rd_362 LIR
+.%var sig_rd 15 sig_rd_362 LIX
+.%scope end
+.%scope function __pif_flcalc_crc16_payload ___pif_flcalc_crc16_payload "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 680 707
+.%arg in_crc16 13 in_crc16_364_V$5ab
+.%arg payload_base 16 payload_base_364_V$5ac
+.%arg payload_offset 0 payload_offset_364_V$5ad
+.%arg payload_len 0 payload_len_364_V$5ae
+.%var out_crc16 13 out_crc16_364 LIX
+.%var i 0 i_364 LIX
+.%var to_rd 0 to_rd_364 LIX
+.%var xfr_rd 24 xfr_rd_364 LIR
+.%var sig_rd 15 sig_rd_364 LIX
+.%scope end
+.%scope function pif_flcalc_crc16 _pif_flcalc_crc16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 709 770
+.%arg init 13 init_366_V$5b6
+.%arg lm_ptr 18 lm_ptr_366_V$5b7
+.%arg lm_len 0 lm_len_366_V$5b8
+.%arg cls_ptr 11 cls_ptr_366_V$5b9
+.%arg cls_len 0 cls_len_366_V$5ba
+.%arg payld_offset 0 payld_offset_366_V$5bb
+.%arg payld_len 0 payld_len_366_V$5bc
+.%var i 12 i_366 LIX
+.%var ibyte 12 ibyte_366 LIX
+.%var crc16 13 crc16_366 LIX
+.%scope block 738 767
+.%var ctm_payld_len 0 ctm_payld_len_369 LIX
+.%var mu_payld_len 0 mu_payld_len_369 LIX
+.%var payld_base 16 payld_base_369 LIX
+.%var ctm_offset 0 ctm_offset_369 LIX
+.%var mu_offset 0 mu_offset_369 LIX
+.%scope end
+.%scope end
+.%scope function pif_flcalc_crc16_lmem _pif_flcalc_crc16_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 772 805
+.%arg init 13 init_374_V$5c6
+.%arg lm_ptr 19 lm_ptr_374_V$5c7
+.%arg lm_len_b 0 lm_len_b_374_V$5c8
+.%var i 0 i_374 LIX
+.%var crc16 13 crc16_374 LIX
+.%var rem_b 0 rem_b_374 LIX
+.%var val 0 val_374 LIX
+.%var tmp 0 tmp_374 LIX
+.%scope end
+.%scope function __pif_flcalc_crc32_byte ___pif_flcalc_crc32_byte "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 822 835
+.%arg in_crc32 0 in_crc32_380_V$5cf
+.%arg dbyte 12 dbyte_380_V$5d0
+.%var out_crc32 0 out_crc32_380 LIX
+.%var ibyte 0 ibyte_380 LIX
+.%scope end
+.%scope function __pif_flcalc_crc32_xfr_buf ___pif_flcalc_crc32_xfr_buf "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 848 915
+.%arg in_crc32 0 in_crc32_381_V$5d4
+.%arg xfr_buf 22 xfr_buf_381_V$5d5
+.%arg xfr_len_b 0 xfr_len_b_381_V$5d6
+.%var out_crc32 0 out_crc32_381 LIX
+.%var t_val 0 t_val_381 LIX
+.%var xfr_len_lw 0 xfr_len_lw_381 LIX
+.%var rem_b 0 rem_b_381 LIX
+.%var jump_idx 0 jump_idx_381 LIX
+.%scope end
+.%scope function __pif_flcalc_crc32_var ___pif_flcalc_crc32_var "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 926 953
+.%arg in_crc32 0 in_crc32_386_V$5dd
+.%arg cls_ptr 11 cls_ptr_386_V$5de
+.%arg cls_len 0 cls_len_386_V$5df
+.%var out_crc32 0 out_crc32_386 LIX
+.%var cls_offset 0 cls_offset_386 LIX
+.%var i 0 i_386 LIX
+.%var to_rd 0 to_rd_386 LIX
+.%var xfr_rd 25 xfr_rd_386 LIR
+.%var sig_rd 15 sig_rd_386 LIX
+.%scope end
+.%scope function __pif_flcalc_crc32_payload ___pif_flcalc_crc32_payload "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 965 992
+.%arg in_crc32 0 in_crc32_388_V$5e8
+.%arg payload_base 16 payload_base_388_V$5e9
+.%arg payload_offset 0 payload_offset_388_V$5ea
+.%arg payload_len 0 payload_len_388_V$5eb
+.%var out_crc32 0 out_crc32_388 LIX
+.%var i 0 i_388 LIX
+.%var to_rd 0 to_rd_388 LIX
+.%var xfr_rd 26 xfr_rd_388 LIR
+.%var sig_rd 15 sig_rd_388 LIX
+.%scope end
+.%scope function pif_flcalc_crc32_reflect _pif_flcalc_crc32_reflect "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 994 1007
+.%arg in_crc32 0 in_crc32_390_V$5f3
+.%var crc32 0 crc32_390 LIX
+.%var crc32_reflected 0 crc32_reflected_390 LIX
+.%var i 12 i_390 LIX
+.%scope end
+.%scope function pif_flcalc_crc32 _pif_flcalc_crc32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 1009 1070
+.%arg init 0 init_391_V$5f8
+.%arg lm_ptr 18 lm_ptr_391_V$5f9
+.%arg lm_len 0 lm_len_391_V$5fa
+.%arg cls_ptr 11 cls_ptr_391_V$5fb
+.%arg cls_len 0 cls_len_391_V$5fc
+.%arg payld_offset 0 payld_offset_391_V$5fd
+.%arg payld_len 0 payld_len_391_V$5fe
+.%var i 12 i_391 LIX
+.%var ibyte 12 ibyte_391 LIX
+.%var crc32 0 crc32_391 LIX
+.%scope block 1038 1067
+.%var ctm_payld_len 0 ctm_payld_len_394 LIX
+.%var mu_payld_len 0 mu_payld_len_394 LIX
+.%var payld_base 16 payld_base_394 LIX
+.%var ctm_offset 0 ctm_offset_394 LIX
+.%var mu_offset 0 mu_offset_394 LIX
+.%scope end
+.%scope end
+.%scope function pif_flcalc_crc32_lmem _pif_flcalc_crc32_lmem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/src/pif_flcalc_algorithms.c" 1072 1105
+.%arg init 0 init_399_V$608
+.%arg lm_ptr 19 lm_ptr_399_V$609
+.%arg lm_len_b 0 lm_len_b_399_V$60a
+.%var i 0 i_399 LIX
+.%var crc32 0 crc32_399 LIX
+.%var rem_b 0 rem_b_399 LIX
+.%var val 0 val_399 LIX
+.%var tmp 0 tmp_399 LIX
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type S40 pif_pkt_info{
+__unnamed 0 4;
+}
+.%type S40 {
+__unnamed 0 5;
+__raw 0 10;
+}
+.%type S40 {
+isl 0:26:6 0;
+pkt_num 0:16:10 0;
+bls 0:14:2 0;
+pkt_len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+resv2 8:31:1 0;
+ctm_size 8:29:2 0;
+ctm_isl 8:22:7 0;
+seqr 8:17:5 0;
+unseq 8:16:1 0;
+seq 8:0:16 0;
+ig_port 12 6;
+eg_port 16 7;
+pkt_buf 24 8;
+trunc_len 32:18:14 0;
+pkt_pl_off 32:8:10 0;
+resv1 32:3:5 0;
+ipv4_sum_ok 32:2:1 0;
+udp_sum_ok 32:1:1 0;
+tcp_sum_ok 32:0:1 0;
+calc_fld_bmsk 36 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type P2 9
+.%type U4
+.%type A36 0
+.%type P12 12
+.%type U1
+.%type U2
+.%type A32 12
+.%type I4
+.%type P3 9
+.%type A32 12
+.%type P6 12
+.%type P6 0
+.%type A32 12
+.%type A128 0
+.%type P2 0
+.%type A32 0
+.%type A32 0
+.%type A32 0
+.%type A32 0

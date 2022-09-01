@@ -1,0 +1,459 @@
+/*********************************************************************
+ *                     openNetVM
+ *              https://sdnfv.github.io
+ *
+ *   BSD LICENSE
+ *
+ *   Copyright(c)
+ *            2015-2019 George Washington University
+ *            2015-2019 University of California Riverside
+ *   All rights reserved.
+ *
+ *   Redistribution and use in source and binary forms, with or without
+ *   modification, are permitted provided that the following conditions
+ *   are met:
+ *
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in
+ *       the documentation and/or other materials provided with the
+ *       distribution.
+ *     * The name of the author may not be used to endorse or promote
+ *       products derived from this software without specific prior
+ *       written permission.
+ *
+ *   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ ********************************************************************/
+
+#include <errno.h>
+#include <getopt.h>
+#include <inttypes.h>
+#include <rte_common.h>
+#include <rte_ip.h>
+#include <rte_ip_frag.h>
+#include <rte_mbuf.h>
+#include <rte_gtp.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/queue.h>
+#include <unistd.h>
+
+#include "gtp.h"
+#include "upf_context.h"
+
+#include "onvm_nflib.h"
+#include "onvm_pkt_helper.h"
+
+#define NF_TAG "upf_u"
+
+#if 0
+#define SELF_IP RTE_IPV4(10, 100, 200, 3)
+#else
+#define SELF_IP 63464458
+#endif
+
+#define SRC_INTF_ACCESS     0
+#define SRC_INTF_CORE       1
+#define SRC_INTF_SGI_LAN    2
+#define SRC_INTF_CP         3
+#define SRC_INTF_NUM        (SRC_INTF_CP + 1)
+
+#define MODIFY // the code been modify or increase
+
+#ifdef MODIFY
+bool DL_flag = false;//check is DL flow or not (use to set mac address)
+#endif
+
+#define IPV4_MTU RTE_ETHER_MTU 
+
+//get the memory pool
+struct rte_mempool *pktmbuf_pool_onvm;
+
+static inline uint8_t SourceInterfaceToPort (uint8_t interface) {
+    switch (interface) {
+        case SRC_INTF_ACCESS:
+            return 0;
+        case SRC_INTF_CORE:
+        case SRC_INTF_SGI_LAN:
+            return 1;
+        case SRC_INTF_CP:
+            return -1;
+        default:
+            return -1;
+    }
+}
+
+uint64_t seid = 0;
+uint16_t pdrId = 0;
+
+UPDK_PDR *GetPdrByUeIpAddress(struct rte_mbuf *pkt, uint32_t ue_ip) {
+    UpfSession *session = UpfSessionFindByUeIP(ue_ip);
+    UTLT_Assert(session, return NULL, "session not found error");
+    UTLT_Assert(session->pdr_list, return NULL, "PDR list not initialized");
+    UTLT_Assert(session->pdr_list->len, return NULL, "PDR list contains 0 rules");
+
+    list_node_t *node = session->pdr_list->head;
+    UpfPDR *pdr = NULL;
+    while (node) {
+        pdr = (UpfPDR *) node->val;
+        node = node->next;
+        if (pdr->flags.pdi) {
+            if (pdr->pdi.flags.sourceInterface) {
+                if (SourceInterfaceToPort(pdr->pdi.sourceInterface) != pkt->port) {
+                    continue;
+                }
+            }
+            break;
+        }
+    }
+    if (pdr) {
+        seid = session->smfSeid;
+        pdrId = pdr->pdrId;
+    }
+    return pdr;
+}
+
+UPDK_PDR *GetPdrByTeid(struct rte_mbuf *pkt, uint32_t td) {
+    UpfSession *session = UpfSessionFindByTeid(td);
+    UTLT_Assert(session, return NULL, "session not found error");
+    UTLT_Assert(session->pdr_list, return NULL, "PDR list not initialized");
+    UTLT_Assert(session->pdr_list->len, return NULL, "PDR list contains 0 rules");
+
+    list_node_t *node = session->pdr_list->head;
+    UpfPDR *pdr = NULL;
+    while (node) {
+        pdr = (UpfPDR *) node->val;
+        node = node->next;
+        if (pdr->flags.pdi) {
+            if (pdr->pdi.flags.sourceInterface) {
+                if (SourceInterfaceToPort(pdr->pdi.sourceInterface) != pkt->port) {
+                    continue;
+                }
+            }
+            break;
+        }
+    }
+    if (pdr) {
+        seid = session->smfSeid;
+        pdrId = pdr->pdrId;
+    }
+    return pdr;
+}
+
+static inline void AttachL2Header(struct rte_mbuf *pkt) {
+    // Prepend ethernet header
+    struct rte_ether_hdr *eth_hdr =
+        (struct rte_ether_hdr *)rte_pktmbuf_prepend(
+                pkt, (uint16_t)sizeof(struct rte_ether_hdr));
+
+    int j = 0;
+    for (j = 0; j < RTE_ETHER_ADDR_LEN; ++j) {
+        eth_hdr->d_addr.addr_bytes[j] = j;
+    }
+
+ #ifdef MODIFY   
+    //next hop's mac address
+    if(DL_flag){
+        eth_hdr->d_addr.addr_bytes[0] = 0x3c;
+        eth_hdr->d_addr.addr_bytes[1] = 0xfd;
+        eth_hdr->d_addr.addr_bytes[2] = 0xfe;
+        eth_hdr->d_addr.addr_bytes[3] = 0x73;
+        eth_hdr->d_addr.addr_bytes[4] = 0x82;
+        eth_hdr->d_addr.addr_bytes[5] = 0xa0;
+
+    }else{
+        eth_hdr->d_addr.addr_bytes[0] = 0x00;
+        eth_hdr->d_addr.addr_bytes[1] = 0x0a;
+        eth_hdr->d_addr.addr_bytes[2] = 0xcd;
+        eth_hdr->d_addr.addr_bytes[3] = 0x3a;
+        eth_hdr->d_addr.addr_bytes[4] = 0xff;
+        eth_hdr->d_addr.addr_bytes[5] = 0x96;
+    }
+#endif
+
+    eth_hdr->ether_type = rte_cpu_to_be_16(RTE_ETHER_TYPE_IPV4);
+}
+
+void send_duplicate_packet(struct rte_mbuf *pkt_origin, struct onvm_pkt_meta *meta_origin, struct onvm_nf *nf) {
+    int i;
+    struct rte_mempool *pktmbuf_pool;
+    struct onvm_pkt_meta *meta_out;
+    int return_value;
+
+    //get rte mbuf form mempool
+    struct rte_mbuf *pkt_out = rte_pktmbuf_alloc(pktmbuf_pool_onvm);
+    if (pkt_out == NULL) {
+        printf("Failed to allocate packets\n");
+        return;
+    }
+    
+    int return_num_frags = 0;
+    int max_fragment_support = 100;
+    struct rte_mbuf *pkt_frag_array[max_fragment_support];
+    return_num_frags = rte_ipv4_fragment_packet(pkt_origin,pkt_frag_array, max_fragment_support, IPV4_MTU ,pktmbuf_pool_onvm,pktmbuf_pool_onvm);
+  
+    for( i = 0 ; i < return_num_frags ; i++){
+        struct onvm_pkt_meta *meta;
+        struct rte_ipv4_hdr *ipv4_hdr;
+        ipv4_hdr = rte_pktmbuf_mtod(pkt_frag_array[i],struct rte_ipv4_hdr *);
+        ipv4_hdr->hdr_checksum = rte_ipv4_cksum(ipv4_hdr);
+        AttachL2Header(pkt_frag_array[i]);
+        meta = onvm_get_pkt_meta(pkt_frag_array[i]);
+        meta->destination = meta_origin->destination;
+        meta->action = meta_origin->action;
+    }
+    //drop the origin packet
+    meta_origin->action = ONVM_NF_ACTION_DROP;
+    //send out the generated packet
+
+    return_value = onvm_nflib_return_pkt_bulk(nf, pkt_frag_array, return_num_frags);
+    if(return_value < 0){
+        printf("fail to sent the fragmented packets\n");
+    }
+
+    return;
+}
+
+void HandlePacketWithFar(struct rte_mbuf *pkt, UPDK_FAR *far, UPDK_QER *qer, struct onvm_pkt_meta *meta, struct onvm_nf *nf) {
+#define FAR_ACTION_MASK   0x07
+    if (far->flags.applyAction) {
+        switch (far->applyAction & FAR_ACTION_MASK) {
+            case UPDK_FAR_APPLY_ACTION_DROP:
+                meta->action = ONVM_NF_ACTION_DROP;
+                break;
+            case UPDK_FAR_APPLY_ACTION_FORW:{
+                int frag_flag = 0;
+                if (far->flags.forwardingParameters) {
+                    if (far->forwardingParameters.flags.outerHeaderCreation) {
+                        UPDK_OuterHeaderCreation *outerHeaderCreation = &(far->forwardingParameters.outerHeaderCreation);
+                        switch (outerHeaderCreation->description) {
+                            case UPDK_OUTER_HEADER_CREATION_DESCRIPTION_GTPU_UDP_IPV4: {
+                                uint16_t outerHeaderLen = 0;
+                                uint16_t payloadLen = pkt->data_len;
+
+                                if(qer){
+                                    outerHeaderLen = sizeof(struct rte_ipv4_hdr) + 
+                                                     sizeof(struct rte_udp_hdr) + 
+                                                     sizeof(gtpv1_t) +
+                                                     sizeof(gtpv1_hdr_opt_t) +
+                                                     sizeof(pdu_sess_container_hdr_t);
+                                    payloadLen += sizeof(gtpv1_hdr_opt_t) + sizeof(pdu_sess_container_hdr_t);
+                                                     
+                                } else {
+                                    outerHeaderLen = sizeof(struct rte_ipv4_hdr) + 
+                                                     sizeof(struct rte_udp_hdr) + 
+                                                     sizeof(gtpv1_t);
+                                }
+                                
+                                //check if the size out of mtu
+                                if(payloadLen > (IPV4_MTU-outerHeaderLen)){
+                                    frag_flag = 1;
+                                }
+
+                                gtpv1_t *gtp_hdr = (gtpv1_t *)rte_pktmbuf_prepend(pkt, outerHeaderLen);
+                                gtp_hdr = rte_pktmbuf_mtod_offset(pkt, gtpv1_t *, sizeof(struct rte_ipv4_hdr) + sizeof(struct rte_udp_hdr));
+                                gtpv1_set_header(gtp_hdr, payloadLen , outerHeaderCreation->teid);
+
+                                if(qer){
+                                    gtp_hdr->flags |= GTP1_F_EXTHDR;//enable extension header
+                                    gtpv1_hdr_opt_t *gtp_opt_hdr = rte_pktmbuf_mtod_offset(pkt, gtpv1_hdr_opt_t *, sizeof(struct rte_ipv4_hdr) + sizeof(struct rte_udp_hdr) + sizeof(gtpv1_t));
+                                    gtp_opt_hdr->seq_number = 0;
+                                    gtp_opt_hdr->NPDU = 0;
+                                    gtp_opt_hdr->next_ehdr_type = GTPV1_NEXT_EXT_HDR_TYPE_85;
+
+                                    pdu_sess_container_hdr_t *pdu_ss_ctr = rte_pktmbuf_mtod_offset(pkt, pdu_sess_container_hdr_t *, sizeof(struct rte_ipv4_hdr) + sizeof(struct rte_udp_hdr) + sizeof(gtpv1_t) + sizeof(gtpv1_hdr_opt_t));
+                                    pdu_ss_ctr->length = 0x01;
+                                    pdu_ss_ctr->pdu_sess_ctr = rte_cpu_to_be_16(QERGetQFI(qer));
+                                    pdu_ss_ctr->next_hdr = 0x00;
+                                }
+
+                                struct rte_udp_hdr *udp_hdr = rte_pktmbuf_mtod_offset(pkt, struct rte_udp_hdr *, sizeof(struct rte_ipv4_hdr));
+                                onvm_pkt_fill_udp(udp_hdr, UDP_PORT_FOR_GTP, UDP_PORT_FOR_GTP, payloadLen + sizeof(gtpv1_t));//pktdatalen-outerheaderlen=rawpacket_len, but here, udppayloadlen should be raw + gtp header 
+
+                                struct rte_ipv4_hdr *ipv4_hdr = rte_pktmbuf_mtod_offset(pkt, struct rte_ipv4_hdr *, 0);
+                                onvm_pkt_fill_ipv4(ipv4_hdr, rte_cpu_to_be_32(SELF_IP), rte_cpu_to_be_32(outerHeaderCreation->ipv4.s_addr), IPPROTO_UDP);
+                                ipv4_hdr->total_length = rte_cpu_to_be_16(payloadLen + sizeof(gtpv1_t) + sizeof(struct rte_udp_hdr) +sizeof(struct rte_ipv4_hdr));//raw+gtp8+udp8+ip20
+                                ipv4_hdr->hdr_checksum = rte_ipv4_cksum(ipv4_hdr);
+
+                            }   break;
+                            case UPDK_OUTER_HEADER_CREATION_DESCRIPTION_GTPU_UDP_IPV6:
+                            case UPDK_OUTER_HEADER_CREATION_DESCRIPTION_UDP_IPV4:
+                            case UPDK_OUTER_HEADER_CREATION_DESCRIPTION_UDP_IPV6:
+                            default:
+                                UTLT_Error("Unknown outer header creation info");
+                        }
+                    }
+                }
+                meta->destination = pkt->port ^ 1;
+                meta->action = ONVM_NF_ACTION_OUT;
+                if(frag_flag == 1){
+                    send_duplicate_packet(pkt,meta,nf);
+                }
+                break;
+            }
+            case UPDK_FAR_APPLY_ACTION_BUFF:
+                UTLT_Error("Buffering not supported");
+                break;
+            default:
+                UTLT_Error("Unspec apply action[%u] in FAR[%u]",
+                           far->applyAction,
+                           far->farId);
+        }
+        //TODO(vivek): Complete these actions:
+        if (far->applyAction & UPDK_FAR_APPLY_ACTION_NOCP) {
+            // Send message to UPF-C
+            Event *msg= (Event *) rte_calloc(NULL, 1, sizeof(Event), 0);
+            msg->type = UPF_EVENT_SESSION_REPORT;
+            msg->arg0 = seid;
+            msg->arg1 = pdrId;
+            /*
+            struct ReportMsg *msg= (struct ReportMsg *) rte_calloc(NULL, 1, sizeof(struct ReportMsg), 0);
+            msg->seid = seid;
+            msg->pdrId = pdrId;
+            */
+            onvm_nflib_send_msg_to_nf(2, msg);
+        }
+        if (far->applyAction & UPDK_FAR_APPLY_ACTION_DUPL) {
+            UTLT_Error("Duplicate Apply action: %u not supported, dropping the packet", far->applyAction);
+        }
+    }
+}
+
+static int packet_handler(struct rte_mbuf *pkt,
+                          struct onvm_pkt_meta *meta,
+                          struct onvm_nf_local_ctx *nf_local_ctx) {
+    meta->action = ONVM_NF_ACTION_DROP;
+    struct rte_ipv4_hdr *iph = onvm_pkt_ipv4_hdr(pkt);
+
+    if (iph == NULL) {
+        return 0;
+    }
+
+    UPDK_PDR *pdr = NULL;
+#ifdef MODIFY    
+    DL_flag = false;
+#endif
+    // Step 1: Identify if it is a uplink packet or downlink packet
+    if (iph->dst_addr == SELF_IP) {  //
+        struct rte_udp_hdr *udp_header = onvm_pkt_udp_hdr(pkt);
+        if (udp_header == NULL) {
+            return 0;
+        }
+        // invariant(dst_port == GTPV1_PORT);
+        // extract TEID from
+        // Step 2: Get PDR rule
+        uint32_t teid = get_teid_gtp_packet(pkt, udp_header);
+        pdr = GetPdrByTeid(pkt, teid);
+    } else {
+        // Step 2: Get PDR rule
+        pdr = GetPdrByUeIpAddress(pkt, rte_cpu_to_be_32(iph->dst_addr));
+#ifdef MODIFY
+        DL_flag = true;
+#endif
+    }
+
+    if (!pdr) {
+        printf("no PDR found for %pI4, skip\n", &iph->dst_addr);
+        // TODO(vivek): what to do?
+        return 0;
+    }
+    rte_pktmbuf_adj(pkt, sizeof(struct rte_ether_hdr));
+
+    UPDK_FAR *far;
+    UPDK_QER *qer;
+
+    far = pdr->far;
+    if (!far) {
+        printf("There is no FAR related to PDR[%u]\n", pdr->pdrId);
+        meta->action = ONVM_NF_ACTION_DROP;
+        return 0;
+    }
+    qer = pdr->qer;
+    if (!qer) {
+        printf("There is no QER related to PDR[%u]\n", pdr->pdrId);
+    }
+
+    if (pdr->flags.outerHeaderRemoval) {
+        uint16_t outerHeaderLen = 0;
+        switch (pdr->outerHeaderRemoval) {
+            case OUTER_HEADER_REMOVAL_GTP_IP4: {
+                outerHeaderLen = sizeof(struct rte_ipv4_hdr) +
+                                 sizeof(struct rte_udp_hdr);
+
+                //get gtp_header length  
+                uint16_t gtp_length = get_gtpu_header_len(pkt);
+                outerHeaderLen += gtp_length;
+
+                rte_pktmbuf_adj(pkt, outerHeaderLen);
+            } break;
+            case OUTER_HEADER_REMOVAL_GTP_IP6:
+            case OUTER_HEADER_REMOVAL_UDP_IP4:
+            case OUTER_HEADER_REMOVAL_UDP_IP6:
+            case OUTER_HEADER_REMOVAL_IP4:
+            case OUTER_HEADER_REMOVAL_IP6:
+            case OUTER_HEADER_REMOVAL_GTP:
+            case OUTER_HEADER_REMOVAL_S_TAG:
+            case OUTER_HEADER_REMOVAL_S_C_TAG:
+            default:
+                printf("unknown\n");
+        }
+    }
+
+    HandlePacketWithFar(pkt, far, qer, meta, nf_local_ctx->nf);
+    AttachL2Header(pkt);
+    return 0;
+}
+
+int main(int argc, char *argv[]) {
+    int arg_offset;
+    struct onvm_nf_local_ctx *nf_local_ctx;
+    struct onvm_nf_function_table *nf_function_table;
+
+    nf_local_ctx = onvm_nflib_init_nf_local_ctx();
+    onvm_nflib_start_signal_handler(nf_local_ctx, NULL);
+    nf_function_table = onvm_nflib_init_nf_function_table();
+    nf_function_table->pkt_handler = &packet_handler;
+
+    if ((arg_offset = onvm_nflib_init(argc, argv, NF_TAG, nf_local_ctx,
+                    nf_function_table)) < 0) {
+        onvm_nflib_stop(nf_local_ctx);
+        if (arg_offset == ONVM_SIGNAL_TERMINATION) {
+            printf("Exiting due to user termination\n");
+            return 0;
+        } else {
+            rte_exit(EXIT_FAILURE, "Failed ONVM init\n");
+        }
+    }
+
+    UpfSessionPoolInit ();
+    UeIpToUpfSessionMapInit();
+    TeidToUpfSessionMapInit();
+
+    //get the memory pool
+    pktmbuf_pool_onvm = rte_mempool_lookup(PKTMBUF_POOL_NAME);
+    if (pktmbuf_pool_onvm == NULL) {
+        onvm_nflib_stop(nf_local_ctx);
+        rte_exit(EXIT_FAILURE, "Cannot find mbuf pool!\n");
+    }
+
+    onvm_nflib_run(nf_local_ctx);
+
+    onvm_nflib_stop(nf_local_ctx);
+    printf("If we reach here, program is ending\n");
+    return 0;
+}

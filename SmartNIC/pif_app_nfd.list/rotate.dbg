@@ -1,0 +1,11 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function rotl _rotl "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/rotate.c" 17 30
+.%arg value 0 value_11_V$d
+.%arg shift 1 shift_11_V$e
+.%var result 0 result_11 LIX
+.%scope end
+.%type U4
+.%type I4

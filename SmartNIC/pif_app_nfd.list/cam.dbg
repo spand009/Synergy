@@ -1,0 +1,27 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function cam_clear _cam_clear "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/cam.c" 17 22
+.%scope end
+.%scope function cam_write _cam_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/cam.c" 26 36
+.%arg entry_num 0 entry_num_135_V$222
+.%arg tag 0 tag_135_V$223
+.%arg cam_state 0 cam_state_135_V$224
+.%scope end
+.%scope function cam_lookup _cam_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowcache/me/lib/standardlibrary/_c/cam.c" 39 47
+.%arg tag 0 tag_139_V$229
+.%var result 1 result_139 LIX
+.%scope end
+.%type U4
+.%type S4 cam_lookup_t{
+__unnamed 0 2;
+value 0 0;
+}
+.%type S4 {
+zeros1 0:12:20 0;
+state 0:8:4 0;
+hit 0:7:1 0;
+entry_num 0:3:4 0;
+zeros2 0:0:3 0;
+}

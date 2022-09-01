@@ -1,0 +1,42 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function fc_do_release _fc_do_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/fc.c" 38 49
+.%arg in_lock 1 in_lock_40_V$99
+.%scope end
+.%scope function fc_do_lookup _fc_do_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/fc.c" 51 88
+.%arg flowkey 3 flowkey_41_V$a3
+.%arg flowkey_len 0 flowkey_len_41_V$a4
+.%arg pktlen 0 pktlen_41_V$a5
+.%arg version 0 version_41_V$a6
+.%arg timeout 0 timeout_41_V$a7
+.%var result 4 result_41 LIX
+.%scope end
+.%scope function fc_get_version _fc_get_version "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/fc.c" 92 95
+.%scope end
+.%type U4
+.%type S4 fc_lock_t{
+__unnamed 0 2;
+value 0 0;
+}
+.%type S4 {
+bucket_address 0:6:26 0;
+exclusive_lock 0:5:1 0;
+cam_entry 0:2:3 0;
+bucket_mu 0:0:2 0;
+}
+.%type P6 0
+.%type S16 fc_lookup_result_t{
+payload_address 0 5;
+lock 8 1;
+result_code 12 6;
+}
+.%type U8
+.%type E4 FC_LOOKUP_RESULT_CODE{
+FC_LOOKUP_ERROR 0;
+FC_LOOKUP_EXACT_MATCH 1;
+FC_LOOKUP_ENTRY_ADDED 2;
+FC_LOOKUP_ALLOCATE_ERROR 6;
+FC_LOOKUP_CAM_OVERFLOW 255;
+}

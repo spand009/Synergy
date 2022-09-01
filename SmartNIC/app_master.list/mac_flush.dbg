@@ -1,0 +1,112 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_92 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var pause_counts 3 _pause_counts SEX
+.%var last_mac_arb_cmd 4 _last_mac_arb_cmd SEX
+.%scope function mac_set_port_paused _mac_set_port_paused "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/mac_flush.c" 99 143
+.%arg port 0 port_93_V$b6
+.%var addr_hi_base 0 addr_hi_base_93 LIX
+.%var addr_hi 0 addr_hi_93 LIX
+.%var addr_lo 0 addr_lo_93 LIX
+.%var port_bitmap_addr 6 port_bitmap_addr_93 LIX
+.%var xfr_port_bit 8 xfr_port_bit_93 LIW
+.%var count 0 count_93 LIX
+.%var sig0 9 sig0_93 LIX
+.%var sig1 9 sig1_93 LIX
+.%var sig2 9 sig2_93 LIX
+.%var sig3 9 sig3_93 LIX
+.%var sig4 9 sig4_93 LIX
+.%var sig5 9 sig5_93 LIX
+.%var sig6 9 sig6_93 LIX
+.%scope end
+.%scope function mac_clr_port_paused _mac_clr_port_paused "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/mac_flush.c" 150 194
+.%arg port 0 port_94_V$c6
+.%var addr_hi_base 0 addr_hi_base_94 LIX
+.%var addr_hi 0 addr_hi_94 LIX
+.%var addr_lo 0 addr_lo_94 LIX
+.%var port_bitmap_addr 6 port_bitmap_addr_94 LIX
+.%var xfr_port_bit 8 xfr_port_bit_94 LIW
+.%var count 0 count_94 LIX
+.%var sig0 9 sig0_94 LIX
+.%var sig1 9 sig1_94 LIX
+.%var sig2 9 sig2_94 LIX
+.%var sig3 9 sig3_94 LIX
+.%var sig4 9 sig4_94 LIX
+.%var sig5 9 sig5_94 LIX
+.%var sig6 9 sig6_94 LIX
+.%scope end
+.%scope function mac_flush_port_if_paused _mac_flush_port_if_paused "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/mac_flush.c" 216 348
+.%arg nbi 5 nbi_95_V$d4
+.%arg core 5 core_95_V$d5
+.%arg seg 5 seg_95_V$d6
+.%var csr_addr 0 csr_addr_95 LIX
+.%var pause_status 0 pause_status_95 LIX
+.%var nbi_island 0 nbi_island_95 LIX
+.%var tgt_dev 0 tgt_dev_95 LIX
+.%var offset 0 offset_95 LIX
+.%var eth_cmd_config 0 eth_cmd_config_95 LIX
+.%var csr_offset 0 csr_offset_95 LIX
+.%var csr_offset_chpcs 0 csr_offset_chpcs_95 LIX
+.%var nbicoreseg 0 nbicoreseg_95 LIX
+.%var flush 5 flush_95 LIX
+.%var pause_count_ptr 10 pause_count_ptr_95 LIX
+.%var xfr_eth_cmd_config 0 xfr_eth_cmd_config_95 LIR
+.%var xfr_eth_rx_pause_status 0 xfr_eth_rx_pause_status_95 LIR
+.%var xfer_pcsstatus1_0 0 xfer_pcsstatus1_0_95 LIR
+.%var xfer_pcsstatus1_1 0 xfer_pcsstatus1_1_95 LIR
+.%var xfer_pcsbaserstatus1 0 xfer_pcsbaserstatus1_95 LIR
+.%var xfr_flush 0 xfr_flush_95 LIW
+.%var sig1 9 sig1_95 LIX
+.%var sig2 9 sig2_95 LIX
+.%var sig_pcsstatus1_pre 9 sig_pcsstatus1_pre_95 LIX
+.%var sig_pcsstatus1 9 sig_pcsstatus1_95 LIX
+.%var sig_pcsbaserstatus1 9 sig_pcsbaserstatus1_95 LIX
+.%scope block 312 336
+.%var ring_isl 0 ring_isl_105 LIX
+.%var ring_num 0 ring_num_105 LIX
+.%var cmd 0 cmd_105 LIX
+.%var off 0 off_105 LIX
+.%scope end
+.%scope end
+.%scope function mac_poll_nbi_ports _mac_poll_nbi_ports "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/mac_flush.c" 354 375
+.%arg nbi 5 nbi_107_V$f1
+.%arg active_ports_bitmap 0 active_ports_bitmap_107_V$f2
+.%var port 0 port_107 LIX
+.%var core 5 core_107 LIX
+.%var seg 5 seg_107 LIX
+.%scope end
+.%scope function mac_poll _mac_poll "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/common/src/mac_flush.c" 380 419
+.%scope block 382 418
+.%var active_ports 0 active_ports_112 LIX
+.%var xfr_active_ports_nbi0 0 xfr_active_ports_nbi0_112 LIR
+.%var xfr_active_ports_nbi1 0 xfr_active_ports_nbi1_112 LIR
+.%var sig_nbi0 9 sig_nbi0_112 LIX
+.%var sig_nbi1 9 sig_nbi1_112 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type A192 0
+.%type A48 5
+.%type U1
+.%type P12 7
+.%type U4
+.%type U8
+.%type I4
+.%type P6 0

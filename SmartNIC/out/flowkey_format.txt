@@ -1,0 +1,11 @@
+{'flowkey_sz_lw': 8,
+ 'lookup_fields': ['gtpu_ipv4.dstAddr',
+                   'gtpu_ipv4.srcAddr',
+                   'gtpu_ipv4.diffserv',
+                   'gtpu.teid',
+                   'ipv4.srcAddr',
+                   'ipv4.dstAddr'],
+ 'metadata_fields': ['standard_metadata.ingress_port'],
+ 'metadata_packed': OrderedDict([('standard_metadata.ingress_port', 10), ('__padding', 22)]),
+ 'metadata_packed_width': 32,
+ 'tier_hdrs': OrderedDict([(0, OrderedDict([('start', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (1, OrderedDict([('parse_ethernet', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (2, OrderedDict([('parse_ipv4', {'total_width': 64, 'raw': OrderedDict([('ipv4.srcAddr', 1), ('ipv4.dstAddr', 1)]), 'packed': OrderedDict([('ipv4.srcAddr', 32), ('ipv4.dstAddr', 32)])})])), (3, OrderedDict([('parse_tcp', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()}), ('parse_udp', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (4, OrderedDict([('parse_gtpu', {'total_width': 32, 'raw': OrderedDict([('gtpu.teid', 1)]), 'packed': OrderedDict([('gtpu.teid', 32)])})])), (5, OrderedDict([('parse_gtpu_ipv4', {'total_width': 96, 'raw': OrderedDict([('gtpu_ipv4.dstAddr', 1), ('gtpu_ipv4.srcAddr', 1), ('gtpu_ipv4.diffserv', 1)]), 'packed': OrderedDict([('gtpu_ipv4.dstAddr', 32), ('gtpu_ipv4.srcAddr', 32), ('gtpu_ipv4.diffserv', 8), ('__padding', 24)])})])), (6, OrderedDict([('fwd', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})]))])}

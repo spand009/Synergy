@@ -1,0 +1,244 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function ones_sum_add _ones_sum_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 33 39
+.%arg sum1 0 sum1_121_V$63
+.%arg sum2 0 sum2_121_V$64
+.%var ret 0 ret_121 LIX
+.%scope end
+.%scope function ones_sum_fold16 _ones_sum_fold16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 42 48
+.%arg sum 0 sum_122_V$67
+.%var ret 0 ret_122 LIX
+.%scope end
+.%scope function ones_sum_pseudo _ones_sum_pseudo "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 52 97
+.%arg ip_type 0 ip_type_123_V$6a
+.%arg protocol 0 protocol_123_V$6b
+.%arg ip 1 ip_123_V$6c
+.%arg l4_hdr 1 l4_hdr_123_V$6d
+.%arg l4_len 0 l4_len_123_V$6e
+.%var sum 0 sum_123 LIX
+.%var tmp 0 tmp_123 LIX
+.%scope end
+.%scope function ones_sum_warr _ones_sum_warr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 101 159
+.%arg buf 3 buf_132_V$76
+.%arg len 0 len_132_V$77
+.%var sum 0 sum_132 LIX
+.%var t_val 0 t_val_132 LIX
+.%var val 0 val_132 LIX
+.%var rem 0 rem_132 LIX
+.%var nwords 0 nwords_132 LIX
+.%var nskip 0 nskip_132 LIX
+.%scope end
+.%scope function ones_sum_mem _ones_sum_mem "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 164 189
+.%arg mem 4 mem_138_V$7f
+.%arg len 5 len_138_V$80
+.%var pkt_cache 6 pkt_cache_138 LIR
+.%var curr_len 5 curr_len_138 LIX
+.%var pkt_ptr 4 pkt_ptr_138 LIX
+.%var read_sig 5 read_sig_138 LIX
+.%var sum 0 sum_138 LIX
+.%scope end
+.%scope function net_csum_mod _net_csum_mod "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 192 199
+.%arg orig_csum 0 orig_csum_141_V$88
+.%arg orig_val 0 orig_val_141_V$89
+.%arg new_val 0 new_val_141_V$8a
+.%var new_csum 0 new_csum_141 LIX
+.%scope end
+.%scope function net_csum_ipv4 _net_csum_ipv4 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 202 205
+.%arg ip 1 ip_142_V$8d
+.%arg pkt_ptr 4 pkt_ptr_142_V$8e
+.%scope end
+.%scope function __net_csum_ipv4 ___net_csum_ipv4 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 208 246
+.%arg ip 1 ip_143_V$90
+.%arg pkt_ptr 4 pkt_ptr_143_V$91
+.%arg test_ip_opt 0 test_ip_opt_143_V$92
+.%var sum 0 sum_143 LIX
+.%var opt_size 0 opt_size_143 LIX
+.%var hl 0 hl_143 LIX
+.%var ip_opts 7 ip_opts_143 LIR
+.%var read_sig 5 read_sig_143 LIX
+.%scope end
+.%scope function net_csum_l4_ip _net_csum_l4_ip "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 249 296
+.%arg ip_type 0 ip_type_150_V$ae
+.%arg protocol 0 protocol_150_V$af
+.%arg ip 1 ip_150_V$b0
+.%arg l4_hdr 1 l4_hdr_150_V$b1
+.%arg pkt_ctm 4 pkt_ctm_150_V$b2
+.%arg ctm_len 0 ctm_len_150_V$b3
+.%arg pkt_mem 4 pkt_mem_150_V$b4
+.%arg mem_len 0 mem_len_150_V$b5
+.%var sum 0 sum_150 LIX
+.%var tmp 0 tmp_150 LIX
+.%var l4_len 0 l4_len_150 LIX
+.%scope end
+.%scope function net_csum_ipv4_udp _net_csum_ipv4_udp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 299 308
+.%arg ip 1 ip_162_V$c2
+.%arg udp 1 udp_162_V$c3
+.%arg pkt_ctm 4 pkt_ctm_162_V$c4
+.%arg ctm_len 0 ctm_len_162_V$c5
+.%arg pkt_mem 4 pkt_mem_162_V$c6
+.%arg mem_len 0 mem_len_162_V$c7
+.%scope end
+.%scope function net_csum_ipv4_tcp _net_csum_ipv4_tcp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 311 320
+.%arg ip 1 ip_165_V$cb
+.%arg tcp 1 tcp_165_V$cc
+.%arg pkt_ctm 4 pkt_ctm_165_V$cd
+.%arg ctm_len 0 ctm_len_165_V$ce
+.%arg pkt_mem 4 pkt_mem_165_V$cf
+.%arg mem_len 0 mem_len_165_V$d0
+.%scope end
+.%scope function net_csum_ipv6_udp _net_csum_ipv6_udp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 323 332
+.%arg ip 1 ip_168_V$d3
+.%arg udp 1 udp_168_V$d4
+.%arg pkt_ctm 4 pkt_ctm_168_V$d5
+.%arg ctm_len 0 ctm_len_168_V$d6
+.%arg pkt_mem 4 pkt_mem_168_V$d7
+.%arg mem_len 0 mem_len_168_V$d8
+.%scope end
+.%scope function net_csum_ipv6_tcp _net_csum_ipv6_tcp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/csum.c" 335 344
+.%arg ip 1 ip_171_V$da
+.%arg tcp 1 tcp_171_V$db
+.%arg pkt_ctm 4 pkt_ctm_171_V$dc
+.%arg ctm_len 0 ctm_len_171_V$dd
+.%arg pkt_mem 4 pkt_mem_171_V$de
+.%arg mem_len 0 mem_len_171_V$df
+.%scope end
+.%scope function he_eth_fit _he_eth_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 79 83
+.%arg sz 5 sz_176_V$e1
+.%arg off 5 off_176_V$e2
+.%scope end
+.%scope function he_eth _he_eth "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 98 119
+.%arg src_buf 1 src_buf_178_V$e6
+.%arg off 5 off_178_V$e7
+.%arg dst 1 dst_178_V$e8
+.%var next_proto 0 next_proto_178 LIX
+.%scope end
+.%scope function he_vlan_fit _he_vlan_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 122 127
+.%arg sz 5 sz_185_V$10c
+.%arg off 5 off_185_V$10d
+.%scope end
+.%scope function he_vlan _he_vlan "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 139 161
+.%arg src_buf 1 src_buf_188_V$113
+.%arg off 5 off_188_V$114
+.%arg dst 1 dst_188_V$115
+.%var next_proto 0 next_proto_188 LIX
+.%scope end
+.%scope function he_arp_fit _he_arp_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 164 169
+.%arg sz 5 sz_195_V$124
+.%arg off 5 off_195_V$125
+.%scope end
+.%scope function he_arp _he_arp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 172 186
+.%arg src_buf 1 src_buf_198_V$128
+.%arg off 5 off_198_V$129
+.%arg dst 1 dst_198_V$12a
+.%scope end
+.%scope function he_ip4_fit _he_ip4_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 189 194
+.%arg sz 5 sz_203_V$13c
+.%arg off 5 off_203_V$13d
+.%scope end
+.%scope function he_ip4 _he_ip4 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 213 236
+.%arg src_buf 1 src_buf_206_V$140
+.%arg off 5 off_206_V$141
+.%arg dst 1 dst_206_V$142
+.%var next_proto 0 next_proto_206 LIX
+.%var ret 5 ret_206 LIX
+.%scope end
+.%scope function he_ip6_fit _he_ip6_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 239 244
+.%arg sz 5 sz_213_V$1a0
+.%arg off 5 off_213_V$1a1
+.%scope end
+.%scope function he_ip6 _he_ip6 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 269 292
+.%arg src_buf 1 src_buf_216_V$1a4
+.%arg off 5 off_216_V$1a5
+.%arg dst 1 dst_216_V$1a6
+.%var next_proto 0 next_proto_216 LIX
+.%var ret 5 ret_216 LIX
+.%scope end
+.%scope function he_ip6_ext_skip_fit _he_ip6_ext_skip_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 303 308
+.%arg sz 5 sz_224_V$1c2
+.%arg off 5 off_224_V$1c3
+.%scope end
+.%scope function he_ip6_ext_skip _he_ip6_ext_skip "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 311 333
+.%arg src_buf 1 src_buf_227_V$1c7
+.%arg off 5 off_227_V$1c8
+.%var dst 8 dst_227 LIX
+.%var next_proto 0 next_proto_227 LIX
+.%var len 0 len_227 LIX
+.%scope end
+.%scope function he_tcp_fit _he_tcp_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 338 343
+.%arg sz 5 sz_230_V$1d3
+.%arg off 5 off_230_V$1d4
+.%scope end
+.%scope function he_tcp _he_tcp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 353 376
+.%arg src_buf 1 src_buf_233_V$1d7
+.%arg off 5 off_233_V$1d8
+.%arg dst 1 dst_233_V$1d9
+.%var next_proto 0 next_proto_233 LIX
+.%var ret 5 ret_233 LIX
+.%scope end
+.%scope function he_udp_fit _he_udp_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 379 384
+.%arg sz 5 sz_238_V$20d
+.%arg off 5 off_238_V$20e
+.%scope end
+.%scope function he_udp _he_udp "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 394 416
+.%arg src_buf 1 src_buf_241_V$211
+.%arg off 5 off_241_V$212
+.%arg dst 1 dst_241_V$213
+.%arg vxln_prt 0 vxln_prt_241_V$214
+.%var next_proto 0 next_proto_241 LIX
+.%scope end
+.%scope function he_gre_fit _he_gre_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 419 427
+.%arg sz 5 sz_246_V$22f
+.%arg off 5 off_246_V$230
+.%scope end
+.%scope function he_gre _he_gre "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 443 473
+.%arg src_buf 1 src_buf_249_V$234
+.%arg off 5 off_249_V$235
+.%arg dst 1 dst_249_V$236
+.%var next_proto 0 next_proto_249 LIX
+.%var flags 0 flags_249 LIX
+.%var len 0 len_249 LIX
+.%scope end
+.%scope function he_gre_nvgre _he_gre_nvgre "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 476 494
+.%arg src_buf 1 src_buf_256_V$243
+.%arg off 5 off_256_V$244
+.%arg dst 1 dst_256_V$245
+.%var next_proto 0 next_proto_256 LIX
+.%var len 0 len_256 LIX
+.%scope end
+.%scope function he_vxlan_fit _he_vxlan_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 497 502
+.%arg sz 5 sz_261_V$248
+.%arg off 5 off_261_V$249
+.%scope end
+.%scope function he_vxlan _he_vxlan "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 508 530
+.%arg src_buf 1 src_buf_264_V$24d
+.%arg off 5 off_264_V$24e
+.%arg dst 1 dst_264_V$24f
+.%var next_proto 0 next_proto_264 LIX
+.%var len 0 len_264 LIX
+.%scope end
+.%scope function he_mpls_fit _he_mpls_fit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 534 539
+.%arg sz 5 sz_269_V$253
+.%arg off 5 off_269_V$254
+.%scope end
+.%scope function he_mpls _he_mpls "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/net/_c/hdr_ext.c" 545 561
+.%arg src_buf 1 src_buf_272_V$257
+.%arg off 5 off_272_V$258
+.%arg dst 1 dst_272_V$259
+.%scope end
+.%type U4
+.%type P2 2
+.%type U4
+.%type P2 0
+.%type P2 2
+.%type I4
+.%type A64 0
+.%type A40 0
+.%type S4 _ip6_ext{
+nh 0 9;
+len 1 9;
+pad0 2 10;
+}
+.%type U1
+.%type U2

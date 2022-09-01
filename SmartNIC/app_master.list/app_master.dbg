@@ -1,0 +1,95 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 1 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 3 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 4 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 5 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 6 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 7 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 8 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 9 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 10 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 11 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%var nfd_cfg_sig_app_master0 12 _nfd_cfg_sig_app_master0 SEX
+.%var nfd_cfg_sig_app_master1 12 _nfd_cfg_sig_app_master1 SEX
+.%var nfd_cfg_sig_app_master2 12 _nfd_cfg_sig_app_master2 SEX
+.%var nfd_cfg_sig_app_master3 12 _nfd_cfg_sig_app_master3 SEX
+.%var cfg_msg 13 _cfg_msg SEX
+.%var cfg_bar_data 16 _cfg_bar_data SER
+.%scope function __hashmap_lock_release ___hashmap_lock_release "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/include/hashmap.h" 103 122
+.%arg lock 17 lock_273_V$734
+.%var ind 22 ind_273 LIX
+.%var addr_hi 0 addr_hi_273 LIX
+.%var addr_lo 0 addr_lo_273 LIX
+.%scope end
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_456_V$74d
+.%arg y 0 y_456_V$74e
+.%var result 0 result_456 LIX
+.%scope end
+.%scope function mac_time_poll _mac_time_poll "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/src/app_master.c" 67 74
+.%scope end
+.%scope function main _main "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/src/app_master.c" 77 151
+.%scope block 106 132
+.%var link_state 0 link_state_469 LIW
+.%scope end
+.%scope end
+.%type U4
+.%type A16 2
+.%type U1
+.%type A32768 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A41943040 2
+.%type A10485760 2
+.%type I4
+.%type S4 nfd_cfg_msg{
+__unnamed 0 14;
+}
+.%type S4 {
+__unnamed 0 15;
+__raw 0 0;
+}
+.%type S4 {
+msg_valid 0:31:1 0;
+error 0:30:1 0;
+interested 0:29:1 0;
+up_bit 0:28:1 0;
+spare 0:16:12 0;
+queue 0:8:8 0;
+vnic 0:0:8 0;
+}
+.%type A24 0
+.%type P2 18
+.%type S10 {
+addr 0 19;
+state 8 21;
+}
+.%type P3 20
+.%type U4
+.%type U2
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 23;
+}
+.%type S4 {
+__unnamed 0 24;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}

@@ -1,0 +1,2460 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%var nfp_cls_autopush_user_event 1 _nfp_cls_autopush_user_event SEX
+.%var nfp_cls_autopush_user_event_status 2 _nfp_cls_autopush_user_event_status SEX
+.%var nfp_pcie_pcie_msi_sw_gen 3 _nfp_pcie_pcie_msi_sw_gen SEX
+.%var nfp_pcie_pcie_msix_sw_gen 4 _nfp_pcie_pcie_msix_sw_gen SEX
+.%scope function __cls_read_be ___cls_read_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 87 93
+.%arg data 5 data_192_V$4f5
+.%arg addr 7 addr_192_V$4f6
+.%arg size 0 size_192_V$4f7
+.%arg max_size 0 max_size_192_V$4f8
+.%arg sync 8 sync_192_V$4f9
+.%arg sig 9 sig_192_V$4fa
+.%scope block 92 92
+.%var ind 11 ind_194 LIX
+.%var count 0 count_194 LIX
+.%var max_count 0 max_count_194 LIX
+.%scope end
+.%scope end
+.%scope function cls_read_be _cls_read_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 96 101
+.%arg data 5 data_211_V$518
+.%arg addr 7 addr_211_V$519
+.%arg size 0 size_211_V$51a
+.%var sig 10 sig_211 LIX
+.%scope end
+.%scope function __cls_write_be ___cls_write_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 104 110
+.%arg data 14 data_212_V$51c
+.%arg addr 7 addr_212_V$51d
+.%arg size 0 size_212_V$51e
+.%arg max_size 0 max_size_212_V$51f
+.%arg sync 8 sync_212_V$520
+.%arg sig 9 sig_212_V$521
+.%scope block 109 109
+.%var ind 11 ind_214 LIX
+.%var count 0 count_214 LIX
+.%var max_count 0 max_count_214 LIX
+.%scope end
+.%scope end
+.%scope function cls_write_be _cls_write_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 113 118
+.%arg data 14 data_231_V$534
+.%arg addr 7 addr_231_V$535
+.%arg size 0 size_231_V$536
+.%var sig 10 sig_231 LIX
+.%scope end
+.%scope function __cls_read_le ___cls_read_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 121 127
+.%arg data 5 data_232_V$538
+.%arg addr 7 addr_232_V$539
+.%arg size 0 size_232_V$53a
+.%arg max_size 0 max_size_232_V$53b
+.%arg sync 8 sync_232_V$53c
+.%arg sig 9 sig_232_V$53d
+.%scope block 126 126
+.%var ind 11 ind_234 LIX
+.%var count 0 count_234 LIX
+.%var max_count 0 max_count_234 LIX
+.%scope end
+.%scope end
+.%scope function cls_read_le _cls_read_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 130 135
+.%arg data 5 data_251_V$54e
+.%arg addr 7 addr_251_V$54f
+.%arg size 0 size_251_V$550
+.%var sig 10 sig_251 LIX
+.%scope end
+.%scope function __cls_write_le ___cls_write_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 138 144
+.%arg data 14 data_252_V$552
+.%arg addr 7 addr_252_V$553
+.%arg size 0 size_252_V$554
+.%arg max_size 0 max_size_252_V$555
+.%arg sync 8 sync_252_V$556
+.%arg sig 9 sig_252_V$557
+.%scope block 143 143
+.%var ind 11 ind_254 LIX
+.%var count 0 count_254 LIX
+.%var max_count 0 max_count_254 LIX
+.%scope end
+.%scope end
+.%scope function cls_write_le _cls_write_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 147 152
+.%arg data 14 data_271_V$568
+.%arg addr 7 addr_271_V$569
+.%arg size 0 size_271_V$56a
+.%var sig 10 sig_271 LIX
+.%scope end
+.%scope function __cls_read ___cls_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 162 166
+.%arg data 5 data_272_V$56c
+.%arg addr 7 addr_272_V$56d
+.%arg size 0 size_272_V$56e
+.%arg max_size 0 max_size_272_V$56f
+.%arg sync 8 sync_272_V$570
+.%arg sig 9 sig_272_V$571
+.%scope end
+.%scope function cls_read _cls_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 169 172
+.%arg data 5 data_273_V$572
+.%arg addr 7 addr_273_V$573
+.%arg size 0 size_273_V$574
+.%scope end
+.%scope function __cls_write ___cls_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 175 179
+.%arg data 14 data_274_V$575
+.%arg addr 7 addr_274_V$576
+.%arg size 0 size_274_V$577
+.%arg max_size 0 max_size_274_V$578
+.%arg sync 8 sync_274_V$579
+.%arg sig 9 sig_274_V$57a
+.%scope end
+.%scope function cls_write _cls_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 182 185
+.%arg data 14 data_275_V$57b
+.%arg addr 7 addr_275_V$57c
+.%arg size 0 size_275_V$57d
+.%scope end
+.%scope function __cls_hash_mask_clr ___cls_hash_mask_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 218 231
+.%arg key 14 key_276_V$57e
+.%arg mask 7 mask_276_V$57f
+.%arg size 0 size_276_V$580
+.%arg max_size 0 max_size_276_V$581
+.%arg idx 0 idx_276_V$582
+.%arg sync 8 sync_276_V$583
+.%arg sig 9 sig_276_V$584
+.%var temp_mask 7 temp_mask_276 LIX
+.%scope block 230 230
+.%var ind 11 ind_280 LIX
+.%var count 0 count_280 LIX
+.%var max_count 0 max_count_280 LIX
+.%scope end
+.%scope end
+.%scope function cls_hash_mask_clr _cls_hash_mask_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 234 240
+.%arg key 14 key_297_V$59a
+.%arg mask 7 mask_297_V$59b
+.%arg size 0 size_297_V$59c
+.%arg idx 0 idx_297_V$59d
+.%var sig 10 sig_297 LIX
+.%scope end
+.%scope function __cls_hash_mask ___cls_hash_mask "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 243 255
+.%arg key 14 key_298_V$59f
+.%arg mask 7 mask_298_V$5a0
+.%arg size 0 size_298_V$5a1
+.%arg max_size 0 max_size_298_V$5a2
+.%arg idx 0 idx_298_V$5a3
+.%arg sync 8 sync_298_V$5a4
+.%arg sig 9 sig_298_V$5a5
+.%var temp_mask 7 temp_mask_298 LIX
+.%scope block 254 254
+.%var ind 11 ind_302 LIX
+.%var count 0 count_302 LIX
+.%var max_count 0 max_count_302 LIX
+.%scope end
+.%scope end
+.%scope function cls_hash_mask _cls_hash_mask "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 258 263
+.%arg key 14 key_319_V$5b7
+.%arg mask 7 mask_319_V$5b8
+.%arg size 0 size_319_V$5b9
+.%arg idx 0 idx_319_V$5ba
+.%var sig 10 sig_319 LIX
+.%scope end
+.%scope function __cls_clr ___cls_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 267 272
+.%arg data 14 data_320_V$5bc
+.%arg addr 7 addr_320_V$5bd
+.%arg size 0 size_320_V$5be
+.%arg max_size 0 max_size_320_V$5bf
+.%arg sync 8 sync_320_V$5c0
+.%arg sig 9 sig_320_V$5c1
+.%scope block 271 271
+.%var ind 11 ind_322 LIX
+.%var count 0 count_322 LIX
+.%var max_count 0 max_count_322 LIX
+.%scope end
+.%scope end
+.%scope function cls_clr _cls_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 275 280
+.%arg data 14 data_339_V$5d4
+.%arg addr 7 addr_339_V$5d5
+.%arg size 0 size_339_V$5d6
+.%var sig 10 sig_339 LIX
+.%scope end
+.%scope function __cls_set ___cls_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 284 290
+.%arg data 14 data_340_V$5d8
+.%arg addr 7 addr_340_V$5d9
+.%arg size 0 size_340_V$5da
+.%arg max_size 0 max_size_340_V$5db
+.%arg sync 8 sync_340_V$5dc
+.%arg sig 9 sig_340_V$5dd
+.%scope block 289 289
+.%var ind 11 ind_342 LIX
+.%var count 0 count_342 LIX
+.%var max_count 0 max_count_342 LIX
+.%scope end
+.%scope end
+.%scope function cls_set _cls_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 293 298
+.%arg data 14 data_359_V$5ee
+.%arg addr 7 addr_359_V$5ef
+.%arg size 0 size_359_V$5f0
+.%var sig 10 sig_359 LIX
+.%scope end
+.%scope function __cls_test_clr ___cls_test_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 302 308
+.%arg data 15 data_360_V$5f2
+.%arg addr 7 addr_360_V$5f3
+.%arg size 0 size_360_V$5f4
+.%arg max_size 0 max_size_360_V$5f5
+.%arg sync 8 sync_360_V$5f6
+.%arg sig 9 sig_360_V$5f7
+.%scope block 307 307
+.%var ind 11 ind_362 LIX
+.%var count 0 count_362 LIX
+.%var max_count 0 max_count_362 LIX
+.%scope end
+.%scope end
+.%scope function cls_test_clr _cls_test_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 311 316
+.%arg data 15 data_379_V$608
+.%arg addr 7 addr_379_V$609
+.%arg size 0 size_379_V$60a
+.%var sig 10 sig_379 LIX
+.%scope end
+.%scope function __cls_test_set ___cls_test_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 320 326
+.%arg data 15 data_380_V$60c
+.%arg addr 7 addr_380_V$60d
+.%arg size 0 size_380_V$60e
+.%arg max_size 0 max_size_380_V$60f
+.%arg sync 8 sync_380_V$610
+.%arg sig 9 sig_380_V$611
+.%scope block 325 325
+.%var ind 11 ind_382 LIX
+.%var count 0 count_382 LIX
+.%var max_count 0 max_count_382 LIX
+.%scope end
+.%scope end
+.%scope function cls_test_set _cls_test_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 329 334
+.%arg data 15 data_399_V$623
+.%arg addr 7 addr_399_V$624
+.%arg size 0 size_399_V$625
+.%var sig 10 sig_399 LIX
+.%scope end
+.%scope function __cls_test_add ___cls_test_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 338 344
+.%arg data 15 data_400_V$627
+.%arg addr 7 addr_400_V$628
+.%arg size 0 size_400_V$629
+.%arg max_size 0 max_size_400_V$62a
+.%arg sync 8 sync_400_V$62b
+.%arg sig 9 sig_400_V$62c
+.%scope block 343 343
+.%var ind 11 ind_402 LIX
+.%var count 0 count_402 LIX
+.%var max_count 0 max_count_402 LIX
+.%scope end
+.%scope end
+.%scope function cls_test_add _cls_test_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 347 352
+.%arg data 15 data_419_V$63d
+.%arg addr 7 addr_419_V$63e
+.%arg size 0 size_419_V$63f
+.%var sig 10 sig_419 LIX
+.%scope end
+.%scope function __cls_test_sub ___cls_test_sub "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 356 362
+.%arg data 15 data_420_V$641
+.%arg addr 7 addr_420_V$642
+.%arg size 0 size_420_V$643
+.%arg max_size 0 max_size_420_V$644
+.%arg sync 8 sync_420_V$645
+.%arg sig 9 sig_420_V$646
+.%scope block 361 361
+.%var ind 11 ind_422 LIX
+.%var count 0 count_422 LIX
+.%var max_count 0 max_count_422 LIX
+.%scope end
+.%scope end
+.%scope function cls_test_sub _cls_test_sub "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 365 370
+.%arg data 15 data_439_V$657
+.%arg addr 7 addr_439_V$658
+.%arg size 0 size_439_V$659
+.%var sig 10 sig_439 LIX
+.%scope end
+.%scope function cls_incr _cls_incr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 374 377
+.%arg addr 7 addr_440_V$65b
+.%scope end
+.%scope function cls_incr64 _cls_incr64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 380 383
+.%arg addr 7 addr_441_V$65c
+.%scope end
+.%scope function cls_decr _cls_decr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 386 389
+.%arg addr 7 addr_442_V$65d
+.%scope end
+.%scope function cls_decr64 _cls_decr64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 392 395
+.%arg addr 7 addr_443_V$65e
+.%scope end
+.%scope function cls_vf_translate_setup _cls_vf_translate_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 399 419
+.%arg base_addr 0 base_addr_444_V$65f
+.%arg cls_bytes 0 cls_bytes_444_V$660
+.%arg page_size 0 page_size_444_V$661
+.%arg alert_trig 0 alert_trig_444_V$662
+.%arg alignment 0 alignment_444_V$663
+.%arg padding 0 padding_444_V$664
+.%var vftaddr 7 vftaddr_444 LIX
+.%var vftcfg_temp 0 vftcfg_temp_444 LIX
+.%var vftcfg 0 vftcfg_444 LIW
+.%scope end
+.%scope function cls_vf_translate_disable _cls_vf_translate_disable "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/cls.c" 422 428
+.%var vftaddr 7 vftaddr_445 LIX
+.%var vftcfg 0 vftcfg_445 LIW
+.%scope end
+.%scope function mac_stats_load _mac_stats_load "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 62 80
+.%arg src_hi 0 src_hi_512_V$66a
+.%arg src_lo 0 src_lo_512_V$66b
+.%arg dst_hi 0 dst_hi_512_V$66c
+.%arg dst_lo 0 dst_lo_512_V$66d
+.%var stats 16 stats_512 LIX
+.%var sig 10 sig_512 LIX
+.%scope end
+.%scope function mac_stats_add _mac_stats_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 84 112
+.%arg src_hi 0 src_hi_513_V$671
+.%arg src_lo 0 src_lo_513_V$672
+.%arg dst_hi 0 dst_hi_513_V$673
+.%arg dst_lo 0 dst_lo_513_V$674
+.%var stats 17 stats_513 LIX
+.%var sig 10 sig_513 LIX
+.%var dst_lo2 0 dst_lo2_513 LIX
+.%scope end
+.%scope function __macstats_head_drop_accum ___macstats_head_drop_accum "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 261 315
+.%arg nbi 0 nbi_518_V$679
+.%arg core 0 core_518_V$67a
+.%arg ports_mask 18 ports_mask_518_V$67b
+.%arg port_stats 19 port_stats_518_V$67c
+.%arg break_cpp_burst 0 break_cpp_burst_518_V$67d
+.%var addr 0 addr_518 LIX
+.%var add_val 23 add_val_518 LIW
+.%var drop_pair 0 drop_pair_518 LIX
+.%var add_even 10 add_even_518 LIX
+.%var add_odd 10 add_odd_518 LIX
+.%var i 10 i_518 LIX
+.%var ret 10 ret_518 LIX
+.%scope end
+.%scope function macstats_head_drop_accum _macstats_head_drop_accum "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 318 323
+.%arg nbi 0 nbi_525_V$68d
+.%arg core 0 core_525_V$68e
+.%arg ports_mask 18 ports_mask_525_V$68f
+.%arg port_stats 19 port_stats_525_V$690
+.%scope end
+.%scope function __ME ___ME "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 28 37
+.%var menum 0 menum_526 LIX
+.%var ctxsts 24 ctxsts_526 LIX
+.%scope end
+.%scope function ctx_wait _ctx_wait "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 40 50
+.%arg sig 27 sig_527_V$69e
+.%scope end
+.%scope function wait_sig_mask _wait_sig_mask "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 53 59
+.%arg sigmask 10 sigmask_529_V$6a1
+.%scope end
+.%scope function signal_ctx _signal_ctx "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 62 67
+.%arg ctx 0 ctx_530_V$6a2
+.%arg sig_no 0 sig_no_530_V$6a3
+.%scope end
+.%scope function signal_next_ctx _signal_next_ctx "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 70 75
+.%arg sig_no 0 sig_no_531_V$6a4
+.%scope end
+.%scope function signal_next_me _signal_next_me "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 78 83
+.%arg ctx 0 ctx_532_V$6a5
+.%arg sig_no 0 sig_no_532_V$6a6
+.%scope end
+.%scope function signal_prev_me _signal_prev_me "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 86 91
+.%arg ctx 0 ctx_533_V$6a7
+.%arg sig_no 0 sig_no_533_V$6a8
+.%scope end
+.%scope function set_alarm _set_alarm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 94 104
+.%arg cycles 0 cycles_534_V$6a9
+.%arg sig 9 sig_534_V$6aa
+.%var sig_num 0 sig_num_534 LIX
+.%var tslo 0 tslo_534 LIX
+.%scope end
+.%scope function clear_alarm _clear_alarm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 107 110
+.%scope end
+.%scope function sleep _sleep "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 113 120
+.%arg cycles 0 cycles_536_V$6ad
+.%var sig 10 sig_536 LIX
+.%scope end
+.%scope function halt _halt "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 123 126
+.%scope end
+.%scope function bit_test _bit_test "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 129 141
+.%arg data 0 data_538_V$6af
+.%arg bit_pos 0 bit_pos_538_V$6b0
+.%var result 10 result_538 LIX
+.%scope end
+.%scope function ffs _ffs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 144 149
+.%arg data 0 data_540_V$6b5
+.%var result 0 result_540 LIX
+.%scope end
+.%scope function ffs64 _ffs64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 152 167
+.%arg data 22 data_541_V$6b8
+.%var hi 0 hi_541 LIX
+.%var result 0 result_541 LIX
+.%scope end
+.%scope function crc_read _crc_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 170 173
+.%scope end
+.%scope function crc_write _crc_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 176 179
+.%arg residue 0 residue_545_V$6bd
+.%scope end
+.%scope function crc_32_be _crc_32_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 182 207
+.%arg data 0 data_546_V$6be
+.%arg bspec 28 bspec_546_V$6bf
+.%var result 0 result_546 LIX
+.%scope end
+.%scope function crc_iscsi_be _crc_iscsi_be "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 210 235
+.%arg data 0 data_548_V$6c4
+.%arg bspec 28 bspec_548_V$6c5
+.%var result 0 result_548 LIX
+.%scope end
+.%scope function inp_state_test _inp_state_test "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 238 251
+.%arg statename 10 statename_550_V$6c8
+.%var result 10 result_550 LIX
+.%scope end
+.%scope function me_tsc_read _me_tsc_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 254 262
+.%var lo 0 lo_552 LIX
+.%var hi 0 hi_552 LIX
+.%scope end
+.%scope function me_pc_read _me_pc_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/me.c" 265 268
+.%scope end
+.%scope function __mem_read_atomic ___mem_read_atomic "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 159 168
+.%arg data 5 data_554_V$6d1
+.%arg addr 29 addr_554_V$6d2
+.%arg size 0 size_554_V$6d3
+.%arg max_size 0 max_size_554_V$6d4
+.%arg sync 8 sync_554_V$6d5
+.%arg sig 9 sig_554_V$6d6
+.%scope block 166 166
+.%var ind 11 ind_558 LIX
+.%var count 0 count_558 LIX
+.%var max_count 0 max_count_558 LIX
+.%var addr_hi 0 addr_hi_558 LIX
+.%var addr_lo 0 addr_lo_558 LIX
+.%scope end
+.%scope end
+.%scope function mem_read_atomic _mem_read_atomic "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 171 176
+.%arg data 5 data_572_V$6ee
+.%arg addr 29 addr_572_V$6ef
+.%arg size 0 size_572_V$6f0
+.%var sig 10 sig_572 LIX
+.%scope end
+.%scope function __mem_write_atomic ___mem_write_atomic "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 179 188
+.%arg data 14 data_573_V$6f2
+.%arg addr 29 addr_573_V$6f3
+.%arg size 0 size_573_V$6f4
+.%arg max_size 0 max_size_573_V$6f5
+.%arg sync 8 sync_573_V$6f6
+.%arg sig 9 sig_573_V$6f7
+.%scope block 186 186
+.%var ind 11 ind_577 LIX
+.%var count 0 count_577 LIX
+.%var max_count 0 max_count_577 LIX
+.%var addr_hi 0 addr_hi_577 LIX
+.%var addr_lo 0 addr_lo_577 LIX
+.%scope end
+.%scope end
+.%scope function mem_write_atomic _mem_write_atomic "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 191 196
+.%arg data 14 data_591_V$70a
+.%arg addr 29 addr_591_V$70b
+.%arg size 0 size_591_V$70c
+.%var sig 10 sig_591 LIX
+.%scope end
+.%scope function mem_incr32 _mem_incr32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 199 202
+.%arg addr 29 addr_592_V$70e
+.%scope block 201 201
+.%var addr_hi 0 addr_hi_593 LIX
+.%var addr_lo 0 addr_lo_593 LIX
+.%scope end
+.%scope end
+.%scope function mem_decr32 _mem_decr32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 205 208
+.%arg addr 29 addr_594_V$711
+.%scope block 207 207
+.%var addr_hi 0 addr_hi_595 LIX
+.%var addr_lo 0 addr_lo_595 LIX
+.%scope end
+.%scope end
+.%scope function mem_incr64 _mem_incr64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 211 214
+.%arg addr 29 addr_596_V$714
+.%scope block 213 213
+.%var addr_hi 0 addr_hi_597 LIX
+.%var addr_lo 0 addr_lo_597 LIX
+.%scope end
+.%scope end
+.%scope function mem_decr64 _mem_decr64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 217 220
+.%arg addr 29 addr_598_V$717
+.%scope block 219 219
+.%var addr_hi 0 addr_hi_599 LIX
+.%var addr_lo 0 addr_lo_599 LIX
+.%scope end
+.%scope end
+.%scope function mem_add32_imm _mem_add32_imm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 223 228
+.%arg val 0 val_600_V$71a
+.%arg addr 29 addr_600_V$71b
+.%scope block 227 227
+.%var ind 11 ind_602 LIX
+.%var addr_hi 0 addr_hi_602 LIX
+.%var addr_lo 0 addr_lo_602 LIX
+.%scope end
+.%scope end
+.%scope function mem_add64_imm _mem_add64_imm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 231 236
+.%arg val 0 val_605_V$72e
+.%arg addr 29 addr_605_V$72f
+.%scope block 235 235
+.%var ind 11 ind_607 LIX
+.%var addr_hi 0 addr_hi_607 LIX
+.%var addr_lo 0 addr_lo_607 LIX
+.%scope end
+.%scope end
+.%scope function mem_bitset_imm _mem_bitset_imm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 239 244
+.%arg val 0 val_610_V$742
+.%arg addr 29 addr_610_V$743
+.%scope block 243 243
+.%var ind 11 ind_612 LIX
+.%var addr_hi 0 addr_hi_612 LIX
+.%var addr_lo 0 addr_lo_612 LIX
+.%scope end
+.%scope end
+.%scope function mem_bitclr_imm _mem_bitclr_imm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 247 252
+.%arg val 0 val_615_V$755
+.%arg addr 29 addr_615_V$756
+.%scope block 251 251
+.%var ind 11 ind_617 LIX
+.%var addr_hi 0 addr_hi_617 LIX
+.%var addr_lo 0 addr_lo_617 LIX
+.%scope end
+.%scope end
+.%scope function __mem_add32 ___mem_add32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 255 263
+.%arg data 14 data_620_V$767
+.%arg addr 29 addr_620_V$768
+.%arg size 0 size_620_V$769
+.%arg max_size 0 max_size_620_V$76a
+.%arg sync 8 sync_620_V$76b
+.%arg sig 9 sig_620_V$76c
+.%scope block 261 261
+.%var ind 11 ind_623 LIX
+.%var count 0 count_623 LIX
+.%var max_count 0 max_count_623 LIX
+.%var addr_hi 0 addr_hi_623 LIX
+.%var addr_lo 0 addr_lo_623 LIX
+.%scope end
+.%scope end
+.%scope function mem_add32 _mem_add32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 266 271
+.%arg data 14 data_637_V$780
+.%arg addr 29 addr_637_V$781
+.%arg size 0 size_637_V$782
+.%var sig 10 sig_637 LIX
+.%scope end
+.%scope function __mem_add64 ___mem_add64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 274 282
+.%arg data 14 data_638_V$784
+.%arg addr 29 addr_638_V$785
+.%arg size 0 size_638_V$786
+.%arg max_size 0 max_size_638_V$787
+.%arg sync 8 sync_638_V$788
+.%arg sig 9 sig_638_V$789
+.%scope block 280 280
+.%var ind 11 ind_641 LIX
+.%var count 0 count_641 LIX
+.%var max_count 0 max_count_641 LIX
+.%var addr_hi 0 addr_hi_641 LIX
+.%var addr_lo 0 addr_lo_641 LIX
+.%scope end
+.%scope end
+.%scope function mem_add64 _mem_add64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 285 290
+.%arg data 14 data_655_V$79c
+.%arg addr 29 addr_655_V$79d
+.%arg size 0 size_655_V$79e
+.%var sig 10 sig_655 LIX
+.%scope end
+.%scope function __mem_sub32 ___mem_sub32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 293 301
+.%arg data 14 data_656_V$7a0
+.%arg addr 29 addr_656_V$7a1
+.%arg size 0 size_656_V$7a2
+.%arg max_size 0 max_size_656_V$7a3
+.%arg sync 8 sync_656_V$7a4
+.%arg sig 9 sig_656_V$7a5
+.%scope block 299 299
+.%var ind 11 ind_659 LIX
+.%var count 0 count_659 LIX
+.%var max_count 0 max_count_659 LIX
+.%var addr_hi 0 addr_hi_659 LIX
+.%var addr_lo 0 addr_lo_659 LIX
+.%scope end
+.%scope end
+.%scope function mem_sub32 _mem_sub32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 304 309
+.%arg data 14 data_673_V$7b8
+.%arg addr 29 addr_673_V$7b9
+.%arg size 0 size_673_V$7ba
+.%var sig 10 sig_673 LIX
+.%scope end
+.%scope function __mem_sub64 ___mem_sub64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 312 320
+.%arg data 14 data_674_V$7bc
+.%arg addr 29 addr_674_V$7bd
+.%arg size 0 size_674_V$7be
+.%arg max_size 0 max_size_674_V$7bf
+.%arg sync 8 sync_674_V$7c0
+.%arg sig 9 sig_674_V$7c1
+.%scope block 318 318
+.%var ind 11 ind_677 LIX
+.%var count 0 count_677 LIX
+.%var max_count 0 max_count_677 LIX
+.%var addr_hi 0 addr_hi_677 LIX
+.%var addr_lo 0 addr_lo_677 LIX
+.%scope end
+.%scope end
+.%scope function mem_sub64 _mem_sub64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 323 328
+.%arg data 14 data_691_V$7d4
+.%arg addr 29 addr_691_V$7d5
+.%arg size 0 size_691_V$7d6
+.%var sig 10 sig_691 LIX
+.%scope end
+.%scope function __mem_bitset ___mem_bitset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 331 344
+.%arg data 14 data_692_V$7d8
+.%arg addr 29 addr_692_V$7d9
+.%arg size 0 size_692_V$7da
+.%arg max_size 0 max_size_692_V$7db
+.%arg sync 8 sync_692_V$7dc
+.%arg sig 9 sig_692_V$7dd
+.%scope block 342 342
+.%var ind 11 ind_695 LIX
+.%var count 0 count_695 LIX
+.%var max_count 0 max_count_695 LIX
+.%var addr_hi 0 addr_hi_695 LIX
+.%var addr_lo 0 addr_lo_695 LIX
+.%scope end
+.%scope end
+.%scope function mem_bitset _mem_bitset "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 347 352
+.%arg data 14 data_709_V$7f0
+.%arg addr 29 addr_709_V$7f1
+.%arg size 0 size_709_V$7f2
+.%var sig 10 sig_709 LIX
+.%scope end
+.%scope function __mem_bitclr ___mem_bitclr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 355 368
+.%arg data 14 data_710_V$7f4
+.%arg addr 29 addr_710_V$7f5
+.%arg size 0 size_710_V$7f6
+.%arg max_size 0 max_size_710_V$7f7
+.%arg sync 8 sync_710_V$7f8
+.%arg sig 9 sig_710_V$7f9
+.%scope block 366 366
+.%var ind 11 ind_713 LIX
+.%var count 0 count_713 LIX
+.%var max_count 0 max_count_713 LIX
+.%var addr_hi 0 addr_hi_713 LIX
+.%var addr_lo 0 addr_lo_713 LIX
+.%scope end
+.%scope end
+.%scope function mem_bitclr _mem_bitclr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 371 376
+.%arg data 14 data_727_V$80c
+.%arg addr 29 addr_727_V$80d
+.%arg size 0 size_727_V$80e
+.%var sig 10 sig_727 LIX
+.%scope end
+.%scope function __mem_test_set ___mem_test_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 379 387
+.%arg data 15 data_728_V$810
+.%arg addr 29 addr_728_V$811
+.%arg size 0 size_728_V$812
+.%arg max_size 0 max_size_728_V$813
+.%arg sync 8 sync_728_V$814
+.%arg sig_pair 30 sig_pair_728_V$815
+.%scope block 385 385
+.%var ind 11 ind_731 LIX
+.%var count 0 count_731 LIX
+.%var max_count 0 max_count_731 LIX
+.%var addr_hi 0 addr_hi_731 LIX
+.%var addr_lo 0 addr_lo_731 LIX
+.%scope end
+.%scope end
+.%scope function mem_test_set _mem_test_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 390 396
+.%arg data 15 data_741_V$829
+.%arg addr 29 addr_741_V$82a
+.%arg size 0 size_741_V$82b
+.%var sig_pair 31 sig_pair_741 LIX
+.%scope end
+.%scope function __mem_test_clr ___mem_test_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 399 407
+.%arg data 15 data_742_V$82f
+.%arg addr 29 addr_742_V$830
+.%arg size 0 size_742_V$831
+.%arg max_size 0 max_size_742_V$832
+.%arg sync 8 sync_742_V$833
+.%arg sig_pair 30 sig_pair_742_V$834
+.%scope block 405 405
+.%var ind 11 ind_745 LIX
+.%var count 0 count_745 LIX
+.%var max_count 0 max_count_745 LIX
+.%var addr_hi 0 addr_hi_745 LIX
+.%var addr_lo 0 addr_lo_745 LIX
+.%scope end
+.%scope end
+.%scope function mem_test_clr _mem_test_clr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 410 416
+.%arg data 15 data_755_V$847
+.%arg addr 29 addr_755_V$848
+.%arg size 0 size_755_V$849
+.%var sig_pair 31 sig_pair_755 LIX
+.%scope end
+.%scope function __mem_test_add ___mem_test_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 419 427
+.%arg data 15 data_756_V$84d
+.%arg addr 29 addr_756_V$84e
+.%arg size 0 size_756_V$84f
+.%arg max_size 0 max_size_756_V$850
+.%arg sync 8 sync_756_V$851
+.%arg sig_pair 30 sig_pair_756_V$852
+.%scope block 425 425
+.%var ind 11 ind_759 LIX
+.%var count 0 count_759 LIX
+.%var max_count 0 max_count_759 LIX
+.%var addr_hi 0 addr_hi_759 LIX
+.%var addr_lo 0 addr_lo_759 LIX
+.%scope end
+.%scope end
+.%scope function mem_test_add _mem_test_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 430 436
+.%arg data 15 data_769_V$865
+.%arg addr 29 addr_769_V$866
+.%arg size 0 size_769_V$867
+.%var sig_pair 31 sig_pair_769 LIX
+.%scope end
+.%scope function __mem_test_sub ___mem_test_sub "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 439 447
+.%arg data 15 data_770_V$86b
+.%arg addr 29 addr_770_V$86c
+.%arg size 0 size_770_V$86d
+.%arg max_size 0 max_size_770_V$86e
+.%arg sync 8 sync_770_V$86f
+.%arg sig_pair 30 sig_pair_770_V$870
+.%scope block 445 445
+.%var ind 11 ind_773 LIX
+.%var count 0 count_773 LIX
+.%var max_count 0 max_count_773 LIX
+.%var addr_hi 0 addr_hi_773 LIX
+.%var addr_lo 0 addr_lo_773 LIX
+.%scope end
+.%scope end
+.%scope function mem_test_sub _mem_test_sub "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_atomic.c" 450 456
+.%arg data 15 data_783_V$883
+.%arg addr 29 addr_783_V$884
+.%arg size 0 size_783_V$885
+.%var sig_pair 31 sig_pair_783 LIX
+.%scope end
+.%scope function __mem_read64 ___mem_read64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 94 102
+.%arg data 5 data_826_V$889
+.%arg addr 29 addr_826_V$88a
+.%arg size 0 size_826_V$88b
+.%arg max_size 0 max_size_826_V$88c
+.%arg sync 8 sync_826_V$88d
+.%arg sig 9 sig_826_V$88e
+.%scope block 101 101
+.%var ind 11 ind_830 LIX
+.%var count 0 count_830 LIX
+.%var max_count 0 max_count_830 LIX
+.%var addr_hi 0 addr_hi_830 LIX
+.%var addr_lo 0 addr_lo_830 LIX
+.%scope end
+.%scope end
+.%scope function mem_read64 _mem_read64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 105 110
+.%arg data 5 data_844_V$8a2
+.%arg addr 29 addr_844_V$8a3
+.%arg size 0 size_844_V$8a4
+.%var sig 10 sig_844 LIX
+.%scope end
+.%scope function __mem_read64_le ___mem_read64_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 113 121
+.%arg data 5 data_845_V$8a6
+.%arg addr 29 addr_845_V$8a7
+.%arg size 0 size_845_V$8a8
+.%arg max_size 0 max_size_845_V$8a9
+.%arg sync 8 sync_845_V$8aa
+.%arg sig 9 sig_845_V$8ab
+.%scope block 120 120
+.%var ind 11 ind_849 LIX
+.%var count 0 count_849 LIX
+.%var max_count 0 max_count_849 LIX
+.%var addr_hi 0 addr_hi_849 LIX
+.%var addr_lo 0 addr_lo_849 LIX
+.%scope end
+.%scope end
+.%scope function mem_read64_le _mem_read64_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 124 129
+.%arg data 5 data_863_V$8be
+.%arg addr 29 addr_863_V$8bf
+.%arg size 0 size_863_V$8c0
+.%var sig 10 sig_863 LIX
+.%scope end
+.%scope function __mem_read64_swap ___mem_read64_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 132 140
+.%arg data 5 data_864_V$8c2
+.%arg addr 29 addr_864_V$8c3
+.%arg size 0 size_864_V$8c4
+.%arg max_size 0 max_size_864_V$8c5
+.%arg sync 8 sync_864_V$8c6
+.%arg sig 9 sig_864_V$8c7
+.%scope block 139 139
+.%var ind 11 ind_868 LIX
+.%var count 0 count_868 LIX
+.%var max_count 0 max_count_868 LIX
+.%var addr_hi 0 addr_hi_868 LIX
+.%var addr_lo 0 addr_lo_868 LIX
+.%scope end
+.%scope end
+.%scope function mem_read64_swap _mem_read64_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 143 148
+.%arg data 5 data_882_V$8da
+.%arg addr 29 addr_882_V$8db
+.%arg size 0 size_882_V$8dc
+.%var sig 10 sig_882 LIX
+.%scope end
+.%scope function __mem_read64_swap_le ___mem_read64_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 151 159
+.%arg data 5 data_883_V$8de
+.%arg addr 29 addr_883_V$8df
+.%arg size 0 size_883_V$8e0
+.%arg max_size 0 max_size_883_V$8e1
+.%arg sync 8 sync_883_V$8e2
+.%arg sig 9 sig_883_V$8e3
+.%scope block 158 158
+.%var ind 11 ind_887 LIX
+.%var count 0 count_887 LIX
+.%var max_count 0 max_count_887 LIX
+.%var addr_hi 0 addr_hi_887 LIX
+.%var addr_lo 0 addr_lo_887 LIX
+.%scope end
+.%scope end
+.%scope function mem_read64_swap_le _mem_read64_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 162 167
+.%arg data 5 data_901_V$8f6
+.%arg addr 29 addr_901_V$8f7
+.%arg size 0 size_901_V$8f8
+.%var sig 10 sig_901 LIX
+.%scope end
+.%scope function __mem_read32 ___mem_read32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 171 179
+.%arg data 5 data_902_V$8fa
+.%arg addr 29 addr_902_V$8fb
+.%arg size 0 size_902_V$8fc
+.%arg max_size 0 max_size_902_V$8fd
+.%arg sync 8 sync_902_V$8fe
+.%arg sig 9 sig_902_V$8ff
+.%scope block 178 178
+.%var ind 11 ind_906 LIX
+.%var count 0 count_906 LIX
+.%var max_count 0 max_count_906 LIX
+.%var addr_hi 0 addr_hi_906 LIX
+.%var addr_lo 0 addr_lo_906 LIX
+.%scope end
+.%scope end
+.%scope function mem_read32 _mem_read32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 182 187
+.%arg data 5 data_920_V$912
+.%arg addr 29 addr_920_V$913
+.%arg size 0 size_920_V$914
+.%var sig 10 sig_920 LIX
+.%scope end
+.%scope function __mem_read32_le ___mem_read32_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 190 198
+.%arg data 5 data_921_V$916
+.%arg addr 29 addr_921_V$917
+.%arg size 0 size_921_V$918
+.%arg max_size 0 max_size_921_V$919
+.%arg sync 8 sync_921_V$91a
+.%arg sig 9 sig_921_V$91b
+.%scope block 197 197
+.%var ind 11 ind_925 LIX
+.%var count 0 count_925 LIX
+.%var max_count 0 max_count_925 LIX
+.%var addr_hi 0 addr_hi_925 LIX
+.%var addr_lo 0 addr_lo_925 LIX
+.%scope end
+.%scope end
+.%scope function mem_read32_le _mem_read32_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 201 206
+.%arg data 5 data_939_V$92e
+.%arg addr 29 addr_939_V$92f
+.%arg size 0 size_939_V$930
+.%var sig 10 sig_939 LIX
+.%scope end
+.%scope function __mem_read32_swap ___mem_read32_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 209 217
+.%arg data 5 data_940_V$932
+.%arg addr 29 addr_940_V$933
+.%arg size 0 size_940_V$934
+.%arg max_size 0 max_size_940_V$935
+.%arg sync 8 sync_940_V$936
+.%arg sig 9 sig_940_V$937
+.%scope block 216 216
+.%var ind 11 ind_944 LIX
+.%var count 0 count_944 LIX
+.%var max_count 0 max_count_944 LIX
+.%var addr_hi 0 addr_hi_944 LIX
+.%var addr_lo 0 addr_lo_944 LIX
+.%scope end
+.%scope end
+.%scope function mem_read32_swap _mem_read32_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 220 225
+.%arg data 5 data_958_V$94a
+.%arg addr 29 addr_958_V$94b
+.%arg size 0 size_958_V$94c
+.%var sig 10 sig_958 LIX
+.%scope end
+.%scope function __mem_read32_swap_le ___mem_read32_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 228 236
+.%arg data 5 data_959_V$94e
+.%arg addr 29 addr_959_V$94f
+.%arg size 0 size_959_V$950
+.%arg max_size 0 max_size_959_V$951
+.%arg sync 8 sync_959_V$952
+.%arg sig 9 sig_959_V$953
+.%scope block 235 235
+.%var ind 11 ind_963 LIX
+.%var count 0 count_963 LIX
+.%var max_count 0 max_count_963 LIX
+.%var addr_hi 0 addr_hi_963 LIX
+.%var addr_lo 0 addr_lo_963 LIX
+.%scope end
+.%scope end
+.%scope function mem_read32_swap_le _mem_read32_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 239 244
+.%arg data 5 data_977_V$966
+.%arg addr 29 addr_977_V$967
+.%arg size 0 size_977_V$968
+.%var sig 10 sig_977 LIX
+.%scope end
+.%scope function __mem_read8 ___mem_read8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 248 255
+.%arg data 5 data_978_V$96a
+.%arg addr 29 addr_978_V$96b
+.%arg size 0 size_978_V$96c
+.%arg max_size 0 max_size_978_V$96d
+.%arg sync 8 sync_978_V$96e
+.%arg sig 9 sig_978_V$96f
+.%scope block 254 254
+.%var ind 11 ind_981 LIX
+.%var count 0 count_981 LIX
+.%var max_count 0 max_count_981 LIX
+.%var addr_hi 0 addr_hi_981 LIX
+.%var addr_lo 0 addr_lo_981 LIX
+.%scope end
+.%scope end
+.%scope function mem_read8 _mem_read8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 258 263
+.%arg data 5 data_995_V$982
+.%arg addr 29 addr_995_V$983
+.%arg size 0 size_995_V$984
+.%var sig 10 sig_995 LIX
+.%scope end
+.%scope function __mem_write64 ___mem_write64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 267 275
+.%arg data 14 data_996_V$986
+.%arg addr 29 addr_996_V$987
+.%arg size 0 size_996_V$988
+.%arg max_size 0 max_size_996_V$989
+.%arg sync 8 sync_996_V$98a
+.%arg sig 9 sig_996_V$98b
+.%scope block 274 274
+.%var ind 11 ind_1000 LIX
+.%var count 0 count_1000 LIX
+.%var max_count 0 max_count_1000 LIX
+.%var addr_hi 0 addr_hi_1000 LIX
+.%var addr_lo 0 addr_lo_1000 LIX
+.%scope end
+.%scope end
+.%scope function mem_write64 _mem_write64 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 278 283
+.%arg data 14 data_1014_V$99e
+.%arg addr 29 addr_1014_V$99f
+.%arg size 0 size_1014_V$9a0
+.%var sig 10 sig_1014 LIX
+.%scope end
+.%scope function __mem_write64_le ___mem_write64_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 286 294
+.%arg data 14 data_1015_V$9a2
+.%arg addr 29 addr_1015_V$9a3
+.%arg size 0 size_1015_V$9a4
+.%arg max_size 0 max_size_1015_V$9a5
+.%arg sync 8 sync_1015_V$9a6
+.%arg sig 9 sig_1015_V$9a7
+.%scope block 293 293
+.%var ind 11 ind_1019 LIX
+.%var count 0 count_1019 LIX
+.%var max_count 0 max_count_1019 LIX
+.%var addr_hi 0 addr_hi_1019 LIX
+.%var addr_lo 0 addr_lo_1019 LIX
+.%scope end
+.%scope end
+.%scope function mem_write64_le _mem_write64_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 297 302
+.%arg data 14 data_1033_V$9ba
+.%arg addr 29 addr_1033_V$9bb
+.%arg size 0 size_1033_V$9bc
+.%var sig 10 sig_1033 LIX
+.%scope end
+.%scope function __mem_write64_swap ___mem_write64_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 305 313
+.%arg data 14 data_1034_V$9be
+.%arg addr 29 addr_1034_V$9bf
+.%arg size 0 size_1034_V$9c0
+.%arg max_size 0 max_size_1034_V$9c1
+.%arg sync 8 sync_1034_V$9c2
+.%arg sig 9 sig_1034_V$9c3
+.%scope block 312 312
+.%var ind 11 ind_1038 LIX
+.%var count 0 count_1038 LIX
+.%var max_count 0 max_count_1038 LIX
+.%var addr_hi 0 addr_hi_1038 LIX
+.%var addr_lo 0 addr_lo_1038 LIX
+.%scope end
+.%scope end
+.%scope function mem_write64_swap _mem_write64_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 316 321
+.%arg data 14 data_1052_V$9d6
+.%arg addr 29 addr_1052_V$9d7
+.%arg size 0 size_1052_V$9d8
+.%var sig 10 sig_1052 LIX
+.%scope end
+.%scope function __mem_write64_swap_le ___mem_write64_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 324 332
+.%arg data 14 data_1053_V$9da
+.%arg addr 29 addr_1053_V$9db
+.%arg size 0 size_1053_V$9dc
+.%arg max_size 0 max_size_1053_V$9dd
+.%arg sync 8 sync_1053_V$9de
+.%arg sig 9 sig_1053_V$9df
+.%scope block 331 331
+.%var ind 11 ind_1057 LIX
+.%var count 0 count_1057 LIX
+.%var max_count 0 max_count_1057 LIX
+.%var addr_hi 0 addr_hi_1057 LIX
+.%var addr_lo 0 addr_lo_1057 LIX
+.%scope end
+.%scope end
+.%scope function mem_write64_swap_le _mem_write64_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 335 340
+.%arg data 14 data_1071_V$9f2
+.%arg addr 29 addr_1071_V$9f3
+.%arg size 0 size_1071_V$9f4
+.%var sig 10 sig_1071 LIX
+.%scope end
+.%scope function __mem_write32 ___mem_write32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 344 352
+.%arg data 14 data_1072_V$9f6
+.%arg addr 29 addr_1072_V$9f7
+.%arg size 0 size_1072_V$9f8
+.%arg max_size 0 max_size_1072_V$9f9
+.%arg sync 8 sync_1072_V$9fa
+.%arg sig 9 sig_1072_V$9fb
+.%scope block 351 351
+.%var ind 11 ind_1076 LIX
+.%var count 0 count_1076 LIX
+.%var max_count 0 max_count_1076 LIX
+.%var addr_hi 0 addr_hi_1076 LIX
+.%var addr_lo 0 addr_lo_1076 LIX
+.%scope end
+.%scope end
+.%scope function mem_write32 _mem_write32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 355 360
+.%arg data 14 data_1090_V$a0e
+.%arg addr 29 addr_1090_V$a0f
+.%arg size 0 size_1090_V$a10
+.%var sig 10 sig_1090 LIX
+.%scope end
+.%scope function __mem_write32_le ___mem_write32_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 363 371
+.%arg data 14 data_1091_V$a12
+.%arg addr 29 addr_1091_V$a13
+.%arg size 0 size_1091_V$a14
+.%arg max_size 0 max_size_1091_V$a15
+.%arg sync 8 sync_1091_V$a16
+.%arg sig 9 sig_1091_V$a17
+.%scope block 370 370
+.%var ind 11 ind_1095 LIX
+.%var count 0 count_1095 LIX
+.%var max_count 0 max_count_1095 LIX
+.%var addr_hi 0 addr_hi_1095 LIX
+.%var addr_lo 0 addr_lo_1095 LIX
+.%scope end
+.%scope end
+.%scope function mem_write32_le _mem_write32_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 374 379
+.%arg data 14 data_1109_V$a2a
+.%arg addr 29 addr_1109_V$a2b
+.%arg size 0 size_1109_V$a2c
+.%var sig 10 sig_1109 LIX
+.%scope end
+.%scope function __mem_write32_swap ___mem_write32_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 382 390
+.%arg data 14 data_1110_V$a2e
+.%arg addr 29 addr_1110_V$a2f
+.%arg size 0 size_1110_V$a30
+.%arg max_size 0 max_size_1110_V$a31
+.%arg sync 8 sync_1110_V$a32
+.%arg sig 9 sig_1110_V$a33
+.%scope block 389 389
+.%var ind 11 ind_1114 LIX
+.%var count 0 count_1114 LIX
+.%var max_count 0 max_count_1114 LIX
+.%var addr_hi 0 addr_hi_1114 LIX
+.%var addr_lo 0 addr_lo_1114 LIX
+.%scope end
+.%scope end
+.%scope function mem_write32_swap _mem_write32_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 393 398
+.%arg data 14 data_1128_V$a46
+.%arg addr 29 addr_1128_V$a47
+.%arg size 0 size_1128_V$a48
+.%var sig 10 sig_1128 LIX
+.%scope end
+.%scope function __mem_write32_swap_le ___mem_write32_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 401 409
+.%arg data 14 data_1129_V$a4a
+.%arg addr 29 addr_1129_V$a4b
+.%arg size 0 size_1129_V$a4c
+.%arg max_size 0 max_size_1129_V$a4d
+.%arg sync 8 sync_1129_V$a4e
+.%arg sig 9 sig_1129_V$a4f
+.%scope block 408 408
+.%var ind 11 ind_1133 LIX
+.%var count 0 count_1133 LIX
+.%var max_count 0 max_count_1133 LIX
+.%var addr_hi 0 addr_hi_1133 LIX
+.%var addr_lo 0 addr_lo_1133 LIX
+.%scope end
+.%scope end
+.%scope function mem_write32_swap_le _mem_write32_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 412 417
+.%arg data 14 data_1147_V$a62
+.%arg addr 29 addr_1147_V$a63
+.%arg size 0 size_1147_V$a64
+.%var sig 10 sig_1147 LIX
+.%scope end
+.%scope function __mem_write8 ___mem_write8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 421 428
+.%arg data 14 data_1148_V$a66
+.%arg addr 29 addr_1148_V$a67
+.%arg size 0 size_1148_V$a68
+.%arg max_size 0 max_size_1148_V$a69
+.%arg sync 8 sync_1148_V$a6a
+.%arg sig 9 sig_1148_V$a6b
+.%scope block 427 427
+.%var ind 11 ind_1151 LIX
+.%var count 0 count_1151 LIX
+.%var max_count 0 max_count_1151 LIX
+.%var addr_hi 0 addr_hi_1151 LIX
+.%var addr_lo 0 addr_lo_1151 LIX
+.%scope end
+.%scope end
+.%scope function mem_write8 _mem_write8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 431 436
+.%arg data 14 data_1165_V$a7e
+.%arg addr 29 addr_1165_V$a7f
+.%arg size 0 size_1165_V$a80
+.%var sig 10 sig_1165 LIX
+.%scope end
+.%scope function __mem_write8_le ___mem_write8_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 439 446
+.%arg data 14 data_1166_V$a82
+.%arg addr 29 addr_1166_V$a83
+.%arg size 0 size_1166_V$a84
+.%arg max_size 0 max_size_1166_V$a85
+.%arg sync 8 sync_1166_V$a86
+.%arg sig 9 sig_1166_V$a87
+.%scope block 445 445
+.%var ind 11 ind_1169 LIX
+.%var count 0 count_1169 LIX
+.%var max_count 0 max_count_1169 LIX
+.%var addr_hi 0 addr_hi_1169 LIX
+.%var addr_lo 0 addr_lo_1169 LIX
+.%scope end
+.%scope end
+.%scope function mem_write8_le _mem_write8_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 449 454
+.%arg data 14 data_1183_V$a9a
+.%arg addr 29 addr_1183_V$a9b
+.%arg size 0 size_1183_V$a9c
+.%var sig 10 sig_1183 LIX
+.%scope end
+.%scope function __mem_write8_swap ___mem_write8_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 457 464
+.%arg data 14 data_1184_V$a9e
+.%arg addr 29 addr_1184_V$a9f
+.%arg size 0 size_1184_V$aa0
+.%arg max_size 0 max_size_1184_V$aa1
+.%arg sync 8 sync_1184_V$aa2
+.%arg sig 9 sig_1184_V$aa3
+.%scope block 463 463
+.%var ind 11 ind_1187 LIX
+.%var count 0 count_1187 LIX
+.%var max_count 0 max_count_1187 LIX
+.%var addr_hi 0 addr_hi_1187 LIX
+.%var addr_lo 0 addr_lo_1187 LIX
+.%scope end
+.%scope end
+.%scope function mem_write8_swap _mem_write8_swap "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 467 472
+.%arg data 14 data_1201_V$ab6
+.%arg addr 29 addr_1201_V$ab7
+.%arg size 0 size_1201_V$ab8
+.%var sig 10 sig_1201 LIX
+.%scope end
+.%scope function __mem_write8_swap_le ___mem_write8_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 475 482
+.%arg data 14 data_1202_V$aba
+.%arg addr 29 addr_1202_V$abb
+.%arg size 0 size_1202_V$abc
+.%arg max_size 0 max_size_1202_V$abd
+.%arg sync 8 sync_1202_V$abe
+.%arg sig 9 sig_1202_V$abf
+.%scope block 481 481
+.%var ind 11 ind_1205 LIX
+.%var count 0 count_1205 LIX
+.%var max_count 0 max_count_1205 LIX
+.%var addr_hi 0 addr_hi_1205 LIX
+.%var addr_lo 0 addr_lo_1205 LIX
+.%scope end
+.%scope end
+.%scope function mem_write8_swap_le _mem_write8_swap_le "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_bulk.c" 485 490
+.%arg data 14 data_1219_V$ad2
+.%arg addr 29 addr_1219_V$ad3
+.%arg size 0 size_1219_V$ad4
+.%var sig 10 sig_1219 LIX
+.%scope end
+.%scope function __mem_cam_lookup ___mem_cam_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 26 115
+.%arg data 15 data_1305_V$ad6
+.%arg addr 29 addr_1305_V$ad7
+.%arg camsize 10 camsize_1305_V$ad8
+.%arg cambits 10 cambits_1305_V$ad9
+.%arg sync 8 sync_1305_V$ada
+.%arg sigpair 30 sigpair_1305_V$adb
+.%var ind 11 ind_1305 LIX
+.%var addr_hi 0 addr_hi_1305 LIX
+.%var addr_lo 0 addr_lo_1305 LIX
+.%scope end
+.%scope function mem_cam_lookup _mem_cam_lookup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 118 125
+.%arg data 15 data_1325_V$af2
+.%arg addr 29 addr_1325_V$af3
+.%arg camsize 10 camsize_1325_V$af4
+.%arg cambits 10 cambits_1325_V$af5
+.%var sigpair 31 sigpair_1325 LIX
+.%scope end
+.%scope function __mem_cam_lookup_add ___mem_cam_lookup_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 128 217
+.%arg data 15 data_1326_V$af9
+.%arg addr 29 addr_1326_V$afa
+.%arg camsize 10 camsize_1326_V$afb
+.%arg cambits 10 cambits_1326_V$afc
+.%arg sync 8 sync_1326_V$afd
+.%arg sigpair 30 sigpair_1326_V$afe
+.%var ind 11 ind_1326 LIX
+.%var addr_hi 0 addr_hi_1326 LIX
+.%var addr_lo 0 addr_lo_1326 LIX
+.%scope end
+.%scope function mem_cam_lookup_add _mem_cam_lookup_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 220 227
+.%arg data 15 data_1346_V$b0f
+.%arg addr 29 addr_1346_V$b10
+.%arg camsize 10 camsize_1346_V$b11
+.%arg cambits 10 cambits_1346_V$b12
+.%var sigpair 31 sigpair_1346 LIX
+.%scope end
+.%scope function __mem_cam128_lookup8 ___mem_cam128_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 237 242
+.%arg data 32 data_1347_V$b16
+.%arg addr 38 addr_1347_V$b17
+.%arg sync 8 sync_1347_V$b18
+.%arg sigpair 30 sigpair_1347_V$b19
+.%scope end
+.%scope function mem_cam128_lookup8 _mem_cam128_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 245 249
+.%arg data 32 data_1348_V$b1a
+.%arg addr 38 addr_1348_V$b1b
+.%scope end
+.%scope function __mem_cam128_lookup16 ___mem_cam128_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 252 257
+.%arg data 39 data_1349_V$b1c
+.%arg addr 38 addr_1349_V$b1d
+.%arg sync 8 sync_1349_V$b1e
+.%arg sigpair 30 sigpair_1349_V$b1f
+.%scope end
+.%scope function mem_cam128_lookup16 _mem_cam128_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 260 264
+.%arg data 39 data_1350_V$b20
+.%arg addr 38 addr_1350_V$b21
+.%scope end
+.%scope function __mem_cam128_lookup24 ___mem_cam128_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 267 272
+.%arg data 44 data_1351_V$b22
+.%arg addr 38 addr_1351_V$b23
+.%arg sync 8 sync_1351_V$b24
+.%arg sigpair 30 sigpair_1351_V$b25
+.%scope end
+.%scope function mem_cam128_lookup24 _mem_cam128_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 275 279
+.%arg data 44 data_1352_V$b26
+.%arg addr 38 addr_1352_V$b27
+.%scope end
+.%scope function __mem_cam128_lookup32 ___mem_cam128_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 282 287
+.%arg data 49 data_1353_V$b28
+.%arg addr 38 addr_1353_V$b29
+.%arg sync 8 sync_1353_V$b2a
+.%arg sigpair 30 sigpair_1353_V$b2b
+.%scope end
+.%scope function mem_cam128_lookup32 _mem_cam128_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 290 294
+.%arg data 49 data_1354_V$b2c
+.%arg addr 38 addr_1354_V$b2d
+.%scope end
+.%scope function __mem_cam256_lookup8 ___mem_cam256_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 297 302
+.%arg data 32 data_1355_V$b2e
+.%arg addr 38 addr_1355_V$b2f
+.%arg sync 8 sync_1355_V$b30
+.%arg sigpair 30 sigpair_1355_V$b31
+.%scope end
+.%scope function mem_cam256_lookup8 _mem_cam256_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 305 309
+.%arg data 32 data_1356_V$b32
+.%arg addr 38 addr_1356_V$b33
+.%scope end
+.%scope function __mem_cam256_lookup16 ___mem_cam256_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 312 317
+.%arg data 39 data_1357_V$b34
+.%arg addr 38 addr_1357_V$b35
+.%arg sync 8 sync_1357_V$b36
+.%arg sigpair 30 sigpair_1357_V$b37
+.%scope end
+.%scope function mem_cam256_lookup16 _mem_cam256_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 320 324
+.%arg data 39 data_1358_V$b38
+.%arg addr 38 addr_1358_V$b39
+.%scope end
+.%scope function __mem_cam256_lookup24 ___mem_cam256_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 327 332
+.%arg data 44 data_1359_V$b3a
+.%arg addr 38 addr_1359_V$b3b
+.%arg sync 8 sync_1359_V$b3c
+.%arg sigpair 30 sigpair_1359_V$b3d
+.%scope end
+.%scope function mem_cam256_lookup24 _mem_cam256_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 335 339
+.%arg data 44 data_1360_V$b3e
+.%arg addr 38 addr_1360_V$b3f
+.%scope end
+.%scope function __mem_cam256_lookup32 ___mem_cam256_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 342 347
+.%arg data 49 data_1361_V$b40
+.%arg addr 38 addr_1361_V$b41
+.%arg sync 8 sync_1361_V$b42
+.%arg sigpair 30 sigpair_1361_V$b43
+.%scope end
+.%scope function mem_cam256_lookup32 _mem_cam256_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 350 354
+.%arg data 49 data_1362_V$b44
+.%arg addr 38 addr_1362_V$b45
+.%scope end
+.%scope function __mem_cam384_lookup8 ___mem_cam384_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 357 362
+.%arg data 32 data_1363_V$b46
+.%arg addr 38 addr_1363_V$b47
+.%arg sync 8 sync_1363_V$b48
+.%arg sigpair 30 sigpair_1363_V$b49
+.%scope end
+.%scope function mem_cam384_lookup8 _mem_cam384_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 365 369
+.%arg data 32 data_1364_V$b4a
+.%arg addr 38 addr_1364_V$b4b
+.%scope end
+.%scope function __mem_cam384_lookup16 ___mem_cam384_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 372 377
+.%arg data 39 data_1365_V$b4c
+.%arg addr 38 addr_1365_V$b4d
+.%arg sync 8 sync_1365_V$b4e
+.%arg sigpair 30 sigpair_1365_V$b4f
+.%scope end
+.%scope function mem_cam384_lookup16 _mem_cam384_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 380 384
+.%arg data 39 data_1366_V$b50
+.%arg addr 38 addr_1366_V$b51
+.%scope end
+.%scope function __mem_cam384_lookup24 ___mem_cam384_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 387 392
+.%arg data 44 data_1367_V$b52
+.%arg addr 38 addr_1367_V$b53
+.%arg sync 8 sync_1367_V$b54
+.%arg sigpair 30 sigpair_1367_V$b55
+.%scope end
+.%scope function mem_cam384_lookup24 _mem_cam384_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 395 399
+.%arg data 44 data_1368_V$b56
+.%arg addr 38 addr_1368_V$b57
+.%scope end
+.%scope function __mem_cam384_lookup32 ___mem_cam384_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 402 407
+.%arg data 49 data_1369_V$b58
+.%arg addr 38 addr_1369_V$b59
+.%arg sync 8 sync_1369_V$b5a
+.%arg sigpair 30 sigpair_1369_V$b5b
+.%scope end
+.%scope function mem_cam384_lookup32 _mem_cam384_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 410 414
+.%arg data 49 data_1370_V$b5c
+.%arg addr 38 addr_1370_V$b5d
+.%scope end
+.%scope function __mem_cam512_lookup8 ___mem_cam512_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 417 422
+.%arg data 32 data_1371_V$b5e
+.%arg addr 38 addr_1371_V$b5f
+.%arg sync 8 sync_1371_V$b60
+.%arg sigpair 30 sigpair_1371_V$b61
+.%scope end
+.%scope function mem_cam512_lookup8 _mem_cam512_lookup8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 425 429
+.%arg data 32 data_1372_V$b62
+.%arg addr 38 addr_1372_V$b63
+.%scope end
+.%scope function __mem_cam512_lookup16 ___mem_cam512_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 432 437
+.%arg data 39 data_1373_V$b64
+.%arg addr 38 addr_1373_V$b65
+.%arg sync 8 sync_1373_V$b66
+.%arg sigpair 30 sigpair_1373_V$b67
+.%scope end
+.%scope function mem_cam512_lookup16 _mem_cam512_lookup16 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 440 444
+.%arg data 39 data_1374_V$b68
+.%arg addr 38 addr_1374_V$b69
+.%scope end
+.%scope function __mem_cam512_lookup24 ___mem_cam512_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 447 452
+.%arg data 44 data_1375_V$b6a
+.%arg addr 38 addr_1375_V$b6b
+.%arg sync 8 sync_1375_V$b6c
+.%arg sigpair 30 sigpair_1375_V$b6d
+.%scope end
+.%scope function mem_cam512_lookup24 _mem_cam512_lookup24 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 455 459
+.%arg data 44 data_1376_V$b6e
+.%arg addr 38 addr_1376_V$b6f
+.%scope end
+.%scope function __mem_cam512_lookup32 ___mem_cam512_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 462 467
+.%arg data 49 data_1377_V$b70
+.%arg addr 38 addr_1377_V$b71
+.%arg sync 8 sync_1377_V$b72
+.%arg sigpair 30 sigpair_1377_V$b73
+.%scope end
+.%scope function mem_cam512_lookup32 _mem_cam512_lookup32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 470 474
+.%arg data 49 data_1378_V$b74
+.%arg addr 38 addr_1378_V$b75
+.%scope end
+.%scope function __mem_cam128_lookup8_add ___mem_cam128_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 478 483
+.%arg data 32 data_1379_V$b76
+.%arg addr 38 addr_1379_V$b77
+.%arg sync 8 sync_1379_V$b78
+.%arg sigpair 30 sigpair_1379_V$b79
+.%scope end
+.%scope function mem_cam128_lookup8_add _mem_cam128_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 486 490
+.%arg data 32 data_1380_V$b7a
+.%arg addr 38 addr_1380_V$b7b
+.%scope end
+.%scope function __mem_cam128_lookup16_add ___mem_cam128_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 493 498
+.%arg data 39 data_1381_V$b7c
+.%arg addr 38 addr_1381_V$b7d
+.%arg sync 8 sync_1381_V$b7e
+.%arg sigpair 30 sigpair_1381_V$b7f
+.%scope end
+.%scope function mem_cam128_lookup16_add _mem_cam128_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 501 505
+.%arg data 39 data_1382_V$b80
+.%arg addr 38 addr_1382_V$b81
+.%scope end
+.%scope function __mem_cam128_lookup24_add ___mem_cam128_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 508 513
+.%arg data 44 data_1383_V$b82
+.%arg addr 38 addr_1383_V$b83
+.%arg sync 8 sync_1383_V$b84
+.%arg sigpair 30 sigpair_1383_V$b85
+.%scope end
+.%scope function mem_cam128_lookup24_add _mem_cam128_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 516 520
+.%arg data 44 data_1384_V$b86
+.%arg addr 38 addr_1384_V$b87
+.%scope end
+.%scope function __mem_cam128_lookup32_add ___mem_cam128_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 523 528
+.%arg data 49 data_1385_V$b88
+.%arg addr 38 addr_1385_V$b89
+.%arg sync 8 sync_1385_V$b8a
+.%arg sigpair 30 sigpair_1385_V$b8b
+.%scope end
+.%scope function mem_cam128_lookup32_add _mem_cam128_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 531 535
+.%arg data 49 data_1386_V$b8c
+.%arg addr 38 addr_1386_V$b8d
+.%scope end
+.%scope function __mem_cam256_lookup8_add ___mem_cam256_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 538 543
+.%arg data 32 data_1387_V$b8e
+.%arg addr 38 addr_1387_V$b8f
+.%arg sync 8 sync_1387_V$b90
+.%arg sigpair 30 sigpair_1387_V$b91
+.%scope end
+.%scope function mem_cam256_lookup8_add _mem_cam256_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 546 550
+.%arg data 32 data_1388_V$b92
+.%arg addr 38 addr_1388_V$b93
+.%scope end
+.%scope function __mem_cam256_lookup16_add ___mem_cam256_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 553 558
+.%arg data 39 data_1389_V$b94
+.%arg addr 38 addr_1389_V$b95
+.%arg sync 8 sync_1389_V$b96
+.%arg sigpair 30 sigpair_1389_V$b97
+.%scope end
+.%scope function mem_cam256_lookup16_add _mem_cam256_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 561 565
+.%arg data 39 data_1390_V$b98
+.%arg addr 38 addr_1390_V$b99
+.%scope end
+.%scope function __mem_cam256_lookup24_add ___mem_cam256_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 568 573
+.%arg data 44 data_1391_V$b9a
+.%arg addr 38 addr_1391_V$b9b
+.%arg sync 8 sync_1391_V$b9c
+.%arg sigpair 30 sigpair_1391_V$b9d
+.%scope end
+.%scope function mem_cam256_lookup24_add _mem_cam256_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 576 580
+.%arg data 44 data_1392_V$b9e
+.%arg addr 38 addr_1392_V$b9f
+.%scope end
+.%scope function __mem_cam256_lookup32_add ___mem_cam256_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 583 588
+.%arg data 49 data_1393_V$ba0
+.%arg addr 38 addr_1393_V$ba1
+.%arg sync 8 sync_1393_V$ba2
+.%arg sigpair 30 sigpair_1393_V$ba3
+.%scope end
+.%scope function mem_cam256_lookup32_add _mem_cam256_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 591 595
+.%arg data 49 data_1394_V$ba4
+.%arg addr 38 addr_1394_V$ba5
+.%scope end
+.%scope function __mem_cam384_lookup8_add ___mem_cam384_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 598 603
+.%arg data 32 data_1395_V$ba6
+.%arg addr 38 addr_1395_V$ba7
+.%arg sync 8 sync_1395_V$ba8
+.%arg sigpair 30 sigpair_1395_V$ba9
+.%scope end
+.%scope function mem_cam384_lookup8_add _mem_cam384_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 606 610
+.%arg data 32 data_1396_V$baa
+.%arg addr 38 addr_1396_V$bab
+.%scope end
+.%scope function __mem_cam384_lookup16_add ___mem_cam384_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 613 618
+.%arg data 39 data_1397_V$bac
+.%arg addr 38 addr_1397_V$bad
+.%arg sync 8 sync_1397_V$bae
+.%arg sigpair 30 sigpair_1397_V$baf
+.%scope end
+.%scope function mem_cam384_lookup16_add _mem_cam384_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 621 625
+.%arg data 39 data_1398_V$bb0
+.%arg addr 38 addr_1398_V$bb1
+.%scope end
+.%scope function __mem_cam384_lookup24_add ___mem_cam384_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 628 633
+.%arg data 44 data_1399_V$bb2
+.%arg addr 38 addr_1399_V$bb3
+.%arg sync 8 sync_1399_V$bb4
+.%arg sigpair 30 sigpair_1399_V$bb5
+.%scope end
+.%scope function mem_cam384_lookup24_add _mem_cam384_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 636 640
+.%arg data 44 data_1400_V$bb6
+.%arg addr 38 addr_1400_V$bb7
+.%scope end
+.%scope function __mem_cam384_lookup32_add ___mem_cam384_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 643 648
+.%arg data 49 data_1401_V$bb8
+.%arg addr 38 addr_1401_V$bb9
+.%arg sync 8 sync_1401_V$bba
+.%arg sigpair 30 sigpair_1401_V$bbb
+.%scope end
+.%scope function mem_cam384_lookup32_add _mem_cam384_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 651 655
+.%arg data 49 data_1402_V$bbc
+.%arg addr 38 addr_1402_V$bbd
+.%scope end
+.%scope function __mem_cam512_lookup8_add ___mem_cam512_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 658 663
+.%arg data 32 data_1403_V$bbe
+.%arg addr 38 addr_1403_V$bbf
+.%arg sync 8 sync_1403_V$bc0
+.%arg sigpair 30 sigpair_1403_V$bc1
+.%scope end
+.%scope function mem_cam512_lookup8_add _mem_cam512_lookup8_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 666 670
+.%arg data 32 data_1404_V$bc2
+.%arg addr 38 addr_1404_V$bc3
+.%scope end
+.%scope function __mem_cam512_lookup16_add ___mem_cam512_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 673 678
+.%arg data 39 data_1405_V$bc4
+.%arg addr 38 addr_1405_V$bc5
+.%arg sync 8 sync_1405_V$bc6
+.%arg sigpair 30 sigpair_1405_V$bc7
+.%scope end
+.%scope function mem_cam512_lookup16_add _mem_cam512_lookup16_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 681 685
+.%arg data 39 data_1406_V$bc8
+.%arg addr 38 addr_1406_V$bc9
+.%scope end
+.%scope function __mem_cam512_lookup24_add ___mem_cam512_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 688 693
+.%arg data 44 data_1407_V$bca
+.%arg addr 38 addr_1407_V$bcb
+.%arg sync 8 sync_1407_V$bcc
+.%arg sigpair 30 sigpair_1407_V$bcd
+.%scope end
+.%scope function mem_cam512_lookup24_add _mem_cam512_lookup24_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 696 700
+.%arg data 44 data_1408_V$bce
+.%arg addr 38 addr_1408_V$bcf
+.%scope end
+.%scope function __mem_cam512_lookup32_add ___mem_cam512_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 703 708
+.%arg data 49 data_1409_V$bd0
+.%arg addr 38 addr_1409_V$bd1
+.%arg sync 8 sync_1409_V$bd2
+.%arg sigpair 30 sigpair_1409_V$bd3
+.%scope end
+.%scope function mem_cam512_lookup32_add _mem_cam512_lookup32_add "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_cam.c" 711 715
+.%arg data 49 data_1410_V$bd4
+.%arg addr 38 addr_1410_V$bd5
+.%scope end
+.%scope function __mem_pe_dma_mu_to_ctm ___mem_pe_dma_mu_to_ctm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_pe.c" 68 76
+.%arg ctm_addr 54 ctm_addr_1411_V$bd6
+.%arg mem_addr 29 mem_addr_1411_V$bd7
+.%arg size 0 size_1411_V$bd8
+.%arg sync 8 sync_1411_V$bd9
+.%arg sig 9 sig_1411_V$bda
+.%scope block 74 74
+.%var alu_ind 11 alu_ind_1414 LIX
+.%var csr_ind 55 csr_ind_1414 LIX
+.%var count 0 count_1414 LIX
+.%var addr_hi 0 addr_hi_1414 LIX
+.%var addr_lo 0 addr_lo_1414 LIX
+.%scope end
+.%scope end
+.%scope function mem_pe_dma_mu_to_ctm _mem_pe_dma_mu_to_ctm "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_pe.c" 79 84
+.%arg ctm_addr 54 ctm_addr_1419_V$bfe
+.%arg mem_addr 29 mem_addr_1419_V$bff
+.%arg size 0 size_1419_V$c00
+.%var sig 10 sig_1419 LIX
+.%scope end
+.%scope function __mem_pe_dma_ctm_to_mu ___mem_pe_dma_ctm_to_mu "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_pe.c" 87 95
+.%arg mem_addr 29 mem_addr_1420_V$c02
+.%arg ctm_addr 54 ctm_addr_1420_V$c03
+.%arg size 0 size_1420_V$c04
+.%arg sync 8 sync_1420_V$c05
+.%arg sig 9 sig_1420_V$c06
+.%scope block 93 93
+.%var alu_ind 11 alu_ind_1423 LIX
+.%var csr_ind 55 csr_ind_1423 LIX
+.%var count 0 count_1423 LIX
+.%var addr_hi 0 addr_hi_1423 LIX
+.%var addr_lo 0 addr_lo_1423 LIX
+.%scope end
+.%scope end
+.%scope function mem_pe_dma_ctm_to_mu _mem_pe_dma_ctm_to_mu "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_pe.c" 98 103
+.%arg mem_addr 29 mem_addr_1428_V$c24
+.%arg ctm_addr 54 ctm_addr_1428_V$c25
+.%arg size 0 size_1428_V$c26
+.%var sig 10 sig_1428 LIX
+.%scope end
+.%scope function mem_ring_get_addr _mem_ring_get_addr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 46 52
+.%arg base 58 base_1450_V$c28
+.%var addr_hi 0 addr_hi_1450 LIX
+.%scope end
+.%scope function mem_ring_setup _mem_ring_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 55 110
+.%arg rnum 0 rnum_1451_V$c2b
+.%arg base 58 base_1451_V$c2c
+.%arg size 0 size_1451_V$c2d
+.%var desc_tmp 59 desc_tmp_1451 LIX
+.%var desc 59 desc_1451 LIX
+.%var entries 0 entries_1451 LIX
+.%var ind 11 ind_1451 LIX
+.%var addr_hi 0 addr_hi_1451 LIX
+.%scope end
+.%scope function mem_journal_setup _mem_journal_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 113 116
+.%arg rnum 0 rnum_1456_V$c5f
+.%arg base 58 base_1456_V$c60
+.%arg size 0 size_1456_V$c61
+.%scope end
+.%scope function mem_workq_setup _mem_workq_setup "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 120 123
+.%arg rnum 0 rnum_1457_V$c63
+.%arg base 58 base_1457_V$c64
+.%arg size 0 size_1457_V$c65
+.%scope end
+.%scope function __mem_ring_get ___mem_ring_get "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 237 245
+.%arg rnum 0 rnum_1458_V$c67
+.%arg raddr 0 raddr_1458_V$c68
+.%arg data 5 data_1458_V$c69
+.%arg size 0 size_1458_V$c6a
+.%arg max_size 0 max_size_1458_V$c6b
+.%arg sync 8 sync_1458_V$c6c
+.%arg sigpair 30 sigpair_1458_V$c6d
+.%scope block 243 243
+.%var ind 11 ind_1460 LIX
+.%var count 0 count_1460 LIX
+.%scope block 243 243
+.%var max_count 0 max_count_1470 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_ring_get _mem_ring_get "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 248 263
+.%arg rnum 0 rnum_1471_V$c7f
+.%arg raddr 0 raddr_1471_V$c80
+.%arg data 5 data_1471_V$c81
+.%arg size 0 size_1471_V$c82
+.%var sigpair 31 sigpair_1471 LIX
+.%scope end
+.%scope function __mem_ring_get_freely ___mem_ring_get_freely "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 267 274
+.%arg rnum 0 rnum_1472_V$c87
+.%arg raddr 0 raddr_1472_V$c88
+.%arg data 5 data_1472_V$c89
+.%arg size 0 size_1472_V$c8a
+.%arg max_size 0 max_size_1472_V$c8b
+.%arg sync 8 sync_1472_V$c8c
+.%arg sig 9 sig_1472_V$c8d
+.%scope block 273 273
+.%var ind 11 ind_1474 LIX
+.%var count 0 count_1474 LIX
+.%scope block 273 273
+.%var max_count 0 max_count_1489 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_ring_get_freely _mem_ring_get_freely "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 277 283
+.%arg rnum 0 rnum_1492_V$c9f
+.%arg raddr 0 raddr_1492_V$ca0
+.%arg data 5 data_1492_V$ca1
+.%arg size 0 size_1492_V$ca2
+.%var sig 10 sig_1492 LIX
+.%scope end
+.%scope function __mem_ring_pop ___mem_ring_pop "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 287 295
+.%arg rnum 0 rnum_1493_V$ca4
+.%arg raddr 0 raddr_1493_V$ca5
+.%arg data 5 data_1493_V$ca6
+.%arg size 0 size_1493_V$ca7
+.%arg max_size 0 max_size_1493_V$ca8
+.%arg sync 8 sync_1493_V$ca9
+.%arg sigpair 30 sigpair_1493_V$caa
+.%scope block 293 293
+.%var ind 11 ind_1495 LIX
+.%var count 0 count_1495 LIX
+.%scope block 293 293
+.%var max_count 0 max_count_1505 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_ring_pop _mem_ring_pop "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 298 313
+.%arg rnum 0 rnum_1506_V$cbb
+.%arg raddr 0 raddr_1506_V$cbc
+.%arg data 5 data_1506_V$cbd
+.%arg size 0 size_1506_V$cbe
+.%var sigpair 31 sigpair_1506 LIX
+.%scope end
+.%scope function __mem_ring_put ___mem_ring_put "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 316 329
+.%arg rnum 0 rnum_1507_V$cc3
+.%arg raddr 0 raddr_1507_V$cc4
+.%arg data 15 data_1507_V$cc5
+.%arg size 0 size_1507_V$cc6
+.%arg max_size 0 max_size_1507_V$cc7
+.%arg sync 8 sync_1507_V$cc8
+.%arg sigpair 30 sigpair_1507_V$cc9
+.%scope block 323 323
+.%var ind 11 ind_1510 LIX
+.%var count 0 count_1510 LIX
+.%scope block 323 323
+.%var max_count 0 max_count_1520 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_ring_put _mem_ring_put "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 332 343
+.%arg rnum 0 rnum_1521_V$cda
+.%arg raddr 0 raddr_1521_V$cdb
+.%arg data 15 data_1521_V$cdc
+.%arg size 0 size_1521_V$cdd
+.%var sigpair 31 sigpair_1521 LIX
+.%var result 10 result_1521 LIX
+.%scope end
+.%scope function __mem_ring_journal ___mem_ring_journal "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 347 354
+.%arg rnum 0 rnum_1522_V$ce3
+.%arg raddr 0 raddr_1522_V$ce4
+.%arg data 14 data_1522_V$ce5
+.%arg size 0 size_1522_V$ce6
+.%arg max_size 0 max_size_1522_V$ce7
+.%arg sync 8 sync_1522_V$ce8
+.%arg sig 9 sig_1522_V$ce9
+.%scope block 353 353
+.%var ind 11 ind_1524 LIX
+.%var count 0 count_1524 LIX
+.%scope block 353 353
+.%var max_count 0 max_count_1539 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_ring_journal _mem_ring_journal "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 357 363
+.%arg rnum 0 rnum_1542_V$cfa
+.%arg raddr 0 raddr_1542_V$cfb
+.%arg data 14 data_1542_V$cfc
+.%arg size 0 size_1542_V$cfd
+.%var sig 10 sig_1542 LIX
+.%scope end
+.%scope function mem_ring_journal_fast _mem_ring_journal_fast "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 366 380
+.%arg rnum 0 rnum_1543_V$cff
+.%arg raddr 0 raddr_1543_V$d00
+.%arg value 0 value_1543_V$d01
+.%var ind 11 ind_1543 LIX
+.%scope end
+.%scope function __mem_workq_add_work ___mem_workq_add_work "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 384 392
+.%arg rnum 0 rnum_1545_V$d10
+.%arg raddr 0 raddr_1545_V$d11
+.%arg data 14 data_1545_V$d12
+.%arg size 0 size_1545_V$d13
+.%arg max_size 0 max_size_1545_V$d14
+.%arg sync 8 sync_1545_V$d15
+.%arg sig 9 sig_1545_V$d16
+.%scope block 390 390
+.%var ind 11 ind_1547 LIX
+.%var count 0 count_1547 LIX
+.%scope block 390 390
+.%var max_count 0 max_count_1562 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_workq_add_work _mem_workq_add_work "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 395 401
+.%arg rnum 0 rnum_1565_V$d27
+.%arg raddr 0 raddr_1565_V$d28
+.%arg data 14 data_1565_V$d29
+.%arg size 0 size_1565_V$d2a
+.%var sig 10 sig_1565 LIX
+.%scope end
+.%scope function __mem_workq_add_thread ___mem_workq_add_thread "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 405 413
+.%arg rnum 0 rnum_1566_V$d2c
+.%arg raddr 0 raddr_1566_V$d2d
+.%arg data 5 data_1566_V$d2e
+.%arg size 0 size_1566_V$d2f
+.%arg max_size 0 max_size_1566_V$d30
+.%arg sync 8 sync_1566_V$d31
+.%arg sig 9 sig_1566_V$d32
+.%scope block 411 411
+.%var ind 11 ind_1568 LIX
+.%var count 0 count_1568 LIX
+.%scope block 411 411
+.%var max_count 0 max_count_1583 LIX
+.%scope end
+.%scope end
+.%scope end
+.%scope function mem_workq_add_thread _mem_workq_add_thread "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 416 422
+.%arg rnum 0 rnum_1586_V$d43
+.%arg raddr 0 raddr_1586_V$d44
+.%arg data 5 data_1586_V$d45
+.%arg size 0 size_1586_V$d46
+.%var sig 10 sig_1586 LIX
+.%scope end
+.%scope function mem_ring_current_size _mem_ring_current_size "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/mem_ring.c" 426 436
+.%arg rnum 0 rnum_1587_V$d48
+.%arg raddr 0 raddr_1587_V$d49
+.%var desc 59 desc_1587 LIR
+.%var sig 10 sig_1587 LIX
+.%scope end
+.%scope function pcie_c2p_barcfg_set _pcie_c2p_barcfg_set "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 32 60
+.%arg pcie_isl 0 pcie_isl_1649_V$d5a
+.%arg bar_idx 60 bar_idx_1649_V$d5b
+.%arg addr_hi 0 addr_hi_1649_V$d5c
+.%arg addr_lo 0 addr_lo_1649_V$d5d
+.%arg req_id 60 req_id_1649_V$d5e
+.%var isl 0 isl_1649 LIX
+.%var bar_addr 0 bar_addr_1649 LIX
+.%var tmp 0 tmp_1649 LIX
+.%var wr_val 0 wr_val_1649 LIW
+.%var rd_val 0 rd_val_1649 LIR
+.%var wr_sig 10 wr_sig_1649 LIX
+.%var rd_sig 10 rd_sig_1649 LIX
+.%scope end
+.%scope function __pcie_read ___pcie_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 126 134
+.%arg data 5 data_1651_V$d66
+.%arg pcie_isl 0 pcie_isl_1651_V$d67
+.%arg bar_idx 60 bar_idx_1651_V$d68
+.%arg addr_hi 0 addr_hi_1651_V$d69
+.%arg addr_lo 0 addr_lo_1651_V$d6a
+.%arg size 0 size_1651_V$d6b
+.%arg max_size 0 max_size_1651_V$d6c
+.%arg sync 8 sync_1651_V$d6d
+.%arg sig 9 sig_1651_V$d6e
+.%scope block 132 132
+.%var ind 11 ind_1653 LIX
+.%var count 0 count_1653 LIX
+.%var max_count 0 max_count_1653 LIX
+.%var addr 0 addr_1653 LIX
+.%scope end
+.%scope end
+.%scope function pcie_read _pcie_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 137 146
+.%arg data 5 data_1667_V$d80
+.%arg pcie_isl 0 pcie_isl_1667_V$d81
+.%arg bar_idx 60 bar_idx_1667_V$d82
+.%arg addr_hi 0 addr_hi_1667_V$d83
+.%arg addr_lo 0 addr_lo_1667_V$d84
+.%arg size 0 size_1667_V$d85
+.%var sig 10 sig_1667 LIX
+.%scope end
+.%scope function __pcie_write ___pcie_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 149 157
+.%arg data 14 data_1669_V$d87
+.%arg pcie_isl 0 pcie_isl_1669_V$d88
+.%arg bar_idx 60 bar_idx_1669_V$d89
+.%arg addr_hi 0 addr_hi_1669_V$d8a
+.%arg addr_lo 0 addr_lo_1669_V$d8b
+.%arg size 0 size_1669_V$d8c
+.%arg max_size 0 max_size_1669_V$d8d
+.%arg sync 8 sync_1669_V$d8e
+.%arg sig 9 sig_1669_V$d8f
+.%scope block 155 155
+.%var ind 11 ind_1671 LIX
+.%var count 0 count_1671 LIX
+.%var max_count 0 max_count_1671 LIX
+.%var addr 0 addr_1671 LIX
+.%scope end
+.%scope end
+.%scope function pcie_write _pcie_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 160 169
+.%arg data 14 data_1685_V$da1
+.%arg pcie_isl 0 pcie_isl_1685_V$da2
+.%arg bar_idx 60 bar_idx_1685_V$da3
+.%arg addr_hi 0 addr_hi_1685_V$da4
+.%arg addr_lo 0 addr_lo_1685_V$da5
+.%arg size 0 size_1685_V$da6
+.%var sig 10 sig_1685 LIX
+.%scope end
+.%scope function pcie_dma_cfg_set_one _pcie_dma_cfg_set_one "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 172 206
+.%arg pcie_isl 0 pcie_isl_1687_V$da8
+.%arg index 0 index_1687_V$da9
+.%arg new_cfg 61 new_cfg_1687_V$daa
+.%var cfg 0 cfg_1687 LIX
+.%var cfg_tmp 64 cfg_tmp_1687 LIX
+.%var sig 10 sig_1687 LIX
+.%var count 0 count_1687 LIX
+.%var reg_no 0 reg_no_1687 LIX
+.%var addr_lo 0 addr_lo_1687 LIX
+.%var addr_hi 0 addr_hi_1687 LIX
+.%scope end
+.%scope function __pcie_dma_cfg_set_pair ___pcie_dma_cfg_set_pair "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 209 229
+.%arg pcie_isl 0 pcie_isl_1688_V$dc3
+.%arg index 0 index_1688_V$dc4
+.%arg new_cfg 67 new_cfg_1688_V$dc5
+.%arg sync 8 sync_1688_V$dc6
+.%arg sig 9 sig_1688_V$dc7
+.%var count 0 count_1688 LIX
+.%var reg_no 0 reg_no_1688 LIX
+.%var addr_lo 0 addr_lo_1688 LIX
+.%var addr_hi 0 addr_hi_1688 LIX
+.%scope end
+.%scope function pcie_dma_cfg_set_pair _pcie_dma_cfg_set_pair "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 232 238
+.%arg pcie_isl 0 pcie_isl_1689_V$dcc
+.%arg index 0 index_1689_V$dcd
+.%arg new_cfg 67 new_cfg_1689_V$dce
+.%var sig 10 sig_1689 LIX
+.%scope end
+.%scope function pcie_dma_set_sig _pcie_dma_set_sig "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 241 261
+.%arg cmd 71 cmd_1690_V$dd0
+.%arg meid 0 meid_1690_V$dd1
+.%arg ctx 0 ctx_1690_V$dd2
+.%arg sig_no 0 sig_no_1690_V$dd3
+.%var cmd_ptr 72 cmd_ptr_1690 LIX
+.%var mode_msk_inv 0 mode_msk_inv_1690 LIX
+.%var mode 0 mode_1690 LIX
+.%scope end
+.%scope function pcie_dma_set_event _pcie_dma_set_event "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 264 271
+.%arg cmd 71 cmd_1691_V$df7
+.%arg type 0 type_1691_V$df8
+.%arg source 0 source_1691_V$df9
+.%var cmd_ptr 72 cmd_ptr_1691 LIX
+.%scope end
+.%scope function __pcie_dma_enq ___pcie_dma_enq "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 274 290
+.%arg pcie_isl 0 pcie_isl_1692_V$e19
+.%arg cmd 77 cmd_1692_V$e1a
+.%arg queue 0 queue_1692_V$e1b
+.%arg sync 8 sync_1692_V$e1c
+.%arg sig 9 sig_1692_V$e1d
+.%var count 0 count_1692 LIX
+.%var addr_hi 0 addr_hi_1692 LIX
+.%scope end
+.%scope function pcie_dma_enq _pcie_dma_enq "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 293 299
+.%arg pcie_isl 0 pcie_isl_1696_V$e21
+.%arg cmd 77 cmd_1696_V$e22
+.%arg queue 0 queue_1696_V$e23
+.%var sig 10 sig_1696 LIX
+.%scope end
+.%scope function pcie_dma_enq_no_sig _pcie_dma_enq_no_sig "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/pcie.c" 302 311
+.%arg pcie_isl 0 pcie_isl_1697_V$e25
+.%arg cmd 77 cmd_1697_V$e26
+.%arg queue 0 queue_1697_V$e27
+.%var count 0 count_1697 LIX
+.%var addr_hi 0 addr_hi_1697 LIX
+.%scope end
+.%scope function tmq_cnt_read _tmq_cnt_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/tmq.c" 38 64
+.%arg nbi 0 nbi_1700_V$e2a
+.%arg counter 78 counter_1700_V$e2b
+.%arg qnum 0 qnum_1700_V$e2c
+.%arg clear 10 clear_1700_V$e2d
+.%var addr 0 addr_1700 LIX
+.%var ret 10 ret_1700 LIX
+.%scope end
+.%scope function xpb_read _xpb_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/xpb.c" 25 33
+.%arg addr 0 addr_1703_V$e31
+.%var sig 10 sig_1703 LIX
+.%var xfer 0 xfer_1703 LIR
+.%scope end
+.%scope function xpb_write _xpb_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/xpb.c" 36 42
+.%arg addr 0 addr_1704_V$e35
+.%arg val 0 val_1704_V$e36
+.%var sig 10 sig_1704 LIX
+.%var xfer 0 xfer_1704 LIW
+.%scope end
+.%scope function ___rt_assert ____rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/libnfp.c" 50 55
+.%arg addr 71 addr_1705_V$e39
+.%scope end
+.%scope function macstats_port_read _macstats_port_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 115 148
+.%arg mac 0 mac_514_V$e3a
+.%arg port 0 port_514_V$e3b
+.%arg port_stats 79 port_stats_514_V$e3c
+.%var core 60 core_514 LIX
+.%var seg 60 seg_514 LIX
+.%var src_hi 0 src_hi_514 LIX
+.%var src_lo 0 src_lo_514 LIX
+.%var dst_hi 0 dst_hi_514 LIX
+.%var dst_lo 0 dst_lo_514 LIX
+.%var off 0 off_514 LIX
+.%scope end
+.%scope function macstats_port_accum _macstats_port_accum "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 151 190
+.%arg mac 0 mac_515_V$e45
+.%arg port 0 port_515_V$e46
+.%arg port_stats 83 port_stats_515_V$e47
+.%var core 60 core_515 LIX
+.%var seg 60 seg_515 LIX
+.%var src_hi 0 src_hi_515 LIX
+.%var src_lo 0 src_lo_515 LIX
+.%var dst_hi 0 dst_hi_515 LIX
+.%var dst_lo 0 dst_lo_515 LIX
+.%var off 0 off_515 LIX
+.%scope end
+.%scope function macstats_channel_read _macstats_channel_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 193 219
+.%arg mac 0 mac_516_V$fd0
+.%arg channel 0 channel_516_V$fd1
+.%arg channel_stats 85 channel_stats_516_V$fd2
+.%var src_hi 0 src_hi_516 LIX
+.%var src_lo 0 src_lo_516 LIX
+.%var src_lo_base 0 src_lo_base_516 LIX
+.%var dst_hi 0 dst_hi_516 LIX
+.%var dst_lo 0 dst_lo_516 LIX
+.%var off 0 off_516 LIX
+.%scope end
+.%scope function macstats_channel_accum _macstats_channel_accum "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/nfp/_c/macstats.c" 222 258
+.%arg mac 0 mac_517_V$fda
+.%arg channel 0 channel_517_V$fdb
+.%arg channel_stats 90 channel_stats_517_V$fdc
+.%var src_hi 0 src_hi_517 LIX
+.%var src_lo 0 src_lo_517 LIX
+.%var dst_hi 0 dst_hi_517 LIX
+.%var dst_lo 0 dst_lo_517 LIX
+.%var off 0 off_517 LIX
+.%scope end
+.%type U4
+.%type S4 {
+__reserved_16 0:16:16 0;
+source 0:4:12 0;
+type 0:0:4 0;
+}
+.%type S4 {
+__reserved_21 0:21:11 0;
+overflow 0:20:1 0;
+hwm 0:16:4 0;
+__reserved_12 0:12:4 0;
+read 0:8:4 0;
+__reserved_4 0:4:4 0;
+write 0:0:4 0;
+}
+.%type S4 {
+__reserved_5 0:5:27 0;
+msi_vec_num 0:0:5 0;
+}
+.%type S4 {
+__reserved_8 0:8:24 0;
+msix_vec_num 0:0:8 0;
+}
+.%type P2 6
+.%type U4
+.%type P12 6
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 10
+.%type I4
+.%type S4 nfp_mecsr_prev_alu{
+__unnamed 0 12;
+}
+.%type S4 {
+__unnamed 0 13;
+__raw 0 0;
+}
+.%type S4 {
+data16 0:16:16 0;
+res 0:15:1 0;
+ov_sig_ctx 0:14:1 0;
+ov_sig_num 0:13:1 0;
+length 0:8:5 0;
+ov_len 0:7:1 0;
+ov_bm_csr 0:6:1 0;
+ove_data 0:3:3 0;
+ove_master 0:1:2 0;
+ov_sm 0:0:1 0;
+}
+.%type P2 6
+.%type P2 6
+.%type A32 0
+.%type A32 0
+.%type U2
+.%type P3 20
+.%type S96 macstats_head_drop_accum{
+ports_drop 0 21;
+}
+.%type A96 22
+.%type U8
+.%type A16 22
+.%type S4 nfp_mecsr_active_ctx_sts{
+__unnamed 0 25;
+}
+.%type S4 {
+__unnamed 0 26;
+__raw 0 0;
+}
+.%type S4 {
+ab0 0:31:1 0;
+il_id 0:25:6 0;
+actxpc 0:8:17 0;
+__reserved_7 0:7:1 0;
+me_id 0:3:4 0;
+acno 0:0:3 0;
+}
+.%type E4 {
+kill 0;
+voluntary 1;
+bpt 2;
+}
+.%type E4 {
+crc_bytes_0_3 0;
+crc_bytes_0_2 1;
+crc_bytes_0_1 2;
+crc_byte_0 3;
+crc_bytes_1_3 4;
+crc_bytes_2_3 5;
+crc_byte_3 6;
+}
+.%type P3 6
+.%type P2 31
+.%type S8 SIGNAL_PAIR{
+even 0 10;
+odd 4 10;
+}
+.%type P2 33
+.%type S8 mem_cam_8bit{
+__unnamed 0 34;
+}
+.%type S8 {
+search 0 35;
+result 0 36;
+}
+.%type S8 {
+value 0 0;
+__pad 4 0;
+}
+.%type S8 {
+__unnamed 0 37;
+mask 0 22;
+}
+.%type S8 {
+mask_lo 0 0;
+mask_hi 4 0;
+}
+.%type P3 6
+.%type P2 40
+.%type S8 mem_cam_16bit{
+__unnamed 0 41;
+}
+.%type S8 {
+search 0 42;
+result 0 43;
+}
+.%type S8 {
+value 0 0;
+__pad 4 0;
+}
+.%type S8 {
+__pad 0:8:24 0;
+match 0:0:8 0;
+mask 4 0;
+}
+.%type P2 45
+.%type S4 mem_cam_24bit{
+__unnamed 0 46;
+}
+.%type S4 {
+search 0 47;
+result 0 48;
+}
+.%type S4 {
+value 0 0;
+}
+.%type S4 {
+mask 0:16:16 0;
+data 0:8:8 0;
+match 0:0:8 0;
+}
+.%type P2 50
+.%type S4 mem_cam_32bit{
+__unnamed 0 51;
+}
+.%type S4 {
+search 0 52;
+result 0 53;
+}
+.%type S4 {
+value 0 0;
+}
+.%type S4 {
+mask 0:16:16 0;
+data 0:8:8 0;
+match 0:0:8 0;
+}
+.%type P3 6
+.%type S4 nfp_mecsr_cmd_indirect_ref_0{
+__unnamed 0 56;
+}
+.%type S4 {
+__unnamed 0 57;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_30 0:30:2 0;
+island 0:24:6 0;
+master 0:20:4 0;
+signal_master 0:16:4 0;
+signal_ctx 0:13:3 0;
+signal_num 0:9:4 0;
+__reserved_8 0:8:1 0;
+byte_mask 0:0:8 0;
+}
+.%type P3 6
+.%type S16 nfp_memring_t2{
+ring_size 0:28:4 0;
+reserved1 0:26:2 0;
+head_ptr 0:2:24 0;
+eop 0:1:1 0;
+zero 0:0:1 0;
+tail_ptr 4:2:30 0;
+ring_type 4:0:2 0;
+q_loc 8:30:2 0;
+reserved2 8:26:4 0;
+q_page 8:24:2 0;
+q_count 8:0:24 0;
+reserved3 12:4:28 0;
+reserved4 12:0:4 0;
+}
+.%type U1
+.%type S4 pcie_dma_cfg_one{
+__unnamed 0 62;
+}
+.%type S4 {
+__unnamed 0 63;
+__raw 0 18;
+}
+.%type S4 {
+__reserved 0:29:3 0;
+signal_only 0:28:1 0;
+end_pad 0:26:2 0;
+start_pad 0:24:2 0;
+id_based_order 0:23:1 0;
+relaxed_order 0:22:1 0;
+no_snoop 0:21:1 0;
+target_64 0:20:1 0;
+cpp_target 0:16:4 0;
+}
+.%type S4 _pcie_dma_cfg_word_access{
+__unnamed 0 65;
+}
+.%type S4 {
+__unnamed 0 66;
+__raw 0 0;
+}
+.%type S4 {
+odd 0 18;
+even 2 18;
+}
+.%type P2 68
+.%type S4 nfp_pcie_dma_cfg{
+__unnamed 0 69;
+}
+.%type S4 {
+__unnamed 0 70;
+__raw 0 0;
+}
+.%type S4 {
+__reserved_29 0:29:3 0;
+signal_only_odd 0:28:1 0;
+end_pad_odd 0:26:2 0;
+start_pad_odd 0:24:2 0;
+id_based_order_odd 0:23:1 0;
+relaxed_order_odd 0:22:1 0;
+no_snoop_odd 0:21:1 0;
+target_64_odd 0:20:1 0;
+cpp_target_odd 0:16:4 0;
+__reserved_13 0:13:3 0;
+signal_only_even 0:12:1 0;
+end_pad_even 0:10:2 0;
+start_pad_even 0:8:2 0;
+id_based_order_even 0:7:1 0;
+relaxed_order_even 0:6:1 0;
+no_snoop_even 0:5:1 0;
+target_64_even 0:4:1 0;
+cpp_target_even 0:0:4 0;
+}
+.%type P2 6
+.%type P2 73
+.%type S16 nfp_pcie_dma_cmd{
+__unnamed 0 74;
+}
+.%type S16 {
+__unnamed 0 75;
+__raw 0 76;
+}
+.%type S16 {
+cpp_addr_lo 0:0:32 0;
+mode_sel 4:30:2 0;
+dma_mode 4:14:16 0;
+cpp_token 4:12:2 0;
+dma_cfg_index 4:8:4 0;
+cpp_addr_hi 4:0:8 0;
+pcie_addr_lo 8:0:32 0;
+length 12:20:12 0;
+rid 12:12:8 0;
+rid_override 12:11:1 0;
+trans_class 12:8:3 0;
+pcie_addr_hi 12:0:8 0;
+}
+.%type A16 0
+.%type P2 73
+.%type P2 0
+.%type P3 80
+.%type S256 macstats_port{
+RxPIfInOctetsLo 0 0;
+RxPIfInOctetsHi 4 60;
+RxPIfInOctetsHi_res 5 81;
+RxFrameTooLongErrors 8 0;
+RxInRangeLengthErrors 12 0;
+RxVlanReceivedOK 16 0;
+RxPIfInErrors 20 0;
+RxPIfInBroadCastPkts 24 0;
+RxPStatsDropEvents 28 0;
+RxAlignmentErrors 32 0;
+RxPauseMacCtlFrames 36 0;
+RxFramesReceivedOK 40 0;
+RxFrameCheckSequenceErrors 44 0;
+RxPIfInUniCastPkts 48 0;
+RxPIfInMultiCastPkts 52 0;
+RxPStatsPkts 56 0;
+RxPStatsUndersizePkts 60 0;
+RxPStatsPkts64octets 64 0;
+RxPStatsPkts65to127octets 68 0;
+RxPStatsPkts512to1023octets 72 0;
+RxPStatsPkts1024to1518octets 76 0;
+RxPStatsJabbers 80 0;
+RxPStatsFragments 84 0;
+RxCBFCPauseFramesReceived2 88 0;
+RxCBFCPauseFramesReceived3 92 0;
+RxPStatsPkts128to255octets 96 0;
+RxPStatsPkts256to511octets 100 0;
+RxPStatsPkts1519toMaxoctets 104 0;
+RxPStatsOversizePkts 108 0;
+RxCBFCPauseFramesReceived0 112 0;
+RxCBFCPauseFramesReceived1 116 0;
+RxCBFCPauseFramesReceived4 120 0;
+RxCBFCPauseFramesReceived5 124 0;
+RxCBFCPauseFramesReceived6 128 0;
+RxCBFCPauseFramesReceived7 132 0;
+RxMacCtlFramesReceived 136 0;
+unused0 140 0;
+unused1 144 0;
+unused2 148 0;
+unused3 152 0;
+unused4 156 0;
+TxPIfOutOctetsLo 160 0;
+TxPIfOutOctetsHi 164 60;
+TxPIfOutOctetsHi_res 165 82;
+TxVlanTransmittedOK 168 0;
+TxPIfOutErrors 172 0;
+TxPIfOutBroadCastPkts 176 0;
+TxPStatsPkts64octets 180 0;
+TxPStatsPkts256to511octets 184 0;
+TxPStatsPkts512to1023octets 188 0;
+TxPauseMacCtlFramesTransmitted 192 0;
+TxFramesTransmittedOK 196 0;
+TxPIfOutUniCastPkts 200 0;
+TxPIfOutMultiCastPkts 204 0;
+TxPStatsPkts65to127octets 208 0;
+TxPStatsPkts128to255octets 212 0;
+TxPStatsPkts1024to1518octets 216 0;
+TxPStatsPkts1518toMAXoctets 220 0;
+TxCBFCPauseFramesTransmitted0 224 0;
+TxCBFCPauseFramesTransmitted1 228 0;
+TxCBFCPauseFramesTransmitted4 232 0;
+TxCBFCPauseFramesTransmitted5 236 0;
+TxCBFCPauseFramesTransmitted2 240 0;
+TxCBFCPauseFramesTransmitted3 244 0;
+TxCBFCPauseFramesTransmitted6 248 0;
+TxCBFCPauseFramesTransmitted7 252 0;
+}
+.%type A3 60
+.%type A3 60
+.%type P3 84
+.%type S512 macstats_port_accum{
+RxPIfInOctets 0 22;
+RxPIfInOctets_unused 8 22;
+RxFrameTooLongErrors 16 22;
+RxInRangeLengthErrors 24 22;
+RxVlanReceivedOK 32 22;
+RxPIfInErrors 40 22;
+RxPIfInBroadCastPkts 48 22;
+RxPStatsDropEvents 56 22;
+RxAlignmentErrors 64 22;
+RxPauseMacCtlFrames 72 22;
+RxFramesReceivedOK 80 22;
+RxFrameCheckSequenceErrors 88 22;
+RxPIfInUniCastPkts 96 22;
+RxPIfInMultiCastPkts 104 22;
+RxPStatsPkts 112 22;
+RxPStatsUndersizePkts 120 22;
+RxPStatsPkts64octets 128 22;
+RxPStatsPkts65to127octets 136 22;
+RxPStatsPkts512to1023octets 144 22;
+RxPStatsPkts1024to1518octets 152 22;
+RxPStatsJabbers 160 22;
+RxPStatsFragments 168 22;
+RxCBFCPauseFramesReceived2 176 22;
+RxCBFCPauseFramesReceived3 184 22;
+RxPStatsPkts128to255octets 192 22;
+RxPStatsPkts256to511octets 200 22;
+RxPStatsPkts1519toMaxoctets 208 22;
+RxPStatsOversizePkts 216 22;
+RxCBFCPauseFramesReceived0 224 22;
+RxCBFCPauseFramesReceived1 232 22;
+RxCBFCPauseFramesReceived4 240 22;
+RxCBFCPauseFramesReceived5 248 22;
+RxCBFCPauseFramesReceived6 256 22;
+RxCBFCPauseFramesReceived7 264 22;
+RxMacCtlFramesReceived 272 22;
+unused0 280 22;
+unused1 288 22;
+unused2 296 22;
+unused3 304 22;
+unused4 312 22;
+TxPIfOutOctets 320 22;
+TxPIfOutOctets_unused 328 22;
+TxVlanTransmittedOK 336 22;
+TxPIfOutErrors 344 22;
+TxPIfOutBroadCastPkts 352 22;
+TxPStatsPkts64octets 360 22;
+TxPStatsPkts256to511octets 368 22;
+TxPStatsPkts512to1023octets 376 22;
+TxPauseMacCtlFramesTransmitted 384 22;
+TxFramesTransmittedOK 392 22;
+TxPIfOutUniCastPkts 400 22;
+TxPIfOutMultiCastPkts 408 22;
+TxPStatsPkts65to127octets 416 22;
+TxPStatsPkts128to255octets 424 22;
+TxPStatsPkts1024to1518octets 432 22;
+TxPStatsPkts1518toMAXoctets 440 22;
+TxCBFCPauseFramesTransmitted0 448 22;
+TxCBFCPauseFramesTransmitted1 456 22;
+TxCBFCPauseFramesTransmitted4 464 22;
+TxCBFCPauseFramesTransmitted5 472 22;
+TxCBFCPauseFramesTransmitted2 480 22;
+TxCBFCPauseFramesTransmitted3 488 22;
+TxCBFCPauseFramesTransmitted6 496 22;
+TxCBFCPauseFramesTransmitted7 504 22;
+}
+.%type P3 86
+.%type S128 macstats_channel{
+RxCIfInOctetsLo 0 0;
+RxCIfInOctetsHi 4 60;
+RxCIfInOctetsHi_res 5 87;
+RxCStatsOctetsLo 8 0;
+RxCStatsOctetsHi 12 60;
+RxCStatsOctetsHi_res 13 88;
+RxCIfInErrors 16 0;
+RxCIfInUniCastPkts 20 0;
+RxCIfInMultiCastPkts 24 0;
+RxCIfInBroadCastPkts 28 0;
+RxCStatsPkts 32 0;
+RxCStatsPkts64octets 36 0;
+RxCStatsPkts65to127octets 40 0;
+RxCStatsPkts128to255octets 44 0;
+RxCStatsPkts256to511octets 48 0;
+RxCStatsPkts512to1023octets 52 0;
+RxCStatsPkts1024to1518octets 56 0;
+RxCStatsPkts1519toMaxoctets 60 0;
+RxChanFramesReceivedOK 64 0;
+RxChanVlanReceivedOK 68 0;
+unused0 72 0;
+unused1 76 0;
+unused2 80 0;
+unused3 84 0;
+unused4 88 0;
+unused5 92 0;
+TxCIfOutOctetsLo 96 0;
+TxCIfOutOctetsHi 100 60;
+TxCIfOutOctetsHi_res 101 89;
+TxCIfOutErrors 104 0;
+TxCIfOutUniCastPkts 108 0;
+TxChanFramesTransmittedOK 112 0;
+TxChanVlanTransmittedOK 116 0;
+TxCIfOutMultiCastPkts 120 0;
+TxCIfOutBroadCastPkts 124 0;
+}
+.%type A3 60
+.%type A3 60
+.%type A3 60
+.%type P3 91
+.%type S256 macstats_channel_accum{
+RxCIfInOctets 0 22;
+RxCIfInOctets_unused 8 22;
+RxCStatsOctets 16 22;
+RxCStatsOctets_unused 24 22;
+RxCIfInErrors 32 22;
+RxCIfInUniCastPkts 40 22;
+RxCIfInMultiCastPkts 48 22;
+RxCIfInBroadCastPkts 56 22;
+RxCStatsPkts 64 22;
+RxCStatsPkts64octets 72 22;
+RxCStatsPkts65to127octets 80 22;
+RxCStatsPkts128to255octets 88 22;
+RxCStatsPkts256to511octets 96 22;
+RxCStatsPkts512to1023octets 104 22;
+RxCStatsPkts1024to1518octets 112 22;
+RxCStatsPkts1519toMaxoctets 120 22;
+RxChanFramesReceivedOK 128 22;
+RxChanVlanReceivedOK 136 22;
+unused0 144 22;
+unused1 152 22;
+unused2 160 22;
+unused3 168 22;
+unused4 176 22;
+unused5 184 22;
+TxCIfOutOctets 192 22;
+TxCIfOutOctets_unused 200 22;
+TxCIfOutErrors 208 22;
+TxCIfOutUniCastPkts 216 22;
+TxChanFramesTransmittedOK 224 22;
+TxChanVlanTransmittedOK 232 22;
+TxCIfOutMultiCastPkts 240 22;
+TxCIfOutBroadCastPkts 248 22;
+}

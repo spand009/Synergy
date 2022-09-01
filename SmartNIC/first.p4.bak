@@ -1,0 +1,31 @@
+
+
+parser start{
+    return ingress;
+}
+action fwd_act(prt){
+    modify_field(standard_metadata.egress_spec, prt);
+}
+
+action drop_act(){
+drop();
+}
+
+action none_act(src, dst){
+
+}
+table in_tbl{
+
+    reads{
+        standard_metadata.ingress_port : exact;
+    }
+    actions{
+        drop_act;
+        fwd_act;
+        }
+}
+
+control ingress{
+    apply(in_tbl);
+}
+

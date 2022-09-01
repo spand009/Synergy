@@ -1,0 +1,92 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_228_V$439
+.%arg y 0 y_228_V$43a
+.%var result 0 result_228 LIX
+.%scope end
+.%scope function handle_ingress_flow_gtpu_decap_table _handle_ingress_flow_gtpu_decap_table "out/pif_ctlflow.c" 12 38
+.%arg parrep 1 parrep_230_V$43d
+.%arg actbuf 2 actbuf_230_V$43e
+.%arg actlen 3 actlen_230_V$43f
+.%arg state 4 state_230_V$440
+.%var action_id 5 action_id_230 LIX
+.%var ret 5 ret_230 LIX
+.%var next_state 5 next_state_230 LIX
+.%scope block 21 26
+.%var result 6 result_231 LIX
+.%scope end
+.%scope end
+.%scope function handle_ingress_flow_gtpu_encap_table _handle_ingress_flow_gtpu_encap_table "out/pif_ctlflow.c" 40 66
+.%arg parrep 1 parrep_233_V$44a
+.%arg actbuf 2 actbuf_233_V$44b
+.%arg actlen 3 actlen_233_V$44c
+.%arg state 4 state_233_V$44d
+.%var action_id 5 action_id_233 LIX
+.%var ret 5 ret_233 LIX
+.%var next_state 5 next_state_233 LIX
+.%scope block 49 54
+.%var result 6 result_234 LIX
+.%scope end
+.%scope end
+.%scope function handle_ingress_flow__condition_0 _handle_ingress_flow__condition_0 "out/pif_ctlflow.c" 68 96
+.%arg parrep 1 parrep_236_V$456
+.%var pif_expression__condition_0_register_0 0 pif_expression__condition_0_register_0_236 LIX
+.%var ipv4 8 ipv4_236 LIX
+.%scope block 80 90
+.%var pif_expression__condition_0_register_1 0 pif_expression__condition_0_register_1_237 LIX
+.%var pif_expression__condition_0_register_2 0 pif_expression__condition_0_register_2_237 LIX
+.%var pif_expression__condition_0_register_3 0 pif_expression__condition_0_register_3_237 LIX
+.%scope end
+.%scope end
+.%scope function handle_ingress_flow_fwd _handle_ingress_flow_fwd "out/pif_ctlflow.c" 98 124
+.%arg parrep 1 parrep_238_V$45f
+.%arg actbuf 2 actbuf_238_V$460
+.%arg actlen 3 actlen_238_V$461
+.%arg state 4 state_238_V$462
+.%var action_id 5 action_id_238 LIX
+.%var ret 5 ret_238 LIX
+.%var next_state 5 next_state_238 LIX
+.%scope block 107 112
+.%var result 6 result_239 LIX
+.%scope end
+.%scope end
+.%scope function pif_ctlflow_ingress_flow _pif_ctlflow_ingress_flow "out/pif_ctlflow.c" 128 159
+.%arg start_state 4 start_state_241_V$46c
+.%arg parrep 1 parrep_241_V$46d
+.%arg actbuf 2 actbuf_241_V$46e
+.%var actlen 0 actlen_241 LIX
+.%var totlen 0 totlen_241 LIX
+.%var ret 5 ret_241 LIX
+.%var pif_ctlflow_state_ingress_flow 5 pif_ctlflow_state_ingress_flow_241 LIX
+.%scope end
+.%scope function pif_ctlflow_egress_flow _pif_ctlflow_egress_flow "out/pif_ctlflow.c" 162 165
+.%arg start_state 4 start_state_245_V$476
+.%arg parrep 1 parrep_245_V$477
+.%arg actbuf 2 actbuf_245_V$478
+.%scope end
+.%type U4
+.%type P6 0
+.%type P3 0
+.%type P2 0
+.%type P2 5
+.%type I4
+.%type S8 pif_lookup_result{
+action_id 0 7;
+action_len 4 7;
+}
+.%type I4
+.%type P6 9
+.%type S20 pif_header_ipv4{
+version 0:28:4 0;
+ihl 0:24:4 0;
+diffserv 0:16:8 0;
+totalLen 0:0:16 0;
+identification 4:16:16 0;
+flags 4:13:3 0;
+fragOffset 4:0:13 0;
+ttl 8:24:8 0;
+protocol 8:16:8 0;
+hdrChecksum 8:0:16 0;
+srcAddr 12:0:32 0;
+dstAddr 16:0:32 0;
+}

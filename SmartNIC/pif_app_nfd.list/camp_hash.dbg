@@ -1,0 +1,32 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_76 LIX
+.%scope end
+.%scope function rotr _rotr "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/src/camp_hash.c" 28 38
+.%arg x 0 x_80_V$f
+.%arg n 0 n_80_V$10
+.%var result 0 result_80 LIX
+.%var copy 0 copy_80 LIX
+.%scope end
+.%scope function camp_hash _camp_hash "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/src/camp_hash.c" 79 117
+.%arg data 1 data_82_V$14
+.%arg length 0 length_82_V$15
+.%arg max_length 0 max_length_82_V$16
+.%var result 3 result_82 LIX
+.%var cpy 0 cpy_82 LIX
+.%var crc 0 crc_82 LIX
+.%var rot 0 rot_82 LIX
+.%var len 0 len_82 LIX
+.%scope block 104 104
+.%var i 0 i_1236 LIX
+.%scope end
+.%scope end
+.%scope function camp_hash_init _camp_hash_init "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/lib/hashmap/src/camp_hash.c" 55 77
+.%scope end
+.%type U4
+.%type P2 2
+.%type U4
+.%type S8 hash_result_t{
+hi 0 0;
+lo 4 0;
+}

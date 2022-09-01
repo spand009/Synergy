@@ -1,0 +1,302 @@
+.%scope file "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function __rt_assert ___rt_assert "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/include/assert.h" 91 99
+.%var reg 0 reg_9 LIX
+.%scope end
+.%scope function pkt_ctm_ptr40 _pkt_ctm_ptr40 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 64 74
+.%arg isl 1 isl_241_V$30c
+.%arg pnum 0 pnum_241_V$30d
+.%arg off 0 off_241_V$30e
+.%var lo 0 lo_241 LIX
+.%var hi 0 hi_241 LIX
+.%scope end
+.%scope function pkt_ctm_ptr32 _pkt_ctm_ptr32 "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 93 96
+.%arg pnum 0 pnum_242_V$312
+.%arg off 0 off_242_V$313
+.%scope end
+.%scope function pkt_csum_read _pkt_csum_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 100 114
+.%arg src_buf 2 src_buf_243_V$315
+.%arg off 4 off_243_V$316
+.%var ret 0 ret_243 LIX
+.%scope end
+.%scope function __pkt_status_read ___pkt_status_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 117 153
+.%arg isl 1 isl_246_V$31d
+.%arg pnum 0 pnum_246_V$31e
+.%arg pkt_status 5 pkt_status_246_V$31f
+.%arg sync 8 sync_246_V$320
+.%arg sig_ptr 9 sig_ptr_246_V$321
+.%var addr 0 addr_246 LIX
+.%scope block 136 152
+.%var addr_hi 0 addr_hi_251 LIX
+.%scope end
+.%scope end
+.%scope function pkt_status_read _pkt_status_read "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 156 162
+.%arg isl 1 isl_252_V$32a
+.%arg pnum 0 pnum_252_V$32b
+.%arg pkt_status 5 pkt_status_252_V$32c
+.%var add_thread_sig 4 add_thread_sig_252 LIX
+.%scope end
+.%scope function pkt_ctm_data_size _pkt_ctm_data_size "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 166 183
+.%arg pkt_len 0 pkt_len_253_V$32e
+.%arg pkt_offset 0 pkt_offset_253_V$32f
+.%arg ctm_buf_size 10 ctm_buf_size_253_V$330
+.%var tbytes 0 tbytes_253 LIX
+.%var ret 0 ret_253 LIX
+.%scope end
+.%scope function pkt_emem_data_size _pkt_emem_data_size "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 187 204
+.%arg pkt_len 0 pkt_len_254_V$334
+.%arg pkt_offset 0 pkt_offset_254_V$335
+.%arg ctm_buf_size 10 ctm_buf_size_254_V$336
+.%var tbytes 0 tbytes_254 LIX
+.%var ret 0 ret_254 LIX
+.%scope end
+.%scope function __pkt_mac_egress_cmd_write ___pkt_mac_egress_cmd_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 208 223
+.%arg pbuf 11 pbuf_255_V$33a
+.%arg off 1 off_255_V$33b
+.%arg l3_csum_ins 4 l3_csum_ins_255_V$33c
+.%arg l4_csum_ins 4 l4_csum_ins_255_V$33d
+.%arg xcmd 12 xcmd_255_V$33e
+.%arg sync 8 sync_255_V$33f
+.%arg sig 9 sig_255_V$340
+.%scope end
+.%scope function pkt_mac_egress_cmd_write _pkt_mac_egress_cmd_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 227 236
+.%arg pbuf 11 pbuf_256_V$341
+.%arg off 1 off_256_V$342
+.%arg l3_csum_ins 4 l3_csum_ins_256_V$343
+.%arg l4_csum_ins 4 l4_csum_ins_256_V$344
+.%var sig 4 sig_256 LIX
+.%var cmd 0 cmd_256 LIW
+.%scope end
+.%scope function __pkt_msd_write ___pkt_msd_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 239 284
+.%arg pbuf 11 pbuf_257_V$347
+.%arg off 1 off_257_V$348
+.%arg xms 13 xms_257_V$349
+.%arg size 0 size_257_V$34a
+.%arg sync 8 sync_257_V$34b
+.%arg sig 9 sig_257_V$34c
+.%var msi 14 msi_257 LIX
+.%scope block 259 278
+.%var ms_off 1 ms_off_259 LIX
+.%scope end
+.%scope end
+.%scope function pkt_msd_write _pkt_msd_write "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 288 294
+.%arg pbuf 11 pbuf_260_V$354
+.%arg off 1 off_260_V$355
+.%var sig 4 sig_260 LIX
+.%var ms 16 ms_260 LIW
+.%scope end
+.%scope function __pkt_nbi_recv_with_hdrs ___pkt_nbi_recv_with_hdrs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 298 317
+.%arg meta 17 meta_261_V$35f
+.%arg msize 0 msize_261_V$360
+.%arg off 0 off_261_V$361
+.%arg sync 8 sync_261_V$362
+.%arg sig 9 sig_261_V$363
+.%var addr 0 addr_261 LIX
+.%var count 0 count_261 LIX
+.%scope end
+.%scope function pkt_nbi_recv_with_hdrs _pkt_nbi_recv_with_hdrs "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 321 325
+.%arg meta 17 meta_269_V$370
+.%arg msize 0 msize_269_V$371
+.%arg off 0 off_269_V$372
+.%var add_thread_sig 4 add_thread_sig_269 LIX
+.%scope end
+.%scope function __pkt_nbi_recv ___pkt_nbi_recv "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 329 332
+.%arg meta 17 meta_270_V$374
+.%arg msize 0 msize_270_V$375
+.%arg sync 8 sync_270_V$376
+.%arg sig 9 sig_270_V$377
+.%scope end
+.%scope function pkt_nbi_recv _pkt_nbi_recv "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 336 339
+.%arg meta 17 meta_271_V$378
+.%arg msize 0 msize_271_V$379
+.%scope end
+.%scope function pkt_nbi_send _pkt_nbi_send "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 343 386
+.%arg isl 1 isl_272_V$37a
+.%arg pnum 0 pnum_272_V$37b
+.%arg msi 18 msi_272_V$37c
+.%arg len 0 len_272_V$37d
+.%arg nbi 0 nbi_272_V$37e
+.%arg txq 0 txq_272_V$37f
+.%arg seqr 0 seqr_272_V$380
+.%arg seq 0 seq_272_V$381
+.%arg ctm_buf_size 10 ctm_buf_size_272_V$382
+.%var addr_hi 0 addr_hi_272 LIX
+.%var addr_lo 0 addr_lo_272 LIX
+.%var csr0 19 csr0_272 LIX
+.%var palu 22 palu_272 LIX
+.%scope end
+.%scope function pkt_nbi_send_dont_free _pkt_nbi_send_dont_free "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 390 434
+.%arg isl 1 isl_273_V$39c
+.%arg pnum 0 pnum_273_V$39d
+.%arg msi 18 msi_273_V$39e
+.%arg len 0 len_273_V$39f
+.%arg nbi 0 nbi_273_V$3a0
+.%arg txq 0 txq_273_V$3a1
+.%arg seqr 0 seqr_273_V$3a2
+.%arg seq 0 seq_273_V$3a3
+.%arg ctm_buf_size 10 ctm_buf_size_273_V$3a4
+.%var addr_hi 0 addr_hi_273 LIX
+.%var addr_lo 0 addr_lo_273 LIX
+.%var csr0 19 csr0_273 LIX
+.%var palu 22 palu_273 LIX
+.%scope end
+.%scope function pkt_nbi_drop_seq _pkt_nbi_drop_seq "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 438 479
+.%arg isl 1 isl_274_V$3be
+.%arg pnum 0 pnum_274_V$3bf
+.%arg msi 18 msi_274_V$3c0
+.%arg len 0 len_274_V$3c1
+.%arg nbi 0 nbi_274_V$3c2
+.%arg txq 0 txq_274_V$3c3
+.%arg seqr 0 seqr_274_V$3c4
+.%arg seq 0 seq_274_V$3c5
+.%arg ctm_buf_size 10 ctm_buf_size_274_V$3c6
+.%var addr_hi 0 addr_hi_274 LIX
+.%var addr_lo 0 addr_lo_274 LIX
+.%var csr0 19 csr0_274 LIX
+.%var palu 22 palu_274 LIX
+.%scope end
+.%scope function pkt_ctm_free _pkt_ctm_free "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 482 490
+.%arg isl 0 isl_275_V$3e0
+.%arg pnum 0 pnum_275_V$3e1
+.%var addr_hi 0 addr_hi_275 LIX
+.%scope end
+.%scope function pkt_ctm_alloc _pkt_ctm_alloc "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 493 536
+.%arg credits 25 credits_276_V$3e3
+.%arg isl 1 isl_276_V$3e4
+.%arg size 10 size_276_V$3e5
+.%arg alloc_internal 1 alloc_internal_276_V$3e6
+.%arg replenish_credits 4 replenish_credits_276_V$3e7
+.%var addr_hi 0 addr_hi_276 LIX
+.%var addr_lo 0 addr_lo_276 LIX
+.%var ind 0 ind_276 LIX
+.%var pe_res 27 pe_res_276 LIR
+.%var sig_alloc 4 sig_alloc_276 LIX
+.%var credits_update 26 credits_update_276 LIX
+.%var sig_cls 4 sig_cls_276 LIX
+.%var pnum 0 pnum_276 LIX
+.%scope end
+.%scope function pkt_ctm_init_credits _pkt_ctm_init_credits "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 539 544
+.%arg credits 25 credits_280_V$3fa
+.%arg pkt_credits 0 pkt_credits_280_V$3fb
+.%arg buf_credits 0 buf_credits_280_V$3fc
+.%scope end
+.%scope function pkt_ctm_poll_pe_credit _pkt_ctm_poll_pe_credit "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 547 565
+.%arg credits 25 credits_281_V$401
+.%var pe_res 30 pe_res_281 LIR
+.%var credits_update 26 credits_update_281 LIX
+.%var sig_pe 4 sig_pe_281 LIX
+.%var sig_cls 4 sig_cls_281 LIX
+.%var master 0 master_281 LIX
+.%scope end
+.%scope function pkt_ctm_get_credits _pkt_ctm_get_credits "/root/SNIC_SDK/nfp-sdk-6.0.4/p4/components/flowenv/me/lib/pkt/libpkt.c" 568 613
+.%arg credits 25 credits_283_V$40f
+.%arg pkt_credits 0 pkt_credits_283_V$410
+.%arg buf_credits 0 buf_credits_283_V$411
+.%arg replenish_credits 4 replenish_credits_283_V$412
+.%var credits_update 26 credits_update_283 LIX
+.%var credits_add_back 26 credits_add_back_283 LIW
+.%var sig_cls 4 sig_cls_283 LIX
+.%scope end
+.%type U4
+.%type U1
+.%type P2 3
+.%type U4
+.%type I4
+.%type P2 6
+.%type S4 pkt_status_t{
+__unnamed 0 7;
+__raw 0 0;
+}
+.%type S4 {
+error 0:31:1 0;
+last_seg_rcvd 0:30:1 0;
+first_seg_rcvd 0:29:1 0;
+sent_to_me 0:28:1 0;
+not_valid 0:27:1 0;
+owned_by_me 0:26:1 0;
+owner 0:24:2 0;
+resv_0 0:18:6 0;
+size 0:16:2 0;
+resv_1 0:10:6 0;
+ctm_addr_div256 0:0:10 0;
+}
+.%type E4 {
+sig_done 0;
+ctx_swap 1;
+}
+.%type P2 4
+.%type E4 PKT_CTM_SIZE{
+PKT_CTM_SIZE_256 0;
+PKT_CTM_SIZE_512 1;
+PKT_CTM_SIZE_1024 2;
+PKT_CTM_SIZE_2048 3;
+}
+.%type P2 3
+.%type P2 0
+.%type P2 0
+.%type S4 pkt_ms_info{
+off_enc 0 15;
+len_adj 2 15;
+}
+.%type U2
+.%type A8 0
+.%type P2 3
+.%type P2 14
+.%type S4 pkt_iref_csr0{
+__unnamed 0 20;
+}
+.%type S4 {
+__unnamed 0 21;
+__raw 0 0;
+}
+.%type S4 {
+resv0 0:30:2 0;
+seq 0:16:14 0;
+resv1 0:8:8 0;
+seqr 0:0:8 0;
+}
+.%type S4 pkt_iref_palu{
+__unnamed 0 23;
+}
+.%type S4 {
+__unnamed 0 24;
+__raw 0 0;
+}
+.%type S4 {
+resv0 0:30:2 0;
+nbi 0:28:2 0;
+resv1 0:26:2 0;
+txq 0:16:10 0;
+resv2 0:13:3 0;
+ms_off 0:8:5 0;
+magic 0:0:8 0;
+}
+.%type P12 26
+.%type S8 ctm_pkt_credits{
+pkts 0 0;
+bufs 4 0;
+}
+.%type S4 pe_pkt_alloc_res{
+__unnamed 0 28;
+}
+.%type S4 {
+__unnamed 0 29;
+__raw 0 0;
+}
+.%type S4 {
+resv 0:30:2 0;
+pnum 0:20:10 0;
+pkt_credit 0:9:11 0;
+buf_credit 0:0:9 0;
+}
+.%type S4 pe_credit_get_res{
+__unnamed 0 31;
+}
+.%type S4 {
+__unnamed 0 32;
+__raw 0 0;
+}
+.%type S4 {
+resv 0:20:12 0;
+pkt_credit 0:9:11 0;
+buf_credit 0:0:9 0;
+}
