@@ -6,7 +6,7 @@ The installations for the control plane and UPF appears below, respectively.
 
 ## Install Control Plane
 ```
-# Automatically setup the l25gc experiment
+# Automatically setup the Synergy experiment
 
 
 read node_type
