@@ -1,8 +1,8 @@
-# Synergy
+# Synergy: A SmartNIC Accelerated 5G Dataplane and Monitor for Mobility Prediction
 
-Paper to be attached soon.
+Paper to be attached when public.
 
-Attached below are the installations for the control plane and UPF, repectively.
+The installations for the control plane and UPF appears below, respectively.
 
 ## Install Control Plane
 ```
