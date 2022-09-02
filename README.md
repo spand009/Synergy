@@ -1,5 +1,9 @@
 # Synergy
 
+Paper to be attached soon.
+
+Attached below are the installations for the control plane and UPF, repectively.
+
 ## Install Control Plane
 ```
 # Automatically setup the l25gc experiment
