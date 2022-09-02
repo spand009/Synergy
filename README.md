@@ -8,15 +8,13 @@ The installations for the control plane and UPF appears below, respectively.
 ```
 # Automatically setup the l25gc experiment
 
-echo -n "Select the node tpye: UERAN | 5GC | DN: "
+
 read node_type
 node_name=$(hostname)
 
 homedir=$(eval echo "~$USER")
-echo "Home directory is $homedir"
 cd $homedir
 
-echo "Start to configure $node_type on $node_name ..."
 case $node_type in
     "UERAN") # echo 'UERAN'
     echo "Download test-packet repository for MoonGen"
