@@ -1,7 +1,7 @@
 # Synergy
 
+## Install Control Plane
 ```
-# !/bin/bash  
 # Automatically setup the l25gc experiment
 
 echo -n "Select the node tpye: UERAN | 5GC | DN: "
@@ -200,4 +200,45 @@ case $node_type in
 esac
 exit 0
 
+```
+
+## Install Data Plane
+
+```
+# Make sure you set the device PCIe address based on your installation.
+
+dpkg -l | grep nfp;
+nfp-temp;
+modinfo nfp;
+rmmod nfp;
+modprobe nfp nfp_dev_cpp=1 nfp_pf_netdev=0;
+nfp-hwinfo;
+nfp-flash -w /opt/netronome/flash/flash-nic.bin;
+nfp-flash -w /opt/netronome/flash/flash-one.bin;
+
+systemctl start nfp-sdk6-rte
+systemctl status nfp-sdk6-rte
+
+num_vfs=10
+curr_vfs="$(cat /sys/bus/pci/devices/0000\:03\:00.0/sriov_numvfs)"
+echo $curr_vfs
+
+#check if they number of VF is greater than 0
+if [ ${curr_vfs} -gt 0 ]
+then
+    echo 0 > /sys/bus/pci/devices/0000\:03\:00.0/sriov_numvfs
+    echo $1 > /sys/bus/pci/devices/0000\:03\:00.0/sriov_numvfs
+else
+    echo $1 > /sys/bus/pci/devices/0000\:03\:00.0/sriov_numvfs
+fi
+echo "The number of VFs now are "
+cat /sys/bus/pci/devices/0000\:03\:00.0/sriov_numvfs
+
+cd SmartNIC
+make clean
+make run
+
+# Start the thrift API
+cd ..
+python ThriftAPI/5G.py
 ```
